@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public List<DescribeInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeInstancesResponseBodyInstances : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the network type is ANSM.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                     /// <item><description>CREATING: The workspace is being created.</description></item>
                     /// <item><description>DELETING: The workspace is being deleted.</description></item>
                     /// <item><description>MODIFYING: The resource specifications are being modified.</description></item>
-                    /// <item><description>SUCCESS: The previous operation succeeded.</description></item>
+                    /// <item><description>SUCCESS: The previous operation was successful.</description></item>
                     /// <item><description>FAILED: The previous operation failed.</description></item>
                     /// </list>
                     /// 
@@ -148,6 +150,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
                         /// <summary>
                         /// <para>The stage name.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Start development console</para>
                         /// </summary>
                         [NameInMap("StepName")]
                         [Validation(Required=false)]
@@ -180,11 +185,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 /// <summary>
                 /// <para>The cluster status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CREATING: The cluster is being created.</description></item>
-                /// <item><description>RUNNING: The cluster is running.</description></item>
-                /// <item><description>DISABLE: The cluster is invalid.</description></item>
-                /// <item><description>DELETING: The cluster is being deleted.</description></item>
-                /// <item><description>DELETED: The cluster is deleted.</description></item>
+                /// <item><description><para>CREATING: The cluster is being created.</para>
+                /// </description></item>
+                /// <item><description><para>RUNNING: The cluster is running.</para>
+                /// </description></item>
+                /// <item><description><para>DISABLE: The cluster is invalid.</para>
+                /// </description></item>
+                /// <item><description><para>DELETING: The cluster is being deleted.</para>
+                /// </description></item>
+                /// <item><description><para>DELETED: The cluster is deleted.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -197,11 +207,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 /// <summary>
                 /// <para>The cluster status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CREATING: The cluster is being created.</description></item>
-                /// <item><description>RUNNING: The cluster is running.</description></item>
-                /// <item><description>DISABLE: The cluster is invalid.</description></item>
-                /// <item><description>DELETING: The cluster is being deleted.</description></item>
-                /// <item><description>DELETED: The cluster is deleted.</description></item>
+                /// <item><description><para>CREATING: The cluster is being created.</para>
+                /// </description></item>
+                /// <item><description><para>RUNNING: The cluster is running.</para>
+                /// </description></item>
+                /// <item><description><para>DISABLE: The cluster is invalid.</para>
+                /// </description></item>
+                /// <item><description><para>DELETING: The cluster is being deleted.</para>
+                /// </description></item>
+                /// <item><description><para>DELETED: The cluster is deleted.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -212,7 +227,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string SubStatus { get; set; }
 
                 /// <summary>
-                /// <para>The cluster-related URLs.</para>
+                /// <para>The URLs related to the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://flink-cn-hongkong.data.aliyun.com">https://flink-cn-hongkong.data.aliyun.com</a></para>
@@ -237,6 +252,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
                     /// <summary>
                     /// <para>The load balancing instance ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>lb-3nss24wchlpaa75xxx</para>
                     /// </summary>
                     [NameInMap("SlbId")]
                     [Validation(Required=false)]
@@ -253,7 +271,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                     public string SlbIp { get; set; }
 
                     /// <summary>
-                    /// <para>The instance status of the load balancing instance.</para>
+                    /// <para>The status of the load balancing instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>active</para>
                     /// </summary>
                     [NameInMap("SlbStatus")]
                     [Validation(Required=false)]
@@ -268,6 +289,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                     public class DescribeInstancesResponseBodyInstancesClusterStateUserSlbDtoUserSlbListeners : TeaModel {
                         /// <summary>
                         /// <para>The listener status.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>running</para>
                         /// </summary>
                         [NameInMap("ListenersStatus")]
                         [Validation(Required=false)]
@@ -288,7 +312,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 }
 
                 /// <summary>
-                /// <para>The CIDR block of the VPC where the cluster is deployed.</para>
+                /// <para>The CIDR block of the VPC where the cluster is located.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.0.0.0/16</para>
@@ -354,7 +378,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public float? ElasticUsedMemory { get; set; }
 
                 /// <summary>
-                /// <para>The resource count of used elastic resources.</para>
+                /// <para>The number of elastic resources used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -384,7 +408,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public float? GuaranteedUsedMemory { get; set; }
 
                 /// <summary>
-                /// <para>The resource count of used guaranteed resources.</para>
+                /// <para>The number of guaranteed resources used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -394,7 +418,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public float? GuaranteedUsedResource { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether cross-zone high-availability resources are selected.</para>
+                /// <para>Indicates whether zone-disaster recovery resources are selected.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -404,7 +428,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public bool? Ha { get; set; }
 
                 /// <summary>
-                /// <para>The number of cross-zone high-availability CPUs used.</para>
+                /// <para>The number of zone-disaster recovery CPUs used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -414,7 +438,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public float? HaUsedCpu { get; set; }
 
                 /// <summary>
-                /// <para>The amount of active memory used for cross-zone high availability.</para>
+                /// <para>The amount of zone-disaster recovery memory used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -424,7 +448,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public float? HaUsedMemory { get; set; }
 
                 /// <summary>
-                /// <para>The number of cross-zone high-availability compute units used.</para>
+                /// <para>The number of zone-disaster recovery compute units used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -466,7 +490,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>The storage resource usage information of the cluster.</para>
+            /// <para>The information about the storage resources used by the cluster.</para>
             /// </summary>
             [NameInMap("ClusterUsedStorage")]
             [Validation(Required=false)]
@@ -564,7 +588,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether cross-zone high-availability resources are selected.</para>
+            /// <para>Indicates whether zone-disaster recovery resources are selected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -574,14 +598,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public bool? Ha { get; set; }
 
             /// <summary>
-            /// <para>The description of cross-zone high-availability resources.</para>
+            /// <para>The description of zone-disaster recovery resources.</para>
             /// </summary>
             [NameInMap("HaResourceSpec")]
             [Validation(Required=false)]
             public DescribeInstancesResponseBodyInstancesHaResourceSpec HaResourceSpec { get; set; }
             public class DescribeInstancesResponseBodyInstancesHaResourceSpec : TeaModel {
                 /// <summary>
-                /// <para>The number of cross-zone high-availability CPUs.</para>
+                /// <para>The number of zone-disaster recovery CPUs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -591,7 +615,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public int? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>The memory size of cross-zone high-availability resources.</para>
+                /// <para>The memory size of zone-disaster recovery resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>48</para>
@@ -603,14 +627,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>The vSwitch group in the secondary zone for cross-zone high availability.</para>
+            /// <para>The vSwitch group in the secondary zone for zone-disaster recovery.</para>
             /// </summary>
             [NameInMap("HaVSwitchIds")]
             [Validation(Required=false)]
             public List<string> HaVSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch group information in the secondary zone for cross-zone high availability.</para>
+            /// <para>The information about the vSwitch group in the secondary zone for zone-disaster recovery.</para>
             /// </summary>
             [NameInMap("HaVSwitchInfo")]
             [Validation(Required=false)]
@@ -647,7 +671,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The vSwitch CIDR block information.</para>
+                /// <para>The vSwitch CIDR block.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.16.0/24</para>
@@ -687,7 +711,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the zone to which the workspace belongs.</para>
+                /// <para>The zone ID of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-h</para>
@@ -699,7 +723,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>The ID of the secondary zone for zone-disaster recovery.</para>
+            /// <para>The secondary zone ID for zone-disaster recovery.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hongkong-b</para>
@@ -748,7 +772,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the workspace.</para>
+            /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vvp1</para>
@@ -768,12 +792,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string MonitorType { get; set; }
 
             /// <summary>
-            /// <para>The order status of the Flink compute service. Valid values:</para>
+            /// <para>The order status of the Realtime Compute for Apache Flink service. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NOT_INIT: The order is placed but components are not deployed.</description></item>
-            /// <item><description>NORMAL: The order is in the normal state.</description></item>
-            /// <item><description>CEASE: The order is expired.</description></item>
-            /// <item><description>RELEASE: The order is overdue.</description></item>
+            /// <item><description>NORMAL: Normal.</description></item>
+            /// <item><description>CEASE: Expired.</description></item>
+            /// <item><description>RELEASE: Overdue.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -784,7 +808,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string OrderState { get; set; }
 
             /// <summary>
-            /// <para>The access configuration information for OSS.</para>
+            /// <para>The access configuration for OSS.</para>
             /// </summary>
             [NameInMap("OssInfo")]
             [Validation(Required=false)]
@@ -792,6 +816,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public class DescribeInstancesResponseBodyInstancesOssInfo : TeaModel {
                 /// <summary>
                 /// <para>The AccessKey ID for OSS.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>XXXXXX</para>
                 /// </summary>
                 [NameInMap("AccessId")]
                 [Validation(Required=false)]
@@ -799,6 +826,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
                 /// <summary>
                 /// <para>The AccessKey secret for OSS.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>XXXXXXXX</para>
                 /// </summary>
                 [NameInMap("AccessKey")]
                 [Validation(Required=false)]
@@ -887,7 +917,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The resource specifications.</para>
+            /// <para>The resource specification information.</para>
             /// </summary>
             [NameInMap("ResourceSpec")]
             [Validation(Required=false)]
@@ -925,8 +955,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 /// <summary>
                 /// <para>Specifies whether fully managed storage is selected. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: Yes.</description></item>
-                /// <item><description>false: No.</description></item>
+                /// <item><description>true: Fully managed storage is used.</description></item>
+                /// <item><description>false: Fully managed storage is not used.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -937,16 +967,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public bool? FullyManaged { get; set; }
 
                 /// <summary>
-                /// <para>The order status of the fully managed storage. Valid values:</para>
+                /// <para>The order status of fully managed storage. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>NOT_INIT: The order is placed but components are not deployed.</para>
-                /// </description></item>
-                /// <item><description><para>NORMAL: The order is in the normal state.</para>
-                /// </description></item>
-                /// <item><description><para>CEASE: The order is expired.</para>
-                /// </description></item>
-                /// <item><description><para>RELEASE: The order is overdue.</para>
-                /// </description></item>
+                /// <item><description>NOT_INIT: The order is placed but components are not deployed.</description></item>
+                /// <item><description>NORMAL: Normal.</description></item>
+                /// <item><description>CEASE: Expired.</description></item>
+                /// <item><description>RELEASE: Overdue.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -976,7 +1002,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 }
 
                 /// <summary>
-                /// <para>Specifies whether the creation of fully managed storage is supported.</para>
+                /// <para>Specifies whether fully managed storage can be created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -1034,7 +1060,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>The ID of the user that owns the instance.</para>
+            /// <para>The ID of the user to which the instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>183899668736****</para>
@@ -1044,14 +1070,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string Uid { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch IDs.</para>
+            /// <para>The list of vSwitch IDs.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>The information about the primary vSwitch group.</para>
+            /// <para>The primary vSwitch group information.</para>
             /// </summary>
             [NameInMap("VSwitchInfo")]
             [Validation(Required=false)]
@@ -1128,7 +1154,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the zone to which the workspace belongs.</para>
+                /// <para>The zone ID of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-h</para>
@@ -1157,7 +1183,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public DescribeInstancesResponseBodyInstancesVpcInfo VpcInfo { get; set; }
             public class DescribeInstancesResponseBodyInstancesVpcInfo : TeaModel {
                 /// <summary>
-                /// <para>The CIDR block of the VPC.</para>
+                /// <para>The VPC CIDR block.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172.16.5.0/24</para>
@@ -1167,7 +1193,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string CidrBlock { get; set; }
 
                 /// <summary>
-                /// <para>The description of the VPC.</para>
+                /// <para>The VPC description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>“”</para>
@@ -1189,10 +1215,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 /// <summary>
                 /// <para>The VPC status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Pending: Configuring.</para>
-                /// </description></item>
-                /// <item><description><para>Available: Available.</para>
-                /// </description></item>
+                /// <item><description>Pending: Configuring.</description></item>
+                /// <item><description>Available: Available.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -1213,7 +1237,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the VPC.</para>
+                /// <para>The VPC name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Flink cluster VPC</para>
@@ -1225,7 +1249,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>The ID of the zone to which the instance belongs.</para>
+            /// <para>The zone ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-g</para>
@@ -1267,10 +1291,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request is successful.</description></item>
-        /// <item><description>false: The request fails.</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

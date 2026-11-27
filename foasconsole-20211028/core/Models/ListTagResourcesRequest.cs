@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27AE00</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The order instance IDs.</para>
+        /// <para>The IDs of the order instances. You can call DescribeInstances to query the instance IDs of the workspace.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag list. A maximum of 20 items are supported.</para>
+        /// <para>The list of tags. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

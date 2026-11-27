@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class DescribeNamespacesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether zone-disaster recovery is enabled.</para>
+        /// <para>Specifies whether to enable high availability across zones.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Ha { get; set; }
 
         /// <summary>
-        /// <para>The order instance ID.</para>
+        /// <para>The instance ID of the order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The namespace name.</para>
+        /// <para>The name of the namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>di-590843445844225</para>

@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group of a resource.</para>
+        /// <para>Modifies the resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group of a resource.</para>
+        /// <para>Modifies the resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group of a resource.</para>
+        /// <para>Modifies the resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group of a resource.</para>
+        /// <para>Modifies the resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -201,6 +201,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <summary>
         /// <para>Disables the Flink AI service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables the Flink AI service.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guidelines</b>: If you call this OpenAPI operation in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the operation directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloseFlinkAiServiceRequest
@@ -244,6 +252,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <para>Disables the Flink AI service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables the Flink AI service.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guidelines</b>: If you call this OpenAPI operation in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the operation directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CloseFlinkAiServiceRequest
         /// </param>
@@ -286,6 +302,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <para>Disables the Flink AI service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables the Flink AI service.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guidelines</b>: If you call this OpenAPI operation in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the operation directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CloseFlinkAiServiceRequest
         /// </param>
@@ -303,6 +327,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <summary>
         /// <para>Disables the Flink AI service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables the Flink AI service.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guidelines</b>: If you call this OpenAPI operation in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the operation directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloseFlinkAiServiceRequest
@@ -849,6 +881,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink.</em>*</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI operation in automated scenarios such as AI assistants or Code Agents, we recommend that you install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official Skill encapsulated by the platform</a>. If you integrate the OpenAPI client and call the operation directly, append the AlibabaCloud-Agent-Skills/custom identifier to the User-Agent in the request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1014,6 +1049,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink.</em>*</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI operation in automated scenarios such as AI assistants or Code Agents, we recommend that you install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official Skill encapsulated by the platform</a>. If you integrate the OpenAPI client and call the operation directly, append the AlibabaCloud-Agent-Skills/custom identifier to the User-Agent in the request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1179,6 +1217,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink.</em>*</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI operation in automated scenarios such as AI assistants or Code Agents, we recommend that you install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official Skill encapsulated by the platform</a>. If you integrate the OpenAPI client and call the operation directly, append the AlibabaCloud-Agent-Skills/custom identifier to the User-Agent in the request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1202,6 +1243,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink.</em>*</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI operation in automated scenarios such as AI assistants or Code Agents, we recommend that you install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official Skill encapsulated by the platform</a>. If you integrate the OpenAPI client and call the operation directly, append the AlibabaCloud-Agent-Skills/custom identifier to the User-Agent in the request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1221,6 +1265,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <summary>
         /// <para>Creates a workspace in a fully managed Flink instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a workspace in a fully managed Flink instance.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI operation in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the operation directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateNamespaceRequest
@@ -1286,6 +1338,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <para>Creates a workspace in a fully managed Flink instance.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a workspace in a fully managed Flink instance.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI operation in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the operation directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// CreateNamespaceRequest
         /// </param>
@@ -1350,6 +1410,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <para>Creates a workspace in a fully managed Flink instance.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a workspace in a fully managed Flink instance.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI operation in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the operation directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateNamespaceRequest
         /// </param>
@@ -1367,6 +1435,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <summary>
         /// <para>Creates a workspace in a fully managed Flink instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a workspace in a fully managed Flink instance.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI operation in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the operation directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateNamespaceRequest
@@ -1673,7 +1749,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You cannot release a workspace in the following scenarios: - In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state. - For subscription workspaces, unsubscribe from the resources on the Unsubscription page in the User Center.</para>
+        /// <para>You cannot release a workspace in the following scenarios: - In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state. - If the billing method is subscription, unsubscribe from the resources on the Unsubscription page in the User Center.
+        /// <b>AI/Agent invocation guide</b>: If you call this API operation in automated scenarios such as AI assistants or Code Agents, we recommend that you install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">officially encapsulated skill</a>. If you integrate the OpenAPI client and call the API operation directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent header of the request. This helps the platform continuously improve support for AI/Agent scenarios.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1724,7 +1801,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You cannot release a workspace in the following scenarios: - In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state. - For subscription workspaces, unsubscribe from the resources on the Unsubscription page in the User Center.</para>
+        /// <para>You cannot release a workspace in the following scenarios: - In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state. - If the billing method is subscription, unsubscribe from the resources on the Unsubscription page in the User Center.
+        /// <b>AI/Agent invocation guide</b>: If you call this API operation in automated scenarios such as AI assistants or Code Agents, we recommend that you install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">officially encapsulated skill</a>. If you integrate the OpenAPI client and call the API operation directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent header of the request. This helps the platform continuously improve support for AI/Agent scenarios.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1775,7 +1853,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You cannot release a workspace in the following scenarios: - In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state. - For subscription workspaces, unsubscribe from the resources on the Unsubscription page in the User Center.</para>
+        /// <para>You cannot release a workspace in the following scenarios: - In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state. - If the billing method is subscription, unsubscribe from the resources on the Unsubscription page in the User Center.
+        /// <b>AI/Agent invocation guide</b>: If you call this API operation in automated scenarios such as AI assistants or Code Agents, we recommend that you install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">officially encapsulated skill</a>. If you integrate the OpenAPI client and call the API operation directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent header of the request. This helps the platform continuously improve support for AI/Agent scenarios.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1800,7 +1879,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You cannot release a workspace in the following scenarios: - In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state. - For subscription workspaces, unsubscribe from the resources on the Unsubscription page in the User Center.</para>
+        /// <para>You cannot release a workspace in the following scenarios: - In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state. - If the billing method is subscription, unsubscribe from the resources on the Unsubscription page in the User Center.
+        /// <b>AI/Agent invocation guide</b>: If you call this API operation in automated scenarios such as AI assistants or Code Agents, we recommend that you install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">officially encapsulated skill</a>. If you integrate the OpenAPI client and call the API operation directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent header of the request. This helps the platform continuously improve support for AI/Agent scenarios.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1819,8 +1899,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the namespace information of an instance by calling DescribeNamespaces.</para>
+        /// <para>Queries the namespace information of a specific instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call DescribeNamespaces to query the namespace information of a specific instance.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header to help the platform continuously improve support for AI and agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeNamespacesRequest
@@ -1863,8 +1951,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the namespace information of an instance by calling DescribeNamespaces.</para>
+        /// <para>Queries the namespace information of a specific instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call DescribeNamespaces to query the namespace information of a specific instance.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header to help the platform continuously improve support for AI and agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeNamespacesRequest
@@ -1907,8 +2003,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the namespace information of an instance by calling DescribeNamespaces.</para>
+        /// <para>Queries the namespace information of a specific instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call DescribeNamespaces to query the namespace information of a specific instance.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header to help the platform continuously improve support for AI and agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNamespacesRequest
@@ -1925,8 +2029,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the namespace information of an instance by calling DescribeNamespaces.</para>
+        /// <para>Queries the namespace information of a specific instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call DescribeNamespaces to query the namespace information of a specific instance.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header to help the platform continuously improve support for AI and agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNamespacesRequest
@@ -1943,8 +2055,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about regions that support purchases of fully managed Flink.</para>
+        /// <para>Retrieves the regions available for purchase.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the regions available for purchase.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
@@ -1973,8 +2093,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about regions that support purchases of fully managed Flink.</para>
+        /// <para>Retrieves the regions available for purchase.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the regions available for purchase.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
@@ -2003,8 +2131,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about regions that support purchases of fully managed Flink.</para>
+        /// <para>Retrieves the regions available for purchase.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the regions available for purchase.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <returns>
         /// DescribeSupportedRegionsResponse
@@ -2017,8 +2153,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about regions that support purchases of fully managed Flink.</para>
+        /// <para>Retrieves the regions available for purchase.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the regions available for purchase.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <returns>
         /// DescribeSupportedRegionsResponse
@@ -2031,8 +2175,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about zones that are available for purchase.</para>
+        /// <para>Queries the zones available for purchase.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the zones available for purchase.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guidelines</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, we recommend that you install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSupportedZonesRequest
@@ -2069,8 +2221,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about zones that are available for purchase.</para>
+        /// <para>Queries the zones available for purchase.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the zones available for purchase.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guidelines</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, we recommend that you install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSupportedZonesRequest
@@ -2107,8 +2267,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about zones that are available for purchase.</para>
+        /// <para>Queries the zones available for purchase.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the zones available for purchase.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guidelines</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, we recommend that you install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSupportedZonesRequest
@@ -2125,8 +2293,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about zones that are available for purchase.</para>
+        /// <para>Queries the zones available for purchase.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the zones available for purchase.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guidelines</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, we recommend that you install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSupportedZonesRequest
@@ -2145,6 +2321,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <summary>
         /// <para>Retrieves the status of the Flink AI service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the status of the Flink AI service.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetFlinkAiServiceRequest
@@ -2188,6 +2372,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <para>Retrieves the status of the Flink AI service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the status of the Flink AI service.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetFlinkAiServiceRequest
         /// </param>
@@ -2230,6 +2422,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <para>Retrieves the status of the Flink AI service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the status of the Flink AI service.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetFlinkAiServiceRequest
         /// </param>
@@ -2248,6 +2448,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <para>Retrieves the status of the Flink AI service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the status of the Flink AI service.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetFlinkAiServiceRequest
         /// </param>
@@ -2263,8 +2471,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the usage of the free quota for the Flink AI service.</para>
+        /// <para>Queries the usage of the free quota for Flink AI services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the usage of the free quota for Flink AI services.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetFlinkAiServiceFreeQuotaRequest
@@ -2305,8 +2521,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the usage of the free quota for the Flink AI service.</para>
+        /// <para>Queries the usage of the free quota for Flink AI services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the usage of the free quota for Flink AI services.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetFlinkAiServiceFreeQuotaRequest
@@ -2347,8 +2571,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the usage of the free quota for the Flink AI service.</para>
+        /// <para>Queries the usage of the free quota for Flink AI services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the usage of the free quota for Flink AI services.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetFlinkAiServiceFreeQuotaRequest
@@ -2365,8 +2597,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the usage of the free quota for the Flink AI service.</para>
+        /// <para>Queries the usage of the free quota for Flink AI services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the usage of the free quota for Flink AI services.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetFlinkAiServiceFreeQuotaRequest
@@ -2383,8 +2623,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource tags. You can query tag keys by tag values, query tag values by tag keys, or retrieve all tag information used in your Flink fully managed workspace.</para>
+        /// <para>Queries resource tags. You can query keys by tag values, query values by keys, or retrieve all tags used in a fully managed Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call ListTagResources to query resource tags. You can query keys by tag values, query values by keys, or retrieve all tags used in a fully managed Flink workspace.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this API in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -2441,8 +2689,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource tags. You can query tag keys by tag values, query tag values by tag keys, or retrieve all tag information used in your Flink fully managed workspace.</para>
+        /// <para>Queries resource tags. You can query keys by tag values, query values by keys, or retrieve all tags used in a fully managed Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call ListTagResources to query resource tags. You can query keys by tag values, query values by keys, or retrieve all tags used in a fully managed Flink workspace.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this API in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -2499,8 +2755,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource tags. You can query tag keys by tag values, query tag values by tag keys, or retrieve all tag information used in your Flink fully managed workspace.</para>
+        /// <para>Queries resource tags. You can query keys by tag values, query values by keys, or retrieve all tags used in a fully managed Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call ListTagResources to query resource tags. You can query keys by tag values, query values by keys, or retrieve all tags used in a fully managed Flink workspace.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this API in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -2517,8 +2781,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource tags. You can query tag keys by tag values, query tag values by tag keys, or retrieve all tag information used in your Flink fully managed workspace.</para>
+        /// <para>Queries resource tags. You can query keys by tag values, query values by keys, or retrieve all tags used in a fully managed Flink workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call ListTagResources to query resource tags. You can query keys by tag values, query values by keys, or retrieve all tags used in a fully managed Flink workspace.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this API in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill provided by the platform</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI and agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -2535,8 +2807,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the shutdown protection for the Flink AI service.</para>
+        /// <para>Modifies the shutdown protection for Flink AI services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the shutdown protection for Flink AI services.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this API in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAiServiceProtectionRequest
@@ -2581,8 +2861,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the shutdown protection for the Flink AI service.</para>
+        /// <para>Modifies the shutdown protection for Flink AI services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the shutdown protection for Flink AI services.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this API in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAiServiceProtectionRequest
@@ -2627,8 +2915,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the shutdown protection for the Flink AI service.</para>
+        /// <para>Modifies the shutdown protection for Flink AI services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the shutdown protection for Flink AI services.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this API in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAiServiceProtectionRequest
@@ -2645,8 +2941,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the shutdown protection for the Flink AI service.</para>
+        /// <para>Modifies the shutdown protection for Flink AI services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the shutdown protection for Flink AI services.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this API in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official platform-encapsulated skill</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAiServiceProtectionRequest
@@ -3890,6 +4194,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <para>Activates the Flink AI service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Activates the Flink AI service.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill encapsulated by the platform</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// OpenFlinkAiServiceRequest
         /// </param>
@@ -3931,6 +4243,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <summary>
         /// <para>Activates the Flink AI service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Activates the Flink AI service.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill encapsulated by the platform</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// OpenFlinkAiServiceRequest
@@ -3974,6 +4294,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <para>Activates the Flink AI service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Activates the Flink AI service.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill encapsulated by the platform</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// OpenFlinkAiServiceRequest
         /// </param>
@@ -3991,6 +4319,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <summary>
         /// <para>Activates the Flink AI service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Activates the Flink AI service.</para>
+        /// <remarks>
+        /// <para><b>AI/Agent invocation guide</b>: If you call this OpenAPI in automated scenarios such as AI assistants or Code Agents, install and use the <a href="https://skills.aliyun.com/skills/alibabacloud-flink-instance-manage">official skill encapsulated by the platform</a>. If you integrate the OpenAPI client and call the API directly, include the AlibabaCloud-Agent-Skills/custom identifier in the User-Agent request header. This helps the platform continuously improve support for AI/Agent scenarios.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// OpenFlinkAiServiceRequest

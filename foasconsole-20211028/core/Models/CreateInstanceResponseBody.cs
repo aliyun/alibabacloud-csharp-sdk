@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public CreateInstanceResponseBodyOrderInfo OrderInfo { get; set; }
         public class CreateInstanceResponseBodyOrderInfo : TeaModel {
             /// <summary>
-            /// <para>The order instance ID.</para>
+            /// <para>The ID of the instance in the order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f-cn-zvp2q0zik06</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public long? OrderId { get; set; }
 
             /// <summary>
-            /// <para>The storage instance ID.</para>
+            /// <para>The ID of the storage instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sc_flinkstorage_public_cn-w*****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string StorageInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The storage order ID.</para>
+            /// <para>The ID of the storage order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>240353501970749</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

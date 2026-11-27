@@ -29,12 +29,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             /// <summary>
             /// <para>The status of the Flink AI instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CLOSED: The service is closed or not activated.</description></item>
-            /// <item><description>WAITING: The service is waiting for activation after successful payment.</description></item>
-            /// <item><description>OPENING: The service is being activated.</description></item>
-            /// <item><description>RUNNING: The service is activated.</description></item>
-            /// <item><description>CLOSING: The service is being closed.</description></item>
-            /// <item><description>DISABLE: The service has an overdue payment.</description></item>
+            /// <item><description>CLOSED: Closed or not activated.</description></item>
+            /// <item><description>WAITING: Waiting for activation after successful payment.</description></item>
+            /// <item><description>OPENING: Activating.</description></item>
+            /// <item><description>RUNNING: Activated.</description></item>
+            /// <item><description>CLOSING: Closing.</description></item>
+            /// <item><description>DISABLE: Overdue payment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string FlinkAiInstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the AI service order instance.</para>
+            /// <para>The instance ID of the AI service order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sc_flinkaifuncpost_public_cn-o3s4xabcdef</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The activation time of the AI service. The value is a timestamp in milliseconds.</para>
+            /// <para>The time when the AI service was activated, in the millisecond timestamp format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1786934292</para>

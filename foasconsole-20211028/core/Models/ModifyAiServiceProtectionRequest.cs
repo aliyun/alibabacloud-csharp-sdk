@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class ModifyAiServiceProtectionRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable manual shutdown protection.</para>
+        /// <para>Specifies whether to enable protection against manual shutdown operations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>The region ID. It must match the region where the API endpoint is deployed. Currently, only cn-beijing is supported.</para>
+        /// <para>The region ID. It must match the region where the API endpoint is deployed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

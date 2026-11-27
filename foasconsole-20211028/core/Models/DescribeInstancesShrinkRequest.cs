@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether hybrid billing is enabled.</para>
+        /// <para>Specifies whether hybrid billing is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Elastic { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the order.</para>
+        /// <para>The order instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f-cn-wwo36qj4g06</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The paging Settings for the number of entries per page in a paged query. Maximum value: 100. Default value: 10.</para>
+        /// <para>The number of entries to return on each page in the paging Settings for a paged query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled. This is the default value.</description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal. This is the default value.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter does not take effect for pay-as-you-go instances.</para>
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>POST: pay-as-you-go.</description></item>
-        /// <item><description>PRE: subscription.</description></item>
+        /// <item><description>POST: pay-as-you-go</description></item>
+        /// <item><description>PRE: subscription</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,21 +52,21 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The default high-availability namespace resource configuration.</para>
+        /// <para>The resource configurations for the default high-availability namespace.</para>
         /// </summary>
         [NameInMap("DefaultHaNamespaceResourceSpec")]
         [Validation(Required=false)]
         public string DefaultHaNamespaceResourceSpecShrink { get; set; }
 
         /// <summary>
-        /// <para>The default namespace resource configuration.</para>
+        /// <para>The resource configurations for the default namespace.</para>
         /// </summary>
         [NameInMap("DefaultNamespaceResourceSpec")]
         [Validation(Required=false)]
         public string DefaultNamespaceResourceSpecShrink { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration.</para>
+        /// <para>The number of subscription periods.</para>
         /// <remarks>
         /// <para>This parameter is required when ChargeType is set to PRE.</para>
         /// </remarks>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Ha { get; set; }
 
         /// <summary>
-        /// <para>The zone-disaster recovery resource specifications.</para>
+        /// <para>The resource specifications for zone-disaster recovery.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string HaResourceSpecShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of vSwitch IDs in the secondary zone for zone-disaster recovery.</para>
+        /// <para>The vSwitches in the secondary zone for zone-disaster recovery.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string HaVSwitchIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The workspace name. The name must start with a lowercase letter and can contain lowercase letters, digits, and hyphens (-). The name cannot end with a hyphen.</para>
+        /// <para>The name of the workspace. The name must start with a lowercase letter and can contain lowercase letters, digits, and hyphens. It cannot end with a hyphen.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -143,13 +143,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string MonitorType { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle of the subscription instance. Valid values:</para>
+        /// <para>The subscription period unit for the subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>year</b>: yearly.</description></item>
-        /// <item><description><b>month</b>: monthly.</description></item>
+        /// <item><description><b>year</b>: year</description></item>
+        /// <item><description><b>month</b>: month</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when ChargeType is set to PRE.</para>
+        /// <para>This parameter is required when the billing method is subscription.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxbavps3rpiy</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string StorageShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. A maximum of 20 tags can be specified.</para>
+        /// <para>The list of tags. You can add up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -218,8 +218,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         /// <summary>
         /// <para>Specifies whether to use a coupon. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Use a coupon.</description></item>
-        /// <item><description>false: Do not use a coupon.</description></item>
+        /// <item><description>true: uses a coupon.</description></item>
+        /// <item><description>false: does not use a coupon.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? UsePromotionCode { get; set; }
 
         /// <summary>
-        /// <para>The list of vSwitch IDs.</para>
+        /// <para>The vSwitch IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string VSwitchIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

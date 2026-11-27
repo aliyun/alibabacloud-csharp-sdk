@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27AE00</para>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The tag request ID.</para>
+        /// <para>The ID of the tag request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>87AE00</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>The order instance ID.</para>
+            /// <para>The instance ID of the order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f-cn-tyts</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The resource type. The value is fixed as vvpinstance.</para>
+            /// <para>The resource type. The value is fixed to vvpinstance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vvpinstance</para>

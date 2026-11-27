@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of region information.</para>
+        /// <para>The list of regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of regions returned.</para>
+        /// <para>The number of regions returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

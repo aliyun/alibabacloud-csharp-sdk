@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public DescribeNamespacesResponseBodyNamespacesElasticResourceSpec ElasticResourceSpec { get; set; }
             public class DescribeNamespacesResponseBodyNamespacesElasticResourceSpec : TeaModel {
                 /// <summary>
-                /// <para>The maximum CPU limit for pay-as-you-go resources.</para>
+                /// <para>The CPU limit for pay-as-you-go resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public int? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>The maximum memory limit for pay-as-you-go resources, in GB.</para>
+                /// <para>The memory limit for pay-as-you-go resources. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1629879567394</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec GuaranteedResourceSpec { get; set; }
             public class DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec : TeaModel {
                 /// <summary>
-                /// <para>The number of CPUs for subscription resources.</para>
+                /// <para>The number of CPU cores for subscription resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public int? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>The memory size for subscription resources, in GB.</para>
+                /// <para>The memory size for subscription resources. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether zone-disaster recovery is enabled for the namespace.</para>
+            /// <para>Indicates whether high availability across zones is enabled for the namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public bool? Ha { get; set; }
 
             /// <summary>
-            /// <para>The namespace name.</para>
+            /// <para>The name of the namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ns-1</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public DescribeNamespacesResponseBodyNamespacesResourceSpec ResourceSpec { get; set; }
             public class DescribeNamespacesResponseBodyNamespacesResourceSpec : TeaModel {
                 /// <summary>
-                /// <para>The number of CPUs.</para>
+                /// <para>The number of CPU cores.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -144,14 +144,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>The resources that have been used.</para>
+            /// <para>The used resources.</para>
             /// </summary>
             [NameInMap("ResourceUsed")]
             [Validation(Required=false)]
             public DescribeNamespacesResponseBodyNamespacesResourceUsed ResourceUsed { get; set; }
             public class DescribeNamespacesResponseBodyNamespacesResourceUsed : TeaModel {
                 /// <summary>
-                /// <para>The number of CPUs used.</para>
+                /// <para>The number of used CPU cores.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public float? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>The number of compute units (CUs) used.</para>
+                /// <para>The number of used compute units (CUs).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public float? Cu { get; set; }
 
                 /// <summary>
-                /// <para>The amount of memory used.</para>
+                /// <para>The amount of used memory.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -183,13 +183,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>The namespace status. Valid values:</para>
+            /// <para>The status of the namespace. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>CREATING: The namespace is being created.</description></item>
             /// <item><description>DELETING: The namespace is being deleted.</description></item>
             /// <item><description>MODIFYING: The resource specifications are being modified.</description></item>
-            /// <item><description>SUCCESS: The last operation succeeded.</description></item>
-            /// <item><description>FAILED: The last operation failed.</description></item>
+            /// <item><description>SUCCESS: The previous operation was successful.</description></item>
+            /// <item><description>FAILED: The previous operation failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>67F33190-946B-1105-B6A1-E2DF0426DD51</para>
@@ -261,9 +261,9 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request succeeded.</description></item>
+        /// <item><description>true: The request is successful.</description></item>
         /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
