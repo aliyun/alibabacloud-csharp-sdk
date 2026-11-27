@@ -3240,12 +3240,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLC 作业 RL 轨迹流转分析</para>
+        /// <para>Retrieves the RL trajectory flow analysis of a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取DLC作业RL轨迹流转分析</para>
+        /// <para>Retrieves the RL trajectory flow analysis of a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3295,12 +3295,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLC 作业 RL 轨迹流转分析</para>
+        /// <para>Retrieves the RL trajectory flow analysis of a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取DLC作业RL轨迹流转分析</para>
+        /// <para>Retrieves the RL trajectory flow analysis of a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3350,12 +3350,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLC 作业 RL 轨迹流转分析</para>
+        /// <para>Retrieves the RL trajectory flow analysis of a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取DLC作业RL轨迹流转分析</para>
+        /// <para>Retrieves the RL trajectory flow analysis of a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3374,12 +3374,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLC 作业 RL 轨迹流转分析</para>
+        /// <para>Retrieves the RL trajectory flow analysis of a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取DLC作业RL轨迹流转分析</para>
+        /// <para>Retrieves the RL trajectory flow analysis of a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3398,12 +3398,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLC 作业 RL 日志上下文</para>
+        /// <para>Retrieves the context of a specific exception log for a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取DLC作业某条异常日志的上下文</para>
+        /// <para>Retrieves the context of a specific exception log for a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3457,12 +3457,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLC 作业 RL 日志上下文</para>
+        /// <para>Retrieves the context of a specific exception log for a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取DLC作业某条异常日志的上下文</para>
+        /// <para>Retrieves the context of a specific exception log for a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3516,12 +3516,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLC 作业 RL 日志上下文</para>
+        /// <para>Retrieves the context of a specific exception log for a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取DLC作业某条异常日志的上下文</para>
+        /// <para>Retrieves the context of a specific exception log for a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3540,12 +3540,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DLC 作业 RL 日志上下文</para>
+        /// <para>Retrieves the context of a specific exception log for a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取DLC作业某条异常日志的上下文</para>
+        /// <para>Retrieves the context of a specific exception log for a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3892,6 +3892,180 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetRLTrainingProgressWithOptionsAsync(JobId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the multi-turn generation details of a single RL trajectory for a DLC job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the multi-turn generation details of a single RL trajectory for a DLC job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRLTrajectoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRLTrajectoryResponse
+        /// </returns>
+        public GetRLTrajectoryResponse GetRLTrajectoryWithOptions(string JobId, GetRLTrajectoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptUid))
+            {
+                query["PromptUid"] = request.PromptUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SampleIndex))
+            {
+                query["SampleIndex"] = request.SampleIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRLTrajectory",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/rltrace/trajectory",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRLTrajectoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the multi-turn generation details of a single RL trajectory for a DLC job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the multi-turn generation details of a single RL trajectory for a DLC job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRLTrajectoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRLTrajectoryResponse
+        /// </returns>
+        public async Task<GetRLTrajectoryResponse> GetRLTrajectoryWithOptionsAsync(string JobId, GetRLTrajectoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptUid))
+            {
+                query["PromptUid"] = request.PromptUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SampleIndex))
+            {
+                query["SampleIndex"] = request.SampleIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRLTrajectory",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/rltrace/trajectory",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRLTrajectoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the multi-turn generation details of a single RL trajectory for a DLC job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the multi-turn generation details of a single RL trajectory for a DLC job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRLTrajectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRLTrajectoryResponse
+        /// </returns>
+        public GetRLTrajectoryResponse GetRLTrajectory(string JobId, GetRLTrajectoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRLTrajectoryWithOptions(JobId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the multi-turn generation details of a single RL trajectory for a DLC job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the multi-turn generation details of a single RL trajectory for a DLC job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRLTrajectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRLTrajectoryResponse
+        /// </returns>
+        public async Task<GetRLTrajectoryResponse> GetRLTrajectoryAsync(string JobId, GetRLTrajectoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRLTrajectoryWithOptionsAsync(JobId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5854,12 +6028,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 DLC 作业的 RL 样本轨迹</para>
+        /// <para>Retrieves a paginated list of RL trajectory samples for a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页获取DLC作业的RL轨迹样本列表</para>
+        /// <para>Retrieves a paginated list of RL trajectory samples for a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5917,12 +6091,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 DLC 作业的 RL 样本轨迹</para>
+        /// <para>Retrieves a paginated list of RL trajectory samples for a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页获取DLC作业的RL轨迹样本列表</para>
+        /// <para>Retrieves a paginated list of RL trajectory samples for a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5980,12 +6154,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 DLC 作业的 RL 样本轨迹</para>
+        /// <para>Retrieves a paginated list of RL trajectory samples for a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页获取DLC作业的RL轨迹样本列表</para>
+        /// <para>Retrieves a paginated list of RL trajectory samples for a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6004,12 +6178,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 DLC 作业的 RL 样本轨迹</para>
+        /// <para>Retrieves a paginated list of RL trajectory samples for a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页获取DLC作业的RL轨迹样本列表</para>
+        /// <para>Retrieves a paginated list of RL trajectory samples for a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6028,12 +6202,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 DLC 样本的 RL 轨迹</para>
+        /// <para>Retrieves a paginated list of RL trajectories for a specific UID in a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页获取DLC作业某个uid下的RL轨迹列表</para>
+        /// <para>Retrieves a paginated list of RL trajectories for a specific UID in a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6095,12 +6269,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 DLC 样本的 RL 轨迹</para>
+        /// <para>Retrieves a paginated list of RL trajectories for a specific UID in a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页获取DLC作业某个uid下的RL轨迹列表</para>
+        /// <para>Retrieves a paginated list of RL trajectories for a specific UID in a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6162,12 +6336,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 DLC 样本的 RL 轨迹</para>
+        /// <para>Retrieves a paginated list of RL trajectories for a specific UID in a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页获取DLC作业某个uid下的RL轨迹列表</para>
+        /// <para>Retrieves a paginated list of RL trajectories for a specific UID in a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6186,12 +6360,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 DLC 样本的 RL 轨迹</para>
+        /// <para>Retrieves a paginated list of RL trajectories for a specific UID in a DLC job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页获取DLC作业某个uid下的RL轨迹列表</para>
+        /// <para>Retrieves a paginated list of RL trajectories for a specific UID in a DLC job.</para>
         /// </description>
         /// 
         /// <param name="request">

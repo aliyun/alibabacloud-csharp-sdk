@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetRLLogContextRequest : TeaModel {
         /// <summary>
-        /// <para>用于辅助定位的锚点日志消息，可取自 GetRLTrainingProgress 返回的 Fatal[].RawMessage。</para>
+        /// <para>The text of the anchor log. The fallback path locates the log by prefix matching. This value is derived from Fatal[].RawMessage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string AnchorMessage { get; set; }
 
         /// <summary>
-        /// <para>锚点日志行的时间，采用 RFC3339 格式。</para>
+        /// <para>The timestamp of the anchor log line in UTC RFC 3339 format with second precision.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string AnchorTime { get; set; }
 
         /// <summary>
-        /// <para>锚点日志采集时间，采用纯数字的纳秒时间戳字符串，可取自 GetRLTrainingProgress 返回的 Fatal[].CollectNs，用于辅助定位上下文。实际定位方式由 Mode 返回，结果不保证包含原始锚点日志。</para>
+        /// <para>The agent_collect_time of the anchor line as a nanosecond string. This value is derived from Fatal[].CollectNs. If provided, the exact path is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1785947815190122847</para>

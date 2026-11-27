@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListRLTrajectoriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>作业 ID</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc********</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>生效的页码；未传分页参数时为默认值 1</para>
+        /// <para>The effective page number. If pagination parameters are not provided, the default value 1 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>生效的每页条数；未传分页参数时为默认值 10</para>
+        /// <para>The effective number of entries per page. If pagination parameters are not provided, the default value 10 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>样本 uid</para>
+        /// <para>The sample UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3afcfbdf-3956-4ab2-b9cb-f9c204b8fc9c</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string PromptUid { get; set; }
 
         /// <summary>
-        /// <para>请求 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>指定 PromptUid 下分页前的轨迹总数，不是当前页条数。查询规模受限时可能仅为下界，不保证是精确总数。</para>
+        /// <para>The total number of trajectories under this UID before pagination. This is an exact value, and represents a lower bound only when Truncated is true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>轨迹列表（当前页，按 SampleIndex 数值升序）</para>
+        /// <para>The list of trajectories on the current page, sorted in ascending order by SampleIndex.</para>
         /// </summary>
         [NameInMap("Trajectories")]
         [Validation(Required=false)]

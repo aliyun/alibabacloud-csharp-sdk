@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListRLSamplesResponseBody : TeaModel {
         /// <summary>
-        /// <para>作业 ID</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc5yfk7eyg95lac</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>生效的页码；未传分页参数时为默认值 1</para>
+        /// <para>The effective page number. If pagination parameters are not specified, the default value 1 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>生效的每页条数；未传分页参数时为默认值 10</para>
+        /// <para>The effective number of entries per page. If pagination parameters are not specified, the default value 10 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>当前页的样本轨迹概览，按 PromptUid 字典序、SampleIndex 数值升序排列。</para>
+        /// <para>The list of trajectories on the current page.</para>
         /// </summary>
         [NameInMap("Samples")]
         [Validation(Required=false)]
         public List<RLSample> Samples { get; set; }
 
         /// <summary>
-        /// <para>分页前的匹配轨迹总数，不是当前页条数。查询规模受限时可能仅为下界，不保证是精确总数。</para>
+        /// <para>The total number of trajectories within the window before pagination. If Truncated is set to true, this value represents a lower bound rather than the exact total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21596</para>
