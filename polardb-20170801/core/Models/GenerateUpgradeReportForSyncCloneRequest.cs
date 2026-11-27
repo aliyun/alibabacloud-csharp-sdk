@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The reserved parameter. The value is a JSON string.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;targetTableMode\&quot;:2}</para>
+        /// <para>{&quot;targetTableMode&quot;:2}</para>
         /// </summary>
         [NameInMap("Reserve")]
         [Validation(Required=false)]

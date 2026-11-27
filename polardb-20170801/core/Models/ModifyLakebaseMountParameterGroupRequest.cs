@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>The new parameter template name.</para>
+        /// <para>The new name of the parameter template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-new</para>

@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The task type. You can call the <a href="%E8%BF%98%E6%9C%AA%E7%94%9F%E6%88%90ID">DescribeActiveOperationTaskType</a> operation to query the task types of pending tasks.</para>
+        /// <para>The task type. You can call the [DescribeActiveOperationTaskType](ID not generated yet) operation to query the task types of pending tasks.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>You can also enter <b>all</b> to view all pending tasks under your account.</description></item>

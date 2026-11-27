@@ -20,14 +20,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>The synchronization configuration whitelist returned based on the source type. For DingTalk, UserId is returned. For Lark, FeishuChatMemberStaleTtlSeconds is returned.</para>
+        /// <para>The synchronization configuration whitelist returned by source type. For DINGTALK, UserId can be returned. For FEISHU, FeishuChatMemberStaleTtlSeconds can be returned.</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public DescribeKBSyncLinkAttributeResponseBodyConfig Config { get; set; }
         public class DescribeKBSyncLinkAttributeResponseBodyConfig : TeaModel {
             /// <summary>
-            /// <para>The validity period of the successful snapshot of Lark group members for fallback reuse, in seconds. This parameter is returned only for Lark synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. The valid value configured for the link is returned. If no value is configured, the default value -1 is returned.</para>
+            /// <para>The validity period of the group member success snapshot used for fallback reuse, in seconds. This field can be returned for DINGTALK and FEISHU synchronization links. Explicit general configurations take precedence. If it is not configured, Lark uses the legacy dedicated field. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. If it is not configured for DingTalk, -1 is returned. If the general field is not explicitly configured for Lark, this field may not be returned, and the legacy dedicated field returns a valid value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>-1</para>
+            /// </summary>
+            [NameInMap("ChatMemberStaleTtlSeconds")]
+            [Validation(Required=false)]
+            public int? ChatMemberStaleTtlSeconds { get; set; }
+
+            /// <summary>
+            /// <para>The validity period of the Lark group member success snapshot used for fallback reuse, in seconds. This field is returned only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 indicates that snapshot fallback reuse is disabled. A positive integer indicates the maximum age of the snapshot allowed for reuse. The valid value configured for the link is returned. If it is not configured, the default value -1 is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -37,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? FeishuChatMemberStaleTtlSeconds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the DingTalk user who performs the operation. This parameter is returned only for DingTalk synchronization links.</para>
+            /// <para>The ID of the DingTalk user who performs the operation. This field is returned only for DINGTALK synchronization links.</para>
             /// 
             /// <b>Example:</b>
             /// <para>manager123</para>
@@ -109,7 +119,34 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The source directory. For OSS sources, the bucket and object prefix in the oss://<bucket>/<prefix> format are returned. For other sources, the directory identifier or path of the corresponding channel is returned.</para>
+        /// <para>Returns the current configuration, which does not indicate that synchronization is complete. This field may not be returned if it is not set.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SELECTED</para>
+        /// </summary>
+        [NameInMap("SelectionMode")]
+        [Validation(Required=false)]
+        public string SelectionMode { get; set; }
+
+        /// <summary>
+        /// <para>Returns the current configuration, which does not indicate that synchronization is complete. This field may not be returned if it is not set.</para>
+        /// </summary>
+        [NameInMap("SelectionRules")]
+        [Validation(Required=false)]
+        public string SelectionRules { get; set; }
+
+        /// <summary>
+        /// <para>The switch for source deletion synchronization.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("SourceDeleteSyncEnabled")]
+        [Validation(Required=false)]
+        public bool? SourceDeleteSyncEnabled { get; set; }
+
+        /// <summary>
+        /// <para>The source directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/documents</para>

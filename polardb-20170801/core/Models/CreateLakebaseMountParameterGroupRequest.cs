@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateLakebaseMountParameterGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The instance edition. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>basic: Basic Edition.</description></item>
-        /// <item><description>high_performance: High-performance Edition.</description></item>
-        /// </list>
+        /// <para>The instance edition. Valid values: basic (Basic Edition) and high_performance (High-performance Edition).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParamGroupCategory { get; set; }
 
         /// <summary>
-        /// <para>The description of the parameter template.</para>
+        /// <para>The parameter template description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test template</para>
@@ -35,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParameterGroupDesc { get; set; }
 
         /// <summary>
-        /// <para>The name of the parameter template.</para>
+        /// <para>The parameter template name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

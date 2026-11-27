@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreatePolarClawSkillResponseBody : TeaModel {
         /// <summary>
-        /// <para>Used for system scheduled task checks. Modifications are not supported for the current scheduled task.</para>
+        /// <para>Used for system scheduled task checks. The current scheduled task does not support modifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the skill.</para>
+        /// <para>The skill name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polarclawhub</para>

@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The response message.</para>
         /// <remarks>
-        /// <para>If the request is successful, \<c>Successful\\</c> is returned. If the request fails, an error message, such as an error code, is returned.</para>
+        /// <para>If the request is successful, `Successful` is returned. If the request fails, an error message, such as an error code, is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

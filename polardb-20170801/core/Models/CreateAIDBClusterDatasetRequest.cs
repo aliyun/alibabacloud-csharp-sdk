@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAIDBClusterDatasetRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AI database cluster. The cluster must have DBType set to polardb_ai. This parameter is required. If it is not provided, the service returns InvalidDBClusterId.Malformed (404).</para>
+        /// <para>The ID of the AI database cluster. The cluster must have DBType set to polardb_ai. This parameter is required. If this parameter is not provided, the service returns InvalidDBClusterId.Malformed (404).</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2ze88***</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The training mode for the dataset. Dataset formats vary by mode. Valid values:</para>
+        /// <para>The training mode for the dataset. Dataset formats vary based on the mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>sft</b>: supervised fine-tuning, dedicated to training datasets</description></item>
         /// <item><description><b>grpo</b>: reinforcement learning optimization, dedicated to training datasets</description></item>

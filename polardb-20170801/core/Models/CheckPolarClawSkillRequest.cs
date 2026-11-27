@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The tag details.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\&quot;PolarDB\&quot;,\&quot;programming\&quot;]</para>
+        /// <para>[&quot;PolarDB&quot;,&quot;programming&quot;]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

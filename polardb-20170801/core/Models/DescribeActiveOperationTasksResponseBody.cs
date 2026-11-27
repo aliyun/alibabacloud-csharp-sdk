@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of O\&amp;M tasks.</para>
+        /// <para>The list of O&amp;M tasks.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]

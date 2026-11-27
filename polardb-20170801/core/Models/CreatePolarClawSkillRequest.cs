@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreatePolarClawSkillRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region where the OSS bucket that stores the skill files resides.</para>
+        /// <para>The region ID of the OSS bucket where the skill files are stored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BucketRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the bucket used for skill files. UserOwned indicates a user-owned bucket. Hosted indicates a hosted bucket. You must have the required permissions to use a hosted bucket.</para>
+        /// <para>The type of the bucket used for skill files. Valid values: UserOwned: a user-owned bucket. Hosted: a managed bucket. You must have the required permissions to use a managed bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UserOwned</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BucketType { get; set; }
 
         /// <summary>
-        /// <para>The name of the OSS bucket that resides in the same region as the current project.</para>
+        /// <para>The name of the OSS bucket that is in the same region as the current project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string OSSBucket { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the OSS object. The prefix can contain digits and letters and must be 1 to 30 characters in length.</para>
+        /// <para>The prefix of your OSS object. The prefix can contain digits and letters and must be 1 to 30 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string OSSPrefix { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the parameter template resides.</para>
+        /// <para>The region ID of the region where the parameter template resides.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</para>
         /// </remarks>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the skill.</para>
+        /// <para>The skill name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SkillName { get; set; }
 
         /// <summary>
-        /// <para>The version of the skill.</para>
+        /// <para>The skill version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The brief description of the skill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>An example for managing PolarDB skills</para>
+        /// <para>Example for managing PolarDB skills</para>
         /// </summary>
         [NameInMap("Summary")]
         [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The tag details.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\&quot;PolarDB\&quot;]</para>
+        /// <para>[&quot;PolarDB&quot;]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

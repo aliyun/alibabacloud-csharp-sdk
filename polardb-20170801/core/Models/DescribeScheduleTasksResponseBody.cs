@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the scheduled O\&amp;M task.</para>
+                /// <para>The ID of the scheduled O&amp;M task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86293c29-a03d-4872-b625-***********</para>

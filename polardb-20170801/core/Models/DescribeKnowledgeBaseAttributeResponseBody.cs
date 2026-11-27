@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeKnowledgeBaseAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of AI applications associated with the knowledge base.</para>
+        /// <para>The number of associated AI applications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? BindingAppCount { get; set; }
 
         /// <summary>
-        /// <para>The time when the knowledge base was created.</para>
-        /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The creation time. The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-08-14T05:58:42Z</para>
@@ -51,11 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
-        /// <para>The type of the knowledge base. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PUBLIC</description></item>
-        /// <item><description>PERSONAL</description></item>
-        /// </list>
+        /// <para>The type of the knowledge base. Valid values: PUBLIC and PERSONAL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PUBLIC</para>
@@ -122,7 +117,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? ShardCount { get; set; }
 
         /// <summary>
-        /// <para>The status of the knowledge base.</para>
+        /// <para>Specifies whether source deletion synchronization is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("SourceDeleteSyncEnabled")]
+        [Validation(Required=false)]
+        public bool? SourceDeleteSyncEnabled { get; set; }
+
+        /// <summary>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Activation</para>

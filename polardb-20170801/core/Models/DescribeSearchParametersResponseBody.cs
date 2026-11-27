@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The Search engine version. This is not the MySQL version of the primary cluster.</para>
+        /// <para>The Search engine version, which is not the MySQL version of the primary cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.0</para>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeSearchParametersResponseBodyRunningParametersParameter> Parameter { get; set; }
             public class DescribeSearchParametersResponseBodyRunningParametersParameter : TeaModel {
                 /// <summary>
-                /// <para>The value validation rule of the template. The rule can be a numeric range, an enumeration, or a regular expression, and must be interpreted in combination with the data type.</para>
+                /// <para>The value validation rule of the template, which can be a numeric range, an enumeration, or a regular expression. This rule must be interpreted in combination with the DataType field.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[true\|false]</para>
+                /// <para>[true|false]</para>
                 /// </summary>
                 [NameInMap("CheckingCode")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DataType { get; set; }
 
                 /// <summary>
-                /// <para>The default value of the current active template. This value is independent of the value modified by the user.</para>
+                /// <para>The default value of the current active template, which is independent of the value modified by the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Factor { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether a restart is required for the parameter to take effect. The value is true for static parameters and false for dynamic parameters.</para>
+                /// <para>Specifies whether a restart is required for the modification to take effect. The value is true for static parameters and false for dynamic parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public bool? ForceRestart { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the parameter is modifiable.</para>
+                /// <para>Specifies whether the user is allowed to modify the parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ParameterName { get; set; }
 
                 /// <summary>
-                /// <para>The modification status of the parameter. A value of Normal indicates that no modifications are pending. A value of Modifying indicates that the modification task is not completed.</para>
+                /// <para>The modification status of the parameter. A value of Normal indicates that there are no pending modifications. A value of Modifying indicates that the modification task is not completed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>

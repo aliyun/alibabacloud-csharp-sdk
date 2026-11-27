@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The application ID. Only applications associated with PolarDB for MySQL clusters are accepted. Before the call, you can obtain the DBClusterId associated with the application by calling DescribeApplicationAttribute, and then query the DBType of the cluster by calling DescribeDBClusterAttribute to confirm that the value is MySQL. Associated applications of other engine types are not applicable.</para>
+        /// <para>The application ID. Only applications associated with PolarDB for MySQL clusters are supported. Before calling this operation, you can call DescribeApplicationAttribute to obtain the DBClusterId associated with the application, and then call DescribeDBClusterAttribute to query the DBType of the cluster and confirm that the value is MySQL. This operation is not applicable to associated applications of other database engine types.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

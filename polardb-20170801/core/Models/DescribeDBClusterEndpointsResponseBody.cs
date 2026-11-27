@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;DistributedTransaction\&quot;:\&quot;off\&quot;,\&quot;ConsistLevel\&quot;:\&quot;0\&quot;,\&quot;LoadBalanceStrategy\&quot;:\&quot;load\&quot;,\&quot;MasterAcceptReads\&quot;:\&quot;on\&quot;}</para>
+            /// <para>{&quot;DistributedTransaction&quot;:&quot;off&quot;,&quot;ConsistLevel&quot;:&quot;0&quot;,&quot;LoadBalanceStrategy&quot;:&quot;load&quot;,&quot;MasterAcceptReads&quot;:&quot;on&quot;}</para>
             /// </summary>
             [NameInMap("EndpointConfig")]
             [Validation(Required=false)]

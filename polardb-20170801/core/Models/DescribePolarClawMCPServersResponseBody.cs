@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;dev-mcp-server&quot;: &quot;{\&quot;args\&quot;:[\&quot;-y\&quot;,\&quot;@polarclaw/mcp-dev\&quot;],\&quot;command\&quot;:\&quot;node\&quot;}&quot;
+        ///     &quot;dev-mcp-server&quot;: &quot;{&quot;args&quot;:[&quot;-y&quot;,&quot;@polarclaw/mcp-dev&quot;],&quot;command&quot;:&quot;node&quot;}&quot;
         /// }</para>
         /// </summary>
         [NameInMap("Servers")]

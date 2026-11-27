@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The Serverless type. \<c>**AgileServerless**\\</c> indicates that the cluster is a Serverless cluster. An empty value indicates that the cluster is a common cluster.</para>
+            /// <para>The Serverless type. `**AgileServerless**` indicates that the cluster is a Serverless cluster. An empty value indicates that the cluster is a common cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AgileServerless</para>

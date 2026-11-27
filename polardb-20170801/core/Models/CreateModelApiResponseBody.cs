@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The saved routing rules, returned as a JSON string. A byte-by-byte exact echo is not guaranteed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;RuleName&quot;:&quot;default&quot;,&quot;Providers&quot;:[{&quot;ModelServiceName&quot;:&quot;model-service-a&quot;,&quot;ModelList&quot;:&quot;[\\&quot;deepseek-v4-pro\\&quot;]&quot;,&quot;Weight&quot;:100}]}]</para>
+        /// <para>[{&quot;RuleName&quot;:&quot;default&quot;,&quot;Providers&quot;:[{&quot;ModelServiceName&quot;:&quot;model-service-a&quot;,&quot;ModelList&quot;:&quot;[\&quot;deepseek-v4-pro\&quot;]&quot;,&quot;Weight&quot;:100}]}]</para>
         /// </summary>
         [NameInMap("RouteRules")]
         [Validation(Required=false)]

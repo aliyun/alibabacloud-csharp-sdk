@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup set used to restore the application. This parameter is required. If it is not provided, the API returns InvalidBackupSetID.NotFound (404).</para>
+        /// <para>The ID of the backup set used to restore the application. Usage notes: This parameter is required. If this parameter is not provided, the API returns the InvalidBackupSetID.NotFound (404) error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bs-123456</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BackupSetId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the application.</para>
+        /// <para>The ID of the region where the application resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

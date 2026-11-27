@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateApplicationBackupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application to back up.</para>
+        /// <para>The ID of the application to be backed up.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string JobMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the application resides. The server uses the actual region of the application.</para>
+        /// <para>The region ID of the region where the application resides. The server uses the actual region of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

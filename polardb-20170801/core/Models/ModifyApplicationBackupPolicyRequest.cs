@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The application type, such as polarclaw. This parameter is required. If it is not provided, the service returns InvalidApplicationType.Malformed. Valid values: polarclaw, supabase, and polarclawsaas. Note: The ApplicationType field in the DescribeApplications response contains the polardb_ prefix (such as polardb_polarclaw). When you call this operation, remove the prefix and use the short format.</para>
+        /// <para>The application type, such as polarclaw. This parameter is required. If it is not provided, the service returns InvalidApplicationType.Malformed. Valid values: polarclaw, supabase, and polarclawsaas. Note: The ApplicationType field in the DescribeApplications response contains the polardb_ prefix, such as polardb_polarclaw. When calling this API, remove the prefix and use the short format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polarclaw</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PreferredBackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The time window when automatic backups are performed. Specify the time in the HH:mmZ-HH:mmZ format in UTC. The start time and end time must be on the hour and exactly one hour apart.</para>
+        /// <para>The time window when automatic backups are performed. The format is HH:mmZ-HH:mmZ in UTC. The start time and end time must be on the hour and exactly one hour apart.</para>
         /// 
         /// <b>Example:</b>
         /// <para>07:00Z-08:00Z</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PreferredBackupTime { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the application.</para>
+        /// <para>The ID of the region where the application resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

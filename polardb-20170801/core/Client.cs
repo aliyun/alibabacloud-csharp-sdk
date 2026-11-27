@@ -6137,7 +6137,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, call CreateAIDBCluster to create a cluster with DBType set to polardb_ai, and then call EnableAIDBClusterDatasetService to enable the dataset service. Finally, call this operation to create a dataset.</para>
+        /// <para>Before you call this operation, call CreateAIDBCluster to create a cluster with DBType set to polardb_ai, and then call EnableAIDBClusterDatasetService to enable the dataset service. Finally, call this operation to create a dataset.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6220,7 +6220,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, call CreateAIDBCluster to create a cluster with DBType set to polardb_ai, and then call EnableAIDBClusterDatasetService to enable the dataset service. Finally, call this operation to create a dataset.</para>
+        /// <para>Before you call this operation, call CreateAIDBCluster to create a cluster with DBType set to polardb_ai, and then call EnableAIDBClusterDatasetService to enable the dataset service. Finally, call this operation to create a dataset.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6303,7 +6303,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, call CreateAIDBCluster to create a cluster with DBType set to polardb_ai, and then call EnableAIDBClusterDatasetService to enable the dataset service. Finally, call this operation to create a dataset.</para>
+        /// <para>Before you call this operation, call CreateAIDBCluster to create a cluster with DBType set to polardb_ai, and then call EnableAIDBClusterDatasetService to enable the dataset service. Finally, call this operation to create a dataset.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6326,7 +6326,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, call CreateAIDBCluster to create a cluster with DBType set to polardb_ai, and then call EnableAIDBClusterDatasetService to enable the dataset service. Finally, call this operation to create a dataset.</para>
+        /// <para>Before you call this operation, call CreateAIDBCluster to create a cluster with DBType set to polardb_ai, and then call EnableAIDBClusterDatasetService to enable the dataset service. Finally, call this operation to create a dataset.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14864,7 +14864,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order to purchase a token resource plan and activates a redemption code.</para>
+        /// <para>Purchases a token resource plan and generates a redemption code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14926,7 +14926,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order to purchase a token resource plan and activates a redemption code.</para>
+        /// <para>Purchases a token resource plan and generates a redemption code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14988,7 +14988,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order to purchase a token resource plan and activates a redemption code.</para>
+        /// <para>Purchases a token resource plan and generates a redemption code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15006,7 +15006,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order to purchase a token resource plan and activates a redemption code.</para>
+        /// <para>Purchases a token resource plan and generates a redemption code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15201,6 +15201,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiTableMcpEndpoint))
+            {
+                query["AiTableMcpEndpoint"] = request.AiTableMcpEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatMemberStaleTtlSeconds))
+            {
+                query["ChatMemberStaleTtlSeconds"] = request.ChatMemberStaleTtlSeconds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["ClientId"] = request.ClientId;
@@ -15233,9 +15241,21 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionMode))
+            {
+                query["SelectionMode"] = request.SelectionMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionRules))
+            {
+                query["SelectionRules"] = request.SelectionRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetMcpEndpoint))
             {
                 query["SheetMcpEndpoint"] = request.SheetMcpEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDeleteSyncEnabled))
+            {
+                query["SourceDeleteSyncEnabled"] = request.SourceDeleteSyncEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDir))
             {
@@ -15303,6 +15323,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiTableMcpEndpoint))
+            {
+                query["AiTableMcpEndpoint"] = request.AiTableMcpEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatMemberStaleTtlSeconds))
+            {
+                query["ChatMemberStaleTtlSeconds"] = request.ChatMemberStaleTtlSeconds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["ClientId"] = request.ClientId;
@@ -15335,9 +15363,21 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionMode))
+            {
+                query["SelectionMode"] = request.SelectionMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionRules))
+            {
+                query["SelectionRules"] = request.SelectionRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetMcpEndpoint))
             {
                 query["SheetMcpEndpoint"] = request.SheetMcpEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDeleteSyncEnabled))
+            {
+                query["SourceDeleteSyncEnabled"] = request.SourceDeleteSyncEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDir))
             {
@@ -15465,6 +15505,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["SearchMode"] = request.SearchMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDeleteSyncEnabled))
+            {
+                query["SourceDeleteSyncEnabled"] = request.SourceDeleteSyncEnabled;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -15526,6 +15570,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchMode))
             {
                 query["SearchMode"] = request.SearchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDeleteSyncEnabled))
+            {
+                query["SourceDeleteSyncEnabled"] = request.SourceDeleteSyncEnabled;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17893,11 +17941,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>前提条件</h2>
+        /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>已创建 PolarClaw 应用：技能将上传到该应用。可调用 DescribeApplications 并将 ApplicationTypes 设置为 polardb_polarclaw 查询应用列表，获取应用 ID。</description></item>
-        /// <item><description>技能文件已存放在 OSS Bucket 中：OSSBucket 必须是真实存在、且与应用处于同一地域的 Bucket，Bucket 所在地域可通过 BucketRegionId 指定。</description></item>
-        /// <item><description>OSSPrefix 为技能文件在 Bucket 中的对象前缀。</description></item>
+        /// <item><description>A PolarClaw application is created: The skill will be uploaded to this application. You can call the DescribeApplications operation and set ApplicationTypes to polardb_polarclaw to query the application list and obtain the application ID.</description></item>
+        /// <item><description>The skill files are stored in an OSS bucket: The OSS bucket must exist and be in the same region as the application. You can specify the region of the bucket by using BucketRegionId.</description></item>
+        /// <item><description>OSSPrefix is the object prefix of the skill files in the bucket.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17981,11 +18029,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>前提条件</h2>
+        /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>已创建 PolarClaw 应用：技能将上传到该应用。可调用 DescribeApplications 并将 ApplicationTypes 设置为 polardb_polarclaw 查询应用列表，获取应用 ID。</description></item>
-        /// <item><description>技能文件已存放在 OSS Bucket 中：OSSBucket 必须是真实存在、且与应用处于同一地域的 Bucket，Bucket 所在地域可通过 BucketRegionId 指定。</description></item>
-        /// <item><description>OSSPrefix 为技能文件在 Bucket 中的对象前缀。</description></item>
+        /// <item><description>A PolarClaw application is created: The skill will be uploaded to this application. You can call the DescribeApplications operation and set ApplicationTypes to polardb_polarclaw to query the application list and obtain the application ID.</description></item>
+        /// <item><description>The skill files are stored in an OSS bucket: The OSS bucket must exist and be in the same region as the application. You can specify the region of the bucket by using BucketRegionId.</description></item>
+        /// <item><description>OSSPrefix is the object prefix of the skill files in the bucket.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18069,11 +18117,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>前提条件</h2>
+        /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>已创建 PolarClaw 应用：技能将上传到该应用。可调用 DescribeApplications 并将 ApplicationTypes 设置为 polardb_polarclaw 查询应用列表，获取应用 ID。</description></item>
-        /// <item><description>技能文件已存放在 OSS Bucket 中：OSSBucket 必须是真实存在、且与应用处于同一地域的 Bucket，Bucket 所在地域可通过 BucketRegionId 指定。</description></item>
-        /// <item><description>OSSPrefix 为技能文件在 Bucket 中的对象前缀。</description></item>
+        /// <item><description>A PolarClaw application is created: The skill will be uploaded to this application. You can call the DescribeApplications operation and set ApplicationTypes to polardb_polarclaw to query the application list and obtain the application ID.</description></item>
+        /// <item><description>The skill files are stored in an OSS bucket: The OSS bucket must exist and be in the same region as the application. You can specify the region of the bucket by using BucketRegionId.</description></item>
+        /// <item><description>OSSPrefix is the object prefix of the skill files in the bucket.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18097,11 +18145,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>前提条件</h2>
+        /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>已创建 PolarClaw 应用：技能将上传到该应用。可调用 DescribeApplications 并将 ApplicationTypes 设置为 polardb_polarclaw 查询应用列表，获取应用 ID。</description></item>
-        /// <item><description>技能文件已存放在 OSS Bucket 中：OSSBucket 必须是真实存在、且与应用处于同一地域的 Bucket，Bucket 所在地域可通过 BucketRegionId 指定。</description></item>
-        /// <item><description>OSSPrefix 为技能文件在 Bucket 中的对象前缀。</description></item>
+        /// <item><description>A PolarClaw application is created: The skill will be uploaded to this application. You can call the DescribeApplications operation and set ApplicationTypes to polardb_polarclaw to query the application list and obtain the application ID.</description></item>
+        /// <item><description>The skill files are stored in an OSS bucket: The OSS bucket must exist and be in the same region as the application. You can specify the region of the bucket by using BucketRegionId.</description></item>
+        /// <item><description>OSSPrefix is the object prefix of the skill files in the bucket.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18928,16 +18976,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can specify the maximum CPU quota percentage for the rule by using MaxCpu or the maximum number of CPU cores by using CpuCount.
-        /// You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can use MaxCpu to specify the maximum CPU quota percentage or CpuCount to specify the maximum number of CPU cores available to the rule. You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding rules, but does not support querying CPU utilization for Resource Control.</para>
+        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</para>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
         /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
@@ -19002,16 +19049,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can specify the maximum CPU quota percentage for the rule by using MaxCpu or the maximum number of CPU cores by using CpuCount.
-        /// You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can use MaxCpu to specify the maximum CPU quota percentage or CpuCount to specify the maximum number of CPU cores available to the rule. You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding rules, but does not support querying CPU utilization for Resource Control.</para>
+        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</para>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
         /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
@@ -19076,16 +19122,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can specify the maximum CPU quota percentage for the rule by using MaxCpu or the maximum number of CPU cores by using CpuCount.
-        /// You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can use MaxCpu to specify the maximum CPU quota percentage or CpuCount to specify the maximum number of CPU cores available to the rule. You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding rules, but does not support querying CPU utilization for Resource Control.</para>
+        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</para>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
         /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
@@ -19110,16 +19155,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can specify the maximum CPU quota percentage for the rule by using MaxCpu or the maximum number of CPU cores by using CpuCount.
-        /// You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can use MaxCpu to specify the maximum CPU quota percentage or CpuCount to specify the maximum number of CPU cores available to the rule. You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding rules, but does not support querying CPU utilization for Resource Control.</para>
+        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</para>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
         /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
@@ -28525,11 +28569,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the create, update, delete, attach, and detach operations for resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <para>Resource Control limits the CPU resources that specific users, databases, queries, or connections can use in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</para>
         /// <h3>Limits</h3>
         /// <list type="bullet">
         /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
-        /// <item><description>In the cluster kernel parameter Settings, loose_enable_resource_control must be set to ON.<remarks>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.<remarks>
         /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
         /// </description></item>
@@ -28588,11 +28632,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the create, update, delete, attach, and detach operations for resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <para>Resource Control limits the CPU resources that specific users, databases, queries, or connections can use in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</para>
         /// <h3>Limits</h3>
         /// <list type="bullet">
         /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
-        /// <item><description>In the cluster kernel parameter Settings, loose_enable_resource_control must be set to ON.<remarks>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.<remarks>
         /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
         /// </description></item>
@@ -28651,11 +28695,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the create, update, delete, attach, and detach operations for resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <para>Resource Control limits the CPU resources that specific users, databases, queries, or connections can use in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</para>
         /// <h3>Limits</h3>
         /// <list type="bullet">
         /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
-        /// <item><description>In the cluster kernel parameter Settings, loose_enable_resource_control must be set to ON.<remarks>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.<remarks>
         /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
         /// </description></item>
@@ -28682,11 +28726,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the create, update, delete, attach, and detach operations for resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <para>Resource Control limits the CPU resources that specific users, databases, queries, or connections can use in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules, but does not support querying Resource Control CPU utilization.</para>
         /// <h3>Limits</h3>
         /// <list type="bullet">
         /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
-        /// <item><description>In the cluster kernel parameter Settings, loose_enable_resource_control must be set to ON.<remarks>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.<remarks>
         /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
         /// </description></item>
@@ -62549,7 +62593,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the parameter modification history of PolarDB Search. Before you begin, ensure that the target cluster is a PolarDB for MySQL cluster and PolarSearch is enabled. If PolarSearch is not enabled, log on to the PolarDB console, go to the cluster list, open the basic information page of the target cluster, select Add or Remove Node in the Database Nodes section, and add a search node. For more information, see <a href="https://www.alibabacloud.com/help/en/polardb/polardb-for-mysql/user-guide/guidelines-for-using-polarsearch">Guidelines for using PolarSearch</a>.</para>
+        /// <para>Queries the parameter modification history of PolarDB Search. Before you begin, ensure that the target cluster is a PolarDB for MySQL cluster and intelligent search (PolarSearch) is enabled. If PolarSearch is not enabled, log on to the PolarDB console, go to the cluster list, open the Basic Information page of the target cluster, click Add or Remove Node in the Database Nodes section, and add a search node. For more information, see <a href="https://www.alibabacloud.com/help/en/polardb/polardb-for-mysql/user-guide/guidelines-for-using-polarsearch">Guidelines for using PolarSearch</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -62604,7 +62648,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the parameter modification history of PolarDB Search. Before you begin, ensure that the target cluster is a PolarDB for MySQL cluster and PolarSearch is enabled. If PolarSearch is not enabled, log on to the PolarDB console, go to the cluster list, open the basic information page of the target cluster, select Add or Remove Node in the Database Nodes section, and add a search node. For more information, see <a href="https://www.alibabacloud.com/help/en/polardb/polardb-for-mysql/user-guide/guidelines-for-using-polarsearch">Guidelines for using PolarSearch</a>.</para>
+        /// <para>Queries the parameter modification history of PolarDB Search. Before you begin, ensure that the target cluster is a PolarDB for MySQL cluster and intelligent search (PolarSearch) is enabled. If PolarSearch is not enabled, log on to the PolarDB console, go to the cluster list, open the Basic Information page of the target cluster, click Add or Remove Node in the Database Nodes section, and add a search node. For more information, see <a href="https://www.alibabacloud.com/help/en/polardb/polardb-for-mysql/user-guide/guidelines-for-using-polarsearch">Guidelines for using PolarSearch</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -62659,7 +62703,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the parameter modification history of PolarDB Search. Before you begin, ensure that the target cluster is a PolarDB for MySQL cluster and PolarSearch is enabled. If PolarSearch is not enabled, log on to the PolarDB console, go to the cluster list, open the basic information page of the target cluster, select Add or Remove Node in the Database Nodes section, and add a search node. For more information, see <a href="https://www.alibabacloud.com/help/en/polardb/polardb-for-mysql/user-guide/guidelines-for-using-polarsearch">Guidelines for using PolarSearch</a>.</para>
+        /// <para>Queries the parameter modification history of PolarDB Search. Before you begin, ensure that the target cluster is a PolarDB for MySQL cluster and intelligent search (PolarSearch) is enabled. If PolarSearch is not enabled, log on to the PolarDB console, go to the cluster list, open the Basic Information page of the target cluster, click Add or Remove Node in the Database Nodes section, and add a search node. For more information, see <a href="https://www.alibabacloud.com/help/en/polardb/polardb-for-mysql/user-guide/guidelines-for-using-polarsearch">Guidelines for using PolarSearch</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -62682,7 +62726,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the parameter modification history of PolarDB Search. Before you begin, ensure that the target cluster is a PolarDB for MySQL cluster and PolarSearch is enabled. If PolarSearch is not enabled, log on to the PolarDB console, go to the cluster list, open the basic information page of the target cluster, select Add or Remove Node in the Database Nodes section, and add a search node. For more information, see <a href="https://www.alibabacloud.com/help/en/polardb/polardb-for-mysql/user-guide/guidelines-for-using-polarsearch">Guidelines for using PolarSearch</a>.</para>
+        /// <para>Queries the parameter modification history of PolarDB Search. Before you begin, ensure that the target cluster is a PolarDB for MySQL cluster and intelligent search (PolarSearch) is enabled. If PolarSearch is not enabled, log on to the PolarDB console, go to the cluster list, open the Basic Information page of the target cluster, click Add or Remove Node in the Database Nodes section, and add a search node. For more information, see <a href="https://www.alibabacloud.com/help/en/polardb/polardb-for-mysql/user-guide/guidelines-for-using-polarsearch">Guidelines for using PolarSearch</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -84660,7 +84704,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the PolarFS S3 account policy.</para>
+        /// <para>Modifies the S3 account policy for PolarFS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -84714,7 +84758,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the PolarFS S3 account policy.</para>
+        /// <para>Modifies the S3 account policy for PolarFS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -84768,7 +84812,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the PolarFS S3 account policy.</para>
+        /// <para>Modifies the S3 account policy for PolarFS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -84786,7 +84830,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the PolarFS S3 account policy.</para>
+        /// <para>Modifies the S3 account policy for PolarFS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -90715,8 +90759,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Only privileged accounts of PolarDB for MySQL clusters are supported.</description></item>
-        /// <item><description>If an issue occurs with the privileged account itself, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore it to normal. Call instructions: In the &quot;Before you begin&quot; section, list the complete dependency chain: 1) Create a PolarDB for MySQL cluster (CreateDBCluster, DBType=MySQL); 2) Create an associated PolarDB application for the cluster (CreateApplication, ApplicationType=polarclaw); 3) Wait for the application status to change to Activated (query through DescribeApplications); 4) Confirm that the application contains the privileged account whose password needs to be reset.</description></item>
+        /// <item><description>You can only reset the password of a privileged account in a PolarDB for MySQL cluster.</description></item>
+        /// <item><description>If the privileged account encounters issues, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore normal access. Usage notes: The &quot;Before you begin&quot; section lists the complete dependency chain: 1) Create a PolarDB for MySQL cluster (CreateDBCluster, DBType=MySQL). 2) Create an associated PolarDB application for the cluster (CreateApplication, ApplicationType=polarclaw). 3) Wait until the application status changes to Activated (query by calling DescribeApplications). 4) Confirm that the application contains a privileged account whose password needs to be reset.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -90775,8 +90819,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Only privileged accounts of PolarDB for MySQL clusters are supported.</description></item>
-        /// <item><description>If an issue occurs with the privileged account itself, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore it to normal. Call instructions: In the &quot;Before you begin&quot; section, list the complete dependency chain: 1) Create a PolarDB for MySQL cluster (CreateDBCluster, DBType=MySQL); 2) Create an associated PolarDB application for the cluster (CreateApplication, ApplicationType=polarclaw); 3) Wait for the application status to change to Activated (query through DescribeApplications); 4) Confirm that the application contains the privileged account whose password needs to be reset.</description></item>
+        /// <item><description>You can only reset the password of a privileged account in a PolarDB for MySQL cluster.</description></item>
+        /// <item><description>If the privileged account encounters issues, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore normal access. Usage notes: The &quot;Before you begin&quot; section lists the complete dependency chain: 1) Create a PolarDB for MySQL cluster (CreateDBCluster, DBType=MySQL). 2) Create an associated PolarDB application for the cluster (CreateApplication, ApplicationType=polarclaw). 3) Wait until the application status changes to Activated (query by calling DescribeApplications). 4) Confirm that the application contains a privileged account whose password needs to be reset.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -90835,8 +90879,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Only privileged accounts of PolarDB for MySQL clusters are supported.</description></item>
-        /// <item><description>If an issue occurs with the privileged account itself, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore it to normal. Call instructions: In the &quot;Before you begin&quot; section, list the complete dependency chain: 1) Create a PolarDB for MySQL cluster (CreateDBCluster, DBType=MySQL); 2) Create an associated PolarDB application for the cluster (CreateApplication, ApplicationType=polarclaw); 3) Wait for the application status to change to Activated (query through DescribeApplications); 4) Confirm that the application contains the privileged account whose password needs to be reset.</description></item>
+        /// <item><description>You can only reset the password of a privileged account in a PolarDB for MySQL cluster.</description></item>
+        /// <item><description>If the privileged account encounters issues, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore normal access. Usage notes: The &quot;Before you begin&quot; section lists the complete dependency chain: 1) Create a PolarDB for MySQL cluster (CreateDBCluster, DBType=MySQL). 2) Create an associated PolarDB application for the cluster (CreateApplication, ApplicationType=polarclaw). 3) Wait until the application status changes to Activated (query by calling DescribeApplications). 4) Confirm that the application contains a privileged account whose password needs to be reset.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -90863,8 +90907,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Only privileged accounts of PolarDB for MySQL clusters are supported.</description></item>
-        /// <item><description>If an issue occurs with the privileged account itself, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore it to normal. Call instructions: In the &quot;Before you begin&quot; section, list the complete dependency chain: 1) Create a PolarDB for MySQL cluster (CreateDBCluster, DBType=MySQL); 2) Create an associated PolarDB application for the cluster (CreateApplication, ApplicationType=polarclaw); 3) Wait for the application status to change to Activated (query through DescribeApplications); 4) Confirm that the application contains the privileged account whose password needs to be reset.</description></item>
+        /// <item><description>You can only reset the password of a privileged account in a PolarDB for MySQL cluster.</description></item>
+        /// <item><description>If the privileged account encounters issues, such as unexpected permission revocation (REVOKE), you can reset the permissions of the privileged account to restore normal access. Usage notes: The &quot;Before you begin&quot; section lists the complete dependency chain: 1) Create a PolarDB for MySQL cluster (CreateDBCluster, DBType=MySQL). 2) Create an associated PolarDB application for the cluster (CreateApplication, ApplicationType=polarclaw). 3) Wait until the application status changes to Activated (query by calling DescribeApplications). 4) Confirm that the application contains a privileged account whose password needs to be reset.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -96220,7 +96264,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the synchronization link for a knowledge base.</para>
+        /// <para>Updates a knowledge base synchronization link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -96237,6 +96281,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiTableMcpEndpoint))
+            {
+                query["AiTableMcpEndpoint"] = request.AiTableMcpEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatMemberStaleTtlSeconds))
+            {
+                query["ChatMemberStaleTtlSeconds"] = request.ChatMemberStaleTtlSeconds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["ClientId"] = request.ClientId;
@@ -96265,9 +96317,21 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionMode))
+            {
+                query["SelectionMode"] = request.SelectionMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionRules))
+            {
+                query["SelectionRules"] = request.SelectionRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetMcpEndpoint))
             {
                 query["SheetMcpEndpoint"] = request.SheetMcpEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDeleteSyncEnabled))
+            {
+                query["SourceDeleteSyncEnabled"] = request.SourceDeleteSyncEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncEnabled))
             {
@@ -96310,7 +96374,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the synchronization link for a knowledge base.</para>
+        /// <para>Updates a knowledge base synchronization link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -96327,6 +96391,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiTableMcpEndpoint))
+            {
+                query["AiTableMcpEndpoint"] = request.AiTableMcpEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatMemberStaleTtlSeconds))
+            {
+                query["ChatMemberStaleTtlSeconds"] = request.ChatMemberStaleTtlSeconds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["ClientId"] = request.ClientId;
@@ -96355,9 +96427,21 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionMode))
+            {
+                query["SelectionMode"] = request.SelectionMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionRules))
+            {
+                query["SelectionRules"] = request.SelectionRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SheetMcpEndpoint))
             {
                 query["SheetMcpEndpoint"] = request.SheetMcpEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDeleteSyncEnabled))
+            {
+                query["SourceDeleteSyncEnabled"] = request.SourceDeleteSyncEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncEnabled))
             {
@@ -96400,7 +96484,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the synchronization link for a knowledge base.</para>
+        /// <para>Updates a knowledge base synchronization link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -96418,7 +96502,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the synchronization link for a knowledge base.</para>
+        /// <para>Updates a knowledge base synchronization link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -96472,6 +96556,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchMode))
             {
                 query["SearchMode"] = request.SearchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDeleteSyncEnabled))
+            {
+                query["SourceDeleteSyncEnabled"] = request.SourceDeleteSyncEnabled;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -96530,6 +96618,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchMode))
             {
                 query["SearchMode"] = request.SearchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDeleteSyncEnabled))
+            {
+                query["SourceDeleteSyncEnabled"] = request.SourceDeleteSyncEnabled;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

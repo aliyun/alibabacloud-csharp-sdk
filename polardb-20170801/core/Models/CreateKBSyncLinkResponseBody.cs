@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>The creation time. The time is displayed in ISO 8601 format in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The creation time. The time follows the ISO 8601 standard and uses the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-14T05:58:42Z</para>
@@ -80,6 +80,23 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The current configuration. This does not indicate that synchronization is complete. This parameter may not be returned if it is not set.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SELECTED</para>
+        /// </summary>
+        [NameInMap("SelectionMode")]
+        [Validation(Required=false)]
+        public string SelectionMode { get; set; }
+
+        /// <summary>
+        /// <para>The current configuration. This does not indicate that synchronization is complete. This parameter may not be returned if it is not set.</para>
+        /// </summary>
+        [NameInMap("SelectionRules")]
+        [Validation(Required=false)]
+        public string SelectionRules { get; set; }
+
+        /// <summary>
         /// <para>The address of the source directory for synchronization.</para>
         /// 
         /// <b>Example:</b>
@@ -114,6 +131,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("SyncStatus")]
         [Validation(Required=false)]
         public string SyncStatus { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the asynchronous configuration task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public int? TaskId { get; set; }
 
     }
 

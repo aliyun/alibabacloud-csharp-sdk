@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The task parameters.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;action\&quot;: \&quot;UpgradeDBVersion\&quot;, \&quot;check_method\&quot;: \&quot;check_cpu_usage\&quot;, \&quot;params\&quot;: {\&quot;RelativeDbtype\&quot;: \&quot;maxscale\&quot;, \&quot;DBInstanceName\&quot;: \&quot;pc-*************\&quot;, \&quot;User_ID\&quot;: \&quot;11111\&quot;, \&quot;UID\&quot;: \&quot;1406926474******\&quot;, \&quot;UpgradePolicy\&quot;: \&quot;hot\&quot;}}&quot;</para>
+            /// <para>{&quot;action&quot;: &quot;UpgradeDBVersion&quot;, &quot;check_method&quot;: &quot;check_cpu_usage&quot;, &quot;params&quot;: {&quot;RelativeDbtype&quot;: &quot;maxscale&quot;, &quot;DBInstanceName&quot;: &quot;pc-*************&quot;, &quot;User_ID&quot;: &quot;11111&quot;, &quot;UID&quot;: &quot;1406926474******&quot;, &quot;UpgradePolicy&quot;: &quot;hot&quot;}}&quot;</para>
             /// </summary>
             [NameInMap("TaskParams")]
             [Validation(Required=false)]

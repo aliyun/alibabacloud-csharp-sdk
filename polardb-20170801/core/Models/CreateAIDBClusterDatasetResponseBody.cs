@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The path of the dataset.</para>
+        /// <para>The path to which the dataset belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polardb_ai/datasets/train/sft/dataset01</para>

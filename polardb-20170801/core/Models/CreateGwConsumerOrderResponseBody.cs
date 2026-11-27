@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The expiration time.</para>
-        /// <para>The time is in ISO 8601 format in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The time follows the ISO 8601 standard and is in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-14T16:00:00Z</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The order ID returned after the order is placed.</para>
+        /// <para>The ID of the order returned after the purchase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2035638*******</para>

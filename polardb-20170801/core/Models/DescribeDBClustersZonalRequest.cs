@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The query mode. Set the value to \<c>Simple\\</c>. In this mode, only the basic metadata of the clusters is returned.</para>
+        /// <para>The query mode. Set the value to `Simple`. In this mode, only the basic metadata of the clusters is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Simple</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A token used to retrieve the next page of results. Set this parameter to the \<c>NextToken\\</c> value returned from the previous API call. You do not need to specify this parameter for the first call.</para>
+        /// <para>A token used to retrieve the next page of results. Set this parameter to the `NextToken` value returned from the previous API call. You do not need to specify this parameter for the first call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707e******</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeDBClustersZonalRequestTag> Tag { get; set; }
         public class DescribeDBClustersZonalRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag \<c>n\\</c>. You can filter clusters by specifying up to 20 tags. The \<c>n\\</c> must be a unique and consecutive integer that starts from 1. \<c>Tag.n.Key\\</c> corresponds to \<c>Tag.n.Value\\</c>.</para>
+            /// <para>The key of tag `n`. You can filter clusters by specifying up to 20 tags. The `n` must be a unique and consecutive integer that starts from 1. `Tag.n.Key` corresponds to `Tag.n.Value`.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>

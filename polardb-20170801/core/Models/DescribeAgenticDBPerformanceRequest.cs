@@ -10,17 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAgenticDBPerformanceRequest : TeaModel {
         /// <summary>
-        /// <para>The alert aggregation method. Valid values vary by metric:</para>
-        /// <list type="bullet">
-        /// <item><description>Value: The value of the HTTP status code.</description></item>
-        /// <item><description>Average: The average HTTP wait time.</description></item>
-        /// <item><description>Value: The value of the Telnet status code.</description></item>
-        /// <item><description>TelnetLatency: The average Telnet wait time.</description></item>
-        /// <item><description>Average: The average ping packet loss rate.</description></item>
-        /// </list>
+        /// <para>Specifies whether to aggregate data by instance scope. This parameter takes effect only when neither BranchId nor EndpointId is specified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Average</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Aggregate")]
         [Validation(Required=false)]

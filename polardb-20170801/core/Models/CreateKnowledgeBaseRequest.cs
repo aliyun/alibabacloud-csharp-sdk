@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The type of the knowledge base: PERSONAL or PUBLIC.</para>
+        /// <para>The type of the knowledge base. Valid values: PERSONAL and PUBLIC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PUBLIC</para>
@@ -65,11 +65,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The search mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>balanced (default): balanced mode</description></item>
+        /// <item><description>balanced: balanced mode (default)</description></item>
         /// <item><description>precise: precise mode</description></item>
         /// <item><description>semantic: semantic mode</description></item>
         /// <item><description>knn: KNN mode</description></item>
-        /// <item><description>rrf: reciprocal rank fusion</description></item>
+        /// <item><description>rrf: RRF fusion</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,6 +78,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("SearchMode")]
         [Validation(Required=false)]
         public string SearchMode { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to synchronize deletions from the source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("SourceDeleteSyncEnabled")]
+        [Validation(Required=false)]
+        public bool? SourceDeleteSyncEnabled { get; set; }
 
     }
 

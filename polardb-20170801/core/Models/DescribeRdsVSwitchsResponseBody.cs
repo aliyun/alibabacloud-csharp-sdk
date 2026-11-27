@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string RegionNo { get; set; }
 
                 /// <summary>
-                /// <para>The status of the vSwitch. Valid values: <em><b>Pending</b></em>\<em>: The vSwitch is being configured.\</em> <b>Available</b>: The vSwitch is available.</para>
+                /// <para>The status of the vSwitch. Valid values: <em><b>Pending</b></em>*: The vSwitch is being configured.* <b>Available</b>: The vSwitch is available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Available</para>

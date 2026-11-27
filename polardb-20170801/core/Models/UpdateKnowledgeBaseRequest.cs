@@ -68,6 +68,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string SearchMode { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable source deletion synchronization.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("SourceDeleteSyncEnabled")]
+        [Validation(Required=false)]
+        public bool? SourceDeleteSyncEnabled { get; set; }
+
     }
 
 }

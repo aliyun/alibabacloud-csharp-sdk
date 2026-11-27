@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The map of associated skill details. The key is the skill identifier, and the value is a JSON string that can be parsed into an array of skill details. Each array element contains skillName and version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;skill1&quot;:&quot;[{\&quot;skillName\&quot;:\&quot;example-skill\&quot;,\&quot;version\&quot;:\&quot;1.0.0\&quot;}]&quot;}</para>
+            /// <para>{&quot;skill1&quot;:&quot;[{&quot;skillName&quot;:&quot;example-skill&quot;,&quot;version&quot;:&quot;1.0.0&quot;}]&quot;}</para>
             /// </summary>
             [NameInMap("Skills")]
             [Validation(Required=false)]

@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <para>The description of the parameter.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The server\&quot;s default character set.</para>
+                /// <para>The server&quot;s default character set.</para>
                 /// </summary>
                 [NameInMap("ParameterDescription")]
                 [Validation(Required=false)]

@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The description of the GDN. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>It cannot start with http\:// or https\://.</para>
+        /// <item><description><para>It cannot start with http:// or https://.</para>
         /// </description></item>
         /// <item><description><para>It must start with a letter or a Chinese character.</para>
         /// </description></item>

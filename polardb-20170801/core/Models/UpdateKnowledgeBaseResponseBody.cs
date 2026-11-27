@@ -29,6 +29,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the asynchronous configuration task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public int? TaskId { get; set; }
+
     }
 
 }

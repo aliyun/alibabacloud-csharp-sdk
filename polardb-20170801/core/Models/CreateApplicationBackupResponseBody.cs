@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workflow task corresponding to the backup creation.</para>
+        /// <para>The ID of the workflow task corresponding to the created backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32077061</para>

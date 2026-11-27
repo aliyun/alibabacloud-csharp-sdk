@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeSearchModifyParameterLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The type of the search engine.</para>
+        /// <para>The type of the Search engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polardb_search</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the Search DPI engine, which is not the MySQL version of the primary cluster.</para>
+        /// <para>The DPI engine version of Search. This is not the MySQL version of the primary cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.0</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The parameter modification history, returned in descending order of record ID.</para>
+        /// <para>The parameter modification history. The records are returned in descending order of record ID.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeSearchModifyParameterLogResponseBodyItems> Items { get; set; }
         public class DescribeSearchModifyParameterLogResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The time when the parameter was modified. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The time when the parameter was modified in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-14T07:04:29Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ParameterName { get; set; }
 
             /// <summary>
-            /// <para>The modification status. A value of Syncing indicates that the modification is not in effect. A value of Applied indicates that the modification is in effect.</para>
+            /// <para>The modification status. A value of Syncing indicates that the modification has not taken effect. A value of Applied indicates that the modification has taken effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Applied</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e3a24663-eee5-4009-b635-2e9e8d052e74</para>

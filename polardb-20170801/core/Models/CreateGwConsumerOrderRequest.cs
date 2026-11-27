@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the API key in ISO 8601 format. The value must be later than the current time.</para>
+        /// <para>The expiration time of the API key. Specify the time in the ISO 8601 standard. The specified time must be later than the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2027-07-23T03:09:08Z</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The number of API keys to generate, which is the number of capacity plans to order. Valid values: 1 to 30.</para>
+        /// <para>The number of API keys to generate, which indicates the number of capacity plans to order. Valid values: 1 to 30.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? KeyCount { get; set; }
 
         /// <summary>
-        /// <para>The number of credits per API key. The value is a positive integer string.</para>
+        /// <para>The number of credits for each API key. The value must be a string representing a positive integer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region information.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view region details.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

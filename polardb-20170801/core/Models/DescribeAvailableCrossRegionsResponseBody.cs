@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The list of regions available for cross-region backup.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\&quot;cn-beijing\&quot;, \&quot;cn-shanghai\&quot;, \&quot;cn-qingdao\&quot;, \&quot;cn-shenzhen\&quot;, \&quot;cn-hongkong\&quot;]</para>
+        /// <para>[&quot;cn-beijing&quot;, &quot;cn-shanghai&quot;, &quot;cn-qingdao&quot;, &quot;cn-shenzhen&quot;, &quot;cn-hongkong&quot;]</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]

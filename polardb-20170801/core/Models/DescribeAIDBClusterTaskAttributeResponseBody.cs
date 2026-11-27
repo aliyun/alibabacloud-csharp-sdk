@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The access information of the model in the test deployment scenario.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;networkInterfaceId\&quot;:\&quot;eni-2zea***\&quot;,\&quot;port\&quot;:\&quot;8000\&quot;,\&quot;host\&quot;:\&quot;192.<b>.</b>.**\&quot;}</para>
+        /// <para>{&quot;networkInterfaceId&quot;:&quot;eni-2zea***&quot;,&quot;port&quot;:&quot;8000&quot;,&quot;host&quot;:&quot;192.<b>.</b>.**&quot;}</para>
         /// </summary>
         [NameInMap("AccessInfo")]
         [Validation(Required=false)]

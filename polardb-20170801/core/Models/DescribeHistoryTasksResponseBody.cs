@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The task details.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;steps\&quot;:[{\&quot;step_name\&quot;:\&quot;init_task\&quot;},{\&quot;step_name\&quot;:\&quot;exec_task\&quot;},{\&quot;step_name\&quot;:\&quot;finish_task\&quot;}]}</para>
+            /// <para>{&quot;steps&quot;:[{&quot;step_name&quot;:&quot;init_task&quot;},{&quot;step_name&quot;:&quot;exec_task&quot;},{&quot;step_name&quot;:&quot;finish_task&quot;}]}</para>
             /// </summary>
             [NameInMap("TaskDetail")]
             [Validation(Required=false)]

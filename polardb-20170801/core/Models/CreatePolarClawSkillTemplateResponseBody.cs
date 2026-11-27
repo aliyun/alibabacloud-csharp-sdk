@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The skill template ID.</para>
+        /// <para>The ID of the skill template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcpg-skill-**************</para>
