@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <para>The detailed template configuration, in JSON format. For more information about the data structure, see <a href="https://help.aliyun.com/document_detail/98618.html">SnapshotTemplateConfig</a>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;SnapshotConfig\&quot;:{\&quot;Count\&quot;:10,\&quot;SpecifiedOffsetTime\&quot;:0,\&quot;Interval\&quot;:1},\&quot;SnapshotType\&quot;:\&quot;NormalSnapshot\&quot;}</para>
+            /// <para>{&quot;SnapshotConfig&quot;:{&quot;Count&quot;:10,&quot;SpecifiedOffsetTime&quot;:0,&quot;Interval&quot;:1},&quot;SnapshotType&quot;:&quot;NormalSnapshot&quot;}</para>
             /// </summary>
             [NameInMap("TemplateConfig")]
             [Validation(Required=false)]

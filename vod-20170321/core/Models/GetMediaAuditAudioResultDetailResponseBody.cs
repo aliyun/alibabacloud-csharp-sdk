@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <para>The text content corresponding to the audio.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Tian\&quot;anmen</para>
+                /// <para>Tian&quot;anmen</para>
                 /// </summary>
                 [NameInMap("Text")]
                 [Validation(Required=false)]

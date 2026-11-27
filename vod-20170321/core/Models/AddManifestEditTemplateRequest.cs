@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class AddManifestEditTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the template. Spaces are allowed.</para>
+        /// <para>The name of the template. Spaces are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

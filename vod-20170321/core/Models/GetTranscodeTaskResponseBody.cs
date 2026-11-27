@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <para>The list of audio streams.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot;AudioStreamList&quot;: &quot;[{\&quot;Bitrate\&quot;:\&quot;64.533\&quot;,\&quot;ChannelLayout\&quot;:\&quot;stereo\&quot;,\&quot;Channels\&quot;:\&quot;2\&quot;,\&quot;CodecLongName\&quot;:\&quot;AAC (Advanced Audio Coding)\&quot;,\&quot;CodecName\&quot;:\&quot;aac\&quot;,\&quot;CodecTag\&quot;:\&quot;0x6134706d\&quot;,\&quot;CodecTagString\&quot;:\&quot;mp4a\&quot;,\&quot;CodecTimeBase\&quot;:\&quot;1/44100\&quot;,\&quot;Duration\&quot;:\&quot;12.615533\&quot;,\&quot;Index\&quot;:\&quot;1\&quot;,\&quot;Lang\&quot;:\&quot;und\&quot;,\&quot;SampleFmt\&quot;:\&quot;fltp\&quot;,\&quot;Samplerate\&quot;:\&quot;44100\&quot;,\&quot;StartTime\&quot;:\&quot;-0.046440\&quot;,\&quot;Timebase\&quot;:\&quot;1/44100\&quot;}]</para>
+                /// <para>&quot;AudioStreamList&quot;: &quot;[{&quot;Bitrate&quot;:&quot;64.533&quot;,&quot;ChannelLayout&quot;:&quot;stereo&quot;,&quot;Channels&quot;:&quot;2&quot;,&quot;CodecLongName&quot;:&quot;AAC (Advanced Audio Coding)&quot;,&quot;CodecName&quot;:&quot;aac&quot;,&quot;CodecTag&quot;:&quot;0x6134706d&quot;,&quot;CodecTagString&quot;:&quot;mp4a&quot;,&quot;CodecTimeBase&quot;:&quot;1/44100&quot;,&quot;Duration&quot;:&quot;12.615533&quot;,&quot;Index&quot;:&quot;1&quot;,&quot;Lang&quot;:&quot;und&quot;,&quot;SampleFmt&quot;:&quot;fltp&quot;,&quot;Samplerate&quot;:&quot;44100&quot;,&quot;StartTime&quot;:&quot;-0.046440&quot;,&quot;Timebase&quot;:&quot;1/44100&quot;}]</para>
                 /// </summary>
                 [NameInMap("AudioStreamList")]
                 [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;EncryptType\&quot;:\&quot;AliyunVoDEncryption\&quot;}</para>
+                /// <para>{&quot;EncryptType&quot;:&quot;AliyunVoDEncryption&quot;}</para>
                 /// </summary>
                 [NameInMap("Encryption")]
                 [Validation(Required=false)]
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <para>The list of video streams.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[{\&quot;AvgFPS\&quot;:\&quot;30.0\&quot;,\&quot;Bitrate\&quot;:\&quot;933.814\&quot;,\&quot;CodecLongName\&quot;:\&quot;H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10\&quot;,\&quot;CodecName\&quot;:\&quot;h264\&quot;,\&quot;CodecTag\&quot;:\&quot;0x31637661\&quot;,\&quot;CodecTagString\&quot;:\&quot;avc1\&quot;,\&quot;CodecTimeBase\&quot;:\&quot;1/60\&quot;,\&quot;Dar\&quot;:\&quot;9:16\&quot;,\&quot;Duration\&quot;:\&quot;12.033333\&quot;,\&quot;Fps\&quot;:\&quot;30.0\&quot;,\&quot;HasBFrames\&quot;:\&quot;2\&quot;,\&quot;Height\&quot;:\&quot;360\&quot;,\&quot;Index\&quot;:\&quot;0\&quot;,\&quot;Lang\&quot;:\&quot;und\&quot;,\&quot;Level\&quot;:\&quot;30\&quot;,\&quot;PixFmt\&quot;:\&quot;yuv420p\&quot;,\&quot;Profile\&quot;:\&quot;High\&quot;,\&quot;Sar\&quot;:\&quot;81:256\&quot;,\&quot;StartTime\&quot;:\&quot;0.000000\&quot;,\&quot;Timebase\&quot;:\&quot;1/15360\&quot;,\&quot;Width\&quot;:\&quot;640\&quot;}]</para>
+                /// <para>[{&quot;AvgFPS&quot;:&quot;30.0&quot;,&quot;Bitrate&quot;:&quot;933.814&quot;,&quot;CodecLongName&quot;:&quot;H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10&quot;,&quot;CodecName&quot;:&quot;h264&quot;,&quot;CodecTag&quot;:&quot;0x31637661&quot;,&quot;CodecTagString&quot;:&quot;avc1&quot;,&quot;CodecTimeBase&quot;:&quot;1/60&quot;,&quot;Dar&quot;:&quot;9:16&quot;,&quot;Duration&quot;:&quot;12.033333&quot;,&quot;Fps&quot;:&quot;30.0&quot;,&quot;HasBFrames&quot;:&quot;2&quot;,&quot;Height&quot;:&quot;360&quot;,&quot;Index&quot;:&quot;0&quot;,&quot;Lang&quot;:&quot;und&quot;,&quot;Level&quot;:&quot;30&quot;,&quot;PixFmt&quot;:&quot;yuv420p&quot;,&quot;Profile&quot;:&quot;High&quot;,&quot;Sar&quot;:&quot;81:256&quot;,&quot;StartTime&quot;:&quot;0.000000&quot;,&quot;Timebase&quot;:&quot;1/15360&quot;,&quot;Width&quot;:&quot;640&quot;}]</para>
                 /// </summary>
                 [NameInMap("VideoStreamList")]
                 [Validation(Required=false)]
@@ -442,7 +442,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     /// <para>The list of audio streams.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>&quot;AudioStreamList&quot;: &quot;[{\&quot;Bitrate\&quot;:\&quot;64.533\&quot;,\&quot;ChannelLayout\&quot;:\&quot;stereo\&quot;,\&quot;Channels\&quot;:\&quot;2\&quot;,\&quot;CodecLongName\&quot;:\&quot;AAC (Advanced Audio Coding)\&quot;,\&quot;CodecName\&quot;:\&quot;aac\&quot;,\&quot;CodecTag\&quot;:\&quot;0x6134706d\&quot;,\&quot;CodecTagString\&quot;:\&quot;mp4a\&quot;,\&quot;CodecTimeBase\&quot;:\&quot;1/44100\&quot;,\&quot;Duration\&quot;:\&quot;12.615533\&quot;,\&quot;Index\&quot;:\&quot;1\&quot;,\&quot;Lang\&quot;:\&quot;und\&quot;,\&quot;SampleFmt\&quot;:\&quot;fltp\&quot;,\&quot;Samplerate\&quot;:\&quot;44100\&quot;,\&quot;StartTime\&quot;:\&quot;-0.046440\&quot;,\&quot;Timebase\&quot;:\&quot;1/44100\&quot;}]</para>
+                    /// <para>&quot;AudioStreamList&quot;: &quot;[{&quot;Bitrate&quot;:&quot;64.533&quot;,&quot;ChannelLayout&quot;:&quot;stereo&quot;,&quot;Channels&quot;:&quot;2&quot;,&quot;CodecLongName&quot;:&quot;AAC (Advanced Audio Coding)&quot;,&quot;CodecName&quot;:&quot;aac&quot;,&quot;CodecTag&quot;:&quot;0x6134706d&quot;,&quot;CodecTagString&quot;:&quot;mp4a&quot;,&quot;CodecTimeBase&quot;:&quot;1/44100&quot;,&quot;Duration&quot;:&quot;12.615533&quot;,&quot;Index&quot;:&quot;1&quot;,&quot;Lang&quot;:&quot;und&quot;,&quot;SampleFmt&quot;:&quot;fltp&quot;,&quot;Samplerate&quot;:&quot;44100&quot;,&quot;StartTime&quot;:&quot;-0.046440&quot;,&quot;Timebase&quot;:&quot;1/44100&quot;}]</para>
                     /// </summary>
                     [NameInMap("AudioStreamList")]
                     [Validation(Required=false)]
@@ -476,7 +476,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     /// </list>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>{\&quot;EncryptType\&quot;:\&quot;AliyunVoDEncryption\&quot;}</para>
+                    /// <para>{&quot;EncryptType&quot;:&quot;AliyunVoDEncryption&quot;}</para>
                     /// </summary>
                     [NameInMap("Encryption")]
                     [Validation(Required=false)]
@@ -546,7 +546,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     /// <para>The list of video streams.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>[{\&quot;AvgFPS\&quot;:\&quot;30.0\&quot;,\&quot;Bitrate\&quot;:\&quot;933.814\&quot;,\&quot;CodecLongName\&quot;:\&quot;H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10\&quot;,\&quot;CodecName\&quot;:\&quot;h264\&quot;,\&quot;CodecTag\&quot;:\&quot;0x31637661\&quot;,\&quot;CodecTagString\&quot;:\&quot;avc1\&quot;,\&quot;CodecTimeBase\&quot;:\&quot;1/60\&quot;,\&quot;Dar\&quot;:\&quot;9:16\&quot;,\&quot;Duration\&quot;:\&quot;12.033333\&quot;,\&quot;Fps\&quot;:\&quot;30.0\&quot;,\&quot;HasBFrames\&quot;:\&quot;2\&quot;,\&quot;Height\&quot;:\&quot;360\&quot;,\&quot;Index\&quot;:\&quot;0\&quot;,\&quot;Lang\&quot;:\&quot;und\&quot;,\&quot;Level\&quot;:\&quot;30\&quot;,\&quot;PixFmt\&quot;:\&quot;yuv420p\&quot;,\&quot;Profile\&quot;:\&quot;High\&quot;,\&quot;Sar\&quot;:\&quot;81:256\&quot;,\&quot;StartTime\&quot;:\&quot;0.000000\&quot;,\&quot;Timebase\&quot;:\&quot;1/15360\&quot;,\&quot;Width\&quot;:\&quot;640\&quot;}]</para>
+                    /// <para>[{&quot;AvgFPS&quot;:&quot;30.0&quot;,&quot;Bitrate&quot;:&quot;933.814&quot;,&quot;CodecLongName&quot;:&quot;H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10&quot;,&quot;CodecName&quot;:&quot;h264&quot;,&quot;CodecTag&quot;:&quot;0x31637661&quot;,&quot;CodecTagString&quot;:&quot;avc1&quot;,&quot;CodecTimeBase&quot;:&quot;1/60&quot;,&quot;Dar&quot;:&quot;9:16&quot;,&quot;Duration&quot;:&quot;12.033333&quot;,&quot;Fps&quot;:&quot;30.0&quot;,&quot;HasBFrames&quot;:&quot;2&quot;,&quot;Height&quot;:&quot;360&quot;,&quot;Index&quot;:&quot;0&quot;,&quot;Lang&quot;:&quot;und&quot;,&quot;Level&quot;:&quot;30&quot;,&quot;PixFmt&quot;:&quot;yuv420p&quot;,&quot;Profile&quot;:&quot;High&quot;,&quot;Sar&quot;:&quot;81:256&quot;,&quot;StartTime&quot;:&quot;0.000000&quot;,&quot;Timebase&quot;:&quot;1/15360&quot;,&quot;Width&quot;:&quot;640&quot;}]</para>
                     /// </summary>
                     [NameInMap("VideoStreamList")]
                     [Validation(Required=false)]

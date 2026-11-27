@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The position returned by the current call. An empty value indicates that all data has been retrieved.</para>
+        /// <para>The position to which the current call returns. An empty value indicates that all data has been retrieved.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4AF6-D7393642CA58****</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time follows the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
+            /// <para>The creation time. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-10T08:00:00Z</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The modification time. The time follows the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
+            /// <para>The modification time. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-10T08:00:00Z</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The template status. A value of <b>1</b> indicates enabled, and a value of <b>0</b> indicates disabled.</para>
+            /// <para>The status of the template. Valid values: <b>1</b>: enabled. <b>0</b>: disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The ManifestEdit template ID.</para>
+            /// <para>The ID of the ManifestEdit template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9c6581d59240de5e258ffa4c71a3e01b</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries that meet the current request conditions. This parameter is optional and is not returned by default.</para>
+        /// <para>The total number of entries that meet the query conditions. This parameter is optional and is not returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitEditMediaManifestJobRequest : TeaModel {
         /// <summary>
-        /// <para>The list of audio tracks to be added. The value is a JSON string array. Each element contains the following fields:</para>
+        /// <para>The list of audio tracks to be added, specified as a JSON string array. Each element contains:</para>
         /// <list type="bullet">
-        /// <item><description><b>Language</b>: the language identifier of the audio track.</description></item>
-        /// <item><description><b>Name</b>: the display name of the track. If this field is not specified, the default value is audio-{Language}.</description></item>
-        /// <item><description><b>AudioUrl</b>: the URL of the audio file, which is an OSS object URL.</description></item>
+        /// <item><description><b>Language</b>: the audio language identifier.</description></item>
+        /// <item><description><b>Name</b>: the display name of the track. If not specified, the default value is audio-{Language}.</description></item>
+        /// <item><description><b>AudioUrl</b>: the URL of the audio file (OSS file URL).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string AutoStreamJobId { get; set; }
 
         /// <summary>
-        /// <para>The output configuration. The value is a JSON string. It contains the following fields:</para>
+        /// <para>The output configuration, specified as a JSON string. It contains:</para>
         /// <list type="bullet">
-        /// <item><description><b>OutputDir</b>: the output directory. By default, this field is set to the same directory as the source manifest.</description></item>
-        /// <item><description><b>ManifestName</b>: the file name of the output master playlist. Default value: master. The .m3u8 extension is not allowed.</description></item>
+        /// <item><description><b>OutputDir</b>: the output directory. By default, it is the same directory as the source manifest.</description></item>
+        /// <item><description><b>ManifestName</b>: the file name of the output master playlist. Default value: master. The .m3u8 suffix is not allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OutputConfig { get; set; }
 
         /// <summary>
-        /// <para>The configuration of tracks to be removed. The value is a JSON string. It contains the following fields:</para>
+        /// <para>The configuration of tracks to be removed, specified as a JSON string. It contains:</para>
         /// <list type="bullet">
-        /// <item><description><b>AudioLanguages</b>: the list of audio language identifiers for which the entire audio tracks are to be removed.</description></item>
-        /// <item><description><b>SubtitleLanguages</b>: the list of subtitle language identifiers for which the entire subtitle tracks are to be removed.</description></item>
+        /// <item><description><b>AudioLanguages</b>: the list of audio language identifiers for which the entire tracks are to be removed.</description></item>
+        /// <item><description><b>SubtitleLanguages</b>: the list of subtitle language identifiers for which the entire tracks are to be removed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RemoveTracks { get; set; }
 
         /// <summary>
-        /// <para>The list of subtitle tracks to be added. The value is a JSON string array. Each element contains the following fields:</para>
+        /// <para>The list of subtitle tracks to be added, specified as a JSON string array. Each element contains:</para>
         /// <list type="bullet">
-        /// <item><description><b>Language</b>: the language identifier of the subtitle track. If this field is not specified, the subtitle track is ignored.</description></item>
-        /// <item><description><b>SubtitleUrl</b>: the URL of the subtitle file in WebVTT format, which is an OSS object URL.</description></item>
+        /// <item><description><b>Language</b>: the subtitle language identifier. If not specified, the subtitle track is ignored.</description></item>
+        /// <item><description><b>SubtitleUrl</b>: the URL of the subtitle file (WebVTT) (OSS file URL).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Subtitles { get; set; }
 
         /// <summary>
-        /// <para>The manifest editing template ID, which is returned after the AddManifestEditTemplate operation is called. If this parameter is specified, the output tracks are orchestrated based on the fixed video, audio, and subtitle item configurations in the template.</para>
+        /// <para>The ID of the manifest edit template, which is returned after calling AddManifestEditTemplate. If specified, the output tracks are orchestrated based on the fixed Video, Audio, and Subtitle item configurations in the template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string UserData { get; set; }
 
         /// <summary>
-        /// <para><b>The target video ID</b>, used for authentication isolation and consistency verification.</para>
+        /// <para>The ID of the target video, used for authentication isolation and consistency verification.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -110,10 +110,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string VideoId { get; set; }
 
         /// <summary>
-        /// <para>The list of video tracks to be added. The value is a JSON string array. Each element contains the following fields:</para>
+        /// <para>The list of video tracks to be added, specified as a JSON string array. Each element contains:</para>
         /// <list type="bullet">
-        /// <item><description><b>Name</b>: the display name of the track. If this field is not specified, the video track is ignored.</description></item>
-        /// <item><description><b>VideoUrl</b>: the URL of the video stream manifest file, which is an OSS object URL.</description></item>
+        /// <item><description><b>Name</b>: the display name of the track. If not specified, the video track is ignored.</description></item>
+        /// <item><description><b>VideoUrl</b>: the URL of the video stream manifest file (OSS file URL).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

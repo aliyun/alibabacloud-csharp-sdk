@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitEditMediaManifestJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The manifest editing task ID, which is the MediaConvert pipeline task ID.</para>
+        /// <para>The ID of the manifest editing task, which is the MediaConvert pipeline task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>93e154cb83e54b7a0f1236f847f4****</para>

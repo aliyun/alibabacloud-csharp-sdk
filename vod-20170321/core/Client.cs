@@ -818,7 +818,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <list type="bullet">
         /// <item><description>The <c>Name</c> parameter is required and must pass the <c>COMPLEX_STRING_SPACE_ALLOWED</c> format validation.</description></item>
         /// <item><description>Other parameters are optional, but if provided, they must meet the corresponding format requirements.</description></item>
-        /// <item><description>The encryption type <c>EncryptType</c> supports a combination of multiple encryption methods. For more information, see the valid values.</description></item>
+        /// <item><description>The <c>EncryptType</c> parameter supports a combination of multiple encryption methods. For more information, refer to the valid values.</description></item>
         /// <item><description>When HLS encryption is used, <c>EncryptConfig</c> must include information such as <c>DecryptKeyUri</c>, <c>KeyServiceType</c>, <c>CipherText</c>, and <c>MasterKeyId</c>.</description></item>
         /// </list>
         /// </description>
@@ -875,7 +875,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <list type="bullet">
         /// <item><description>The <c>Name</c> parameter is required and must pass the <c>COMPLEX_STRING_SPACE_ALLOWED</c> format validation.</description></item>
         /// <item><description>Other parameters are optional, but if provided, they must meet the corresponding format requirements.</description></item>
-        /// <item><description>The encryption type <c>EncryptType</c> supports a combination of multiple encryption methods. For more information, see the valid values.</description></item>
+        /// <item><description>The <c>EncryptType</c> parameter supports a combination of multiple encryption methods. For more information, refer to the valid values.</description></item>
         /// <item><description>When HLS encryption is used, <c>EncryptConfig</c> must include information such as <c>DecryptKeyUri</c>, <c>KeyServiceType</c>, <c>CipherText</c>, and <c>MasterKeyId</c>.</description></item>
         /// </list>
         /// </description>
@@ -932,7 +932,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <list type="bullet">
         /// <item><description>The <c>Name</c> parameter is required and must pass the <c>COMPLEX_STRING_SPACE_ALLOWED</c> format validation.</description></item>
         /// <item><description>Other parameters are optional, but if provided, they must meet the corresponding format requirements.</description></item>
-        /// <item><description>The encryption type <c>EncryptType</c> supports a combination of multiple encryption methods. For more information, see the valid values.</description></item>
+        /// <item><description>The <c>EncryptType</c> parameter supports a combination of multiple encryption methods. For more information, refer to the valid values.</description></item>
         /// <item><description>When HLS encryption is used, <c>EncryptConfig</c> must include information such as <c>DecryptKeyUri</c>, <c>KeyServiceType</c>, <c>CipherText</c>, and <c>MasterKeyId</c>.</description></item>
         /// </list>
         /// </description>
@@ -961,7 +961,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <list type="bullet">
         /// <item><description>The <c>Name</c> parameter is required and must pass the <c>COMPLEX_STRING_SPACE_ALLOWED</c> format validation.</description></item>
         /// <item><description>Other parameters are optional, but if provided, they must meet the corresponding format requirements.</description></item>
-        /// <item><description>The encryption type <c>EncryptType</c> supports a combination of multiple encryption methods. For more information, see the valid values.</description></item>
+        /// <item><description>The <c>EncryptType</c> parameter supports a combination of multiple encryption methods. For more information, refer to the valid values.</description></item>
         /// <item><description>When HLS encryption is used, <c>EncryptConfig</c> must include information such as <c>DecryptKeyUri</c>, <c>KeyServiceType</c>, <c>CipherText</c>, and <c>MasterKeyId</c>.</description></item>
         /// </list>
         /// </description>
@@ -977,6 +977,198 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddManifestEditTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建MediaConvert模版组</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>传入<b>Name</b>时创建新的转码模板组；传入<b>TranscodeTemplateGroupId</b>时向指定的转码模板组追加转码模板配置，已有模板与新增模板总数不能超过20个。</description></item>
+        /// <item><description>追加模式下不支持传入<b>GroupConfig</b>，组级配置变更请调用UpdateMediaConvertTemplateGroup接口。</description></item>
+        /// <item><description>创建转码模板组需要正常可用的存储地址；若没有可用的存储地址，模板创建会失败（您可以在<b>视频点播控制台 &gt; 配置管理 &gt; 媒资管理配置 &gt; 存储管理</b>中，激活<b>点播系统bucket</b>获取可用的存储地址）。</description></item>
+        /// <item><description>本接口的单用户QPS限制为5次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddMediaConvertTemplateGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMediaConvertTemplateGroupResponse
+        /// </returns>
+        public AddMediaConvertTemplateGroupResponse AddMediaConvertTemplateGroupWithOptions(AddMediaConvertTemplateGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupConfig))
+            {
+                query["GroupConfig"] = request.GroupConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscodeTemplateGroupId))
+            {
+                query["TranscodeTemplateGroupId"] = request.TranscodeTemplateGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscodeTemplateList))
+            {
+                query["TranscodeTemplateList"] = request.TranscodeTemplateList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddMediaConvertTemplateGroup",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddMediaConvertTemplateGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建MediaConvert模版组</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>传入<b>Name</b>时创建新的转码模板组；传入<b>TranscodeTemplateGroupId</b>时向指定的转码模板组追加转码模板配置，已有模板与新增模板总数不能超过20个。</description></item>
+        /// <item><description>追加模式下不支持传入<b>GroupConfig</b>，组级配置变更请调用UpdateMediaConvertTemplateGroup接口。</description></item>
+        /// <item><description>创建转码模板组需要正常可用的存储地址；若没有可用的存储地址，模板创建会失败（您可以在<b>视频点播控制台 &gt; 配置管理 &gt; 媒资管理配置 &gt; 存储管理</b>中，激活<b>点播系统bucket</b>获取可用的存储地址）。</description></item>
+        /// <item><description>本接口的单用户QPS限制为5次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddMediaConvertTemplateGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMediaConvertTemplateGroupResponse
+        /// </returns>
+        public async Task<AddMediaConvertTemplateGroupResponse> AddMediaConvertTemplateGroupWithOptionsAsync(AddMediaConvertTemplateGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupConfig))
+            {
+                query["GroupConfig"] = request.GroupConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscodeTemplateGroupId))
+            {
+                query["TranscodeTemplateGroupId"] = request.TranscodeTemplateGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscodeTemplateList))
+            {
+                query["TranscodeTemplateList"] = request.TranscodeTemplateList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddMediaConvertTemplateGroup",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddMediaConvertTemplateGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建MediaConvert模版组</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>传入<b>Name</b>时创建新的转码模板组；传入<b>TranscodeTemplateGroupId</b>时向指定的转码模板组追加转码模板配置，已有模板与新增模板总数不能超过20个。</description></item>
+        /// <item><description>追加模式下不支持传入<b>GroupConfig</b>，组级配置变更请调用UpdateMediaConvertTemplateGroup接口。</description></item>
+        /// <item><description>创建转码模板组需要正常可用的存储地址；若没有可用的存储地址，模板创建会失败（您可以在<b>视频点播控制台 &gt; 配置管理 &gt; 媒资管理配置 &gt; 存储管理</b>中，激活<b>点播系统bucket</b>获取可用的存储地址）。</description></item>
+        /// <item><description>本接口的单用户QPS限制为5次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddMediaConvertTemplateGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMediaConvertTemplateGroupResponse
+        /// </returns>
+        public AddMediaConvertTemplateGroupResponse AddMediaConvertTemplateGroup(AddMediaConvertTemplateGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddMediaConvertTemplateGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建MediaConvert模版组</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>传入<b>Name</b>时创建新的转码模板组；传入<b>TranscodeTemplateGroupId</b>时向指定的转码模板组追加转码模板配置，已有模板与新增模板总数不能超过20个。</description></item>
+        /// <item><description>追加模式下不支持传入<b>GroupConfig</b>，组级配置变更请调用UpdateMediaConvertTemplateGroup接口。</description></item>
+        /// <item><description>创建转码模板组需要正常可用的存储地址；若没有可用的存储地址，模板创建会失败（您可以在<b>视频点播控制台 &gt; 配置管理 &gt; 媒资管理配置 &gt; 存储管理</b>中，激活<b>点播系统bucket</b>获取可用的存储地址）。</description></item>
+        /// <item><description>本接口的单用户QPS限制为5次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddMediaConvertTemplateGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddMediaConvertTemplateGroupResponse
+        /// </returns>
+        public async Task<AddMediaConvertTemplateGroupResponse> AddMediaConvertTemplateGroupAsync(AddMediaConvertTemplateGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddMediaConvertTemplateGroupWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5811,8 +6003,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After deletion, the template and its track configurations cannot be recovered. Submitted jobs are not affected, but resubmitting a SubmitEditMediaManifestJob job with the deleted template ID will fail.</description></item>
-        /// <item><description>The custom transcoding template configurations associated with the template in the MediaConvert pipeline will also be cleared (preset templates are not affected).</description></item>
+        /// <item><description>After the template is deleted, the template and its track configurations cannot be recovered. Submitted tasks are not affected. However, submitting a SubmitEditMediaManifestJob task by using the deleted template ID will fail.</description></item>
+        /// <item><description>The custom transcoding template configurations associated with the template in the MediaConvert pipeline are also cleared (preset templates are not affected).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5861,8 +6053,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After deletion, the template and its track configurations cannot be recovered. Submitted jobs are not affected, but resubmitting a SubmitEditMediaManifestJob job with the deleted template ID will fail.</description></item>
-        /// <item><description>The custom transcoding template configurations associated with the template in the MediaConvert pipeline will also be cleared (preset templates are not affected).</description></item>
+        /// <item><description>After the template is deleted, the template and its track configurations cannot be recovered. Submitted tasks are not affected. However, submitting a SubmitEditMediaManifestJob task by using the deleted template ID will fail.</description></item>
+        /// <item><description>The custom transcoding template configurations associated with the template in the MediaConvert pipeline are also cleared (preset templates are not affected).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5911,8 +6103,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After deletion, the template and its track configurations cannot be recovered. Submitted jobs are not affected, but resubmitting a SubmitEditMediaManifestJob job with the deleted template ID will fail.</description></item>
-        /// <item><description>The custom transcoding template configurations associated with the template in the MediaConvert pipeline will also be cleared (preset templates are not affected).</description></item>
+        /// <item><description>After the template is deleted, the template and its track configurations cannot be recovered. Submitted tasks are not affected. However, submitting a SubmitEditMediaManifestJob task by using the deleted template ID will fail.</description></item>
+        /// <item><description>The custom transcoding template configurations associated with the template in the MediaConvert pipeline are also cleared (preset templates are not affected).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5937,8 +6129,8 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After deletion, the template and its track configurations cannot be recovered. Submitted jobs are not affected, but resubmitting a SubmitEditMediaManifestJob job with the deleted template ID will fail.</description></item>
-        /// <item><description>The custom transcoding template configurations associated with the template in the MediaConvert pipeline will also be cleared (preset templates are not affected).</description></item>
+        /// <item><description>After the template is deleted, the template and its track configurations cannot be recovered. Submitted tasks are not affected. However, submitting a SubmitEditMediaManifestJob task by using the deleted template ID will fail.</description></item>
+        /// <item><description>The custom transcoding template configurations associated with the template in the MediaConvert pipeline are also cleared (preset templates are not affected).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5953,6 +6145,182 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteManifestEditTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 MediaConvert 模板组</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>ForceDelGroup</b>取值为<b>true</b>（默认值）时删除整个转码模板组；取值为<b>false</b>时，需通过<b>TranscodeTemplateIdList</b>指定要删除的转码模板。</description></item>
+        /// <item><description>逐模板删除时不允许删除组内最后一个转码模板；如需删除整个模板组，请使用默认的ForceDelGroup。</description></item>
+        /// <item><description>删除请求同步返回，MediaConvert链路侧的模板清理异步执行。</description></item>
+        /// <item><description>本接口的单用户QPS限制为5次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaConvertTemplateGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaConvertTemplateGroupResponse
+        /// </returns>
+        public DeleteMediaConvertTemplateGroupResponse DeleteMediaConvertTemplateGroupWithOptions(DeleteMediaConvertTemplateGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceDelGroup))
+            {
+                query["ForceDelGroup"] = request.ForceDelGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscodeTemplateGroupId))
+            {
+                query["TranscodeTemplateGroupId"] = request.TranscodeTemplateGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscodeTemplateIdList))
+            {
+                query["TranscodeTemplateIdList"] = request.TranscodeTemplateIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMediaConvertTemplateGroup",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMediaConvertTemplateGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 MediaConvert 模板组</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>ForceDelGroup</b>取值为<b>true</b>（默认值）时删除整个转码模板组；取值为<b>false</b>时，需通过<b>TranscodeTemplateIdList</b>指定要删除的转码模板。</description></item>
+        /// <item><description>逐模板删除时不允许删除组内最后一个转码模板；如需删除整个模板组，请使用默认的ForceDelGroup。</description></item>
+        /// <item><description>删除请求同步返回，MediaConvert链路侧的模板清理异步执行。</description></item>
+        /// <item><description>本接口的单用户QPS限制为5次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaConvertTemplateGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaConvertTemplateGroupResponse
+        /// </returns>
+        public async Task<DeleteMediaConvertTemplateGroupResponse> DeleteMediaConvertTemplateGroupWithOptionsAsync(DeleteMediaConvertTemplateGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceDelGroup))
+            {
+                query["ForceDelGroup"] = request.ForceDelGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscodeTemplateGroupId))
+            {
+                query["TranscodeTemplateGroupId"] = request.TranscodeTemplateGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscodeTemplateIdList))
+            {
+                query["TranscodeTemplateIdList"] = request.TranscodeTemplateIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMediaConvertTemplateGroup",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMediaConvertTemplateGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 MediaConvert 模板组</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>ForceDelGroup</b>取值为<b>true</b>（默认值）时删除整个转码模板组；取值为<b>false</b>时，需通过<b>TranscodeTemplateIdList</b>指定要删除的转码模板。</description></item>
+        /// <item><description>逐模板删除时不允许删除组内最后一个转码模板；如需删除整个模板组，请使用默认的ForceDelGroup。</description></item>
+        /// <item><description>删除请求同步返回，MediaConvert链路侧的模板清理异步执行。</description></item>
+        /// <item><description>本接口的单用户QPS限制为5次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaConvertTemplateGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaConvertTemplateGroupResponse
+        /// </returns>
+        public DeleteMediaConvertTemplateGroupResponse DeleteMediaConvertTemplateGroup(DeleteMediaConvertTemplateGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteMediaConvertTemplateGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 MediaConvert 模板组</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>ForceDelGroup</b>取值为<b>true</b>（默认值）时删除整个转码模板组；取值为<b>false</b>时，需通过<b>TranscodeTemplateIdList</b>指定要删除的转码模板。</description></item>
+        /// <item><description>逐模板删除时不允许删除组内最后一个转码模板；如需删除整个模板组，请使用默认的ForceDelGroup。</description></item>
+        /// <item><description>删除请求同步返回，MediaConvert链路侧的模板清理异步执行。</description></item>
+        /// <item><description>本接口的单用户QPS限制为5次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaConvertTemplateGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaConvertTemplateGroupResponse
+        /// </returns>
+        public async Task<DeleteMediaConvertTemplateGroupResponse> DeleteMediaConvertTemplateGroupAsync(DeleteMediaConvertTemplateGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteMediaConvertTemplateGroupWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -21705,6 +22073,158 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the configuration details of a specified MediaConvert (MC) transcoding template group, including the group information and the list of transcoding templates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can only query custom transcoding template groups created by calling AddMediaConvertTemplateGroup for the MC link. If you query a template group that does not exist or is not part of the MC link, the InvalidTranscodeTemplateGroup.NotFound error is returned.</description></item>
+        /// <item><description>The queries per second (QPS) limit per user for this API operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaConvertTemplateGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaConvertTemplateGroupResponse
+        /// </returns>
+        public GetMediaConvertTemplateGroupResponse GetMediaConvertTemplateGroupWithOptions(GetMediaConvertTemplateGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscodeTemplateGroupId))
+            {
+                query["TranscodeTemplateGroupId"] = request.TranscodeTemplateGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMediaConvertTemplateGroup",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMediaConvertTemplateGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration details of a specified MediaConvert (MC) transcoding template group, including the group information and the list of transcoding templates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can only query custom transcoding template groups created by calling AddMediaConvertTemplateGroup for the MC link. If you query a template group that does not exist or is not part of the MC link, the InvalidTranscodeTemplateGroup.NotFound error is returned.</description></item>
+        /// <item><description>The queries per second (QPS) limit per user for this API operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaConvertTemplateGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaConvertTemplateGroupResponse
+        /// </returns>
+        public async Task<GetMediaConvertTemplateGroupResponse> GetMediaConvertTemplateGroupWithOptionsAsync(GetMediaConvertTemplateGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscodeTemplateGroupId))
+            {
+                query["TranscodeTemplateGroupId"] = request.TranscodeTemplateGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMediaConvertTemplateGroup",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMediaConvertTemplateGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration details of a specified MediaConvert (MC) transcoding template group, including the group information and the list of transcoding templates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can only query custom transcoding template groups created by calling AddMediaConvertTemplateGroup for the MC link. If you query a template group that does not exist or is not part of the MC link, the InvalidTranscodeTemplateGroup.NotFound error is returned.</description></item>
+        /// <item><description>The queries per second (QPS) limit per user for this API operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaConvertTemplateGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaConvertTemplateGroupResponse
+        /// </returns>
+        public GetMediaConvertTemplateGroupResponse GetMediaConvertTemplateGroup(GetMediaConvertTemplateGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMediaConvertTemplateGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration details of a specified MediaConvert (MC) transcoding template group, including the group information and the list of transcoding templates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can only query custom transcoding template groups created by calling AddMediaConvertTemplateGroup for the MC link. If you query a template group that does not exist or is not part of the MC link, the InvalidTranscodeTemplateGroup.NotFound error is returned.</description></item>
+        /// <item><description>The queries per second (QPS) limit per user for this API operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaConvertTemplateGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaConvertTemplateGroupResponse
+        /// </returns>
+        public async Task<GetMediaConvertTemplateGroupResponse> GetMediaConvertTemplateGroupAsync(GetMediaConvertTemplateGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMediaConvertTemplateGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves media fingerprint results. After a media fingerprint job is complete, you can call this operation to query the results in real time.</para>
         /// </summary>
         /// 
@@ -26017,7 +26537,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the created ManifestEdit track orchestration templates by paging.</para>
+        /// <para>Queries the list of created ManifestEdit track orchestration templates by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26063,7 +26583,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the created ManifestEdit track orchestration templates by paging.</para>
+        /// <para>Queries the list of created ManifestEdit track orchestration templates by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26109,7 +26629,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the created ManifestEdit track orchestration templates by paging.</para>
+        /// <para>Queries the list of created ManifestEdit track orchestration templates by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26127,7 +26647,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the created ManifestEdit track orchestration templates by paging.</para>
+        /// <para>Queries the list of created ManifestEdit track orchestration templates by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26141,6 +26661,170 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListManifestEditTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom transcoding template groups for the MediaConvert (MC) pipeline by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Only custom transcoding template groups for the MC pipeline created by calling AddMediaConvertTemplateGroup under the current account (with an optional application specified) are returned. Preset template groups are not included.</description></item>
+        /// <item><description>Results are sorted in ascending order by creation time. Pagination is implemented by using MaxResults and NextToken.</description></item>
+        /// <item><description>The queries per second (QPS) limit per user for this operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaConvertTemplateGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaConvertTemplateGroupResponse
+        /// </returns>
+        public ListMediaConvertTemplateGroupResponse ListMediaConvertTemplateGroupWithOptions(ListMediaConvertTemplateGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMediaConvertTemplateGroup",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMediaConvertTemplateGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom transcoding template groups for the MediaConvert (MC) pipeline by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Only custom transcoding template groups for the MC pipeline created by calling AddMediaConvertTemplateGroup under the current account (with an optional application specified) are returned. Preset template groups are not included.</description></item>
+        /// <item><description>Results are sorted in ascending order by creation time. Pagination is implemented by using MaxResults and NextToken.</description></item>
+        /// <item><description>The queries per second (QPS) limit per user for this operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaConvertTemplateGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaConvertTemplateGroupResponse
+        /// </returns>
+        public async Task<ListMediaConvertTemplateGroupResponse> ListMediaConvertTemplateGroupWithOptionsAsync(ListMediaConvertTemplateGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMediaConvertTemplateGroup",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMediaConvertTemplateGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom transcoding template groups for the MediaConvert (MC) pipeline by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Only custom transcoding template groups for the MC pipeline created by calling AddMediaConvertTemplateGroup under the current account (with an optional application specified) are returned. Preset template groups are not included.</description></item>
+        /// <item><description>Results are sorted in ascending order by creation time. Pagination is implemented by using MaxResults and NextToken.</description></item>
+        /// <item><description>The queries per second (QPS) limit per user for this operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaConvertTemplateGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaConvertTemplateGroupResponse
+        /// </returns>
+        public ListMediaConvertTemplateGroupResponse ListMediaConvertTemplateGroup(ListMediaConvertTemplateGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMediaConvertTemplateGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of custom transcoding template groups for the MediaConvert (MC) pipeline by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Only custom transcoding template groups for the MC pipeline created by calling AddMediaConvertTemplateGroup under the current account (with an optional application specified) are returned. Preset template groups are not included.</description></item>
+        /// <item><description>Results are sorted in ascending order by creation time. Pagination is implemented by using MaxResults and NextToken.</description></item>
+        /// <item><description>The queries per second (QPS) limit per user for this operation is 15. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaConvertTemplateGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaConvertTemplateGroupResponse
+        /// </returns>
+        public async Task<ListMediaConvertTemplateGroupResponse> ListMediaConvertTemplateGroupAsync(ListMediaConvertTemplateGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMediaConvertTemplateGroupWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -31968,11 +32652,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation incrementally edits the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</description></item>
-        /// <item><description><c>VideoId</c> and <c>JobId</c> are required parameters used for authentication isolation and consistency verification.</description></item>
+        /// <item><description>This API operation is used to incrementally edit the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</description></item>
+        /// <item><description><c>VideoId</c> and <c>JobId</c> are required parameters for authentication isolation and consistency verification.</description></item>
         /// <item><description>You can specify <c>TemplateId</c> to apply a predefined manifest editing template.</description></item>
-        /// <item><description>This operation supports appending, removing, and replacing audio, subtitle, and video tracks.</description></item>
-        /// <item><description>The <c>OutputConfig</c> parameter specifies the storage location of the edited manifest.</description></item>
+        /// <item><description>It supports appending, removing, and replacing audio, subtitle, and video tracks.</description></item>
+        /// <item><description>The output configuration <c>OutputConfig</c> specifies the storage location of the edited manifest.</description></item>
         /// <item><description>You can pass custom data in <c>UserData</c> as pass-through information.</description></item>
         /// </list>
         /// </description>
@@ -32055,11 +32739,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation incrementally edits the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</description></item>
-        /// <item><description><c>VideoId</c> and <c>JobId</c> are required parameters used for authentication isolation and consistency verification.</description></item>
+        /// <item><description>This API operation is used to incrementally edit the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</description></item>
+        /// <item><description><c>VideoId</c> and <c>JobId</c> are required parameters for authentication isolation and consistency verification.</description></item>
         /// <item><description>You can specify <c>TemplateId</c> to apply a predefined manifest editing template.</description></item>
-        /// <item><description>This operation supports appending, removing, and replacing audio, subtitle, and video tracks.</description></item>
-        /// <item><description>The <c>OutputConfig</c> parameter specifies the storage location of the edited manifest.</description></item>
+        /// <item><description>It supports appending, removing, and replacing audio, subtitle, and video tracks.</description></item>
+        /// <item><description>The output configuration <c>OutputConfig</c> specifies the storage location of the edited manifest.</description></item>
         /// <item><description>You can pass custom data in <c>UserData</c> as pass-through information.</description></item>
         /// </list>
         /// </description>
@@ -32142,11 +32826,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation incrementally edits the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</description></item>
-        /// <item><description><c>VideoId</c> and <c>JobId</c> are required parameters used for authentication isolation and consistency verification.</description></item>
+        /// <item><description>This API operation is used to incrementally edit the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</description></item>
+        /// <item><description><c>VideoId</c> and <c>JobId</c> are required parameters for authentication isolation and consistency verification.</description></item>
         /// <item><description>You can specify <c>TemplateId</c> to apply a predefined manifest editing template.</description></item>
-        /// <item><description>This operation supports appending, removing, and replacing audio, subtitle, and video tracks.</description></item>
-        /// <item><description>The <c>OutputConfig</c> parameter specifies the storage location of the edited manifest.</description></item>
+        /// <item><description>It supports appending, removing, and replacing audio, subtitle, and video tracks.</description></item>
+        /// <item><description>The output configuration <c>OutputConfig</c> specifies the storage location of the edited manifest.</description></item>
         /// <item><description>You can pass custom data in <c>UserData</c> as pass-through information.</description></item>
         /// </list>
         /// </description>
@@ -32173,11 +32857,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation incrementally edits the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</description></item>
-        /// <item><description><c>VideoId</c> and <c>JobId</c> are required parameters used for authentication isolation and consistency verification.</description></item>
+        /// <item><description>This API operation is used to incrementally edit the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</description></item>
+        /// <item><description><c>VideoId</c> and <c>JobId</c> are required parameters for authentication isolation and consistency verification.</description></item>
         /// <item><description>You can specify <c>TemplateId</c> to apply a predefined manifest editing template.</description></item>
-        /// <item><description>This operation supports appending, removing, and replacing audio, subtitle, and video tracks.</description></item>
-        /// <item><description>The <c>OutputConfig</c> parameter specifies the storage location of the edited manifest.</description></item>
+        /// <item><description>It supports appending, removing, and replacing audio, subtitle, and video tracks.</description></item>
+        /// <item><description>The output configuration <c>OutputConfig</c> specifies the storage location of the edited manifest.</description></item>
         /// <item><description>You can pass custom data in <c>UserData</c> as pass-through information.</description></item>
         /// </list>
         /// </description>

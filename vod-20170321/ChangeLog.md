@@ -1,3 +1,6 @@
+2026-11-27 Version: 3.15.0
+- Generated csharp 2017-03-21 for vod.
+
 2026-11-24 Version: 3.14.0
 - Support API AddManifestEditTemplate.
 - Support API DeleteManifestEditTemplate.

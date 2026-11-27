@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <para>The timeline of the online editing project. TimelineIn and TimelineOut indicate the in-point and out-point of a media clip on the timeline, in seconds, accurate to four decimal places.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;TimelineIn\&quot;:0,\&quot;TimelineOut\&quot;:9.42}</para>
+            /// <para>{&quot;TimelineIn&quot;:0,&quot;TimelineOut&quot;:9.42}</para>
             /// </summary>
             [NameInMap("Timeline")]
             [Validation(Required=false)]

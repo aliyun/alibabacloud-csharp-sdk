@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <para>The sprite configuration. If this parameter is not empty, a sprite is generated. For more information about the parameter structure, see <a href="https://help.aliyun.com/document_detail/86952.html">SpriteSnapshotConfig</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;CellWidth\&quot;: 120, \&quot;CellHeight\&quot;: 68, \&quot;Columns\&quot;: 3,\&quot;Lines\&quot;: 10, \&quot;Padding\&quot;: 20, \&quot;Margin\&quot;: 50}</para>
+        /// <para>{&quot;CellWidth&quot;: 120, &quot;CellHeight&quot;: 68, &quot;Columns&quot;: 3,&quot;Lines&quot;: 10, &quot;Padding&quot;: 20, &quot;Margin&quot;: 50}</para>
         /// </summary>
         [NameInMap("SpriteSnapshotConfig")]
         [Validation(Required=false)]
