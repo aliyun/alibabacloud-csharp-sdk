@@ -37,6 +37,22 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
             [Validation(Required=false)]
             public List<string> AllowedDates { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>定邀-现场嘉宾</para>
+            /// </summary>
+            [NameInMap("ChannelName")]
+            [Validation(Required=false)]
+            public string ChannelName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>[&quot;VIP&quot;, &quot;思辨场&quot;]</para>
+            /// </summary>
+            [NameInMap("CustomerLabels")]
+            [Validation(Required=false)]
+            public List<string> CustomerLabels { get; set; }
+
             [NameInMap("Decision")]
             [Validation(Required=false)]
             public string Decision { get; set; }
