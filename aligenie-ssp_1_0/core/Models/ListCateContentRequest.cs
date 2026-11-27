@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public class ListCateContentRequestDeviceInfo : TeaModel {
             /// <summary>
             /// <para>Value corresponding to the encoding type</para>
-            /// <para>When the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID.<br>When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
+            /// <para>When the encoding type is SKILL_ID, the value is the application&quot;s Skill ID.<br>When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

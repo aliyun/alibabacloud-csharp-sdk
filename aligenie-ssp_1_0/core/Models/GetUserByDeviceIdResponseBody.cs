@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 public string OrganizationId { get; set; }
 
                 /// <summary>
-                /// <para>The user\&quot;s UnionID.</para>
+                /// <para>The user&quot;s UnionID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1553*B0C3</para>

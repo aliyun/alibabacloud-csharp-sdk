@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public SendMessageRequestUserInfo UserInfo { get; set; }
         public class SendMessageRequestUserInfo : TeaModel {
             /// <summary>
-            /// <para>Value corresponding to the encoding type. When the encoding type is SKILLID, this value is the application\&quot;s Skill ID. When the encoding type is PACKAGENAME, this value is the packageName of the corresponding client app.</para>
+            /// <para>Value corresponding to the encoding type. When the encoding type is SKILLID, this value is the application&quot;s Skill ID. When the encoding type is PACKAGENAME, this value is the packageName of the corresponding client app.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

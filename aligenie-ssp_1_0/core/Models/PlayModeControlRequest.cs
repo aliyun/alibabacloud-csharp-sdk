@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public class PlayModeControlRequestDeviceInfo : TeaModel {
             /// <summary>
             /// <para>Value corresponding to the encoding type</para>
-            /// <para>When the encoding type is <c>SKILL_ID</c>, the value is the application\&quot;s Skill ID. When the encoding type is <c>PACKAGE_NAME</c>, the value is the packageName of the corresponding client app.</para>
+            /// <para>When the encoding type is <c>SKILL_ID</c>, the value is the application&quot;s Skill ID. When the encoding type is <c>PACKAGE_NAME</c>, the value is the packageName of the corresponding client app.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public class PlayModeControlRequestUserInfo : TeaModel {
             /// <summary>
             /// <para>Value corresponding to the encoding type.</para>
-            /// <para>When the encoding type is <c>SKILL_ID</c>, the value is the application\&quot;s Skill ID. When the encoding type is <c>PACKAGE_NAME</c>, the value is the packageName of the corresponding client app.</para>
+            /// <para>When the encoding type is <c>SKILL_ID</c>, the value is the application&quot;s Skill ID. When the encoding type is <c>PACKAGE_NAME</c>, the value is the packageName of the corresponding client app.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

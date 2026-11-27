@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public GetDeviceTagRequestDeviceInfo DeviceInfo { get; set; }
         public class GetDeviceTagRequestDeviceInfo : TeaModel {
             /// <summary>
-            /// <para>The value corresponding to the encoding type. Enter the Project ID of the project in the Tmall Genie AI platform where the product\&quot;s ProductKey resides.</para>
+            /// <para>The value corresponding to the encoding type. Enter the Project ID of the project in the Tmall Genie AI platform where the product&quot;s ProductKey resides.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

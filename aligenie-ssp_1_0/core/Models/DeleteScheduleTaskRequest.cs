@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public DeleteScheduleTaskRequestDeviceInfo DeviceInfo { get; set; }
         public class DeleteScheduleTaskRequestDeviceInfo : TeaModel {
             /// <summary>
-            /// <para>The value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
+            /// <para>The value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12**45</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public DeleteScheduleTaskRequestUserInfo UserInfo { get; set; }
         public class DeleteScheduleTaskRequestUserInfo : TeaModel {
             /// <summary>
-            /// <para>Value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
+            /// <para>Value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12**45</para>

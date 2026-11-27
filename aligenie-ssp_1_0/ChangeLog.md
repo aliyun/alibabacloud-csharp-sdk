@@ -1,3 +1,6 @@
+2026-11-27 Version: 1.2.0
+- Generated csharp ssp_1.0 for AliGenie.
+
 2026-08-04 Version: 1.1.3
 - Generated csharp ssp_1.0 for AliGenie.
 

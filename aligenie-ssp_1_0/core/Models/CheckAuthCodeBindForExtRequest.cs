@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public CheckAuthCodeBindForExtRequestUserInfo UserInfo { get; set; }
         public class CheckAuthCodeBindForExtRequestUserInfo : TeaModel {
             /// <summary>
-            /// <para>Value corresponding to the encoding type. Enter the Project ID of the product\&quot;s project here. You can view it in the Tmall Genie AI platform console.</para>
+            /// <para>Value corresponding to the encoding type. Enter the Project ID of the product&quot;s project here. You can view it in the Tmall Genie AI platform console.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

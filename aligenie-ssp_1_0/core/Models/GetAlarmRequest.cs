@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public GetAlarmRequestDeviceInfo DeviceInfo { get; set; }
         public class GetAlarmRequestDeviceInfo : TeaModel {
             /// <summary>
-            /// <para>Value corresponding to the encoding type: when the encoding type is SKILL_ID, the value is the application\&quot;s SkillID; when the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
+            /// <para>Value corresponding to the encoding type: when the encoding type is SKILL_ID, the value is the application&quot;s SkillID; when the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public GetAlarmRequestUserInfo UserInfo { get; set; }
         public class GetAlarmRequestUserInfo : TeaModel {
             /// <summary>
-            /// <para>Value corresponding to the encoding type. If the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. If the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
+            /// <para>Value corresponding to the encoding type. If the encoding type is SKILL_ID, the value is the application&quot;s SkillID. If the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
