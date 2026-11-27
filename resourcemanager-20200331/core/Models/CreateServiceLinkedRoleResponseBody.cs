@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Arn { get; set; }
 
             /// <summary>
-            /// <para>The trust policy of the role.</para>
+            /// <para>The trust policy content of the role.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;Statement\&quot;:[{\&quot;Action\&quot;:\&quot;sts:AssumeRole\&quot;,\&quot;Effect\&quot;:\&quot;Allow\&quot;,\&quot;Principal\&quot;:{\&quot;Service\&quot;:[\&quot;polardb.aliyuncs.com\&quot;]}}],\&quot;Version\&quot;:\&quot;1\&quot;}</para>
+            /// <para>{&quot;Statement&quot;:[{&quot;Action&quot;:&quot;sts:AssumeRole&quot;,&quot;Effect&quot;:&quot;Allow&quot;,&quot;Principal&quot;:{&quot;Service&quot;:[&quot;polardb.aliyuncs.com&quot;]}}],&quot;Version&quot;:&quot;1&quot;}</para>
             /// </summary>
             [NameInMap("AssumeRolePolicyDocument")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the role is a service-linked role. Valid values:</para>
+            /// <para>Specifies whether the role is a service-linked role. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: The role is a service-linked role.</description></item>
             /// <item><description>false: The role is not a service-linked role.</description></item>

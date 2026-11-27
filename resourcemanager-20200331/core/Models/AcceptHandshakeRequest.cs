@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class AcceptHandshakeRequest : TeaModel {
         /// <summary>
-        /// <para>The handshake ID.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/160006.html">ListHandshakesForAccount</a> to obtain the handshake ID.</para>
+        /// <para>The invitation ID. You can call the <a href="https://help.aliyun.com/document_detail/160006.html">ListHandshakesForAccount</a> operation to obtain the invitation ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

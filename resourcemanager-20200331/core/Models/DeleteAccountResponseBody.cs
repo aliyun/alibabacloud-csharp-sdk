@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// <para>The deletion type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Direct deletion. If the member has no pay-as-you-go resources in the last 30 days, the system directly deletes the member.</description></item>
-        /// <item><description>1: Cool-down period deletion. If the member has pay-as-you-go resources in the last 30 days, the member enters a cool-down period. The system starts to delete the member after the cool-down period ends. For more information about the cool-down period, see <a href="https://help.aliyun.com/document_detail/446079.html">What is the cool-down period for member deletion</a>.</description></item>
+        /// <item><description>0: Direct deletion. If the member does not have pay-as-you-go resources within the last 30 days, the system directly deletes the member.</description></item>
+        /// <item><description>1: Deletion after a cool-down period. If the member has pay-as-you-go resources within the last 30 days, the member enters a cool-down period. The system starts to delete the member only after the cool-down period ends. For more information about the cool-down period, see <a href="https://help.aliyun.com/document_detail/446079.html">What is the cool-down period for member deletion</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

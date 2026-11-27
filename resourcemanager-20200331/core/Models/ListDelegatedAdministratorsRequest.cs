@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListDelegatedAdministratorsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -21,8 +20,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -32,8 +30,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the trusted service.</para>
-        /// <para>For more information, see the <c>Trusted Service Identifier</c> column in <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</para>
+        /// <para>The identifier of the trusted service. For more information, see the <c>Trusted service identifier</c> column in <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloudfw.aliyuncs.com</para>

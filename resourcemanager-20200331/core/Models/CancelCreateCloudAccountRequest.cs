@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CancelCreateCloudAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The account record ID.</para>
+        /// <para>The ID of the account record.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

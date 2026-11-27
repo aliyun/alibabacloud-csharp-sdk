@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class RemoveCloudAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The member ID.</para>
+        /// <para>The ID of the member.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

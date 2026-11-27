@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class AcceptHandshakeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The handshake information.</para>
+        /// <para>The invitation information.</para>
         /// </summary>
         [NameInMap("Handshake")]
         [Validation(Required=false)]
         public AcceptHandshakeResponseBodyHandshake Handshake { get; set; }
         public class AcceptHandshakeResponseBodyHandshake : TeaModel {
             /// <summary>
-            /// <para>The creation time of the handshake (UTC).</para>
+            /// <para>The time when the invitation was created. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-06T02:15:40Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the handshake (UTC).</para>
+            /// <para>The expiration time of the invitation. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T02:15:40Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The handshake ID.</para>
+            /// <para>The invitation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>h-Ih8IuPfvV0t0****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string MasterAccountName { get; set; }
 
             /// <summary>
-            /// <para>The modification time of the handshake (UTC).</para>
+            /// <para>The time when the invitation was modified. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-06T02:16:40Z</para>
@@ -77,17 +77,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The remarks.</para>
+            /// <para>The note.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Welcome to join us</para>
+            /// <para>Welcome to join</para>
             /// </summary>
             [NameInMap("Note")]
             [Validation(Required=false)]
             public string Note { get; set; }
 
             /// <summary>
-            /// <para>The resource directory ID.</para>
+            /// <para>The ID of the resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rd-3G****</para>
@@ -97,13 +97,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceDirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The status of the handshake. Valid values:</para>
+            /// <para>The invitation status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: waiting for confirmation.</description></item>
-            /// <item><description>Accepted: accepted.</description></item>
-            /// <item><description>Cancelled: canceled.</description></item>
-            /// <item><description>Declined: rejected.</description></item>
-            /// <item><description>Expired: expired.</description></item>
+            /// <item><description>Pending: pending confirmation</description></item>
+            /// <item><description>Accepted: accepted</description></item>
+            /// <item><description>Cancelled: canceled</description></item>
+            /// <item><description>Declined: declined</description></item>
+            /// <item><description>Expired: expired</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account ID or logon email address of the invited account.</para>
+            /// <para>The Alibaba Cloud account ID or logon mailbox of the invited Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>177242285274****</para>
@@ -126,8 +126,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <summary>
             /// <para>The type of the invited Alibaba Cloud account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Account: Alibaba Cloud account ID.</description></item>
-            /// <item><description>Email: logon email address of the Alibaba Cloud account.</description></item>
+            /// <item><description>Account: the Alibaba Cloud account ID</description></item>
+            /// <item><description>Email: the logon mailbox of the Alibaba Cloud account</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource group was created (UTC).</para>
+            /// <para>The time when the resource group was created. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-05T14:39:13+08:00</para>
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <summary>
             /// <para>The status of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Creating: Being created.</description></item>
-            /// <item><description>OK: Created.</description></item>
+            /// <item><description>Creating: The resource group is being created.</description></item>
+            /// <item><description>OK: The resource group is created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

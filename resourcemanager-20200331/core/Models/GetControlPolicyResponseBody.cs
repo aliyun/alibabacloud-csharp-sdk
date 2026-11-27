@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <para>The content of the control policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;Version\&quot;:\&quot;1\&quot;,\&quot;Statement\&quot;:[{\&quot;Effect\&quot;:\&quot;Deny\&quot;,\&quot;Action\&quot;:[\&quot;ram:UpdateRole\&quot;,\&quot;ram:DeleteRole\&quot;,\&quot;ram:AttachPolicyToRole\&quot;,\&quot;ram:DetachPolicyFromRole\&quot;],\&quot;Resource\&quot;:\&quot;acs:ram:<em>:</em>:role/ResourceDirectoryAccountAccessRole\&quot;}]}</para>
+            /// <para>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[{&quot;Effect&quot;:&quot;Deny&quot;,&quot;Action&quot;:[&quot;ram:UpdateRole&quot;,&quot;ram:DeleteRole&quot;,&quot;ram:AttachPolicyToRole&quot;,&quot;ram:DetachPolicyFromRole&quot;],&quot;Resource&quot;:&quot;acs:ram:<em>:</em>:role/ResourceDirectoryAccountAccessRole&quot;}]}</para>
             /// </summary>
             [NameInMap("PolicyDocument")]
             [Validation(Required=false)]

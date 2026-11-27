@@ -11,11 +11,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
     public class CreateResourceAccountRequest : TeaModel {
         /// <summary>
         /// <para>The prefix of the account name. If you leave this parameter empty, the system randomly generates a prefix.</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;Length: 2 to 50 characters.</para>
-        /// <para>&lt;props=&quot;intl&quot;&gt;Length: 2 to 37 characters.</para>
-        /// <para>Format: Can contain letters, digits, and special characters <c>_.-</c>. Must start and end with a letter or digit. Consecutive special characters <c>_.-</c> are not allowed.</para>
-        /// <para>The full account name is in the format of <AccountNamePrefix>@<ResourceDirectoryId>.aliyunid.com. Example: <c>alice@rd-3G****.aliyunid.com</c>.</para>
-        /// <para>The account name must be unique within the resource directory.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The length ranges from 2 to 50 characters.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;The length ranges from 2 to 37 characters.</para>
+        /// <para>Format: The prefix can contain letters, digits, and special characters such as underscores (_), periods (.), and hyphens (-). It must start and end with a letter or a digit, and cannot contain consecutive special characters.</para>
+        /// <para>The format of the complete account name is <AccountNamePrefix>@<ResourceDirectoryId>.aliyunid.com. Example: alice@rd-3G****.aliyunid.com.</para>
+        /// <para>The account name must be unique in the resource directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The display name of the member.</para>
-        /// <para>Length: 2 to 50 characters.</para>
-        /// <para>Format: Can contain letters, digits, underscores (_), periods (.), hyphens (-), and spaces.</para>
-        /// <para>The display name must be unique within the resource directory.</para>
+        /// <para>The name must be 2 to 50 characters in length.</para>
+        /// <para>Format: The name can contain Chinese characters, letters, digits, underscores (_), periods (.), hyphens (-), and spaces.</para>
+        /// <para>The display name must be unique in the resource directory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ParentFolderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the billing account. If you leave this parameter empty, the newly created member pays for its own resource consumption.</para>
+        /// <para>The ID of the settlement account. If you leave this parameter empty, the newly created member pays its own bills.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -61,11 +61,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// <para>The identity type of the member. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>resell (default): reseller account. The created member automatically establishes a reseller relationship with your distributor. You must use the management account to pay for the new member.</description></item>
-        /// <item><description>non_resell: non-reseller account. The created member is a regular Alibaba Cloud account that has no relationship with your current distributor. This account purchases resources directly from Alibaba Cloud and pays for its own resource consumption.</description></item>
+        /// <item><description>resell: reseller account. This is the default value. The created member automatically establishes a reseller relationship with your reseller. You must use the management account to pay for the new member.</description></item>
+        /// <item><description>non_resell: non-reseller account. The created member is a regular Alibaba Cloud account and has no relationship with your current reseller. The account purchases resources directly from Alibaba Cloud and pays its own bills.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is supported only for China site (Chinese mainland) distributor customers.</para>
+        /// <para>This parameter is supported only for reseller customers on the international site.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

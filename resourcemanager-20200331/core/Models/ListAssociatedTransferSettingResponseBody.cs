@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListAssociatedTransferSettingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The settings of the associated resource group transfer feature.</para>
+        /// <para>The associated transfer settings.</para>
         /// </summary>
         [NameInMap("AssociatedTransferSetting")]
         [Validation(Required=false)]
         public ListAssociatedTransferSettingResponseBodyAssociatedTransferSetting AssociatedTransferSetting { get; set; }
         public class ListAssociatedTransferSettingResponseBodyAssociatedTransferSetting : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud account ID.</para>
+            /// <para>The ID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>121998723923****</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task for transferring existing associated resources to the same resource group is started. Valid values:</para>
+            /// <para>Specifies whether to transfer existing associated resources along with the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>false: The task is not started.</description></item>
-            /// <item><description>true: The task is started.</description></item>
+            /// <item><description>false: Existing associated resources are not transferred along with the resource group.</description></item>
+            /// <item><description>true: Existing associated resources are transferred along with the resource group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string EnableExistingResourcesTransfer { get; set; }
 
             /// <summary>
-            /// <para>The rule settings of the associated resource group transfer feature.</para>
+            /// <para>The rule settings for the associated transfer feature.</para>
             /// </summary>
             [NameInMap("RuleSettings")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string AssociatedService { get; set; }
 
                 /// <summary>
-                /// <para>The resource type of the master resource.</para>
+                /// <para>The resource type of the primary resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>instance</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string MasterResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The cloud service code of the master resource.</para>
+                /// <para>The cloud service code of the primary resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs</para>
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string MasterService { get; set; }
 
                 /// <summary>
-                /// <para>The status of the associated resource group transfer feature. Valid values:</para>
+                /// <para>The enabling status of the associated transfer feature. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable: enabled.</description></item>
-                /// <item><description>Disable: disabled.</description></item>
+                /// <item><description>Enable: Enabled.</description></item>
+                /// <item><description>Disable: Disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             }
 
             /// <summary>
-            /// <para>The status of the associated resource group transfer feature. Valid values:</para>
+            /// <para>The enabling status of the associated transfer feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enable: enabled.</description></item>
-            /// <item><description>Disable: disabled.</description></item>
+            /// <item><description>Enable: Enabled.</description></item>
+            /// <item><description>Disable: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

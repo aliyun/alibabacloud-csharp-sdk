@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public InviteAccountToResourceDirectoryResponseBodyHandshake Handshake { get; set; }
         public class InviteAccountToResourceDirectoryResponseBodyHandshake : TeaModel {
             /// <summary>
-            /// <para>The creation time of the invitation (UTC).</para>
+            /// <para>The time when the invitation was created. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-08-10T09:55:41Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the invitation (UTC).</para>
+            /// <para>The expiration time of the invitation. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-08-24T09:55:41Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string MasterAccountName { get; set; }
 
             /// <summary>
-            /// <para>The modification time of the invitation (UTC).</para>
+            /// <para>The time when the invitation was modified. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-08-10T09:55:41Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The remarks.</para>
+            /// <para>The note.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Welcome to join</para>
@@ -99,11 +99,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <summary>
             /// <para>The status of the invitation. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: Waiting for confirmation.</description></item>
-            /// <item><description>Accepted: Accepted.</description></item>
-            /// <item><description>Cancelled: Canceled.</description></item>
-            /// <item><description>Declined: Rejected.</description></item>
-            /// <item><description>Expired: Expired.</description></item>
+            /// <item><description>Pending: pending confirmation.</description></item>
+            /// <item><description>Accepted: accepted.</description></item>
+            /// <item><description>Cancelled: canceled.</description></item>
+            /// <item><description>Declined: declined.</description></item>
+            /// <item><description>Expired: timed out.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID or logon email address of the account that is invited.</para>
+            /// <para>The ID or logon email address of the invited account.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:someone@example.com">someone@example.com</a></para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <para>The type of the invited account. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Account: account ID.</description></item>
-            /// <item><description>Email: logon email address of the account.</description></item>
+            /// <item><description>Email: logon email address.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

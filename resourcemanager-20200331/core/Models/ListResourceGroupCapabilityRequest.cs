@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListResourceGroupCapabilityRequest : TeaModel {
         /// <summary>
-        /// <para>The resource type.</para>
-        /// <para>You can obtain the resource type from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
+        /// <para>The resource type. You can obtain the resource type from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance</para>
@@ -21,8 +20,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The cloud service ID.</para>
-        /// <para>You can obtain the cloud service ID from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
+        /// <para>The cloud service ID. You can obtain the cloud service ID from the <b>Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>

@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>009C3A02-7D4B-416C-9CE7-548C91508F1E</para>

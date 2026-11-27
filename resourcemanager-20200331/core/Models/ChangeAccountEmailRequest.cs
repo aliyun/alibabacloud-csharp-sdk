@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ChangeAccountEmailRequest : TeaModel {
         /// <summary>
-        /// <para>The member account ID.</para>
+        /// <para>The ID of the member.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The email address of the member account.</para>
+        /// <para>The email address of the member.</para>
         /// <remarks>
-        /// <para>The system automatically sends a verification email to the specified email address. The modification takes effect only after the verification is complete. After the verification is complete, the system synchronously updates the email address and security email address of the account.</para>
+        /// <para>The system automatically sends a verification email to the specified email address. The modification takes effect only after the email address is verified. After the verification, the system synchronously updates the email address and security email address of the account.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

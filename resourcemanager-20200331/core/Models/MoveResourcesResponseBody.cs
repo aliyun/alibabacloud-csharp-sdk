@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class MoveResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C00B89D3-3247-11DE-95D8-A7C01FB0AB4F</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <summary>
             /// <para>The error code.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when the resource transfer fails.</para>
+            /// <para>This parameter is returned when the resource transfer fails.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <summary>
             /// <para>The error message.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when the resource transfer fails.</para>
+            /// <para>This parameter is returned when the resource transfer fails.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the resource.</para>
+            /// <para>The ID of the region to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The request ID.</para>
+            /// <para>The ID of the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C00B89D3-3247-11DE-95D8-A7C01FB0AB4F</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>The resource ID.</para>
+            /// <para>The ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-23v38****</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The cloud service code.</para>
+            /// <para>The code of the cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>

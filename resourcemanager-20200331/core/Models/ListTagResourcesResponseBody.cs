@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the <c>NextToken</c> parameter is returned for the next query. Valid values:</para>
+        /// <para>The token used to start the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <c>NextToken</c> is empty, which is displayed as <c>&quot;NextToken&quot;: &quot;&quot;</c>, no next query exists.</description></item>
-        /// <item><description>If <c>NextToken</c> is returned with a value, the value is the token that is used to start the next query.</description></item>
+        /// <item><description>If <c>NextToken</c> is empty, which means <c>&quot;NextToken&quot;: &quot;&quot;</c>, no more results are available.</description></item>
+        /// <item><description>If <c>NextToken</c> has a value, the value is the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>The resource group ID or resource directory member ID.</para>
+            /// <para>The ID of the resource group or the ID of the resource directory member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aekz6bre2uq****</para>

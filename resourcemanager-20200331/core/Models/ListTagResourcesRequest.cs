@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID or resource directory member ID. This parameter is used as a filter condition.</para>
+        /// <para>The ID of the resource group or the ID of the resource directory member. This parameter is used as a filter condition for the query.</para>
         /// <remarks>
-        /// <para>To query the tags that are attached to a resource directory member, you must specify both <c>ResourceId</c> and <c>ResourceType</c>, and set <c>ResourceType</c> to <c>Account</c>.</para>
+        /// <para>When you query the tags bound to a resource directory member, you must specify both <c>ResourceId</c> and <c>ResourceType</c>, and set <c>ResourceType</c> to <c>Account</c>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. This parameter is used as a filter condition. Valid values:</para>
+        /// <para>The resource type. This parameter is used as a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ResourceGroup (default): queries the tags of a resource group.</description></item>
-        /// <item><description>Account: queries the tags of a resource directory member.</description></item>
+        /// <item><description>ResourceGroup (default): Queries the tags of resource groups.</description></item>
+        /// <item><description>Account: Queries the tags of resource directory members.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags. This parameter is used as a filter condition.</para>
+        /// <para>The tags. This parameter is used as a filter condition for the query.</para>
         /// <para>You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]

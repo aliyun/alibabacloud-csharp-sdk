@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListResourceGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The display name of the resource group. This parameter is used as a filter condition. Fuzzy match is supported.</para>
-        /// <para>The value cannot exceed 50 characters in length.</para>
+        /// <para>The display name of the resource group, used as a filter condition for the query. Fuzzy match is supported.</para>
+        /// <para>The value can be up to 50 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-project</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// </description></item>
         /// <item><description><para>true: Tag information is returned.</para>
         /// <remarks>
-        /// <para>If you specify tag-based filter conditions, tag information is always returned regardless of the value of IncludeTags.</para>
+        /// <para>If you specify a tag filter condition, tag information is returned regardless of the value of IncludeTags.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public bool? IncludeTags { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the resource group. This parameter is used as a filter condition. Fuzzy match is supported.</para>
-        /// <para>The value cannot exceed 50 characters in length and can contain letters, digits, and hyphens (-).</para>
+        /// <para>The unique identifier of the resource group, used as a filter condition for the query. Fuzzy match is supported.</para>
+        /// <para>The value can be up to 50 characters in length and can contain letters, digits, and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-project</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The page number.</para>
-        /// <para>Minimum value: 1. Default value: 1.</para>
+        /// <para>Starting value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -73,10 +73,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. This parameter is used as a filter condition.</para>
-        /// <para>The value cannot exceed 18 characters in length and must start with <c>rg-</c>.</para>
+        /// <para>The ID of the resource group, used as a filter condition for the query.</para>
+        /// <para>The value can be up to 18 characters in length and must start with rg-.</para>
         /// <remarks>
-        /// <para>This parameter has been incorporated into the ResourceGroupIds parameter. If you set both ResourceGroupId and ResourceGroupIds, the value of ResourceGroupIds takes precedence.</para>
+        /// <para>This parameter is incorporated into the ResourceGroupIds parameter. If you specify both ResourceGroupId and ResourceGroupIds, ResourceGroupIds takes precedence.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource group IDs. This parameter is used as a filter condition.</para>
+        /// <para>The list of resource group IDs, used as filter conditions for the query.</para>
         /// <para>You can specify up to 100 resource group IDs.</para>
         /// <remarks>
-        /// <para>If you set both ResourceGroupId and ResourceGroupIds, the value of ResourceGroupIds takes precedence.</para>
+        /// <para>If you specify both ResourceGroupId and ResourceGroupIds, ResourceGroupIds takes precedence.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ResourceGroupIds")]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public List<string> ResourceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The resource group status. This parameter is used as a filter condition. Valid values:</para>
+        /// <para>The status of the resource group, used as a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Creating: The resource group is being created.</description></item>
         /// <item><description>OK: The resource group is created.</description></item>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags. This parameter is used as a filter condition.</para>
+        /// <para>The tags, used as filter conditions for the query.</para>
         /// <para>You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]

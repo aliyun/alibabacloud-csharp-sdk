@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CancelChangeAccountEmailRequest : TeaModel {
         /// <summary>
-        /// <para>The member account ID.</para>
+        /// <para>The member ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

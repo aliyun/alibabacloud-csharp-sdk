@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// <para>Specifies whether to return tag information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): does not return tag information.</description></item>
+        /// <item><description>false: does not return tag information. This is the default value.</description></item>
         /// <item><description>true: returns tag information.</description></item>
         /// </list>
         /// 
@@ -24,8 +24,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public bool? IncludeTags { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number. Starting value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -35,8 +34,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The tags used to filter member accounts.</para>
+        /// <para>The tags used to filter results.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <para>The content of the access policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{ \&quot;Statement\&quot;: [{ \&quot;Action\&quot;: [\&quot;oss:<em>\&quot;], \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Resource\&quot;: [\&quot;acs:oss:</em>:<em>:</em>\&quot;]}], \&quot;Version\&quot;: \&quot;1\&quot;}</para>
+            /// <para>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</para>
             /// </summary>
             [NameInMap("PolicyDocument")]
             [Validation(Required=false)]

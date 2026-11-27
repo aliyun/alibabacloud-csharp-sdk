@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// <para>Specifies whether to enable or disable the member deletion permission. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: enables the member deletion permission.</description></item>
-        /// <item><description>Disabled: disables the member deletion permission.</description></item>
+        /// <item><description>Enabled: Enabled.</description></item>
+        /// <item><description>Disabled: Disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

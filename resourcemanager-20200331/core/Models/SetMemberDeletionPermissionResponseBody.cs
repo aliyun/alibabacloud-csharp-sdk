@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// <para>The status of the member deletion permission. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: The member deletion permission is enabled.</description></item>
-        /// <item><description>Disabled: The member deletion permission is disabled.</description></item>
+        /// <item><description>Enabled: Enabled.</description></item>
+        /// <item><description>Disabled: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource directory ID.</para>
+        /// <para>The ID of the resource directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rd-3G****</para>

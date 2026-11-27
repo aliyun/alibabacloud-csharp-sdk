@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class InviteAccountToResourceDirectoryRequest : TeaModel {
         /// <summary>
-        /// <para>The remarks.</para>
-        /// <para>Maximum length: 1024 characters.</para>
+        /// <para>The note. The note can be up to 1,024 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Welcome to join</para>
@@ -50,7 +49,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>The ID or logon email address of the account that is invited.</para>
+        /// <para>The ID or logon email address of the invited account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,10 +60,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string TargetEntity { get; set; }
 
         /// <summary>
-        /// <para>The type of the account that is invited. Valid values:</para>
+        /// <para>The type of the invited account. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Account: account ID.</description></item>
-        /// <item><description>Email: logon email address of the account.</description></item>
+        /// <item><description>Email: logon email address.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

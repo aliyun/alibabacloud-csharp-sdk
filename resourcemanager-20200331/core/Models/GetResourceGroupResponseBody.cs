@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2D69A58F-345C-4FDE-88E4-BF5189484043</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource group was created (UTC).</para>
+            /// <para>The time when the resource group was created. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-9gLOoK****</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <list type="bullet">
             /// <item><description>Creating: The resource group is being created.</description></item>
             /// <item><description>OK: The resource group is created.</description></item>
-            /// <item><description>PendingDelete: The resource group is waiting to be deleted.</description></item>
+            /// <item><description>PendingDelete: The resource group is pending deletion.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

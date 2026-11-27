@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the target node. Valid values:</para>
+        /// <para>The target node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Root ID: detaches the control policy from the Root resource folder.</description></item>
-        /// <item><description>Resource folder ID: detaches the control policy from a resource folder.</description></item>
-        /// <item><description>Member ID: detaches the control policy from a member.</description></item>
+        /// <item><description>Root ID: Dissociates the control policy from the Root folder.</description></item>
+        /// <item><description>Folder ID: Dissociates the control policy from a folder.</description></item>
+        /// <item><description>Member ID: Dissociates the control policy from a member.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

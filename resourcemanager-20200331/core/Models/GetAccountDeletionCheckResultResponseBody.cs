@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetAccountDeletionCheckResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the member deletion check.</para>
+        /// <para>The member deletion check result.</para>
         /// </summary>
         [NameInMap("AccountDeletionCheckResultInfo")]
         [Validation(Required=false)]
         public GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfo AccountDeletionCheckResultInfo { get; set; }
         public class GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfo : TeaModel {
             /// <summary>
-            /// <para>The check items that you can choose to abandon and proceed with the member deletion.</para>
+            /// <para>The check items that you can choose to bypass to continue the member deletion.</para>
             /// <remarks>
             /// <para>This parameter may be returned when AllowDelete is set to true.</para>
             /// </remarks>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string CheckId { get; set; }
 
                 /// <summary>
-                /// <para>The service name of the cloud service to which the check item belongs.</para>
+                /// <para>The service name to which the check item belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Container Service</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 /// <para>The description of the check item.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Cloud service instances are running. Submit a ticket to contact customer service for assistance</para>
+                /// <para>Cloud service instances are running. Contact customer service and submit a ticket</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the member account can be deleted. Valid values:</para>
+            /// <para>Specifies whether the member can be deleted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The member account can be deleted.</description></item>
-            /// <item><description>false: The member account cannot be deleted.</description></item>
+            /// <item><description>true: The member can be deleted.</description></item>
+            /// <item><description>false: The member cannot be deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AllowDelete { get; set; }
 
             /// <summary>
-            /// <para>The reasons why the member account cannot be deleted.</para>
+            /// <para>The reason why the member cannot be deleted.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when AllowDelete is set to false.</para>
+            /// <para>This parameter is returned when AllowDelete is set to false.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("NotAllowReason")]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string CheckId { get; set; }
 
                 /// <summary>
-                /// <para>The service name of the cloud service to which the check item belongs.</para>
+                /// <para>The service name to which the check item belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enterprise finance</para>

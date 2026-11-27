@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// <para>The target node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Root ID: attaches the control policy to the Root resource folder.</description></item>
-        /// <item><description>Resource folder ID: attaches the control policy to a resource folder.</description></item>
-        /// <item><description>Member ID: attaches the control policy to a member.</description></item>
+        /// <item><description>Root ID: Attaches the control policy to the Root folder.</description></item>
+        /// <item><description>Folder ID: Attaches the control policy to a folder.</description></item>
+        /// <item><description>Member ID: Attaches the control policy to a member.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

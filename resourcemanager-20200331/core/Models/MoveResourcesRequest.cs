@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of resources to move.</para>
+        /// <para>The list of resources to be transferred.</para>
         /// <remarks>
-        /// <para>A maximum of 10 resources can be moved at a time. Move resources in batches if you have more than 10.</para>
+        /// <para>You can transfer up to 10 resources at a time. To transfer more resources, transfer them in batches.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public List<MoveResourcesRequestResources> Resources { get; set; }
         public class MoveResourcesRequestResources : TeaModel {
             /// <summary>
-            /// <para>The region ID of the resource.</para>
+            /// <para>The ID of the region to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource ID.</para>
+            /// <para>The ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-23v38****</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
             /// <summary>
             /// <para>The resource type.</para>
-            /// <para>You can obtain the value from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
+            /// <para>You can obtain the value from the <b>Resource type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The cloud service code.</para>
-            /// <para>You can obtain the value from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
+            /// <para>The code of the cloud service.</para>
+            /// <para>You can obtain the value from the <b>Cloud service code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>

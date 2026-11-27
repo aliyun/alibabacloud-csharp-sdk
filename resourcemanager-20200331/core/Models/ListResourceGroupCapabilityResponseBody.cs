@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListResourceGroupCapabilityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of capability items.</para>
+        /// <para>The list of capabilities.</para>
         /// </summary>
         [NameInMap("Capabilities")]
         [Validation(Required=false)]
         public List<ListResourceGroupCapabilityResponseBodyCapabilities> Capabilities { get; set; }
         public class ListResourceGroupCapabilityResponseBodyCapabilities : TeaModel {
             /// <summary>
-            /// <para>The resource center resource type code.</para>
+            /// <para>The Resource Center resource type code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACS::ECS::Instance</para>
@@ -27,8 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceCenterResourceType { get; set; }
 
             /// <summary>
-            /// <para>The resource type.</para>
-            /// <para>You can obtain the resource type from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
+            /// <para>The resource type. You can obtain the resource type from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -38,8 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The cloud service code.</para>
-            /// <para>You can obtain the cloud service code from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
+            /// <para>The cloud service code. You can obtain the cloud service code from the <b>Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>

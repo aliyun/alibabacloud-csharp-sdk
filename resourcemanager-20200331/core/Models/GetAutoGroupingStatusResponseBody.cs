@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetAutoGroupingStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the attached-resource allocation for existing resources is enabled. Valid values:</para>
+        /// <para>Specifies whether automatic grouping for existing resources is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Not enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,12 +24,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public bool? EnableExistedResourcesTransfer { get; set; }
 
         /// <summary>
-        /// <para>The status of automatic resource group transfer. Valid values:</para>
+        /// <para>The activation status of automatic grouping. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabling: Being enabled.</description></item>
-        /// <item><description>Enable: Enabled.</description></item>
-        /// <item><description>Partial_Enable: Attached-resource allocation is enabled, but custom condition-based resource group transfer is not enabled. To enable custom condition-based resource group transfer, call <a href="~~EnableAutoGrouping~~">EnableAutoGrouping</a>.</description></item>
-        /// <item><description>Disable: Not enabled.</description></item>
+        /// <item><description>Enabling: Activating.</description></item>
+        /// <item><description>Enable: Activated.</description></item>
+        /// <item><description>Partial_Enable: Automatic grouping for associated resources is activated, but automatic grouping based on custom conditions is not activated. To activate automatic grouping based on custom conditions, call <a href="~~EnableAutoGrouping~~">EnableAutoGrouping</a>.</description></item>
+        /// <item><description>Disable: Not activated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

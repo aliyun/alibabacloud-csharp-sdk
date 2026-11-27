@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DeregisterDelegatedAdministratorRequest : TeaModel {
         /// <summary>
-        /// <para>The UID of a member account in the resource directory.</para>
+        /// <para>The UID of the member accounts in the resource folder.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the trusted service.</para>
-        /// <para>For more information, see the <c>Trusted Service Identifier</c> column in <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</para>
+        /// <para>The identifier of the trusted service.
+        /// For more information, see the Trusted service identifier column in <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

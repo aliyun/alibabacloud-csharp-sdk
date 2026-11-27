@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// <para>The new type of the member. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ResourceAccount: switches the specified cloud account to a resource account.</description></item>
-        /// <item><description>CloudAccount: switches the specified resource account to a cloud account.</description></item>
+        /// <item><description>ResourceAccount: Switches the specified cloud account to a resource account.</description></item>
+        /// <item><description>CloudAccount: Switches the specified resource account to a cloud account.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Set either NewDisplayName or NewAccountType. You cannot set both of them at the same time.</para>
+        /// <para>You can specify either <c>NewDisplayName</c> or <c>NewAccountType</c>, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// <para>The new name of the member.</para>
         /// <remarks>
-        /// <para>Set either NewDisplayName or NewAccountType. You cannot set both of them at the same time.</para>
+        /// <para>You can specify either <c>NewDisplayName</c> or <c>NewAccountType</c>, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

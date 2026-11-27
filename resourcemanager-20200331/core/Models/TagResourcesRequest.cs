@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource group or the ID of the resource directory member account.</para>
+        /// <para>The ID of the resource group or the member of the resource directory.</para>
         /// <para>You can specify up to 50 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ResourceGroup (default): attaches labels to resource groups.</description></item>
-        /// <item><description>Account: attaches labels to member accounts of a resource directory.</description></item>
+        /// <item><description>ResourceGroup (default): Attaches tags to a resource group.</description></item>
+        /// <item><description>Account: Attaches tags to a member of a resource directory.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when you attach labels to member accounts of a resource directory.</para>
+        /// <para>This parameter is required when you attach tags to a member of a resource directory.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The labels.</para>
-        /// <para>You can attach up to 20 labels.</para>
+        /// <para>The tags.</para>
+        /// <para>You can attach up to 20 tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The label key.</para>
-            /// <para>The key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key.</para>
+            /// <para>The key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k1</para>
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The label value.</para>
-            /// <para>The value can be up to 128 characters in length and cannot start with <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value.</para>
+            /// <para>The value can be up to 128 characters in length. It cannot start with <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>

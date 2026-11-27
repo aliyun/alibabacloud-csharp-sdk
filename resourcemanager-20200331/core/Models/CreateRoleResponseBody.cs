@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <para>The content of the access policy for assuming the role.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{ \&quot;Statement\&quot;: [ { \&quot;Action\&quot;: \&quot;sts:AssumeRole\&quot;, \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Principal\&quot;: { \&quot;RAM\&quot;: \&quot;acs:ram::12345678901234****:root\&quot; } } ], \&quot;Version\&quot;: \&quot;1\&quot; }</para>
+            /// <para>{ &quot;Statement&quot;: [ { &quot;Action&quot;: &quot;sts:AssumeRole&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: { &quot;RAM&quot;: &quot;acs:ram::12345678901234****:root&quot; } } ], &quot;Version&quot;: &quot;1&quot; }</para>
             /// </summary>
             [NameInMap("AssumeRolePolicyDocument")]
             [Validation(Required=false)]

@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-9gLOoK****</para>
@@ -99,9 +99,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <summary>
             /// <para>The status of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Creating: Being created.</description></item>
-            /// <item><description>OK: Created.</description></item>
-            /// <item><description>PendingDelete: Pending deletion.</description></item>
+            /// <item><description>Creating: The resource group is being created.</description></item>
+            /// <item><description>OK: The resource group is created.</description></item>
+            /// <item><description>PendingDelete: The resource group is pending deletion.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

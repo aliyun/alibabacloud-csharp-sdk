@@ -11,8 +11,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
     public class CreateServiceLinkedRoleRequest : TeaModel {
         /// <summary>
         /// <para>The suffix of the role name.</para>
-        /// <para>The total length of the role name (including the suffix) must be 1 to 64 characters and can contain letters, digits, periods (.), and hyphens (-).</para>
+        /// <para>The total length of the role name (including the suffix) is 1 to 64 characters and can contain letters, digits, periods (.), and hyphens (-).</para>
         /// <para>For example, if the suffix is <c>Example</c>, the role name is <c>ServiceLinkedRoleName_Example</c>, and the maximum length cannot exceed 64 characters.</para>
+        /// <para>Only some service-linked roles support custom suffixes. If a custom suffix is not supported, the 400 InvalidParameter.CustomSuffix.NotAllowed error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Example</para>
@@ -23,7 +24,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The description of the service-linked role.</para>
-        /// <para>Only service-linked roles that allow custom suffixes can have a custom role description. Otherwise, the role description uses a preset value and cannot be modified.</para>
+        /// <para>You can specify a description only for service-linked roles that support custom suffixes. Otherwise, the description uses a preset value and cannot be modified.</para>
         /// <para>The description must be 1 to 1,024 characters in length.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +36,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The service name.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/461722.html">Cloud services that support service-linked roles</a>.</para>
+        /// <para>The value is the service identifier of the cloud service, such as <c>polardb.aliyuncs.com</c>. For more information, see <a href="https://help.aliyun.com/document_detail/461722.html">Cloud services that support service-linked roles</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

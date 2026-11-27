@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListResourceGroupsWithAuthDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The display name of the resource group. This parameter is used as a filter condition. Fuzzy match is supported.</para>
+        /// <para>The display name of the resource group, which is used as a filter condition for the query. Fuzzy match is supported.</para>
         /// <para>The name can be up to 50 characters in length.</para>
         /// 
         /// <b>Example:</b>
@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// <para>Specifies whether to return tag information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>false (default): Does not return tag information.</para>
+        /// <item><description><para>false: does not return tag information. This is the default value.</para>
         /// </description></item>
-        /// <item><description><para>true: Returns tag information.</para>
+        /// <item><description><para>true: returns tag information.</para>
         /// <remarks>
-        /// <para>If you specify tag-based filter conditions, tag information is always returned regardless of the value of <c>IncludeTags</c>.</para>
+        /// <para>When you specify a tag filter condition, tag information is returned regardless of the value of <c>IncludeTags</c>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public bool? IncludeTags { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the resource group. This parameter is used as a filter condition. Fuzzy match is supported.</para>
-        /// <para>The identifier can be up to 50 characters in length and can contain letters, digits, and hyphens (-).</para>
+        /// <para>The unique identifier of the resource group, which is used as a filter condition for the query. Fuzzy match is supported.</para>
+        /// <para>The identifier can be up to 50 characters in length, and can contain letters, digits, and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>prod-rg</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of resource group IDs.</para>
+        /// <para>The IDs of the resource groups.</para>
         /// </summary>
         [NameInMap("ResourceGroupIds")]
         [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource types.</para>
+        /// <para>The resource types.</para>
         /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public class ListResourceGroupsWithAuthDetailsRequestResourceTypes : TeaModel {
             /// <summary>
             /// <para>The resource type.</para>
-            /// <para>You can obtain the resource type from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
+            /// <para>You can obtain the value from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -106,8 +106,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceTypeCode { get; set; }
 
             /// <summary>
-            /// <para>The cloud service code.</para>
-            /// <para>You can obtain the cloud service code from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
+            /// <para>The code of the cloud service.</para>
+            /// <para>You can obtain the value from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
@@ -119,11 +119,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>The status of the resource group. This parameter is used as a filter condition. Valid values:</para>
+        /// <para>The status of the resource group, which is used as a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Creating: Being created.</description></item>
-        /// <item><description>OK: Created.</description></item>
-        /// <item><description>PendingDelete: Pending deletion.</description></item>
+        /// <item><description>Creating: The resource group is being created.</description></item>
+        /// <item><description>OK: The resource group is created.</description></item>
+        /// <item><description>PendingDelete: The resource group is pending deletion.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

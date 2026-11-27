@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// <para>The status of the control policy feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: The control policy feature is enabled.</description></item>
-        /// <item><description>PendingEnable: The control policy feature is being enabled.</description></item>
-        /// <item><description>Disabled: The control policy feature is disabled.</description></item>
-        /// <item><description>PendingDisable: The control policy feature is being disabled.</description></item>
+        /// <item><description>Enabled: The feature is enabled.</description></item>
+        /// <item><description>PendingEnable: The feature is being enabled.</description></item>
+        /// <item><description>Disabled: The feature is disabled.</description></item>
+        /// <item><description>PendingDisable: The feature is being disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

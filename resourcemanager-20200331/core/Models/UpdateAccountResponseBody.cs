@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string FolderId { get; set; }
 
             /// <summary>
-            /// <para>The method used by the member to join the resource directory. Valid values:</para>
+            /// <para>The method by which the member joined the resource directory. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>invited: invited.</description></item>
-            /// <item><description>created: created.</description></item>
+            /// <item><description>invited: Invited.</description></item>
+            /// <item><description>created: Created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string JoinMethod { get; set; }
 
             /// <summary>
-            /// <para>The time when the member joined the resource directory (UTC).</para>
+            /// <para>The time when the member joined the resource directory. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string JoinTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the member was last modified (UTC).</para>
+            /// <para>The time when the member was modified. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceDirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The join status of the member. Valid values:</para>
+            /// <para>The status of the member joining the resource directory. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>CreateSuccess: Created.</description></item>
             /// <item><description>InviteSuccess: Invited.</description></item>
@@ -119,8 +119,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <summary>
             /// <para>The type of the member. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CloudAccount: cloud account.</description></item>
-            /// <item><description>ResourceAccount: resource account.</description></item>
+            /// <item><description>CloudAccount: Cloud account.</description></item>
+            /// <item><description>ResourceAccount: Resource account.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

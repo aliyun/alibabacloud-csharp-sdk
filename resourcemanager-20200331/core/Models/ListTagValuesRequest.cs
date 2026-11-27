@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListTagValuesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return in a single request.</para>
+        /// <para>The maximum number of entries to return for a single request.</para>
         /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cm****</para>
@@ -32,7 +32,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The resource type.</para>
-        /// <para>Set the value to Account, which indicates a member of a resource directory.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Account: members of a resource directory.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +46,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag key that is used as a filter condition for the query.</para>
+        /// <para>The tag key used as a filter for the query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string TagKey { get; set; }
 
         /// <summary>
-        /// <para>The tag value for fuzzy match.</para>
+        /// <para>The tag value for fuzzy search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>

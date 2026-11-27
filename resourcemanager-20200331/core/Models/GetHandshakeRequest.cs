@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetHandshakeRequest : TeaModel {
         /// <summary>
-        /// <para>The handshake ID.</para>
+        /// <para>The invitation ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

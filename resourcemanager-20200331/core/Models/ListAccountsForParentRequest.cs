@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The page number.</para>
-        /// <para>Minimum value: 1. Default value: 1.</para>
+        /// <para>Starting value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource folder.</para>
+        /// <para>The ID of the folder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fd-bVaRIG****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string QueryKeyword { get; set; }
 
         /// <summary>
-        /// <para>The tags used to filter member accounts.</para>
+        /// <para>The tags used to filter results.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

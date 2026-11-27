@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <para>The status of the control policy. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Enabled: Enabled.</description></item>
-            /// <item><description>PendingEnable: Being enabled.</description></item>
+            /// <item><description>PendingEnable: Enabling.</description></item>
             /// <item><description>Disabled: Disabled.</description></item>
-            /// <item><description>PendingDisable: Being disabled.</description></item>
+            /// <item><description>PendingDisable: Disabling.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ControlPolicyStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource directory was created. The time is displayed in UTC in RFC 3339 format, indicated by Z.</para>
+            /// <para>The time when the resource directory was enabled. The time is in the RFC 3339 UTC format, where Z indicates UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-18T15:32:10.473Z</para>
@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The real-name verification information of the member.</para>
+            /// <para>The real-name information of the member.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>***有限公司</para>
+            /// <para>*** Co., Ltd</para>
             /// </summary>
             [NameInMap("IdentityInformation")]
             [Validation(Required=false)]
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string MasterAccountName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether member deletion is enabled. Valid values:</para>
+            /// <para>Specifies whether member deletion permission is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enabled: Enabled. You can call <a href="https://help.aliyun.com/document_detail/311546.html">DeleteAccount</a> to delete members of the resource account type.</description></item>
+            /// <item><description>Enabled: Enabled. You can call the <a href="https://help.aliyun.com/document_detail/311546.html">DeleteAccount</a> operation to delete members of the resource account type.</description></item>
             /// <item><description>Disabled: Disabled. You cannot delete members of the resource account type.</description></item>
             /// </list>
             /// 
