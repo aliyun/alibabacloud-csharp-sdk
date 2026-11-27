@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
     public class ResourceRequirements : TeaModel {
         /// <summary>
         /// <para>The resource limits.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;cpu&quot;:&quot;1&quot;,&quot;memory&quot;:&quot;1000Mi&quot;}</para>
         /// </summary>
         [NameInMap("Limits")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The resource requests.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;cpu&quot;:&quot;1&quot;,&quot;memory&quot;:&quot;1000Mi&quot;}</para>
         /// </summary>
         [NameInMap("Requests")]
         [Validation(Required=false)]

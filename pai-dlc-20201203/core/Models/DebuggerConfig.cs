@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <para>The configuration item details in JSON format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;description\&quot;:\&quot;This is a new pytorchjob template\&quot;}</para>
+        /// <para>{&quot;description&quot;:&quot;This is a new pytorchjob template&quot;}</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

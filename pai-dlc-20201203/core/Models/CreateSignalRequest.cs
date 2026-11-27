@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Signal { get; set; }
 
         /// <summary>
-        /// <para>The signal delivery scope.</para>
+        /// <para>The target scope for sending the signal.</para>
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]

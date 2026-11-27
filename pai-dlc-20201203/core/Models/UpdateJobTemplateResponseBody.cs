@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, used for diagnostics and troubleshooting.</para>
+        /// <para>The ID of the request, which is used for diagnostics and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-xxxxxxx</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Version { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a new version was created.</para>
+        /// <para>Indicates whether a new version is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

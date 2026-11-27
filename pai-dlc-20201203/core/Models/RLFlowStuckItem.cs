@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class RLFlowStuckItem : TeaModel {
         /// <summary>
-        /// <para>The number of idle seconds since NowMs. This value is the descending sort key of the Stuck list.</para>
+        /// <para>The number of idle seconds since NowMs (the descending sort key for the stuck list).</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? IdleSec { get; set; }
 
         /// <summary>
-        /// <para>The UNIX timestamp of the last event, in milliseconds.</para>
+        /// <para>The millisecond timestamp of the last event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787293215480</para>
@@ -30,26 +30,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? LastTsMs { get; set; }
 
         /// <summary>
-        /// <para>The current milestone where the entry is staying. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>已生成未下发: Generated but not delivered.</description></item>
-        /// <item><description>已下发未启动: Delivered but not started.</description></item>
-        /// <item><description>已启动待生成: Started and pending generation.</description></item>
-        /// <item><description>生成中: Generating.</description></item>
-        /// <item><description>Rollout完成待打分: Rollout completed and pending scoring.</description></item>
-        /// <item><description>已打分待采样: Scored and pending sampling.</description></item>
-        /// <item><description>已采样待训练: Sampled and pending training.</description></item>
-        /// </list>
+        /// <para>The current milestone: generated but not dispatched, dispatched but not started, started but pending generation, generating, rollout completed pending scoring, scored pending sampling, or sampled pending training.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>生成中</para>
+        /// <para>Generating</para>
         /// </summary>
         [NameInMap("Milestone")]
         [Validation(Required=false)]
         public string Milestone { get; set; }
 
         /// <summary>
-        /// <para>The number of completed generation rounds.</para>
+        /// <para>The number of completed generation turns.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -59,7 +50,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? NTurns { get; set; }
 
         /// <summary>
-        /// <para>The UID of the sample.</para>
+        /// <para>The sample UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>321fa56f-e1e5-4eb3-8047-db7a230c9a75</para>
@@ -69,7 +60,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string PromptUid { get; set; }
 
         /// <summary>
-        /// <para>The ordinal number of the trajectory.</para>
+        /// <para>The trajectory index.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

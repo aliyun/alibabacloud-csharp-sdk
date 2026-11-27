@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
     public class CredentialRole : TeaModel {
         /// <summary>
         /// <para>The account on whose behalf the role is assumed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("AssumeRoleFor")]
         [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The access policy attached during role assumption.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[{&quot;Effect&quot;:&quot;Allow&quot;,&quot;Action&quot;:[&quot;oss:GetObject&quot;],&quot;Resource&quot;:[&quot;acs:oss:<em>:</em>:example-bucket/data/*&quot;]}]}</para>
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class RLFlowStep : TeaModel {
         /// <summary>
-        /// <para>The P50 latency in seconds from when trajectories of the step enter the buffer to when batching occurs.</para>
+        /// <para>The P50 duration in seconds from when trajectories of the step enter the buffer to when they are batched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.8</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public double? BufferWaitP50 { get; set; }
 
         /// <summary>
-        /// <para>The gap duration in seconds, calculated as train started − rollout finished. This represents batching or transfer wait time.</para>
+        /// <para>The gap duration in seconds, calculated as train started minus rollout finished, representing batching or transfer wait time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public double? GapSec { get; set; }
 
         /// <summary>
-        /// <para>The training idle time in seconds, calculated as the current step training start − the previous step training end. If no marker is present, the value falls back to the current step forward computation start − the previous step optimizer end. A value greater than 0 indicates that the trainer is waiting for data.</para>
+        /// <para>The idle time in seconds between the training phases of adjacent steps. This value only reflects the time interval and cannot be used alone to determine data waiting or other specific causes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? NSamples { get; set; }
 
         /// <summary>
-        /// <para>The number of trajectories executed in the step.</para>
+        /// <para>The number of trajectories belonging to the current execution of the step.</para>
         /// 
         /// <b>Example:</b>
         /// <para>96</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? NTrajs { get; set; }
 
         /// <summary>
-        /// <para>The latest time when trajectories of the step enter the buffer, in milliseconds.</para>
+        /// <para>The latest time a trajectory of the step enters the buffer in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787474487713</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? ProdEndMs { get; set; }
 
         /// <summary>
-        /// <para>The earliest time when trajectories of the step enter the buffer, in milliseconds.</para>
+        /// <para>The earliest time a trajectory of the step enters the buffer in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787474487713</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? ProdStartMs { get; set; }
 
         /// <summary>
-        /// <para>The P50 latency in seconds from when trajectories of the step start execution to when they enter the buffer.</para>
+        /// <para>The P50 duration in seconds from when trajectories of the step start execution to when they enter the buffer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.8</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public double? RolloutP50 { get; set; }
 
         /// <summary>
-        /// <para>The rollout duration in seconds, calculated as rollout finished − rollout started. This value is null if no marker is present.</para>
+        /// <para>The rollout duration in seconds, calculated as rollout finished minus rollout started. This value is empty when no markers are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public double? RolloutSec { get; set; }
 
         /// <summary>
-        /// <para>The global step ordinal number.</para>
+        /// <para>The global step number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? Step { get; set; }
 
         /// <summary>
-        /// <para>The forward computation start time, in milliseconds.</para>
+        /// <para>The start time of the forward computation in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787474487713</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? TFwdStartMs { get; set; }
 
         /// <summary>
-        /// <para>The optimizer end time, in milliseconds.</para>
+        /// <para>The end time of the optimizer in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787474487713</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? TOptEndMs { get; set; }
 
         /// <summary>
-        /// <para>The node operation log &quot;Step N rollout finished&quot; time, in milliseconds.</para>
+        /// <para>The time of the &quot;Step N rollout finished&quot; entry in the node logs in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787474487713</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? TRolloutEndMs { get; set; }
 
         /// <summary>
-        /// <para>The node operation log &quot;Step N rollout started&quot; time, in milliseconds (taken from agent_collect_time).</para>
+        /// <para>The observed rollout start time for the current step as a millisecond timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787474487713</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? TRolloutStartMs { get; set; }
 
         /// <summary>
-        /// <para>The node operation log &quot;Step N train finished&quot; time, in milliseconds.</para>
+        /// <para>The time of the &quot;Step N train finished&quot; entry in the node logs in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787474487713</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? TTrainEndMs { get; set; }
 
         /// <summary>
-        /// <para>The node operation log &quot;Step N train started&quot; time, in milliseconds.</para>
+        /// <para>The time of the &quot;Step N train started&quot; entry in the node logs in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787474487713</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? TTrainStartMs { get; set; }
 
         /// <summary>
-        /// <para>The TRAIN_UPDATE (parameter update) time, in milliseconds.</para>
+        /// <para>The time of the TRAIN_UPDATE (parameter update) event in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787474487713</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? TUpdateMs { get; set; }
 
         /// <summary>
-        /// <para>The training duration in seconds. This value is preferentially calculated as train finished − train started. If no marker is present, the value falls back to the duration from batching to training completion. This value is null if global_step is duplicated because of a job restart.</para>
+        /// <para>The duration of the training phase for the step in seconds. This value is not provided when the training start and end times are unavailable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

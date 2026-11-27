@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
     public class JobElasticSpec : TeaModel {
         /// <summary>
         /// <para>The AIMaster Docker image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>registry/aimaster:v1</para>
         /// </summary>
         [NameInMap("AIMasterDockerImage")]
         [Validation(Required=false)]

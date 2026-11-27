@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Current { get; set; }
 
         /// <summary>
-        /// <para>The estimated remaining seconds, calculated as (Total - Current) × PaceSec.</para>
+        /// <para>The estimated time remaining, in seconds. This value is not provided when it cannot be estimated. A value of 0 may be returned when the training is confirmed to be complete, even if PaceSec is not provided.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? EtaSec { get; set; }
 
         /// <summary>
-        /// <para>The per-step duration, calculated as the differential between contiguous step marks, in seconds.</para>
+        /// <para>The average time per step over the recent step progress, in seconds. This value is not provided when there is insufficient information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>14</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public double? PaceSec { get; set; }
 
         /// <summary>
-        /// <para>The progress percentage, which is the ratio of Current to Total.</para>
+        /// <para>The training progress percentage. A value of 100% may be returned for confirmed completed progress, where Current may be less than Total. Do not determine whether the training is complete based solely on the current step number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public double? Pct { get; set; }
 
         /// <summary>
-        /// <para>The latest step mark time, in UNIX seconds.</para>
+        /// <para>The timestamp of the latest step (in UNIX seconds).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1787474487</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? Time { get; set; }
 
         /// <summary>
-        /// <para>The total number of steps, obtained from the configuration dump.</para>
+        /// <para>The total number of steps (retrieved from the configuration dump).</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

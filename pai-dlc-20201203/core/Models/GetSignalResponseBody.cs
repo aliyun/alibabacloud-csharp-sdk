@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The status description, which contains a summary for each pod, such as the number of successful deliveries and the names of failed or pending pods.</para>
+        /// <para>The <b>status description</b>, which includes a summary for each Pod (such as the number of successful deliveries and the names of failed or pending Pods).</para>
         /// 
         /// <b>Example:</b>
         /// <para>signal delivered to 1 pods</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The list of pod names.</para>
+        /// <para>The list of Pod names.</para>
         /// </summary>
         [NameInMap("PodNames")]
         [Validation(Required=false)]
         public List<string> PodNames { get; set; }
 
         /// <summary>
-        /// <para>The status reason code, such as <c>Completed</c>, <c>SignalFailed</c>, or <c>StoppedByJobEnded</c>.</para>
+        /// <para>The <b>status reason code</b>, such as <c>Completed</c>, <c>SignalFailed</c>, or <c>StoppedByJobEnded</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Completed</para>

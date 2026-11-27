@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class Tensorboard : TeaModel {
         /// <summary>
-        /// <para>The visibility.</para>
+        /// <para>The accessibility.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PRIVATE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The CPU resources.</para>
+        /// <para>The CPU resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The maximum running duration in minutes.</para>
+        /// <para>The maximum runtime in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>240</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? Memory { get; set; }
 
         /// <summary>
-        /// <para>The extended fields of the dataset in JSON format. Currently, MountPath is supported, which specifies the mount path for a custom dataset.</para>
+        /// <para>The extended fields of the dataset in JSON format. Currently, MountPath is supported to specify the mount path for a custom dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;mountpath&quot;:&quot;/root/data/&quot;}</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>The priority of the Tensorboard job.</para>
+        /// <para>The priority of the TensorBoard job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group used by Tensorboard.</para>
+        /// <para>The ID of the resource group used by TensorBoard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quota12***</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string QuotaId { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource quota used by Tensorboard.</para>
+        /// <para>The name of the resource quota used by TensorBoard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc-quota</para>
@@ -230,14 +230,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SummaryRelativePath { get; set; }
 
         /// <summary>
-        /// <para>The datasets mounted to the Tensorboard job.</para>
+        /// <para>The datasets mounted to the TensorBoard job.</para>
         /// </summary>
         [NameInMap("TensorboardDataSources")]
         [Validation(Required=false)]
         public List<TensorboardDataSourceSpec> TensorboardDataSources { get; set; }
 
         /// <summary>
-        /// <para>The Tensorboard ID.</para>
+        /// <para>The TensorBoard ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tensorboard-xxx</para>
@@ -247,14 +247,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TensorboardId { get; set; }
 
         /// <summary>
-        /// <para>The pay-as-you-go configuration for the Tensorboard job.</para>
+        /// <para>The pay-as-you-go configuration for the TensorBoard job.</para>
         /// </summary>
         [NameInMap("TensorboardSpec")]
         [Validation(Required=false)]
         public TensorboardSpec TensorboardSpec { get; set; }
 
         /// <summary>
-        /// <para>The Tensorboard URL.</para>
+        /// <para>The TensorBoard URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://xxxxxx">http://xxxxxx</a></para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Username { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123***</para>

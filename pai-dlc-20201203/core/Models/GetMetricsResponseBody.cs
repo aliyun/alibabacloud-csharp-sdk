@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <para>The monitoring metrics data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;Content\&quot;: \&quot;\&quot;, \&quot;OperationName\&quot;: \&quot;purchase\&quot;, \&quot;Success\&quot;: 1, \&quot;Id\&quot;: \&quot;217\&quot;, \&quot;LogDatetime\&quot;: 1687679582923}]</para>
+        /// <para>[{&quot;Content&quot;: &quot;&quot;, &quot;OperationName&quot;: &quot;purchase&quot;, &quot;Success&quot;: 1, &quot;Id&quot;: &quot;217&quot;, &quot;LogDatetime&quot;: 1687679582923}]</para>
         /// </summary>
         [NameInMap("DataPoints")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The statistical period of the monitoring data. Valid values: 15, 60, 900, and 3600. Unit: seconds. If you do not set the statistical period, monitoring data is queried based on the reporting period that was specified when the monitoring metric was registered. The statistical period varies for each monitoring metric (MetricName) of each cloud service. For more information, see cloud service monitoring items.</para>
+        /// <para>The statistical period of the monitoring data. Valid values: 15, 60, 900, and 3600. Unit: seconds. If the statistical period is not specified, the monitoring data is queried based on the reporting period applied for when the monitoring metric was registered. The statistical period varies with the monitoring metric (MetricName) of each cloud service. For more information, see Cloud service monitoring metrics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -70,11 +70,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The operation was successful.</description></item>
-        /// <item><description>false: The operation failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the operation was successful. Valid values: true: The operation was successful. false: The operation failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

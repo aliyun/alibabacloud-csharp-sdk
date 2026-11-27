@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListJobTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of templates.</para>
+        /// <para>The template list.</para>
         /// </summary>
         [NameInMap("JobTemplates")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was created.</para>
+            /// <para>The creation time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was last modified.</para>
+            /// <para>The modification time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The most recent time when a task was successfully created by using this template.</para>
+            /// <para>The most recent time a task was successfully created by using this template.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who last modified the template.</para>
+            /// <para>The last modifier ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20**************26</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who created the template.</para>
+            /// <para>The creator ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20**************26</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

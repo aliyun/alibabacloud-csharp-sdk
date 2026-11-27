@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>

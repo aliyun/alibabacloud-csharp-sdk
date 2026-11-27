@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListRayHistoryServersRequest : TeaModel {
         /// <summary>
-        /// <para>The display name of the node.</para>
+        /// <para>The display name of the job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query range. The node creation time is used for filtering.</para>
+        /// <para>The end time of the query interval. The creation time of the job is used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-09T16:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string IdPrefix { get; set; }
 
         /// <summary>
-        /// <para>Filters results by the time after which the resource was last modified.</para>
+        /// <para>The modification time used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-09T16:00:00Z</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number for a paging query. Paging starts from page 1.</para>
+        /// <para>The page number for a paging query. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of RayHistoryServers to return per page in a paging query.</para>
+        /// <para>The number of RayHistoryServer resources to return on each page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The payment method. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PrePaid</description></item>
         /// <item><description>PostPaid</description></item>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. To query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</para>
+        /// <para>The resource group ID. For more information about how to query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quotaxxx</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only the RayHistoryServers created by the current user.</para>
+        /// <para>Specifies whether to return only the RayHistoryServer resources created by the current logon user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? ShowOwn { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results. Valid values:</para>
+        /// <para>The field by which to sort the returned results. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>DisplayName</description></item>
         /// <item><description>GmtCreateTime</description></item>
@@ -149,10 +149,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <para>The status of the RayHistoryServer. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Creating: The RayHistoryServer is being created.</description></item>
-        /// <item><description>Queuing: The RayHistoryServer is queuing.</description></item>
+        /// <item><description>Queuing: The RayHistoryServer is in the queue.</description></item>
         /// <item><description>Running: The RayHistoryServer is running.</description></item>
         /// <item><description>Stopped: The RayHistoryServer is stopped.</description></item>
-        /// <item><description>Failed: The RayHistoryServer has failed.</description></item>
+        /// <item><description>Failed: The RayHistoryServer failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string StoragePath { get; set; }
 
         /// <summary>
-        /// <para>Filters results by user ID.</para>
+        /// <para>The user ID used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string UserIdForFilter { get; set; }
 
         /// <summary>
-        /// <para>Filters results by username.</para>
+        /// <para>The username used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myusername</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Username { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>268</para>

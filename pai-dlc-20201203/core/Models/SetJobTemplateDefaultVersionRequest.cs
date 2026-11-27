@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class SetJobTemplateDefaultVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The version number to set as the default.</para>
+        /// <para>The target version number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cluster-example-001</para>
         /// </summary>
         [NameInMap("ClusterID")]
         [Validation(Required=false)]
@@ -28,6 +31,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The cluster name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example-training-cluster</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]

@@ -163,6 +163,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The environment variables injected during job execution.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;ENABLE_DEBUG_MODE&quot;:&quot;true&quot;}</para>
         /// </summary>
         [NameInMap("Envs")]
         [Validation(Required=false)]
@@ -521,6 +524,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The system environment variable configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;ENABLE_DEBUG_MODE&quot;:&quot;true&quot;}</para>
         /// </summary>
         [NameInMap("SystemEnvs")]
         [Validation(Required=false)]

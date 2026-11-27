@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The most recent time when a node was successfully created by using this template. This parameter is not returned if you create a template that has not been used.</para>
+        /// <para>The time when the template was last used.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string LastUsedTime { get; set; }
 
         /// <summary>
-        /// <para>The custom key-value pair metadata defined by the user.</para>
+        /// <para>The user-defined key-value pair metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the currently returned version.</para>
+        /// <para>The version number returned in the current response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

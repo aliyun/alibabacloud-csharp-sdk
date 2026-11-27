@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class Quota : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cluster-example-001</para>
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>example-training-cluster</para>
+        /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }

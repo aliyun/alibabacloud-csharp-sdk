@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetTensorboardRequest : TeaModel {
         /// <summary>
-        /// <para>The job ID. See <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</para>
+        /// <para>The job ID. Refer to <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc-xxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JodId { get; set; }
 
         /// <summary>
-        /// <para>The sharing token. Specify this parameter to use the sharing token to obtain the permissions to view a TensorBoard job. You can extract the token from the URL obtained by calling <a href="https://help.aliyun.com/document_detail/2557813.html">GetTensorboardSharedUrl</a>.</para>
+        /// <para>The shared token information. Specify this parameter to use the shared token to obtain permissions to view a specific TensorBoard job. You can extract the token from the URL obtained by calling <a href="https://help.aliyun.com/document_detail/2557813.html">GetTensorboardSharedUrl</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Token { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;See <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;Refer to <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>46099</para>

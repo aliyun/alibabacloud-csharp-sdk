@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class RLFlowMilestoneCount : TeaModel {
         /// <summary>
-        /// <para>The number of in-transit trajectories that remain at this milestone.</para>
+        /// <para>The number of in-transit trajectories at this milestone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>96</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The milestone. Valid values are the same as those of Stuck[].Milestone.</para>
+        /// <para>The milestone. The valid values are the same as those of Stuck[].Milestone.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>生成中</para>
+        /// <para>Generating</para>
         /// </summary>
         [NameInMap("Milestone")]
         [Validation(Required=false)]

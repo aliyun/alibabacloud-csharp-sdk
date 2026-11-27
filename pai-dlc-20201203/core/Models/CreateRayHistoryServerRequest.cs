@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <summary>
         /// <para>The visibility of the job. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: Visible to all users in the workspace.</description></item>
-        /// <item><description>PRIVATE: Visible only to you and administrators in the workspace.</description></item>
+        /// <item><description>PUBLIC: The job is visible to all users in the workspace.</description></item>
+        /// <item><description>PRIVATE: The job is visible only to you and administrators in the workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The display name of the node.</para>
+        /// <para>The display name of the job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The hardware specifications of the public resource group. To access a detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>.&gt;Notice: Prices vary by specification.</para>
+        /// <para>The hardware specifications of the public resource group. For a detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>. &gt;Notice: Prices vary based on specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c6.large</para>
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <summary>
         /// <para>The resource group ID. This parameter is optional.</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is left empty, the job is committed to the public resource group.</description></item>
-        /// <item><description>If the current workspace is already attached to a resource quota, you can specify the corresponding resource quota ID here. For details about how to query a resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</description></item>
+        /// <item><description>If this parameter is left empty, the job is submitted to the public resource group.</description></item>
+        /// <item><description>If a resource quota is bound to the current workspace, you can specify the corresponding resource quota ID. For more information about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string StoragePath { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.&lt;props=&quot;china&quot;&gt;For information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

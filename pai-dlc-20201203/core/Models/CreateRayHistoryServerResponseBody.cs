@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RayHistoryServerId { get; set; }
 
         /// <summary>
-        /// <para>The request ID of this call, used for diagnostics and troubleshooting.</para>
+        /// <para>The request ID of the call. This ID is used for troubleshooting and support.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-xxxxxxx</para>

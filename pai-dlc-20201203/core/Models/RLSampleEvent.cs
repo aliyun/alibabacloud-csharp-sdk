@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class RLSampleEvent : TeaModel {
         /// <summary>
-        /// <para>The details. For Megatron rows, the value is rank=..,global_step=..,ppo_epoch=..</para>
+        /// <para>The supplementary information for the event. The specific content depends on the event type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>uid_generated</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Detail { get; set; }
 
         /// <summary>
-        /// <para>The event source component. For Megatron rows, the value is &quot;{phase} {status}&quot;.</para>
+        /// <para>The source component or execution stage of the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DataLoader</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The training step to which the event belongs (raw string). For Megatron rows, this is empty because the step is included in Detail.</para>
+        /// <para>The decimal string of the training step. An empty string is used when the corresponding information is not collected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GlobalStep { get; set; }
 
         /// <summary>
-        /// <para>The stage. For Megatron rows, this is normalized to TRAIN.</para>
+        /// <para>The training or sampling stage to which the event belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DATA_PREPROCESS</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? TimestampMs { get; set; }
 
         /// <summary>
-        /// <para>The event target component. For Megatron rows, the value is the function name.</para>
+        /// <para>The destination component or execution action of the event.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>PPOTrainerV1</para>
+        /// <para>Trainer</para>
         /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]

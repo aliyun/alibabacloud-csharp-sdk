@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? DefaultVersion { get; set; }
 
         /// <summary>
-        /// <para>The time the template was last modified.</para>
+        /// <para>The modification time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>

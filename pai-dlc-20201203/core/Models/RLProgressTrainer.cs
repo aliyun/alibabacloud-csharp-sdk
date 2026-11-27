@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public RLProgressMicro Micro { get; set; }
 
         /// <summary>
-        /// <para>The current mini-batch ordinal number.</para>
+        /// <para>The current mini-batch index.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

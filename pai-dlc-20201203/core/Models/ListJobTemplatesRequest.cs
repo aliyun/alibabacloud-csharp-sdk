@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListJobTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>Filters the list by a fuzzy match of the template description.</para>
+        /// <para>Filters the list by fuzzy match on the template description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PyTorch training template</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>Filters the list by an exact match of the template ID.</para>
+        /// <para>Filters the list by exact template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tpl1****6jcq2q</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>Filters the list by a fuzzy match of the template name.</para>
+        /// <para>Filters the list by fuzzy match on the template name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job-template-example-1778047****</para>

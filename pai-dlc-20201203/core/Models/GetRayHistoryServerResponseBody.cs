@@ -30,10 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The hardware specifications of the public resource group. For the detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>.</para>
-        /// <remarks>
-        /// <para>Notice: Prices vary depending on the specifications.</para>
-        /// </remarks>
+        /// <para>The hardware specifications of the public resource group. For a detailed list of specifications, access <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>.&gt;Notice: Prices vary by specification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.large</para>
@@ -43,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string EcsSpec { get; set; }
 
         /// <summary>
-        /// <para>The creation time (UTC).</para>
+        /// <para>The creation time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T14:35:01Z</para>
@@ -53,7 +50,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The end time (UTC).</para>
+        /// <para>The completion time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T15:36:08Z</para>
@@ -63,7 +60,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtFinishTime { get; set; }
 
         /// <summary>
-        /// <para>The modification time (UTC).</para>
+        /// <para>The modification time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T14:36:00Z</para>
@@ -73,7 +70,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum runtime duration.</para>
+        /// <para>The maximum runtime in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -83,7 +80,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? MaxRuntimeMinutes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the RayHistoryServer.</para>
+        /// <para>The ID of the Ray history server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rhsxxx</para>
@@ -93,7 +90,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RayHistoryServerId { get; set; }
 
         /// <summary>
-        /// <para>Ray Dashboard URL。</para>
+        /// <para>The Ray Dashboard URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://rhsxxx-dashboard.dsw-gateway-cn-wulanchabu.data.aliyun.com/">https://rhsxxx-dashboard.dsw-gateway-cn-wulanchabu.data.aliyun.com/</a></para>
@@ -123,7 +120,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ReasonMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group in which the job runs.</para>
+        /// <para>The ID of the resource group where the job runs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quotaxxx</para>
@@ -133,7 +130,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource in which the job runs.</para>
+        /// <para>The name of the resource where the job runs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-resource-name</para>
@@ -153,7 +150,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The storage path of Ray logs.</para>
+        /// <para>The storage path for Ray logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucket-test-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/tmp</para>
@@ -163,7 +160,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string StoragePath { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID.</para>
+        /// <para>The ID of the tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10**************14</para>
@@ -173,7 +170,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The user ID used to filter results.</para>
+        /// <para>The ID of the user to which the job belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -183,7 +180,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The username used to filter results.</para>
+        /// <para>The username of the user to which the job belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myusername</para>

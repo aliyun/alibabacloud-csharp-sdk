@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestID { get; set; }
 
         /// <summary>
-        /// <para>The result of the computing power health check.</para>
+        /// <para>The results of the computing power health check.</para>
         /// </summary>
         [NameInMap("SanityCheckResult")]
         [Validation(Required=false)]

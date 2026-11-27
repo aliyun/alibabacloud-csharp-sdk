@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
     public class EventInfo : TeaModel {
         /// <summary>
         /// <para>The text content of the event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Training pod started.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The ID of the event, which is used to obtain the related context.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>event-example-001</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -45,6 +51,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The timestamp of the event in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-11-01T00:00:00Z</para>
         /// </summary>
         [NameInMap("Time")]
         [Validation(Required=false)]

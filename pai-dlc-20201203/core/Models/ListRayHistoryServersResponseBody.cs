@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListRayHistoryServersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of RayHistoryServers.</para>
+        /// <para>The list of RayHistoryServer resources.</para>
         /// </summary>
         [NameInMap("RayHistoryServers")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             /// <summary>
             /// <para>The visibility of the job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PUBLIC: Visible to all users in the workspace.</description></item>
-            /// <item><description>PRIVATE (default): Visible only to you and administrators in the workspace.</description></item>
+            /// <item><description>PUBLIC: The job is visible to all users in the workspace.</description></item>
+            /// <item><description>PRIVATE: The job is visible only to you and administrators in the workspace. This is the default value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Accessibility { get; set; }
 
             /// <summary>
-            /// <para>The display name of the node.</para>
+            /// <para>The display name of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AEB-RECHARGE-TASK-14478-1778466397-main-4-</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The hardware specifications of the public resource group. To access a detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing overview</a>.&gt;Notice: Prices vary by specification.</para>
+            /// <para>The hardware specifications of the public resource group. To access the detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>.&gt;Notice: Prices vary by specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.g6.xlarge</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string EcsSpec { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was created, in UTC.</para>
+            /// <para>The time when the job was created. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-30T02:43:52Z</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the job finished, in UTC.</para>
+            /// <para>The end time. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-27T09:17:11Z</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtFinishTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was last modified, in UTC.</para>
+            /// <para>The time when the job was last modified. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-05-19T04:05:46Z</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The maximum runtime in minutes.</para>
+            /// <para>The maximum runtime duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public int? MaxRuntimeMinutes { get; set; }
 
             /// <summary>
-            /// <para>The ID of the created Ray History Server.</para>
+            /// <para>The ID of the created RayHistoryServer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rhsxxx</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string RayHistoryServerId { get; set; }
 
             /// <summary>
-            /// <para>Ray Dashboard URL。</para>
+            /// <para>The Ray Dashboard URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://rhsxxx-dashboard.dsw-gateway-cn-wulanchabu.data.aliyun.com/">https://rhsxxx-dashboard.dsw-gateway-cn-wulanchabu.data.aliyun.com/</a></para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string ReasonMessage { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID. To query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</para>
+            /// <para>The resource group ID. For more information about how to query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>quotazoqd53w0q75</para>
@@ -151,13 +151,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string ResourceName { get; set; }
 
             /// <summary>
-            /// <para>The status of the Tensorboard. Valid values:</para>
+            /// <para>The status of the TensorBoard. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Creating: The Tensorboard is being created.</description></item>
-            /// <item><description>Running: The Tensorboard is running.</description></item>
-            /// <item><description>Stopped: The Tensorboard is stopped.</description></item>
-            /// <item><description>Succeeded: The Tensorboard has succeeded.</description></item>
-            /// <item><description>Failed: The Tensorboard has failed.</description></item>
+            /// <item><description>Creating: The TensorBoard is being created.</description></item>
+            /// <item><description>Running: The TensorBoard is running.</description></item>
+            /// <item><description>Stopped: The TensorBoard is stopped.</description></item>
+            /// <item><description>Succeeded: The TensorBoard succeeded.</description></item>
+            /// <item><description>Failed: The TensorBoard failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Username { get; set; }
 
             /// <summary>
-            /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+            /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>153466</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>The request ID of this call, used for diagnostics and troubleshooting.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-xxxxxxx</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of nodes that match the filter conditions.</para>
+        /// <para>The total number of jobs that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

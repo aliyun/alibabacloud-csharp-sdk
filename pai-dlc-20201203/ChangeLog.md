@@ -1,3 +1,6 @@
+2026-11-27 Version: 1.13.0
+- Generated csharp 2020-12-03 for pai-dlc.
+
 2026-10-28 Version: 1.12.7
 - Update API CreateJob: add request parameters body.DryRun.
 

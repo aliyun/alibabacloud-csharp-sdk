@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class RLProgressBuffer : TeaModel {
         /// <summary>
-        /// <para>The total number of consumed samples in incomplete buffers.</para>
+        /// <para>The total number of consumed samples in unfinished buffers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public List<RLProgressBufferDetail> Detail { get; set; }
 
         /// <summary>
-        /// <para>The estimated number of remaining seconds to fill the buffer.</para>
+        /// <para>The estimated number of seconds remaining to fill the buffer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public double? FillRatePerMin { get; set; }
 
         /// <summary>
-        /// <para>The total number of finished samples in incomplete buffers.</para>
+        /// <para>The total number of finished samples in unfinished buffers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Finished { get; set; }
 
         /// <summary>
-        /// <para>The readiness percentage, which is the ratio of Ready to Target.</para>
+        /// <para>The completion percentage of the finished count relative to the target count, up to 100%. This value is provided when the target count is greater than 0. This value is not equivalent to the proportion of currently available samples indicated by the ready count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public double? Pct { get; set; }
 
         /// <summary>
-        /// <para>The total number of ready samples in incomplete buffers.</para>
+        /// <para>The total number of ready samples in unfinished buffers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Ready { get; set; }
 
         /// <summary>
-        /// <para>The total number of target samples in incomplete buffers.</para>
+        /// <para>The total number of target samples in unfinished buffers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>512</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? TrainBatchSize { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether Consumed is greater than 0, which means the batch has been fetched and the trainer is updating.</para>
+        /// <para>Indicates whether the consumed count is greater than 0, which means that batches have been fetched and the trainer is updating.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

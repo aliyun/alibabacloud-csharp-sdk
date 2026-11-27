@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
     public class AliyunAccounts : TeaModel {
         /// <summary>
         /// <para>The UID of the Alibaba Cloud account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234567890123456</para>
         /// </summary>
         [NameInMap("AliyunUid")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The employee ID of the internal user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("EmployeeId")]
         [Validation(Required=false)]

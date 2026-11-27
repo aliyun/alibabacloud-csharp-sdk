@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The most recent time when a task was successfully created by using this template. This parameter is not returned if the template has not been used.</para>
+        /// <para>The last time a task was successfully created by using this template. This field is not returned if the template has not been used.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string LastUsedTime { get; set; }
 
         /// <summary>
-        /// <para>The custom key-value pair metadata defined by the user.</para>
+        /// <para>The user-defined key-value pair metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ModifiedBy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. This ID is used for diagnostics and troubleshooting.</para>
+        /// <para>The ID of the request, which is used for troubleshooting and diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The total number of versions. If a single version is queried, the value 1 is returned. If all versions are queried, the actual total number is returned.</para>
+        /// <para>The total number of versions. If you query a single version, 1 is returned. If you query all versions, the actual total number is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The list of template version details. If a single version is queried, one element is returned. If all versions are queried, all elements are returned.</para>
+        /// <para>The list of template version details. If you query a single version, one element is returned. If you query all versions, all elements are returned.</para>
         /// </summary>
         [NameInMap("Versions")]
         [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             /// <para>The field constraint rules. The key is a JSONPath expression, and the value is the constraint type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;JobSpecs[0].Image\&quot;:\&quot;locked\&quot;,\&quot;UserCommand\&quot;:\&quot;locked\&quot;,\&quot;JobType\&quot;:\&quot;locked\&quot;}</para>
+            /// <para>{&quot;JobSpecs[0].Image&quot;:&quot;locked&quot;,&quot;UserCommand&quot;:&quot;locked&quot;,&quot;JobType&quot;:&quot;locked&quot;}</para>
             /// </summary>
             [NameInMap("Constraints")]
             [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             /// <para>The template configuration content of this version in JSON format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;WorkspaceId\&quot;:\&quot;15****05\&quot;,\&quot;JobType\&quot;:\&quot;PyTorchJob\&quot;,\&quot;UserCommand\&quot;:\&quot;echo hello\&quot;,\&quot;JobSpecs\&quot;:[{\&quot;Type\&quot;:\&quot;Worker\&quot;,\&quot;PodCount\&quot;:1,\&quot;Image\&quot;:\&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782\&quot;,\&quot;EcsSpec\&quot;:\&quot;ecs.gn7i-c8g1.2xlarge\&quot;}],\&quot;ResourceType\&quot;:\&quot;ECS\&quot;,\&quot;_ResourcePaymentType\&quot;:\&quot;PostPaid\&quot;,\&quot;CredentialConfig\&quot;:{\&quot;EnableCredentialInject\&quot;:false},\&quot;Accessibility\&quot;:\&quot;PRIVATE\&quot;,\&quot;Settings\&quot;:{\&quot;JobReservedMinutes\&quot;:0,\&quot;Tags\&quot;:{}}}</para>
+            /// <para>{&quot;WorkspaceId&quot;:&quot;15****05&quot;,&quot;JobType&quot;:&quot;PyTorchJob&quot;,&quot;UserCommand&quot;:&quot;echo hello&quot;,&quot;JobSpecs&quot;:[{&quot;Type&quot;:&quot;Worker&quot;,&quot;PodCount&quot;:1,&quot;Image&quot;:&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782&quot;,&quot;EcsSpec&quot;:&quot;ecs.gn7i-c8g1.2xlarge&quot;}],&quot;ResourceType&quot;:&quot;ECS&quot;,&quot;_ResourcePaymentType&quot;:&quot;PostPaid&quot;,&quot;CredentialConfig&quot;:{&quot;EnableCredentialInject&quot;:false},&quot;Accessibility&quot;:&quot;PRIVATE&quot;,&quot;Settings&quot;:{&quot;JobReservedMinutes&quot;:0,&quot;Tags&quot;:{}}}</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]

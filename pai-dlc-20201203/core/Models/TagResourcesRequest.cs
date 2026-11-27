@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. A maximum of 50 items can be specified.</para>
+        /// <para>The resource IDs. Up to 50 items are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags to be created and attached. A maximum of 20 items can be specified.</para>
+        /// <para>The tags to add. Up to 20 items are supported.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
+            /// <para>The tag key of the resource. It can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key</para>

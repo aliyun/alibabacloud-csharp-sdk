@@ -11,20 +11,29 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
     public class JobSettings : TeaModel {
         /// <summary>
         /// <para>The additional advanced parameter settings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;vm.max_map_count&quot;:&quot;262144&quot;}</para>
         /// </summary>
         [NameInMap("AdvancedSettings")]
         [Validation(Required=false)]
         public Dictionary<string, object> AdvancedSettings { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allocate all RDMA NICs.</para>
+        /// <para>Specifies whether to mount all RDMA network interface controllers (NICs).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AllocateAllRDMADevices")]
         [Validation(Required=false)]
         public bool? AllocateAllRDMADevices { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow jobs to be scheduled to nodes that are marked as unschedulable or are in the workspace blacklist. If enabled, node status checks are skipped and the corresponding bypass configurations are applied.</para>
+        /// <para>Specifies whether to allow the job to be scheduled to nodes that are marked as unschedulable or included in the workspace blacklist. If enabled, node status checks are skipped and corresponding bypass configurations are applied.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AllowUnschedulableNodes")]
         [Validation(Required=false)]
@@ -49,6 +58,27 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("Caller")]
         [Validation(Required=false)]
         public string Caller { get; set; }
+
+        /// <summary>
+        /// <para>The cross-account VPC configuration. Currently, only one VPC is allowed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[
+        ///   {
+        ///     &quot;VpcId&quot;: &quot;vpc-xxx&quot;,
+        ///     &quot;SwitchId&quot;: &quot;vsw-xxx&quot;,
+        ///     &quot;SecurityGroupId&quot;: &quot;sg-xxx&quot;,
+        ///     &quot;RoleChain&quot;: &quot;[{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::BailianResourceAccountUID:role/bailiantodlcrole&quot;,&quot;assumeRoleFor&quot;:&quot;BailianResourceAccountUID&quot;},{&quot;roleType&quot;:&quot;user&quot;,&quot;roleArn&quot;:&quot;acs:ram::BailianServiceAccountUID:role/roletoassumecustomerrole&quot;},{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::EndUserUID:role/user-role&quot;,&quot;assumeRoleFor&quot;:&quot;EndUserUID&quot;}]&quot;,
+        ///     &quot;ExtendedCIDRs&quot;: [
+        ///       &quot;192.168.0.0/24&quot;,
+        ///       &quot;192.168.1.0/24&quot;
+        ///     ]
+        ///   }
+        /// ]</para>
+        /// </summary>
+        [NameInMap("CrossAccountVpcs")]
+        [Validation(Required=false)]
+        public List<UserVpc> CrossAccountVpcs { get; set; }
 
         /// <summary>
         /// <para>The DataJuicer job configuration.</para>
@@ -92,7 +122,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? ElasticSpotJobMaxRestartTimes { get; set; }
 
         /// <summary>
-        /// <para>The CPU affinity settings. These settings take effect only when general-purpose computing subscription resources are used.</para>
+        /// <para>The CPU affinity settings. This setting takes effect only when general-purpose computing subscription resources are used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -103,6 +133,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>Specifies whether to enable the DSW development mode for the job. If enabled, a sidecar container is injected into the pod.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("EnableDSWDev")]
         [Validation(Required=false)]
@@ -121,6 +154,20 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("EnableErrorMonitoringInAIMaster")]
         [Validation(Required=false)]
         public bool? EnableErrorMonitoringInAIMaster { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to allow job nodes to communicate with each other over SSH. The image must have SSHD built in. This parameter takes effect only for PyTorch jobs that use self-managed computing resources. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("EnableIntraJobSSH")]
+        [Validation(Required=false)]
+        public bool? EnableIntraJobSSH { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to allow OSS append writes. Valid values:</para>
@@ -151,7 +198,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? EnableRDMA { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable computing power health checks for the job. Valid values:</para>
+        /// <para>Specifies whether to enable the computing power health check for the job. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -179,7 +226,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? EnableTideResource { get; set; }
 
         /// <summary>
-        /// <para>The configuration parameters for fault tolerance monitoring when it is enabled, such as specifying whether to enable log hang-based detection.</para>
+        /// <para>The configuration parameters for fault tolerance monitoring after it is enabled, such as specifying whether to enable log hang-based detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>--enable-log-hang-detection true</para>
@@ -216,7 +263,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public ModelConfig ModelConfig { get; set; }
 
         /// <summary>
-        /// <para>The oversold resource usage mode for the job, which can be not accepted, accepted, or only accepted.</para>
+        /// <para>The oversold resource usage mode for the job, such as not accepted, accepted, or only accepted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AcceptQuotaOverSold</para>
@@ -226,7 +273,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string OversoldType { get; set; }
 
         /// <summary>
-        /// <para>The workflow ID.</para>
+        /// <para>The pipeline ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pid-12****</para>
@@ -236,7 +283,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string PipelineId { get; set; }
 
         /// <summary>
-        /// <para>The configuration parameters for computing power health checks.</para>
+        /// <para>The configuration parameters for the computing power health check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>--sanity-check-timing=AfterJobFaultTolerant --sanity-check-timeout-ops=MarkJobFail</para>
@@ -257,6 +304,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The custom tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;app&quot;:&quot;training&quot;}</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of signal records for the job. Each element has the same structure as the response of GetSignal.</para>
+        /// <para>The list of signal records for the job. The structure of each element is the same as the response of GetSignal.</para>
         /// </summary>
         [NameInMap("Signals")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The message of the returned result.</para>
+            /// <para>The prompt message of the returned result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>signal delivered to 1 pods</para>

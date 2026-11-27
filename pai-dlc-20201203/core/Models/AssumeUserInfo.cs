@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
     public class AssumeUserInfo : TeaModel {
         /// <summary>
         /// <para>The AccessKey ID used for role assumption.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LTAI5tExample****KeyId1234</para>
         /// </summary>
         [NameInMap("AccessKeyId")]
         [Validation(Required=false)]
@@ -28,6 +31,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The security token used for role assumption.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CAISexample****SecurityToken</para>
         /// </summary>
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]

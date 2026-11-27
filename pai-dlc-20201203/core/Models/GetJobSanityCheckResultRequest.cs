@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <summary>
         /// <para>The phase of the computing power health check. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CheckInit: environment preparation.</description></item>
-        /// <item><description>DeviceCheck: single-device computing power check.</description></item>
-        /// <item><description>SingleNodeCommCheck: intra-node communication check.</description></item>
-        /// <item><description>TwoNodeCommCheck: inter-node communication check between two nodes.</description></item>
-        /// <item><description>AllNodeCommCheck: communication check across all nodes.</description></item>
+        /// <item><description>CheckInit: environment preparation</description></item>
+        /// <item><description>DeviceCheck: single-device computing power check</description></item>
+        /// <item><description>SingleNodeCommCheck: intra-node communication check</description></item>
+        /// <item><description>TwoNodeCommCheck: inter-node communication check between two nodes</description></item>
+        /// <item><description>AllNodeCommCheck: all-node communication check</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

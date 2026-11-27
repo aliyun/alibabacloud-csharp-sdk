@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The code source used by the job. Before the nodes of the job start, DLC automatically downloads the code configured in the code source and mounts it to a local directory in the container.</para>
+        /// <para>The code source used by the job. Before the nodes of the job start, DLC automatically downloads the code configured in the code source and mounts it to the local directory of the container.</para>
         /// </summary>
         [NameInMap("CodeSource")]
         [Validation(Required=false)]
         public CreateJobRequestCodeSource CodeSource { get; set; }
         public class CreateJobRequestCodeSource : TeaModel {
             /// <summary>
-            /// <para>The branch of the code repository referenced when the job runs. This parameter is optional. By default, the branch configured in the code source is used.</para>
+            /// <para>The branch of the referenced code repository when the job runs. This parameter is optional. By default, the branch configured in the code source is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>master</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Commit { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the mount path configured for access code source is a shared cloud storage path. If this parameter is set to true, the system enables code clone optimization. In a multi-node job scenario, the clone operation is performed on only one node, and other nodes can directly access access code through the shared cloud storage path.</para>
+            /// <para>Specifies whether the mount path configured in access code source is a shared cloud storage path. If this parameter is set to true, code clone optimization is enabled in the background. In multi-node job scenarios, the clone operation is performed on only one node, and other nodes can directly access access code through the shared cloud storage path.</para>
             /// </summary>
             [NameInMap("IsSharedMountPath")]
             [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Value { get; set; }
 
             /// <summary>
-            /// <para>The visibility of the environment variable. A value of public indicates that the variable is public, and a value of private indicates that the variable is private.</para>
+            /// <para>The visibility of the environment variable. Valid values: public and private.</para>
             /// 
             /// <b>Example:</b>
             /// <para>public</para>
@@ -126,14 +126,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>The list of data sources used to run the job.</para>
+        /// <para>The list of data sources used for running the job.</para>
         /// </summary>
         [NameInMap("DataSources")]
         [Validation(Required=false)]
         public List<CreateJobRequestDataSources> DataSources { get; set; }
         public class CreateJobRequestDataSources : TeaModel {
             /// <summary>
-            /// <para>The ID of the access point. Currently, only access points of AI CPFS are supported.</para>
+            /// <para>The ID of the access point. Currently, only access points of CPFS for AI are supported.</para>
             /// </summary>
             [NameInMap("AccessPointId")]
             [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string DataSourceVersion { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the cache service for the data source. This parameter takes effect only when the cluster supports the cache service and a resource group is configured.</para>
+            /// <para>Specifies whether to enable the cache service for the data source. This parameter takes effect only when the cluster supports it and a resource group is configured.</para>
             /// </summary>
             [NameInMap("EnableCache")]
             [Validation(Required=false)]
@@ -169,8 +169,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             /// <summary>
             /// <para>The permissions when the dataset is mounted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RO: Read-only mount.</description></item>
-            /// <item><description>RW: Read/write mount.</description></item>
+            /// <item><description>RO: read-only mount.</description></item>
+            /// <item><description>RW: read-write mount.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string MountAccess { get; set; }
 
             /// <summary>
-            /// <para>The path to be mounted for the job. This parameter is optional. By default, the mount path configured in the data source is used.</para>
+            /// <para>The path to be mounted for the job. This parameter is optional. By default, the mount path in the data source is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/root/data</para>
@@ -215,10 +215,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string RoleArn { get; set; }
 
             /// <summary>
-            /// <para>The role chain, which is a JSON-formatted string. Example: [{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::cloud_product_resource_account_uid:role/xxxtodlcrole&quot;,&quot;assumeRoleFor&quot;:&quot;cloud_product_resource_account_uid&quot;},{&quot;roleType&quot;:&quot;user&quot;,&quot;roleArn&quot;:&quot;acs:ram::cloud_product_service_account_uid:role/roletoassumecustomerrole&quot;},{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::end_user_uid:role/use-bmcpfs-access-ap-role&quot;,&quot;assumeRoleFor&quot;:&quot;end_user_uid&quot;}].</para>
+            /// <para>The role chain, which is a JSON-formatted string. Example: [{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::Cloud service resource account UID:role/xxxtodlcrole&quot;,&quot;assumeRoleFor&quot;:&quot;Cloud service resource account UID&quot;},{&quot;roleType&quot;:&quot;user&quot;,&quot;roleArn&quot;:&quot;acs:ram::Cloud service account UID:role/roletoassumecustomerrole&quot;},{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::End user UID:role/use-bmcpfs-access-ap-role&quot;,&quot;assumeRoleFor&quot;:&quot;End user UID&quot;}]</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::cloud_product_resource_account_uid:role/xxxtodlcrole&quot;,&quot;assumeRoleFor&quot;:&quot;cloud_product_resource_account_uid&quot;},{&quot;roleType&quot;:&quot;user&quot;,&quot;roleArn&quot;:&quot;acs:ram::cloud_product_service_account_uid:role/roletoassumecustomerrole&quot;},{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::end_user_uid:role/use-bmcpfs-access-ap-role&quot;,&quot;assumeRoleFor&quot;:&quot;end_user_uid&quot;}]</para>
+            /// <para>[{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::Cloud service resource account UID:role/xxxtodlcrole&quot;,&quot;assumeRoleFor&quot;:&quot;Cloud service resource account UID&quot;},{&quot;roleType&quot;:&quot;user&quot;,&quot;roleArn&quot;:&quot;acs:ram::Cloud service account UID:role/roletoassumecustomerrole&quot;},{&quot;roleType&quot;:&quot;service&quot;,&quot;roleArn&quot;:&quot;acs:ram::End user UID:role/use-bmcpfs-access-ap-role&quot;,&quot;assumeRoleFor&quot;:&quot;End user UID&quot;}]</para>
             /// </summary>
             [NameInMap("RoleChain")]
             [Validation(Required=false)]
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>This parameter is not supported. You can ignore it.</para>
+        /// <para>This parameter is not supported. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>“”</para>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <summary>
         /// <para>The name of the job. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name can be up to 256 characters in length.</description></item>
+        /// <item><description>The name cannot exceed 256 characters in length.</description></item>
         /// <item><description>The name can contain digits, letters, underscores (_), periods (.), and hyphens (-).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -272,14 +272,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the dry run mode.</para>
+        /// <para>Specifies whether to enable dry run mode.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not supported. You can ignore it.</para>
+        /// <para>This parameter is not supported. Ignore this parameter.</para>
         /// </summary>
         [NameInMap("ElasticSpec")]
         [Validation(Required=false)]
@@ -303,8 +303,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? JobMaxRunningTimeMinutes { get; set; }
 
         /// <summary>
-        /// <para><b>JobSpecs</b> describes various configurations when the job runs, such as the image address, startup command, node resource declaration, and number of replicas.</para>
-        /// <para>A DLC job consists of different types of nodes. Nodes of the same type have identical configurations, which are called a JobSpec. <b>JobSpecs</b> describes the configurations of all types of nodes and is an array of JobSpecs.</para>
+        /// <para><b>JobSpecs</b> describes various configurations for the job at runtime, such as the image address, startup command, node resource declaration, and number of replicas.</para>
+        /// <para>A DLC job consists of different types of nodes. Nodes of the same type have identical configurations, which are referred to as a JobSpec. <b>JobSpecs</b> describes the configurations for all types of nodes and is an array of JobSpec objects.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("JobSpecs")]
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The additional configurations for the job. You can use this parameter to adjust the behavior of mounted data sources. For example, if the node has an OSS data source mounted, you can set this parameter to <c>fs.oss.download.thread.concurrency=4,fs.oss.download.queue.size=16</c> to overwrite the default parameter settings of JindoFS.</para>
+        /// <para>The additional configuration for the job. You can use this parameter to adjust the behavior of mounted data sources. For example, if the job mounts an OSS data source, you can set this parameter to <c>fs.oss.download.thread.concurrency=4,fs.oss.download.queue.size=16</c> to overwrite the default parameter settings of JindoFS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key1=value1,key2=value2</para>
@@ -346,8 +346,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <summary>
         /// <para>The priority of the job. This parameter is optional. Default value: 1. Valid values: 1 to 9.</para>
         /// <list type="bullet">
-        /// <item><description>1: The lowest priority.</description></item>
-        /// <item><description>9: The highest priority.</description></item>
+        /// <item><description>1: the lowest priority.</description></item>
+        /// <item><description>9: the highest priority.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -360,8 +360,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <summary>
         /// <para>The ID of the resource group. This parameter is optional.</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is left empty, the job is submitted to a public resource group.</description></item>
-        /// <item><description>If you attach a resource quota to the current workspace, you can specify the corresponding resource quota ID here. For details about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</description></item>
+        /// <item><description>If this parameter is left empty, the job is submitted to the public resource group.</description></item>
+        /// <item><description>If the current workspace is attached to a resource quota, you can specify the corresponding resource quota ID here. For details about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <para>The success policy for distributed multi-node jobs. Currently, only multi-node TensorFlow jobs are supported. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ChiefWorker: If this value is specified, the entire job is considered successful as long as the chief pod ends successfully.</description></item>
-        /// <item><description>AllWorkers: This is the default value. The entire job is considered successful only when all worker pods end successfully.</description></item>
+        /// <item><description>AllWorkers (default): The entire job is considered successful only when all worker pods end successfully.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -423,7 +423,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? TemplateVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the folder where the Python third-party library (requirements.txt) file is located. Before each node runs the specified user command, PAI-DLC retrieves the requirements.txt file from the specified folder and runs the <c>pip install -r</c> command to install the libraries.</para>
+        /// <para>The name of the folder where the Python third-party library file (requirements.txt) is located. Before each node runs the specified UserCommand, PAI-DLC retrieves the requirements.txt file from the specified folder and runs the <c>pip install -r</c> command to install the libraries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/code/</para>
@@ -451,7 +451,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string UserCommand { get; set; }
 
         /// <summary>
-        /// <para>The user VPC configuration.</para>
+        /// <para>The VPC configuration of the user.</para>
         /// </summary>
         [NameInMap("UserVpc")]
         [Validation(Required=false)]
@@ -460,8 +460,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             /// <summary>
             /// <para>The default routing. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>eth0: Uses the default network interface controller (NIC) to access external networks through the public gateway.</description></item>
-            /// <item><description>eth1: Uses the user elastic network interfaces (ENIs) to access external networks through the private gateway. For the specific configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Configure a DSW instance to access the Internet through a dedicated public gateway</a>.</description></item>
+            /// <item><description>eth0: uses the default network interface controller (NIC) to access external networks through the public gateway.</description></item>
+            /// <item><description>eth1: uses the user elastic network interface (ENI) to access external networks through the private gateway. For more information about the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Configure a DSW instance to access the Internet through a dedicated public gateway</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -474,8 +474,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             /// <summary>
             /// <para>The extended CIDR blocks.</para>
             /// <list type="bullet">
-            /// <item><description>If the vSwitch ID is empty, this parameter is optional. The system automatically retrieves all CIDR blocks in the VPC.</description></item>
-            /// <item><description>If the vSwitch ID is not empty, this parameter is required. Specify all CIDR blocks in the VPC.</description></item>
+            /// <item><description>If the vSwitch ID is empty, this parameter is optional and the system automatically obtains all CIDR blocks under the VPC.</description></item>
+            /// <item><description>If the vSwitch ID is not empty, this parameter is required. We recommend that you specify all CIDR blocks under the VPC.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("ExtendedCIDRs")]
@@ -495,7 +495,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             /// <summary>
             /// <para>The ID of the user vSwitch. This parameter is optional.</para>
             /// <list type="bullet">
-            /// <item><description>If this parameter is empty, the system automatically selects an appropriate vSwitch based on inventory.</description></item>
+            /// <item><description>If this parameter is left empty, the system automatically selects an appropriate vSwitch based on inventory.</description></item>
             /// <item><description>You can also specify a vSwitch ID.</description></item>
             /// </list>
             /// 
@@ -519,7 +519,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The ID of the workspace. &lt;props=&quot;china&quot;&gt;For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-20210126170216-xxxxxxx</para>

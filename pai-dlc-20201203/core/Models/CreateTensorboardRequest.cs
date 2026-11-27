@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? Memory { get; set; }
 
         /// <summary>
-        /// <para>The extension field of custom dataset, in JSON format. Currently, only MountPath is supported, which specifies the custom mount path of custom dataset.</para>
+        /// <para>The extended fields of custom dataset in JSON format. Currently, MountPath is supported, which specifies the custom mount path of custom dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;mountpath&quot;:&quot;/root/data/&quot;}</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The summary directory.</para>
+        /// <para>The Summary directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/data/</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SummaryPath { get; set; }
 
         /// <summary>
-        /// <para>The relative path of the summary directory.</para>
+        /// <para>The relative path of the Summary directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/summary/</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public TensorboardSpec TensorboardSpec { get; set; }
 
         /// <summary>
-        /// <para>The URI of the dataset:</para>
+        /// <para>The URI of the dataset.</para>
         /// <list type="bullet">
         /// <item><description>If DataSourceType is set to OSS, the format is <c>oss://[oss-bucket].[endpoint]/[path]</c>.</description></item>
         /// <item><description>If DataSourceType is set to NAS, the format is <c>nas://[nas-filesystem-id].[region]/[path]</c>.</description></item>
