@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeChannelRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query this ID in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The channel ID to query. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

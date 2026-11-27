@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeAutoLiveStreamRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>069BCB66-CD80-11E8-A82B-A70F78BBDC00</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The rule details.</para>
+        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<DescribeAutoLiveStreamRuleResponseBodyRules> Rules { get; set; }
         public class DescribeAutoLiveStreamRuleResponseBodyRules : TeaModel {
             /// <summary>
+            /// <para>The callback URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://example.com/callBack">http://example.com/callBack</a></para>
             /// </summary>
@@ -29,15 +36,23 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public string CallBack { get; set; }
 
+            /// <summary>
+            /// <para>The prefix list of channel IDs for fuzzy match.</para>
+            /// </summary>
             [NameInMap("ChannelIdPrefixes")]
             [Validation(Required=false)]
             public List<string> ChannelIdPrefixes { get; set; }
 
+            /// <summary>
+            /// <para>The list of channel IDs for exact match.</para>
+            /// </summary>
             [NameInMap("ChannelIds")]
             [Validation(Required=false)]
             public List<string> ChannelIds { get; set; }
 
             /// <summary>
+            /// <para>The time when the rule was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-08-19T02:53:07Z</para>
             /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The encoding options.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? MediaEncode { get; set; }
 
             /// <summary>
+            /// <para>The playback domain name for automatic bypass.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rtmp://${domain}/${app}/${stream}</para>
             /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string PlayDomain { get; set; }
 
             /// <summary>
+            /// <para>The rule ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12</para>
             /// </summary>
@@ -70,6 +91,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public long? RuleId { get; set; }
 
             /// <summary>
+            /// <para>The rule name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testRule</para>
             /// </summary>
@@ -78,6 +101,12 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string RuleName { get; set; }
 
             /// <summary>
+            /// <para>The rule status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>enable: Enabled.</description></item>
+            /// <item><description>disable: Disabled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>disable</para>
             /// </summary>

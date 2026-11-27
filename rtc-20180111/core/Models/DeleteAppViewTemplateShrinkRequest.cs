@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DeleteAppViewTemplateShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query the ID in the console. Only a single ID can be specified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The template information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Template")]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeUsageAreaDistributionStatDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The regional distribution data of usage statistics.</para>
+        /// </summary>
         [NameInMap("UsageAreaStatList")]
         [Validation(Required=false)]
         public List<DescribeUsageAreaDistributionStatDataResponseBodyUsageAreaStatList> UsageAreaStatList { get; set; }
         public class DescribeUsageAreaDistributionStatDataResponseBodyUsageAreaStatList : TeaModel {
             /// <summary>
+            /// <para>Audio call duration, in minutes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>45</para>
             /// </summary>
@@ -30,14 +37,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? AudioCallDuration { get; set; }
 
             /// <summary>
+            /// <para>Region name, such as China.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>中国</para>
+            /// <para>中国_浙江省</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Total call duration, in minutes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4821</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? TotalCallDuration { get; set; }
 
             /// <summary>
+            /// <para>Video call duration, in minutes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4776</para>
             /// </summary>

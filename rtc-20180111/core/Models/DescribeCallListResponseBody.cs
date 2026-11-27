@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeCallListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of communications.</para>
+        /// </summary>
         [NameInMap("CallList")]
         [Validation(Required=false)]
         public List<DescribeCallListResponseBodyCallList> CallList { get; set; }
@@ -24,6 +27,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string AppId { get; set; }
 
             /// <summary>
+            /// <para>Number of users with poor communication experience.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -32,6 +37,12 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? BadExpUserCnt { get; set; }
 
             /// <summary>
+            /// <para>Communication status. Valid values:  </para>
+            /// <list type="bullet">
+            /// <item><description><b>IN</b>: In progress.  </description></item>
+            /// <item><description><b>OUT</b>: Ended.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>OUT</para>
             /// </summary>
@@ -40,6 +51,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string CallStatus { get; set; }
 
             /// <summary>
+            /// <para>Channel ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>904</para>
             /// </summary>
@@ -48,6 +61,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string ChannelId { get; set; }
 
             /// <summary>
+            /// <para>The UNIX timestamp indicating when the communication was created, in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1614936817</para>
             /// </summary>
@@ -56,6 +71,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public long? CreatedTs { get; set; }
 
             /// <summary>
+            /// <para>The UNIX timestamp indicating when the communication was released, in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1614936817</para>
             /// </summary>
@@ -64,6 +81,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public long? DestroyedTs { get; set; }
 
             /// <summary>
+            /// <para>Duration of the communication, in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -72,6 +91,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public long? Duration { get; set; }
 
             /// <summary>
+            /// <para>User Count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -82,6 +103,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         }
 
         /// <summary>
+        /// <para>Page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -90,6 +113,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>Quantity per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -98,6 +123,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</para>
         /// </summary>
@@ -106,6 +133,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total Quantity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

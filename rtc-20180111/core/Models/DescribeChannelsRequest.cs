@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeChannelsRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query the ID in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of items per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

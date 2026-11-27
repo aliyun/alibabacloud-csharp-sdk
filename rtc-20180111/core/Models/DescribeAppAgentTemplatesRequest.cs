@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeAppAgentTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query the ID in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123121414122313121313</para>
         /// </summary>
@@ -28,14 +31,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The template name.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>智能体模版</para>
+        /// <para>Agent template</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

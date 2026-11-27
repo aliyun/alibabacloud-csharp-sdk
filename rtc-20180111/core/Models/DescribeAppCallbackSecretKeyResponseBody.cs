@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeAppCallbackSecretKeyResponseBody : TeaModel {
         /// <summary>
+        /// <para>Callback key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a656b296a30xxxxxxxxxx1cd4</para>
         /// </summary>

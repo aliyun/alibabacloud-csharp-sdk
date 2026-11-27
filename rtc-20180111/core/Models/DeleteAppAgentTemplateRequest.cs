@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DeleteAppAgentTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the application. You can create and query the ID in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class UpdateAutoLiveStreamRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query application IDs in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The callback URL for starting and stopping the bypass. You can query the bypass callback URL in the console or by calling the <a href="https://help.aliyun.com/document_detail/353198.html">DescribeAutoLiveStreamRule</a> operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://example.com/callback">http://example.com/callback</a></para>
         /// </summary>
@@ -27,15 +30,23 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string CallBack { get; set; }
 
+        /// <summary>
+        /// <para>The prefix list of channel IDs for fuzzy matching.</para>
+        /// </summary>
         [NameInMap("ChannelIdPrefixes")]
         [Validation(Required=false)]
         public List<string> ChannelIdPrefixes { get; set; }
 
+        /// <summary>
+        /// <para>The list of channel IDs for exact matching.</para>
+        /// </summary>
         [NameInMap("ChannelIds")]
         [Validation(Required=false)]
         public List<string> ChannelIds { get; set; }
 
         /// <summary>
+        /// <para>The encoding options. For more information, see the valid values of MediaEncode in <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -48,6 +59,12 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The streaming domain name for automatic bypass. The streaming URL for an automatic bypass task is rtmp://${domain}/${app}/${stream}.</para>
+        /// <list type="bullet">
+        /// <item><description>domain: Your live streaming domain name.</description></item>
+        /// <item><description>app: live.</description></item>
+        /// <item><description>stream: urlencode(${AppId}<em>${ChannelId}</em>${UserId}_${SourceType}), where SourceType is the input source type.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +75,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string PlayDomain { get; set; }
 
         /// <summary>
+        /// <para>The ID of the bypass rule. You can query the bypass rule ID in the console or by calling the <a href="https://help.aliyun.com/document_detail/353198.html">DescribeAutoLiveStreamRule</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,6 +86,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? RuleId { get; set; }
 
         /// <summary>
+        /// <para>The name of the bypass rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testRule</para>
         /// </summary>

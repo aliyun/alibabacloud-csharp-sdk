@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class ModifyCloudNotePhrasesRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query it in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The hotword parameter.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Phrase")]
@@ -27,14 +29,17 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public ModifyCloudNotePhrasesRequestPhrase Phrase { get; set; }
         public class ModifyCloudNotePhrasesRequestPhrase : TeaModel {
             /// <summary>
+            /// <para>The description. The description must be encoded in UTF-8 and be 1 to 200 characters in length.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>水果描述</para>
+            /// <para>Fruit description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The ID of the hotword table.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -45,16 +50,21 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The name of the hotword table. The name must be encoded in UTF-8 and be 1 to 30 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>水果</para>
+            /// <para>Fruit</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Each vocabulary can contain up to 300 hotwords. Each hotword can be up to 10 Chinese characters or 5 English words in length.</para>
+            /// <para>Hotwords must be encoded in UTF-8 and cannot contain punctuation marks or special characters. Otherwise, the hotwords do not take effect.</para>
+            /// <para>The weight of a hotword must be an integer in the range of [-6, 5].</para>
+            /// <para>Numbers in the text must be replaced with the corresponding Chinese characters based on their pronunciation. For example, &quot;59.9元&quot; must be replaced with &quot;五十九点九元&quot;.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("WordWeights")]
@@ -62,6 +72,13 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public List<ModifyCloudNotePhrasesRequestPhraseWordWeights> WordWeights { get; set; }
             public class ModifyCloudNotePhrasesRequestPhraseWordWeights : TeaModel {
                 /// <summary>
+                /// <para>The weight. The value must be an integer in the range of [-6, 5].</para>
+                /// <list type="bullet">
+                /// <item><description>A value greater than 0 increases the probability of recognizing the word, and a value less than 0 decreases the probability.</description></item>
+                /// <item><description>A value of -6 indicates that the word should not be recognized if possible.</description></item>
+                /// <item><description>A value of 2 is a common value.
+                /// If the effect is not obvious, you can increase the weight. However, a large weight may cause negative effects and lead to inaccurate recognition of other words.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -72,10 +89,11 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 public int? Weight { get; set; }
 
                 /// <summary>
+                /// <para>The hotword.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>苹果</para>
+                /// <para>Apple</para>
                 /// </summary>
                 [NameInMap("Word")]
                 [Validation(Required=false)]

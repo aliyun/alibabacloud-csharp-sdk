@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class CreateAppStreamingOutTemplateShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query the ID in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,11 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The template.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ac7N****</para>
         /// </summary>
         [NameInMap("StreamingOutTemplate")]
         [Validation(Required=false)]

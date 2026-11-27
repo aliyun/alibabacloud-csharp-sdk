@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status of the switch. enable indicates that the feature is enabled. disable indicates that the feature is disabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>disable</para>
         /// </summary>

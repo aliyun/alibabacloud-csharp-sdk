@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeRecordFilesRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. Only a single ID can be passed. You can create and query it in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The channel ID. Only a single ID can be passed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yourChannelId</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2020-11-02T17:36:00Z</para>
         /// </summary>
@@ -40,6 +45,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number. By default, the first page is queried.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -48,6 +55,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Default value: <b>10</b>. Maximum value: <b>100</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -56,6 +65,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2020-11-01T17:36:00Z</para>
         /// </summary>
@@ -64,6 +75,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>Recording task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yourTaskId</para>
         /// </summary>

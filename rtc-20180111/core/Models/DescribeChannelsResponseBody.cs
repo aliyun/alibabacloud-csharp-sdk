@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeChannelsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of items per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The active channels.</para>
+        /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<string> Records { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

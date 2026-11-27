@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeAllCallbackResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of callback events.</para>
+        /// </summary>
         [NameInMap("Callbacks")]
         [Validation(Required=false)]
         public List<DescribeAllCallbackResponseBodyCallbacks> Callbacks { get; set; }
         public class DescribeAllCallbackResponseBodyCallbacks : TeaModel {
             /// <summary>
+            /// <para>Event code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RecordEvent</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Category { get; set; }
 
             /// <summary>
+            /// <para>Event name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>录制回调</para>
             /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>List of subscribed sub-events.</para>
+            /// </summary>
             [NameInMap("SubEvent")]
             [Validation(Required=false)]
             public List<DescribeAllCallbackResponseBodyCallbacksSubEvent> SubEvent { get; set; }
             public class DescribeAllCallbackResponseBodyCallbacksSubEvent : TeaModel {
                 /// <summary>
+                /// <para>Subscribed sub-event code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2000</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 public int? Event { get; set; }
 
                 /// <summary>
+                /// <para>Subscribed sub-event name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>录制开始</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 public string EventName { get; set; }
 
                 /// <summary>
+                /// <para>Subscription event type: 0 for system, 1 for custom.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>

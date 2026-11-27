@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeAppsRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query application IDs in the console. Only a single ID is supported. If this parameter is left empty, all application IDs are queried.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yourAppId</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The application version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3.0</para>
         /// </summary>
@@ -26,6 +30,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppVersion { get; set; }
 
         /// <summary>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>asc</b>: Ascending.</para>
+        /// </description></item>
+        /// <item><description><para><b>desc</b>: Descending. Default value.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>asc</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -54,6 +70,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The application status. If this parameter is left empty, all statuses are queried. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>1</b>: Available.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: Disabled due to overdue payments.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

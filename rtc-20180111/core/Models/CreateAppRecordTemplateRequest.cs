@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class CreateAppRecordTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query the ID in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The client token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The recording template.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RecordTemplate")]
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public CreateAppRecordTemplateRequestRecordTemplate RecordTemplate { get; set; }
         public class CreateAppRecordTemplateRequestRecordTemplate : TeaModel {
             /// <summary>
+            /// <para>The delay time before stopping the recording. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>180</para>
             /// </summary>
@@ -43,6 +49,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? DelayStopTime { get; set; }
 
             /// <summary>
+            /// <para>The naming rule for recorded files.</para>
+            /// <remarks>
+            /// <para>To ensure the uniqueness of recorded file names, the current naming rule for recorded files is record/{AppId}/{ChannelId}<em>{TaskId}/{EscapedStartTime}</em>{EscapedEndTime}.</para>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -53,6 +63,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string FilePrefix { get; set; }
 
             /// <summary>
+            /// <para>The splitting duration of the recorded file. The value must be greater than or equal to 1800. Unit: seconds.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -63,17 +74,23 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? FileSplitInterval { get; set; }
 
             /// <summary>
+            /// <para>The format of the recorded file. Only .m3u8, .mp4, and .flv are supported.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Formats")]
             [Validation(Required=false)]
             public List<string> Formats { get; set; }
 
+            /// <summary>
+            /// <para>The list of layout IDs. A maximum of 16 layout IDs can be specified.</para>
+            /// <para>Note: The layouts in the list must correspond to different numbers of data sources.</para>
+            /// </summary>
             [NameInMap("LayoutIds")]
             [Validation(Required=false)]
             public List<string> LayoutIds { get; set; }
 
             /// <summary>
+            /// <para>The encoding options.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -84,10 +101,11 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? MediaEncode { get; set; }
 
             /// <summary>
+            /// <para>The name of the template.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>模版</para>
+            /// <para>Template</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

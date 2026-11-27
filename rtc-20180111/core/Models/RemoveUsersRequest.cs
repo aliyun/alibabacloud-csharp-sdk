@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class RemoveUsersRequest : TeaModel {
         /// <summary>
+        /// <para>Application ID. You can create and query it in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the joined channel. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>User List. Valid values of N: 1 to 30.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Users")]
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public List<RemoveUsersRequestUsers> Users { get; set; }
         public class RemoveUsersRequestUsers : TeaModel {
             /// <summary>
+            /// <para>User ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class CreateAutoLiveStreamRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID, which can be created and queried in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The callback URL used to notify the start and end of the relay. For details about the callback content, see the CallBack callback example below.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://example.com/callback">http://example.com/callback</a></para>
         /// </summary>
@@ -27,15 +30,23 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string CallBack { get; set; }
 
+        /// <summary>
+        /// <para>The list of channel ID prefixes that are fuzzy matched.</para>
+        /// </summary>
         [NameInMap("ChannelIdPrefixes")]
         [Validation(Required=false)]
         public List<string> ChannelIdPrefixes { get; set; }
 
+        /// <summary>
+        /// <para>The list of channel IDs that are exactly matched.</para>
+        /// </summary>
         [NameInMap("ChannelIds")]
         [Validation(Required=false)]
         public List<string> ChannelIds { get; set; }
 
         /// <summary>
+        /// <para>The encoding option. For more information, see the MediaEncode enumeration values below.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -48,6 +59,12 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The streaming domain name for automatic relay. The streaming URL of an automatic relay task is in the format rtmp://${domain}/${app}/${stream}.</para>
+        /// <list type="bullet">
+        /// <item><description>domain: your live streaming domain name.</description></item>
+        /// <item><description>app: live.</description></item>
+        /// <item><description>stream: urlencode(${AppId}<em>${ChannelId}</em>${UserId}_${SourceType}), where SourceType indicates the type of the input source.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +75,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string PlayDomain { get; set; }
 
         /// <summary>
+        /// <para>The name of the relay rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testRule</para>
         /// </summary>

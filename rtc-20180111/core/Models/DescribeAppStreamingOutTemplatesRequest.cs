@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeAppStreamingOutTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>Application ID, created and queried through the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>Search condition.</para>
+        /// </summary>
         [NameInMap("Condition")]
         [Validation(Required=false)]
         public DescribeAppStreamingOutTemplatesRequestCondition Condition { get; set; }
         public class DescribeAppStreamingOutTemplatesRequestCondition : TeaModel {
             /// <summary>
+            /// <para>Template Name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>测试</para>
             /// </summary>
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Template ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Bj6D****</para>
             /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         }
 
         /// <summary>
+        /// <para>Page number. By default, page 1 is queried.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Number of entries per page. The default value is 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

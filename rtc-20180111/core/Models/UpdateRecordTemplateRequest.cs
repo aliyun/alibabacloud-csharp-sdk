@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class UpdateRecordTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query the ID in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The background color in RGB format. Default value: <b>0</b> (black). The formula is <c>R + G × 256 + B × 65536</c>. Valid values for R (red), G (green), and B (blue): <b>0</b> to <b>255</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -27,11 +30,20 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public int? BackgroundColor { get; set; }
 
+        /// <summary>
+        /// <para>The background image information.</para>
+        /// </summary>
         [NameInMap("Backgrounds")]
         [Validation(Required=false)]
         public List<UpdateRecordTemplateRequestBackgrounds> Backgrounds { get; set; }
         public class UpdateRecordTemplateRequestBackgrounds : TeaModel {
             /// <summary>
+            /// <para>Specifies whether to display the image. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b> (None): Not displayed.</description></item>
+            /// <item><description><b>1</b> (Always): Always displayed.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -40,6 +52,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? Display { get; set; }
 
             /// <summary>
+            /// <para>The height of the pane, as a normalized percentage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.2456</para>
             /// </summary>
@@ -48,6 +62,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? Height { get; set; }
 
             /// <summary>
+            /// <para>The HTTP or HTTPS URL of the image.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></para>
             /// </summary>
@@ -56,6 +72,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Url { get; set; }
 
             /// <summary>
+            /// <para>The width of the pane, as a normalized percentage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.2456</para>
             /// </summary>
@@ -64,6 +82,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? Width { get; set; }
 
             /// <summary>
+            /// <para>The X-coordinate, as a normalized percentage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.7576</para>
             /// </summary>
@@ -72,6 +92,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? X { get; set; }
 
             /// <summary>
+            /// <para>The Y-coordinate, as a normalized percentage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.7576</para>
             /// </summary>
@@ -80,6 +102,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? Y { get; set; }
 
             /// <summary>
+            /// <para>The Z-order. A value of 0 indicates the bottom layer. A value of 1 indicates the layer above 0, and so on.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -89,11 +113,17 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        /// <summary>
+        /// <para>The clock information.</para>
+        /// </summary>
         [NameInMap("ClockWidgets")]
         [Validation(Required=false)]
         public List<UpdateRecordTemplateRequestClockWidgets> ClockWidgets { get; set; }
         public class UpdateRecordTemplateRequestClockWidgets : TeaModel {
             /// <summary>
+            /// <para>The text color of the clock in RGB format.</para>
+            /// <para>The formula is <c>R + G × 256 + B × 65536</c>. Valid values for R (red), G (green), and B (blue): <b>0</b> to <b>255</b>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -102,6 +132,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? FontColor { get; set; }
 
             /// <summary>
+            /// <para>The font size of the clock. Valid values: <b>(0, 72]</b>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -110,6 +142,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? FontSize { get; set; }
 
             /// <summary>
+            /// <para>The font type of the clock. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b> (default): NOTO_SERIF_CJKSC_REGULAR</description></item>
+            /// <item><description><b>1</b>: ALIBABA_PUHUITI_REGULAR</description></item>
+            /// <item><description><b>2</b>: ALIBABA_PUHUITI_BOLD</description></item>
+            /// <item><description><b>3</b>: ALIBABA_PUHUITI_Heavy</description></item>
+            /// <item><description><b>4</b>: ALIBABA_PUHUITI_LIGHT</description></item>
+            /// <item><description><b>5</b>: ALIBABA_PUHUITI_MEDIUM</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -118,6 +160,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? FontType { get; set; }
 
             /// <summary>
+            /// <para>The X-coordinate of the clock, as a normalized percentage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.7576</para>
             /// </summary>
@@ -126,6 +170,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? X { get; set; }
 
             /// <summary>
+            /// <para>The Y-coordinate of the clock, as a normalized percentage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.7576</para>
             /// </summary>
@@ -134,6 +180,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? Y { get; set; }
 
             /// <summary>
+            /// <para>The Z-order of the clock. A value of 0 indicates the bottom layer. A value of 1 indicates the layer above 0, and so on.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -144,6 +192,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         }
 
         /// <summary>
+        /// <para>The delay before stopping the recording. Unit: seconds. Default value: <b>180</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>180</para>
         /// </summary>
@@ -152,6 +202,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? DelayStopTime { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to add the timestamp of TS files to the recorded M3U8 file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -160,6 +212,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public bool? EnableM3u8DateTime { get; set; }
 
         /// <summary>
+        /// <para>The interval at which recording files are split. The value must be greater than or equal to 1800. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -170,6 +223,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? FileSplitInterval { get; set; }
 
         /// <summary>
+        /// <para>The recording file formats.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -180,6 +234,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public List<string> Formats { get; set; }
 
         /// <summary>
+        /// <para>The HTTP callback URL for recording events.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://example.com/callback">http://example.com/callback</a></para>
         /// </summary>
@@ -188,6 +244,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string HttpCallbackUrl { get; set; }
 
         /// <summary>
+        /// <para>The layout IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -198,6 +255,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public List<long?> LayoutIds { get; set; }
 
         /// <summary>
+        /// <para>The encoding options.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -208,6 +266,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? MediaEncode { get; set; }
 
         /// <summary>
+        /// <para>The MSMQ for recording event callbacks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>record-callback-queue</para>
         /// </summary>
@@ -216,13 +276,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string MnsQueue { get; set; }
 
         /// <summary>
+        /// <para>The name of the recording configuration template.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Recording template</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The OSS bucket where the recording files are stored.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -232,11 +297,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string OssBucket { get; set; }
 
+        /// <summary>
+        /// <para>The OSS endpoint of the region where the recording files are stored.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss-cn-shanghai.aliyuncs.com</para>
+        /// </summary>
         [NameInMap("OssEndpoint")]
         [Validation(Required=false)]
         public string OssEndpoint { get; set; }
 
         /// <summary>
+        /// <para>The naming rule for recording files.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -251,6 +323,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The billing configuration of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -261,6 +334,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string TaskProfile { get; set; }
 
         /// <summary>
+        /// <para>The configuration template ID. To obtain the template ID, call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -270,11 +344,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <summary>
+        /// <para>The watermark information.</para>
+        /// </summary>
         [NameInMap("Watermarks")]
         [Validation(Required=false)]
         public List<UpdateRecordTemplateRequestWatermarks> Watermarks { get; set; }
         public class UpdateRecordTemplateRequestWatermarks : TeaModel {
             /// <summary>
+            /// <para>The transparency. A value of 0.0 indicates fully transparent, and a value of 1.0 indicates fully opaque.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -283,6 +362,12 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? Alpha { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to display the watermark. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b> (None): Not displayed.</description></item>
+            /// <item><description><b>1</b> (Always): Always displayed.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -291,6 +376,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? Display { get; set; }
 
             /// <summary>
+            /// <para>The height of the pane, as a normalized percentage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.2456</para>
             /// </summary>
@@ -299,6 +386,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? Height { get; set; }
 
             /// <summary>
+            /// <para>The HTTP or HTTPS URL of the watermark.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.example.com/image.jpg">https://www.example.com/image.jpg</a></para>
             /// </summary>
@@ -307,6 +396,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Url { get; set; }
 
             /// <summary>
+            /// <para>The width of the pane, as a normalized percentage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.2456</para>
             /// </summary>
@@ -315,6 +406,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? Width { get; set; }
 
             /// <summary>
+            /// <para>The X-coordinate, as a normalized percentage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.7576</para>
             /// </summary>
@@ -323,6 +416,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? X { get; set; }
 
             /// <summary>
+            /// <para>The Y-coordinate, as a normalized percentage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.7576</para>
             /// </summary>
@@ -331,6 +426,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? Y { get; set; }
 
             /// <summary>
+            /// <para>The Z-order. A value of 0 indicates the bottom layer. A value of 1 indicates the layer above 0, and so on.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>

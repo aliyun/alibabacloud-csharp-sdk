@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeFaultDiagnosisFactorDistributionStatResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Statistics on the distribution of impact factors.</para>
+        /// </summary>
         [NameInMap("StatList")]
         [Validation(Required=false)]
         public List<DescribeFaultDiagnosisFactorDistributionStatResponseBodyStatList> StatList { get; set; }
         public class DescribeFaultDiagnosisFactorDistributionStatResponseBodyStatList : TeaModel {
             /// <summary>
+            /// <para>Impact factor ID. For details, see the list of impact factor ID values below.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string FactorId { get; set; }
 
             /// <summary>
+            /// <para>Number of impacted users.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? UserCount { get; set; }
 
             /// <summary>
+            /// <para>Proportion of impacted users.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.9239</para>
             /// </summary>

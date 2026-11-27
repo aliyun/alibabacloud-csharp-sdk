@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class ModifyAppViewTemplateShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Application ID. Create and view it in the console. Only one ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The template.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Template")]

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class ModifyAppStreamingOutTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>Application ID. You can create and query it in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>Template.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StreamingOutTemplate")]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public ModifyAppStreamingOutTemplateRequestStreamingOutTemplate StreamingOutTemplate { get; set; }
         public class ModifyAppStreamingOutTemplateRequestStreamingOutTemplate : TeaModel {
             /// <summary>
+            /// <para>List of layout IDs. A maximum of 16 IDs are allowed.</para>
+            /// <para>Note: The data sources corresponding to the layouts in the list must not have the same quantity.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("LayoutIds")]
@@ -34,6 +38,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public List<string> LayoutIds { get; set; }
 
             /// <summary>
+            /// <para>Encoding options.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -44,16 +49,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? MediaEncode { get; set; }
 
             /// <summary>
+            /// <para>Template Name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>模版</para>
+            /// <para>模板</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Template ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "rtc";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "central";
             CheckConfig(config);
             this._endpoint = GetEndpoint("rtc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -37,6 +40,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a recording configuration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation adds a recording configuration template. For example, when you add a recording configuration template, you can configure parameters such as recording specifications and encoding options.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddRecordTemplateRequest
         /// </param>
@@ -146,6 +162,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<AddRecordTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a recording configuration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation adds a recording configuration template. For example, when you add a recording configuration template, you can configure parameters such as recording specifications and encoding options.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddRecordTemplateRequest
         /// </param>
@@ -255,6 +284,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<AddRecordTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a recording configuration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation adds a recording configuration template. For example, when you add a recording configuration template, you can configure parameters such as recording specifications and encoding options.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddRecordTemplateRequest
         /// </param>
@@ -268,6 +310,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return AddRecordTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a recording configuration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation adds a recording configuration template. For example, when you add a recording configuration template, you can configure parameters such as recording specifications and encoding options.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddRecordTemplateRequest
         /// </param>
@@ -283,8 +338,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用智能体模版</para>
+        /// <para>Creates an application agent template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second for this API operation. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAppAgentTemplateRequest
@@ -411,8 +472,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用智能体模版</para>
+        /// <para>Creates an application agent template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second for this API operation. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAppAgentTemplateRequest
@@ -539,8 +606,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用智能体模版</para>
+        /// <para>Creates an application agent template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second for this API operation. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAppAgentTemplateRequest
@@ -557,8 +630,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用智能体模版</para>
+        /// <para>Creates an application agent template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second for this API operation. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAppAgentTemplateRequest
@@ -575,8 +654,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增app自定义布局</para>
+        /// <para>Creates a custom layout for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAppLayoutRequest
@@ -631,8 +716,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增app自定义布局</para>
+        /// <para>Creates a custom layout for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAppLayoutRequest
@@ -687,8 +778,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增app自定义布局</para>
+        /// <para>Creates a custom layout for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAppLayoutRequest
@@ -705,8 +802,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增app自定义布局</para>
+        /// <para>Creates a custom layout for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAppLayoutRequest
@@ -723,8 +826,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加应用录制模版</para>
+        /// <para>Creates an application recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAppRecordTemplateRequest
@@ -779,8 +888,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加应用录制模版</para>
+        /// <para>Creates an application recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAppRecordTemplateRequest
@@ -835,8 +950,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加应用录制模版</para>
+        /// <para>Creates an application recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAppRecordTemplateRequest
@@ -853,8 +974,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加应用录制模版</para>
+        /// <para>Creates an application recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAppRecordTemplateRequest
@@ -871,8 +998,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用推流模版</para>
+        /// <para>Creates a stream forwarding template for an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation creates a stream forwarding template for an RTC 3.0 application.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAppStreamingOutTemplateRequest
@@ -923,8 +1058,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用推流模版</para>
+        /// <para>Creates a stream forwarding template for an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation creates a stream forwarding template for an RTC 3.0 application.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAppStreamingOutTemplateRequest
@@ -975,8 +1118,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用推流模版</para>
+        /// <para>Creates a stream forwarding template for an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation creates a stream forwarding template for an RTC 3.0 application.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAppStreamingOutTemplateRequest
@@ -993,8 +1144,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用推流模版</para>
+        /// <para>Creates a stream forwarding template for an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation creates a stream forwarding template for an RTC 3.0 application.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAppStreamingOutTemplateRequest
@@ -1011,8 +1170,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用合流模版</para>
+        /// <para>Creates an application stream mixing template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAppViewTemplateRequest
@@ -1063,8 +1228,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用合流模版</para>
+        /// <para>Creates an application stream mixing template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAppViewTemplateRequest
@@ -1115,8 +1286,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用合流模版</para>
+        /// <para>Creates an application stream mixing template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAppViewTemplateRequest
@@ -1133,8 +1310,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用合流模版</para>
+        /// <para>Creates an application stream mixing template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAppViewTemplateRequest
@@ -1149,6 +1332,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await CreateAppViewTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls CreateAutoLiveStreamRule to create an automatic single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to create a relay rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 1,000 calls per minute. If the limit is exceeded, API calls will be throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAutoLiveStreamRuleRequest
         /// </param>
@@ -1214,6 +1410,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<CreateAutoLiveStreamRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls CreateAutoLiveStreamRule to create an automatic single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to create a relay rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 1,000 calls per minute. If the limit is exceeded, API calls will be throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAutoLiveStreamRuleRequest
         /// </param>
@@ -1279,6 +1488,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<CreateAutoLiveStreamRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls CreateAutoLiveStreamRule to create an automatic single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to create a relay rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 1,000 calls per minute. If the limit is exceeded, API calls will be throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAutoLiveStreamRuleRequest
         /// </param>
@@ -1292,6 +1514,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return CreateAutoLiveStreamRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls CreateAutoLiveStreamRule to create an automatic single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to create a relay rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 1,000 calls per minute. If the limit is exceeded, API calls will be throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAutoLiveStreamRuleRequest
         /// </param>
@@ -1307,7 +1542,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加纪要热词表</para>
+        /// <para>Creates a hotword table for meeting minutes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1359,7 +1594,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加纪要热词表</para>
+        /// <para>Creates a hotword table for meeting minutes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1411,7 +1646,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加纪要热词表</para>
+        /// <para>Creates a hotword table for meeting minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1429,7 +1664,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加纪要热词表</para>
+        /// <para>Creates a hotword table for meeting minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1445,6 +1680,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await CreateCloudNotePhrasesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls CreateEventSubscribe to create a callback for subscribing to room messages.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to create a callback for subscribing to room messages. For example, when you create a callback, you can configure parameters such as the callback URL and event type.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make sure that you call this operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateEventSubscribeRequest
         /// </param>
@@ -1514,6 +1762,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<CreateEventSubscribeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls CreateEventSubscribe to create a callback for subscribing to room messages.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to create a callback for subscribing to room messages. For example, when you create a callback, you can configure parameters such as the callback URL and event type.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make sure that you call this operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateEventSubscribeRequest
         /// </param>
@@ -1583,6 +1844,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<CreateEventSubscribeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls CreateEventSubscribe to create a callback for subscribing to room messages.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to create a callback for subscribing to room messages. For example, when you create a callback, you can configure parameters such as the callback URL and event type.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make sure that you call this operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateEventSubscribeRequest
         /// </param>
@@ -1596,6 +1870,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return CreateEventSubscribeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls CreateEventSubscribe to create a callback for subscribing to room messages.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to create a callback for subscribing to room messages. For example, when you create a callback, you can configure parameters such as the callback URL and event type.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make sure that you call this operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateEventSubscribeRequest
         /// </param>
@@ -1609,6 +1896,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await CreateEventSubscribeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a bypass live streaming layout.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation creates a bypass live streaming layout. For example, you can configure parameters such as the number of audio mixes and the main pane.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateMPULayoutRequest
         /// </param>
@@ -1662,6 +1962,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<CreateMPULayoutResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a bypass live streaming layout.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation creates a bypass live streaming layout. For example, you can configure parameters such as the number of audio mixes and the main pane.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateMPULayoutRequest
         /// </param>
@@ -1715,6 +2028,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<CreateMPULayoutResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a bypass live streaming layout.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation creates a bypass live streaming layout. For example, you can configure parameters such as the number of audio mixes and the main pane.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateMPULayoutRequest
         /// </param>
@@ -1728,6 +2054,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return CreateMPULayoutWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a bypass live streaming layout.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation creates a bypass live streaming layout. For example, you can configure parameters such as the number of audio mixes and the main pane.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateMPULayoutRequest
         /// </param>
@@ -1743,8 +2082,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用智能体模版</para>
+        /// <para>Deletes an application agent template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppAgentTemplateRequest
@@ -1789,8 +2134,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用智能体模版</para>
+        /// <para>Deletes an application agent template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppAgentTemplateRequest
@@ -1835,8 +2186,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用智能体模版</para>
+        /// <para>Deletes an application agent template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppAgentTemplateRequest
@@ -1853,8 +2210,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用智能体模版</para>
+        /// <para>Deletes an application agent template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppAgentTemplateRequest
@@ -1871,8 +2234,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除app自定义布局</para>
+        /// <para>Deletes a custom layout for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteAppLayoutRequest
@@ -1927,8 +2296,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除app自定义布局</para>
+        /// <para>Deletes a custom layout for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteAppLayoutRequest
@@ -1983,8 +2358,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除app自定义布局</para>
+        /// <para>Deletes a custom layout for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppLayoutRequest
@@ -2001,8 +2382,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除app自定义布局</para>
+        /// <para>Deletes a custom layout for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppLayoutRequest
@@ -2019,8 +2406,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用录制模版</para>
+        /// <para>Deletes an application recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteAppRecordTemplateRequest
@@ -2075,8 +2468,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用录制模版</para>
+        /// <para>Deletes an application recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteAppRecordTemplateRequest
@@ -2131,8 +2530,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用录制模版</para>
+        /// <para>Deletes an application recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppRecordTemplateRequest
@@ -2149,8 +2554,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用录制模版</para>
+        /// <para>Deletes an application recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppRecordTemplateRequest
@@ -2167,8 +2578,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用推流模版</para>
+        /// <para>Deletes a stream ingest template for an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation deletes a stream ingest template for an RTC 3.0 application.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteAppStreamingOutTemplateRequest
@@ -2219,8 +2638,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用推流模版</para>
+        /// <para>Deletes a stream ingest template for an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation deletes a stream ingest template for an RTC 3.0 application.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteAppStreamingOutTemplateRequest
@@ -2271,8 +2698,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用推流模版</para>
+        /// <para>Deletes a stream ingest template for an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation deletes a stream ingest template for an RTC 3.0 application.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppStreamingOutTemplateRequest
@@ -2289,8 +2724,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用推流模版</para>
+        /// <para>Deletes a stream ingest template for an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation deletes a stream ingest template for an RTC 3.0 application.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppStreamingOutTemplateRequest
@@ -2307,8 +2750,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用合流模版</para>
+        /// <para>Deletes an application\&quot;s composite stream template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 calls per second for each user. If you exceed this limit, rate limiting is triggered. This may affect your business. Call this API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteAppViewTemplateRequest
@@ -2359,8 +2808,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用合流模版</para>
+        /// <para>Deletes an application\&quot;s composite stream template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 calls per second for each user. If you exceed this limit, rate limiting is triggered. This may affect your business. Call this API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteAppViewTemplateRequest
@@ -2411,8 +2866,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用合流模版</para>
+        /// <para>Deletes an application\&quot;s composite stream template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 calls per second for each user. If you exceed this limit, rate limiting is triggered. This may affect your business. Call this API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppViewTemplateRequest
@@ -2429,8 +2890,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用合流模版</para>
+        /// <para>Deletes an application\&quot;s composite stream template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 calls per second for each user. If you exceed this limit, rate limiting is triggered. This may affect your business. Call this API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppViewTemplateRequest
@@ -2445,6 +2912,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DeleteAppViewTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteAutoLiveStreamRuleRequest
         /// </param>
@@ -2490,6 +2970,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DeleteAutoLiveStreamRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteAutoLiveStreamRuleRequest
         /// </param>
@@ -2535,6 +3028,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DeleteAutoLiveStreamRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteAutoLiveStreamRuleRequest
         /// </param>
@@ -2548,6 +3054,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DeleteAutoLiveStreamRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteAutoLiveStreamRuleRequest
         /// </param>
@@ -2561,6 +3080,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DeleteAutoLiveStreamRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation deletes a channel.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>This operation has no QPS limit per user. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteChannelRequest
         /// </param>
@@ -2606,6 +3138,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DeleteChannelResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation deletes a channel.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>This operation has no QPS limit per user. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteChannelRequest
         /// </param>
@@ -2651,6 +3196,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DeleteChannelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation deletes a channel.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>This operation has no QPS limit per user. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteChannelRequest
         /// </param>
@@ -2664,6 +3222,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DeleteChannelWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation deletes a channel.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>This operation has no QPS limit per user. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteChannelRequest
         /// </param>
@@ -2679,7 +3250,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除纪要热词表</para>
+        /// <para>Deletes a hot word table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2731,7 +3302,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除纪要热词表</para>
+        /// <para>Deletes a hot word table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2783,7 +3354,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除纪要热词表</para>
+        /// <para>Deletes a hot word table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2801,7 +3372,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除纪要热词表</para>
+        /// <para>Deletes a hot word table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2817,6 +3388,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DeleteCloudNotePhrasesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a callback for subscribing to room messages by calling DeleteEventSubscribe.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/274447.html">CreateEventSubscribe</a> to create a callback for subscribing to room messages.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit of this operation is 1,000 calls per minute per user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteEventSubscribeRequest
         /// </param>
@@ -2862,6 +3446,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DeleteEventSubscribeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a callback for subscribing to room messages by calling DeleteEventSubscribe.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/274447.html">CreateEventSubscribe</a> to create a callback for subscribing to room messages.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit of this operation is 1,000 calls per minute per user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteEventSubscribeRequest
         /// </param>
@@ -2907,6 +3504,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DeleteEventSubscribeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a callback for subscribing to room messages by calling DeleteEventSubscribe.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/274447.html">CreateEventSubscribe</a> to create a callback for subscribing to room messages.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit of this operation is 1,000 calls per minute per user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteEventSubscribeRequest
         /// </param>
@@ -2920,6 +3530,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DeleteEventSubscribeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a callback for subscribing to room messages by calling DeleteEventSubscribe.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/274447.html">CreateEventSubscribe</a> to create a callback for subscribing to room messages.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit of this operation is 1,000 calls per minute per user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteEventSubscribeRequest
         /// </param>
@@ -2933,6 +3556,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DeleteEventSubscribeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a bypass live streaming layout.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The per-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteMPULayoutRequest
         /// </param>
@@ -2978,6 +3614,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DeleteMPULayoutResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a bypass live streaming layout.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The per-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteMPULayoutRequest
         /// </param>
@@ -3023,6 +3672,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DeleteMPULayoutResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a bypass live streaming layout.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The per-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteMPULayoutRequest
         /// </param>
@@ -3036,6 +3698,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DeleteMPULayoutWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a bypass live streaming layout.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The per-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteMPULayoutRequest
         /// </param>
@@ -3049,6 +3724,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DeleteMPULayoutWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a recording configuration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteRecordTemplateRequest
         /// </param>
@@ -3094,6 +3782,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DeleteRecordTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a recording configuration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteRecordTemplateRequest
         /// </param>
@@ -3139,6 +3840,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DeleteRecordTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a recording configuration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteRecordTemplateRequest
         /// </param>
@@ -3152,6 +3866,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DeleteRecordTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a recording configuration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteRecordTemplateRequest
         /// </param>
@@ -3167,8 +3894,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出系统支持的事件回调</para>
+        /// <para>Lists the event callbacks supported by the system.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports a maximum of 10 calls per second per user. If you exceed this limit, rate limiting is applied to your API calls, which may affect your business operations. Use this API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
@@ -3197,8 +3930,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出系统支持的事件回调</para>
+        /// <para>Lists the event callbacks supported by the system.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports a maximum of 10 calls per second per user. If you exceed this limit, rate limiting is applied to your API calls, which may affect your business operations. Use this API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
@@ -3227,8 +3966,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出系统支持的事件回调</para>
+        /// <para>Lists the event callbacks supported by the system.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports a maximum of 10 calls per second per user. If you exceed this limit, rate limiting is applied to your API calls, which may affect your business operations. Use this API judiciously.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DescribeAllCallbackResponse
@@ -3241,8 +3986,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出系统支持的事件回调</para>
+        /// <para>Lists the event callbacks supported by the system.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports a maximum of 10 calls per second per user. If you exceed this limit, rate limiting is applied to your API calls, which may affect your business operations. Use this API judiciously.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DescribeAllCallbackResponse
@@ -3255,8 +4006,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用智能体开关</para>
+        /// <para>Query the status of the application agent feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API operation supports a maximum of 10 queries per second per user. If you exceed this limit, rate limiting is triggered, which may affect your application. Call this API only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppAgentFunctionStatusRequest
@@ -3297,8 +4054,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用智能体开关</para>
+        /// <para>Query the status of the application agent feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API operation supports a maximum of 10 queries per second per user. If you exceed this limit, rate limiting is triggered, which may affect your application. Call this API only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppAgentFunctionStatusRequest
@@ -3339,8 +4102,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用智能体开关</para>
+        /// <para>Query the status of the application agent feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API operation supports a maximum of 10 queries per second per user. If you exceed this limit, rate limiting is triggered, which may affect your application. Call this API only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppAgentFunctionStatusRequest
@@ -3357,8 +4126,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用智能体开关</para>
+        /// <para>Query the status of the application agent feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API operation supports a maximum of 10 queries per second per user. If you exceed this limit, rate limiting is triggered, which may affect your application. Call this API only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppAgentFunctionStatusRequest
@@ -3375,8 +4150,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用智能体模版列表</para>
+        /// <para>Lists agent templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Rate limits</h3>
+        /// <para>The rate limit for this API operation is 10 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppAgentTemplatesRequest
@@ -3433,8 +4214,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用智能体模版列表</para>
+        /// <para>Lists agent templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Rate limits</h3>
+        /// <para>The rate limit for this API operation is 10 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppAgentTemplatesRequest
@@ -3491,8 +4278,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用智能体模版列表</para>
+        /// <para>Lists agent templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Rate limits</h3>
+        /// <para>The rate limit for this API operation is 10 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppAgentTemplatesRequest
@@ -3509,8 +4302,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用智能体模版列表</para>
+        /// <para>Lists agent templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Rate limits</h3>
+        /// <para>The rate limit for this API operation is 10 queries per second (QPS) per user. If you exceed the limit, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppAgentTemplatesRequest
@@ -3527,8 +4326,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看app回调开关</para>
+        /// <para>Queries the callback switch of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppCallStatusRequest
@@ -3569,8 +4374,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看app回调开关</para>
+        /// <para>Queries the callback switch of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppCallStatusRequest
@@ -3611,8 +4422,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看app回调开关</para>
+        /// <para>Queries the callback switch of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppCallStatusRequest
@@ -3629,8 +4446,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看app回调开关</para>
+        /// <para>Queries the callback switch of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppCallStatusRequest
@@ -3647,8 +4470,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取app回调密钥</para>
+        /// <para>Obtain the application callback key</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppCallbackSecretKeyRequest
@@ -3689,8 +4518,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取app回调密钥</para>
+        /// <para>Obtain the application callback key</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppCallbackSecretKeyRequest
@@ -3731,8 +4566,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取app回调密钥</para>
+        /// <para>Obtain the application callback key</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppCallbackSecretKeyRequest
@@ -3749,8 +4590,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取app回调密钥</para>
+        /// <para>Obtain the application callback key</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppCallbackSecretKeyRequest
@@ -3767,8 +4614,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看AppKey</para>
+        /// <para>Invoke DescribeAppKey to query the AppKey of a specified application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>Before invoking this API, you must have already created an application in the RTC console.  </para>
+        /// <h3>queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 200 requests per minute per user. If the limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppKeyRequest
@@ -3813,8 +4668,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看AppKey</para>
+        /// <para>Invoke DescribeAppKey to query the AppKey of a specified application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>Before invoking this API, you must have already created an application in the RTC console.  </para>
+        /// <h3>queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 200 requests per minute per user. If the limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppKeyRequest
@@ -3859,8 +4722,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看AppKey</para>
+        /// <para>Invoke DescribeAppKey to query the AppKey of a specified application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>Before invoking this API, you must have already created an application in the RTC console.  </para>
+        /// <h3>queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 200 requests per minute per user. If the limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppKeyRequest
@@ -3877,8 +4748,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看AppKey</para>
+        /// <para>Invoke DescribeAppKey to query the AppKey of a specified application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>Before invoking this API, you must have already created an application in the RTC console.  </para>
+        /// <h3>queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 200 requests per minute per user. If the limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppKeyRequest
@@ -3895,8 +4774,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询app自定义布局</para>
+        /// <para>Query custom application layouts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 queries per second (QPS) per user. Exceeding this limit triggers rate limiting, which may affect your business operations. Use the API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeAppLayoutsRequest
@@ -3939,8 +4824,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询app自定义布局</para>
+        /// <para>Query custom application layouts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 queries per second (QPS) per user. Exceeding this limit triggers rate limiting, which may affect your business operations. Use the API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeAppLayoutsRequest
@@ -3983,8 +4874,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询app自定义布局</para>
+        /// <para>Query custom application layouts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 queries per second (QPS) per user. Exceeding this limit triggers rate limiting, which may affect your business operations. Use the API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppLayoutsRequest
@@ -4001,8 +4898,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询app自定义布局</para>
+        /// <para>Query custom application layouts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 queries per second (QPS) per user. Exceeding this limit triggers rate limiting, which may affect your business operations. Use the API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppLayoutsRequest
@@ -4019,8 +4922,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看应用旁路开关</para>
+        /// <para>View the application bypass switch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 for each user. API calls that exceed this limit are subject to rate limiting, which may impact your business. We recommend that you call this API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppLiveStreamStatusRequest
@@ -4057,8 +4966,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看应用旁路开关</para>
+        /// <para>View the application bypass switch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 for each user. API calls that exceed this limit are subject to rate limiting, which may impact your business. We recommend that you call this API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppLiveStreamStatusRequest
@@ -4095,8 +5010,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看应用旁路开关</para>
+        /// <para>View the application bypass switch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 for each user. API calls that exceed this limit are subject to rate limiting, which may impact your business. We recommend that you call this API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppLiveStreamStatusRequest
@@ -4113,8 +5034,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看应用旁路开关</para>
+        /// <para>View the application bypass switch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 for each user. API calls that exceed this limit are subject to rate limiting, which may impact your business. We recommend that you call this API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppLiveStreamStatusRequest
@@ -4131,8 +5058,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用录制开关</para>
+        /// <para>Queries the recording status of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this operation is 10 calls per second per user. Exceeding this limit triggers rate limiting, which may affect your business. Call this operation only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppRecordStatusRequest
@@ -4169,8 +5102,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用录制开关</para>
+        /// <para>Queries the recording status of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this operation is 10 calls per second per user. Exceeding this limit triggers rate limiting, which may affect your business. Call this operation only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppRecordStatusRequest
@@ -4207,8 +5146,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用录制开关</para>
+        /// <para>Queries the recording status of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this operation is 10 calls per second per user. Exceeding this limit triggers rate limiting, which may affect your business. Call this operation only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppRecordStatusRequest
@@ -4225,8 +5170,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用录制开关</para>
+        /// <para>Queries the recording status of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this operation is 10 calls per second per user. Exceeding this limit triggers rate limiting, which may affect your business. Call this operation only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppRecordStatusRequest
@@ -4243,8 +5194,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用录制模版列表</para>
+        /// <para>Queries the list of application recording templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user calling this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeAppRecordTemplatesRequest
@@ -4287,8 +5244,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用录制模版列表</para>
+        /// <para>Queries the list of application recording templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user calling this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeAppRecordTemplatesRequest
@@ -4331,8 +5294,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用录制模版列表</para>
+        /// <para>Queries the list of application recording templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user calling this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppRecordTemplatesRequest
@@ -4349,8 +5318,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用录制模版列表</para>
+        /// <para>Queries the list of application recording templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user calling this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppRecordTemplatesRequest
@@ -4367,8 +5342,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制列表</para>
+        /// <para>Lists recording files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which may affect your service. Call this API only when necessary.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeAppRecordingFilesRequest
@@ -4411,8 +5392,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制列表</para>
+        /// <para>Lists recording files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which may affect your service. Call this API only when necessary.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeAppRecordingFilesRequest
@@ -4455,8 +5442,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制列表</para>
+        /// <para>Lists recording files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which may affect your service. Call this API only when necessary.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppRecordingFilesRequest
@@ -4473,8 +5466,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制列表</para>
+        /// <para>Lists recording files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which may affect your service. Call this API only when necessary.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppRecordingFilesRequest
@@ -4491,8 +5490,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用推流模版列表</para>
+        /// <para>Query the list of stream ingest templates under an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to view the list of stream ingest templates for an RTC 3.0 application.  </para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If this limit is exceeded, API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeAppStreamingOutTemplatesRequest
@@ -4551,8 +5558,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用推流模版列表</para>
+        /// <para>Query the list of stream ingest templates under an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to view the list of stream ingest templates for an RTC 3.0 application.  </para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If this limit is exceeded, API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeAppStreamingOutTemplatesRequest
@@ -4611,8 +5626,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用推流模版列表</para>
+        /// <para>Query the list of stream ingest templates under an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to view the list of stream ingest templates for an RTC 3.0 application.  </para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If this limit is exceeded, API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppStreamingOutTemplatesRequest
@@ -4629,8 +5652,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用推流模版列表</para>
+        /// <para>Query the list of stream ingest templates under an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to view the list of stream ingest templates for an RTC 3.0 application.  </para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If this limit is exceeded, API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppStreamingOutTemplatesRequest
@@ -4647,8 +5678,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看合流开关</para>
+        /// <para>View the stream merging switch</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>This API has a QPS limit of 10 queries per second (QPS) per user. If you exceed this limit, rate limiting is triggered, which can affect your business operations. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppViewStatusRequest
@@ -4689,8 +5726,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看合流开关</para>
+        /// <para>View the stream merging switch</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>This API has a QPS limit of 10 queries per second (QPS) per user. If you exceed this limit, rate limiting is triggered, which can affect your business operations. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppViewStatusRequest
@@ -4731,8 +5774,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看合流开关</para>
+        /// <para>View the stream merging switch</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>This API has a QPS limit of 10 queries per second (QPS) per user. If you exceed this limit, rate limiting is triggered, which can affect your business operations. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppViewStatusRequest
@@ -4749,8 +5798,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看合流开关</para>
+        /// <para>View the stream merging switch</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>This API has a QPS limit of 10 queries per second (QPS) per user. If you exceed this limit, rate limiting is triggered, which can affect your business operations. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppViewStatusRequest
@@ -4767,8 +5822,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用合流模版列表</para>
+        /// <para>Lists application compositing templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this operation is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. You should call this operation only as needed.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeAppViewTemplatesRequest
@@ -4827,8 +5888,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用合流模版列表</para>
+        /// <para>Lists application compositing templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this operation is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. You should call this operation only as needed.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeAppViewTemplatesRequest
@@ -4887,8 +5954,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用合流模版列表</para>
+        /// <para>Lists application compositing templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this operation is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. You should call this operation only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppViewTemplatesRequest
@@ -4905,8 +5978,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用合流模版列表</para>
+        /// <para>Lists application compositing templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this operation is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. You should call this operation only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppViewTemplatesRequest
@@ -4923,8 +6002,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>App列表</para>
+        /// <para>Queries the list of applications.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the list of applications. For example, you can obtain data such as the application ID, application name, and application type from the query results.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 200 calls per minute. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppsRequest
@@ -4989,8 +6076,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>App列表</para>
+        /// <para>Queries the list of applications.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the list of applications. For example, you can obtain data such as the application ID, application name, and application type from the query results.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 200 calls per minute. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppsRequest
@@ -5055,8 +6150,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>App列表</para>
+        /// <para>Queries the list of applications.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the list of applications. For example, you can obtain data such as the application ID, application name, and application type from the query results.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 200 calls per minute. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppsRequest
@@ -5073,8 +6176,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>App列表</para>
+        /// <para>Queries the list of applications.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the list of applications. For example, you can obtain data such as the application ID, application name, and application type from the query results.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 200 calls per minute. If this limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppsRequest
@@ -5089,6 +6200,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DescribeAppsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the automatic bypass single-stream relay rules.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeAutoLiveStreamRuleRequest
         /// </param>
@@ -5130,6 +6254,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeAutoLiveStreamRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the automatic bypass single-stream relay rules.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeAutoLiveStreamRuleRequest
         /// </param>
@@ -5171,6 +6308,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeAutoLiveStreamRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the automatic bypass single-stream relay rules.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeAutoLiveStreamRuleRequest
         /// </param>
@@ -5184,6 +6334,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DescribeAutoLiveStreamRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the automatic bypass single-stream relay rules.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeAutoLiveStreamRuleRequest
         /// </param>
@@ -5199,8 +6362,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeCall获取单次通信详情。</para>
+        /// <para>Queries the details of a single communication session. For example, you can query the communication status and user details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the details of a single communication session. For example, you can query the communication status and user details.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCallRequest
@@ -5261,8 +6432,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeCall获取单次通信详情。</para>
+        /// <para>Queries the details of a single communication session. For example, you can query the communication status and user details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the details of a single communication session. For example, you can query the communication status and user details.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCallRequest
@@ -5323,8 +6502,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeCall获取单次通信详情。</para>
+        /// <para>Queries the details of a single communication session. For example, you can query the communication status and user details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the details of a single communication session. For example, you can query the communication status and user details.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCallRequest
@@ -5341,8 +6528,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeCall获取单次通信详情。</para>
+        /// <para>Queries the details of a single communication session. For example, you can query the communication status and user details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the details of a single communication session. For example, you can query the communication status and user details.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCallRequest
@@ -5359,8 +6554,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeCallList分页查询时间范围内创建的通信信息。</para>
+        /// <para>Invoke DescribeCallList to perform a paged query of communication records created within a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query communication records created within a specified time range. For example, you can query information such as call duration, status, and user count.  </para>
+        /// <h3>Rate Limiting</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 calls per second per user. If this limit is exceeded, API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCallListRequest
@@ -5437,8 +6640,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeCallList分页查询时间范围内创建的通信信息。</para>
+        /// <para>Invoke DescribeCallList to perform a paged query of communication records created within a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query communication records created within a specified time range. For example, you can query information such as call duration, status, and user count.  </para>
+        /// <h3>Rate Limiting</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 calls per second per user. If this limit is exceeded, API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCallListRequest
@@ -5515,8 +6726,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeCallList分页查询时间范围内创建的通信信息。</para>
+        /// <para>Invoke DescribeCallList to perform a paged query of communication records created within a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query communication records created within a specified time range. For example, you can query information such as call duration, status, and user count.  </para>
+        /// <h3>Rate Limiting</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 calls per second per user. If this limit is exceeded, API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCallListRequest
@@ -5533,8 +6752,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeCallList分页查询时间范围内创建的通信信息。</para>
+        /// <para>Invoke DescribeCallList to perform a paged query of communication records created within a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query communication records created within a specified time range. For example, you can query information such as call duration, status, and user count.  </para>
+        /// <h3>Rate Limiting</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 calls per second per user. If this limit is exceeded, API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCallListRequest
@@ -5551,8 +6778,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>app事件回调列表</para>
+        /// <para>Lists the event callbacks configured for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 queries per second (QPS) per user. If you exceed this limit, the system applies rate limiting to your API calls, which may affect your business operations. Plan your API calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCallbacksRequest
@@ -5593,8 +6826,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>app事件回调列表</para>
+        /// <para>Lists the event callbacks configured for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 queries per second (QPS) per user. If you exceed this limit, the system applies rate limiting to your API calls, which may affect your business operations. Plan your API calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCallbacksRequest
@@ -5635,8 +6874,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>app事件回调列表</para>
+        /// <para>Lists the event callbacks configured for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 queries per second (QPS) per user. If you exceed this limit, the system applies rate limiting to your API calls, which may affect your business operations. Plan your API calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCallbacksRequest
@@ -5653,8 +6898,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>app事件回调列表</para>
+        /// <para>Lists the event callbacks configured for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 queries per second (QPS) per user. If you exceed this limit, the system applies rate limiting to your API calls, which may affect your business operations. Plan your API calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCallbacksRequest
@@ -5673,6 +6924,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <summary>
         /// <para>DescribeChannel</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query online channel information.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If the limit is exceeded, Rate Limiting will be applied to your API Call, which may Impact your business. Please invoke the API reasonably.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelRequest
@@ -5720,6 +6979,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>DescribeChannel</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query online channel information.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If the limit is exceeded, Rate Limiting will be applied to your API Call, which may Impact your business. Please invoke the API reasonably.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeChannelRequest
         /// </param>
@@ -5766,6 +7033,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>DescribeChannel</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query online channel information.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If the limit is exceeded, Rate Limiting will be applied to your API Call, which may Impact your business. Please invoke the API reasonably.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeChannelRequest
         /// </param>
@@ -5784,6 +7059,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>DescribeChannel</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query online channel information.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If the limit is exceeded, Rate Limiting will be applied to your API Call, which may Impact your business. Please invoke the API reasonably.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeChannelRequest
         /// </param>
@@ -5799,8 +7082,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询频道的所有参会者</para>
+        /// <para>This API is used to query the user list in a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query the list of users in an online channel.  </para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Invoke this API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelAllUsersRequest
@@ -5845,8 +7136,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询频道的所有参会者</para>
+        /// <para>This API is used to query the user list in a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query the list of users in an online channel.  </para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Invoke this API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelAllUsersRequest
@@ -5891,8 +7190,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询频道的所有参会者</para>
+        /// <para>This API is used to query the user list in a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query the list of users in an online channel.  </para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Invoke this API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelAllUsersRequest
@@ -5909,8 +7216,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询频道的所有参会者</para>
+        /// <para>This API is used to query the user list in a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query the list of users in an online channel.  </para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Invoke this API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelAllUsersRequest
@@ -5927,8 +7242,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelAreaDistributionStatData获取频道地区分布统计数据。</para>
+        /// <para>Retrieves the regional distribution statistics of a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the regional distribution statistics of a channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Plan your API calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelAreaDistributionStatDataRequest
@@ -5985,8 +7308,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelAreaDistributionStatData获取频道地区分布统计数据。</para>
+        /// <para>Retrieves the regional distribution statistics of a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the regional distribution statistics of a channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Plan your API calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelAreaDistributionStatDataRequest
@@ -6043,8 +7374,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelAreaDistributionStatData获取频道地区分布统计数据。</para>
+        /// <para>Retrieves the regional distribution statistics of a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the regional distribution statistics of a channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Plan your API calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelAreaDistributionStatDataRequest
@@ -6061,8 +7400,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelAreaDistributionStatData获取频道地区分布统计数据。</para>
+        /// <para>Retrieves the regional distribution statistics of a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the regional distribution statistics of a channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Plan your API calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelAreaDistributionStatDataRequest
@@ -6079,8 +7426,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelDistributionStatData获取频道分布统计数据。</para>
+        /// <para>Queries the channel distribution statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the channel distribution statistics. You can query the statistics by dimension, such as operating system type or SDK version.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelDistributionStatDataRequest
@@ -6137,8 +7492,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelDistributionStatData获取频道分布统计数据。</para>
+        /// <para>Queries the channel distribution statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the channel distribution statistics. You can query the statistics by dimension, such as operating system type or SDK version.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelDistributionStatDataRequest
@@ -6195,8 +7558,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelDistributionStatData获取频道分布统计数据。</para>
+        /// <para>Queries the channel distribution statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the channel distribution statistics. You can query the statistics by dimension, such as operating system type or SDK version.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelDistributionStatDataRequest
@@ -6213,8 +7584,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelDistributionStatData获取频道分布统计数据。</para>
+        /// <para>Queries the channel distribution statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the channel distribution statistics. You can query the statistics by dimension, such as operating system type or SDK version.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelDistributionStatDataRequest
@@ -6231,8 +7610,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelOverallData查询频道概览数据。</para>
+        /// <para>This API is used to query channel overview data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query channel overview data. For example, you can query basic communication information, Trend Indicators, and other information.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per User. If the limit is exceeded, Rate Limiting will be applied to API Calls, which may Impact your business. Invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelOverallDataRequest
@@ -6285,8 +7672,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelOverallData查询频道概览数据。</para>
+        /// <para>This API is used to query channel overview data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query channel overview data. For example, you can query basic communication information, Trend Indicators, and other information.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per User. If the limit is exceeded, Rate Limiting will be applied to API Calls, which may Impact your business. Invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelOverallDataRequest
@@ -6339,8 +7734,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelOverallData查询频道概览数据。</para>
+        /// <para>This API is used to query channel overview data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query channel overview data. For example, you can query basic communication information, Trend Indicators, and other information.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per User. If the limit is exceeded, Rate Limiting will be applied to API Calls, which may Impact your business. Invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelOverallDataRequest
@@ -6357,8 +7760,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelOverallData查询频道概览数据。</para>
+        /// <para>This API is used to query channel overview data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query channel overview data. For example, you can query basic communication information, Trend Indicators, and other information.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per User. If the limit is exceeded, Rate Limiting will be applied to API Calls, which may Impact your business. Invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelOverallDataRequest
@@ -6373,6 +7784,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DescribeChannelOverallDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of online users in a channel without detailed information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation queries the list of online users in a channel, excluding detailed user information.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeChannelParticipantsRequest
         /// </param>
@@ -6430,6 +7854,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeChannelParticipantsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of online users in a channel without detailed information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation queries the list of online users in a channel, excluding detailed user information.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeChannelParticipantsRequest
         /// </param>
@@ -6487,6 +7924,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeChannelParticipantsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of online users in a channel without detailed information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation queries the list of online users in a channel, excluding detailed user information.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeChannelParticipantsRequest
         /// </param>
@@ -6500,6 +7950,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DescribeChannelParticipantsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of online users in a channel without detailed information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation queries the list of online users in a channel, excluding detailed user information.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeChannelParticipantsRequest
         /// </param>
@@ -6515,8 +7978,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelTopPubUserList获取频道内发布端的用户列表（按用户在线时长降序）。</para>
+        /// <para>Retrieves the list of publishing users in a channel in descending order of online duration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the list of publishing users in a channel in descending order of online duration. For example, you can query information such as the time when a user joined the call and the communication duration from the user list.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelTopPubUserListRequest
@@ -6569,8 +8040,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelTopPubUserList获取频道内发布端的用户列表（按用户在线时长降序）。</para>
+        /// <para>Retrieves the list of publishing users in a channel in descending order of online duration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the list of publishing users in a channel in descending order of online duration. For example, you can query information such as the time when a user joined the call and the communication duration from the user list.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelTopPubUserListRequest
@@ -6623,8 +8102,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelTopPubUserList获取频道内发布端的用户列表（按用户在线时长降序）。</para>
+        /// <para>Retrieves the list of publishing users in a channel in descending order of online duration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the list of publishing users in a channel in descending order of online duration. For example, you can query information such as the time when a user joined the call and the communication duration from the user list.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelTopPubUserListRequest
@@ -6641,8 +8128,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelTopPubUserList获取频道内发布端的用户列表（按用户在线时长降序）。</para>
+        /// <para>Retrieves the list of publishing users in a channel in descending order of online duration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the list of publishing users in a channel in descending order of online duration. For example, you can query information such as the time when a user joined the call and the communication duration from the user list.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelTopPubUserListRequest
@@ -6659,8 +8154,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeChannelUser</para>
+        /// <para>Queries the information of a user in a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the information of a user in an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelUserRequest
@@ -6709,8 +8212,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeChannelUser</para>
+        /// <para>Queries the information of a user in a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the information of a user in an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelUserRequest
@@ -6759,8 +8270,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeChannelUser</para>
+        /// <para>Queries the information of a user in a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the information of a user in an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelUserRequest
@@ -6777,8 +8296,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeChannelUser</para>
+        /// <para>Queries the information of a user in a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the information of a user in an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelUserRequest
@@ -6795,8 +8322,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelUserMetrics查询频道总览中的用户数据。</para>
+        /// <para>Queries the user data in the channel overview.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the user data in the channel overview. For example, you can query metric data details and overview data.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelUserMetricsRequest
@@ -6849,8 +8384,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelUserMetrics查询频道总览中的用户数据。</para>
+        /// <para>Queries the user data in the channel overview.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the user data in the channel overview. For example, you can query metric data details and overview data.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelUserMetricsRequest
@@ -6903,8 +8446,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelUserMetrics查询频道总览中的用户数据。</para>
+        /// <para>Queries the user data in the channel overview.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the user data in the channel overview. For example, you can query metric data details and overview data.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelUserMetricsRequest
@@ -6921,8 +8472,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeChannelUserMetrics查询频道总览中的用户数据。</para>
+        /// <para>Queries the user data in the channel overview.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the user data in the channel overview. For example, you can query metric data details and overview data.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelUserMetricsRequest
@@ -6937,6 +8496,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DescribeChannelUserMetricsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of real-time online users in a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation queries the details of online users in a channel. For example, you can query the total number of users in communication mode and live streaming mode.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The queries per second (QPS) limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeChannelUsersRequest
         /// </param>
@@ -6982,6 +8554,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeChannelUsersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of real-time online users in a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation queries the details of online users in a channel. For example, you can query the total number of users in communication mode and live streaming mode.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The queries per second (QPS) limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeChannelUsersRequest
         /// </param>
@@ -7027,6 +8612,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeChannelUsersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of real-time online users in a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation queries the details of online users in a channel. For example, you can query the total number of users in communication mode and live streaming mode.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The queries per second (QPS) limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeChannelUsersRequest
         /// </param>
@@ -7040,6 +8638,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DescribeChannelUsersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of real-time online users in a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation queries the details of online users in a channel. For example, you can query the total number of users in communication mode and live streaming mode.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The queries per second (QPS) limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeChannelUsersRequest
         /// </param>
@@ -7055,8 +8666,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询在线频道列表</para>
+        /// <para>Queries all active channels under a single AppId.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries all active channels under a single AppId.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelsRequest
@@ -7093,8 +8712,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询在线频道列表</para>
+        /// <para>Queries all active channels under a single AppId.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries all active channels under a single AppId.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelsRequest
@@ -7131,8 +8758,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询在线频道列表</para>
+        /// <para>Queries all active channels under a single AppId.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries all active channels under a single AppId.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelsRequest
@@ -7149,8 +8784,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询在线频道列表</para>
+        /// <para>Queries all active channels under a single AppId.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries all active channels under a single AppId.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChannelsRequest
@@ -7167,7 +8810,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>纪要热词列表</para>
+        /// <para>Queries the hotword lists for meeting minutes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7227,7 +8870,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>纪要热词列表</para>
+        /// <para>Queries the hotword lists for meeting minutes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7287,7 +8930,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>纪要热词列表</para>
+        /// <para>Queries the hotword lists for meeting minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7305,7 +8948,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>纪要热词列表</para>
+        /// <para>Queries the hotword lists for meeting minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7323,8 +8966,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>纪要列表</para>
+        /// <para>Meeting Summary List</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query the list of meeting summary job files that have generated summary results.  </para>
+        /// <h3>Queries Per Second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If this limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeCloudNotesRequest
@@ -7367,8 +9018,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>纪要列表</para>
+        /// <para>Meeting Summary List</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query the list of meeting summary job files that have generated summary results.  </para>
+        /// <h3>Queries Per Second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If this limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeCloudNotesRequest
@@ -7411,8 +9070,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>纪要列表</para>
+        /// <para>Meeting Summary List</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query the list of meeting summary job files that have generated summary results.  </para>
+        /// <h3>Queries Per Second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If this limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCloudNotesRequest
@@ -7429,8 +9096,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>纪要列表</para>
+        /// <para>Meeting Summary List</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to query the list of meeting summary job files that have generated summary results.  </para>
+        /// <h3>Queries Per Second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If this limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCloudNotesRequest
@@ -7447,8 +9122,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制任务状态</para>
+        /// <para>Queries the status of a recording task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCloudRecordStatusRequest
@@ -7497,8 +9178,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制任务状态</para>
+        /// <para>Queries the status of a recording task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCloudRecordStatusRequest
@@ -7547,8 +9234,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制任务状态</para>
+        /// <para>Queries the status of a recording task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCloudRecordStatusRequest
@@ -7565,8 +9258,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询录制任务状态</para>
+        /// <para>Queries the status of a recording task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCloudRecordStatusRequest
@@ -7583,8 +9282,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeEndPointEventList获取端对端用户事件列表。</para>
+        /// <para>Retrieves a list of end-to-end user events.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves a list of end-to-end user events. For example, you can obtain information such as the event name and event type from the event list.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEndPointEventListRequest
@@ -7641,8 +9348,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeEndPointEventList获取端对端用户事件列表。</para>
+        /// <para>Retrieves a list of end-to-end user events.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves a list of end-to-end user events. For example, you can obtain information such as the event name and event type from the event list.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEndPointEventListRequest
@@ -7699,8 +9414,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeEndPointEventList获取端对端用户事件列表。</para>
+        /// <para>Retrieves a list of end-to-end user events.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves a list of end-to-end user events. For example, you can obtain information such as the event name and event type from the event list.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEndPointEventListRequest
@@ -7717,8 +9440,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeEndPointEventList获取端对端用户事件列表。</para>
+        /// <para>Retrieves a list of end-to-end user events.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves a list of end-to-end user events. For example, you can obtain information such as the event name and event type from the event list.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEndPointEventListRequest
@@ -7735,8 +9466,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeEndPointMetricData获取端对端指标数据。</para>
+        /// <para>Retrieves end-to-end metric data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves end-to-end metric data. For example, you can retrieve metric information for subscribers and publishers.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEndPointMetricDataRequest
@@ -7805,8 +9544,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeEndPointMetricData获取端对端指标数据。</para>
+        /// <para>Retrieves end-to-end metric data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves end-to-end metric data. For example, you can retrieve metric information for subscribers and publishers.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEndPointMetricDataRequest
@@ -7875,8 +9622,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeEndPointMetricData获取端对端指标数据。</para>
+        /// <para>Retrieves end-to-end metric data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves end-to-end metric data. For example, you can retrieve metric information for subscribers and publishers.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEndPointMetricDataRequest
@@ -7893,8 +9648,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeEndPointMetricData获取端对端指标数据。</para>
+        /// <para>Retrieves end-to-end metric data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves end-to-end metric data. For example, you can retrieve metric information for subscribers and publishers.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEndPointMetricDataRequest
@@ -7911,8 +9674,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断影响因素分布</para>
+        /// <para>Invoke the DescribeFaultDiagnosisFactorDistributionStat API to obtain the distribution of factors impacting abnormal diagnosis.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to retrieve the distribution of factors impacting abnormal diagnosis. When using this API, you can query data from the last 48 hours, with each query covering a time range of no more than 24 hours.</para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If this limit is exceeded, API calls will be subject to rate limiting, which may impact your service. Please call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisFactorDistributionStatRequest
@@ -7961,8 +9732,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断影响因素分布</para>
+        /// <para>Invoke the DescribeFaultDiagnosisFactorDistributionStat API to obtain the distribution of factors impacting abnormal diagnosis.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to retrieve the distribution of factors impacting abnormal diagnosis. When using this API, you can query data from the last 48 hours, with each query covering a time range of no more than 24 hours.</para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If this limit is exceeded, API calls will be subject to rate limiting, which may impact your service. Please call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisFactorDistributionStatRequest
@@ -8011,8 +9790,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断影响因素分布</para>
+        /// <para>Invoke the DescribeFaultDiagnosisFactorDistributionStat API to obtain the distribution of factors impacting abnormal diagnosis.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to retrieve the distribution of factors impacting abnormal diagnosis. When using this API, you can query data from the last 48 hours, with each query covering a time range of no more than 24 hours.</para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If this limit is exceeded, API calls will be subject to rate limiting, which may impact your service. Please call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisFactorDistributionStatRequest
@@ -8029,8 +9816,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断影响因素分布</para>
+        /// <para>Invoke the DescribeFaultDiagnosisFactorDistributionStat API to obtain the distribution of factors impacting abnormal diagnosis.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to retrieve the distribution of factors impacting abnormal diagnosis. When using this API, you can query data from the last 48 hours, with each query covering a time range of no more than 24 hours.</para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If this limit is exceeded, API calls will be subject to rate limiting, which may impact your service. Please call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisFactorDistributionStatRequest
@@ -8047,8 +9842,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断总览数据</para>
+        /// <para>Retrieves the overview data of exception diagnostics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the overview data of exception diagnostics. When you call this operation, you can query data from the last 48 hours, and the query time range cannot exceed 24 hours.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit on this operation is 10 per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisOverallDataRequest
@@ -8101,8 +9904,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断总览数据</para>
+        /// <para>Retrieves the overview data of exception diagnostics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the overview data of exception diagnostics. When you call this operation, you can query data from the last 48 hours, and the query time range cannot exceed 24 hours.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit on this operation is 10 per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisOverallDataRequest
@@ -8155,8 +9966,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断总览数据</para>
+        /// <para>Retrieves the overview data of exception diagnostics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the overview data of exception diagnostics. When you call this operation, you can query data from the last 48 hours, and the query time range cannot exceed 24 hours.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit on this operation is 10 per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisOverallDataRequest
@@ -8173,8 +9992,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断总览数据</para>
+        /// <para>Retrieves the overview data of exception diagnostics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the overview data of exception diagnostics. When you call this operation, you can query data from the last 48 hours, and the query time range cannot exceed 24 hours.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit on this operation is 10 per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisOverallDataRequest
@@ -8191,8 +10018,13 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断用户详情</para>
+        /// <para>[responses_200_schema_properties_UserDetail_properties_Duration_type]integer</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>[responses_200_schema_properties_UserDetail_properties_CreatedTs_description]Call creation time, represented as a UNIX timestamp in seconds.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisUserDetailRequest
@@ -8253,8 +10085,13 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断用户详情</para>
+        /// <para>[responses_200_schema_properties_UserDetail_properties_Duration_type]integer</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>[responses_200_schema_properties_UserDetail_properties_CreatedTs_description]Call creation time, represented as a UNIX timestamp in seconds.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisUserDetailRequest
@@ -8315,8 +10152,13 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断用户详情</para>
+        /// <para>[responses_200_schema_properties_UserDetail_properties_Duration_type]integer</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>[responses_200_schema_properties_UserDetail_properties_CreatedTs_description]Call creation time, represented as a UNIX timestamp in seconds.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisUserDetailRequest
@@ -8333,8 +10175,13 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断用户详情</para>
+        /// <para>[responses_200_schema_properties_UserDetail_properties_Duration_type]integer</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>[responses_200_schema_properties_UserDetail_properties_CreatedTs_description]Call creation time, represented as a UNIX timestamp in seconds.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisUserDetailRequest
@@ -8351,8 +10198,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断用户明细列表</para>
+        /// <para>Queries the detailed user list for fault diagnosis.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation is used to retrieve the detailed user list for fault diagnosis. When you call this operation, you can query data from the last 48 hours, and the query time range cannot exceed 24 hours.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisUserListRequest
@@ -8421,8 +10276,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断用户明细列表</para>
+        /// <para>Queries the detailed user list for fault diagnosis.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation is used to retrieve the detailed user list for fault diagnosis. When you call this operation, you can query data from the last 48 hours, and the query time range cannot exceed 24 hours.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisUserListRequest
@@ -8491,8 +10354,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断用户明细列表</para>
+        /// <para>Queries the detailed user list for fault diagnosis.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation is used to retrieve the detailed user list for fault diagnosis. When you call this operation, you can query data from the last 48 hours, and the query time range cannot exceed 24 hours.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisUserListRequest
@@ -8509,8 +10380,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异常诊断用户明细列表</para>
+        /// <para>Queries the detailed user list for fault diagnosis.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation is used to retrieve the detailed user list for fault diagnosis. When you call this operation, you can query data from the last 48 hours, and the query time range cannot exceed 24 hours.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFaultDiagnosisUserListRequest
@@ -8525,6 +10404,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DescribeFaultDiagnosisUserListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeMPULayoutInfoList to retrieve layout parameters for a bypass live streaming task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before calling this operation, call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit for this operation is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeMPULayoutInfoListRequest
         /// </param>
@@ -8582,6 +10474,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeMPULayoutInfoListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeMPULayoutInfoList to retrieve layout parameters for a bypass live streaming task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before calling this operation, call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit for this operation is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeMPULayoutInfoListRequest
         /// </param>
@@ -8639,6 +10544,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeMPULayoutInfoListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeMPULayoutInfoList to retrieve layout parameters for a bypass live streaming task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before calling this operation, call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit for this operation is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeMPULayoutInfoListRequest
         /// </param>
@@ -8652,6 +10570,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DescribeMPULayoutInfoListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeMPULayoutInfoList to retrieve layout parameters for a bypass live streaming task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before calling this operation, call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit for this operation is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeMPULayoutInfoListRequest
         /// </param>
@@ -8667,8 +10598,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribePubUserListBySubUser根据订阅端获取通信中发布端用户列表。</para>
+        /// <para>This API is used to obtain the list of publishing users in a communication session based on the subscriber.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the list of publishing users in a communication session based on the subscriber. For example, you can retrieve detailed information about both the subscriber and the publishing users.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. If this limit is exceeded, API calls will be subject to rate limiting, which may affect your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePubUserListBySubUserRequest
@@ -8725,8 +10664,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribePubUserListBySubUser根据订阅端获取通信中发布端用户列表。</para>
+        /// <para>This API is used to obtain the list of publishing users in a communication session based on the subscriber.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the list of publishing users in a communication session based on the subscriber. For example, you can retrieve detailed information about both the subscriber and the publishing users.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. If this limit is exceeded, API calls will be subject to rate limiting, which may affect your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePubUserListBySubUserRequest
@@ -8783,8 +10730,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribePubUserListBySubUser根据订阅端获取通信中发布端用户列表。</para>
+        /// <para>This API is used to obtain the list of publishing users in a communication session based on the subscriber.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the list of publishing users in a communication session based on the subscriber. For example, you can retrieve detailed information about both the subscriber and the publishing users.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. If this limit is exceeded, API calls will be subject to rate limiting, which may affect your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePubUserListBySubUserRequest
@@ -8801,8 +10756,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribePubUserListBySubUser根据订阅端获取通信中发布端用户列表。</para>
+        /// <para>This API is used to obtain the list of publishing users in a communication session based on the subscriber.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the list of publishing users in a communication session based on the subscriber. For example, you can retrieve detailed information about both the subscriber and the publishing users.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. If this limit is exceeded, API calls will be subject to rate limiting, which may affect your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePubUserListBySubUserRequest
@@ -8819,8 +10782,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeQoeMetricData获取单次通信中用户的下行体验质量指标。</para>
+        /// <para>This API is used to obtain the downlink experience quality metrics of a user in a single communication session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the downlink experience quality metrics of a user in a single communication session. For example, you can retrieve information such as the metric types that impact communication experience and audio/video trend indicators.  </para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If this limit is exceeded, API calls will be subject to rate limiting, which may affect your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQoeMetricDataRequest
@@ -8877,8 +10848,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeQoeMetricData获取单次通信中用户的下行体验质量指标。</para>
+        /// <para>This API is used to obtain the downlink experience quality metrics of a user in a single communication session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the downlink experience quality metrics of a user in a single communication session. For example, you can retrieve information such as the metric types that impact communication experience and audio/video trend indicators.  </para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If this limit is exceeded, API calls will be subject to rate limiting, which may affect your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQoeMetricDataRequest
@@ -8935,8 +10914,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeQoeMetricData获取单次通信中用户的下行体验质量指标。</para>
+        /// <para>This API is used to obtain the downlink experience quality metrics of a user in a single communication session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the downlink experience quality metrics of a user in a single communication session. For example, you can retrieve information such as the metric types that impact communication experience and audio/video trend indicators.  </para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If this limit is exceeded, API calls will be subject to rate limiting, which may affect your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQoeMetricDataRequest
@@ -8953,8 +10940,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeQoeMetricData获取单次通信中用户的下行体验质量指标。</para>
+        /// <para>This API is used to obtain the downlink experience quality metrics of a user in a single communication session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the downlink experience quality metrics of a user in a single communication session. For example, you can retrieve information such as the metric types that impact communication experience and audio/video trend indicators.  </para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If this limit is exceeded, API calls will be subject to rate limiting, which may affect your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQoeMetricDataRequest
@@ -8971,8 +10966,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计区域分布统计数据</para>
+        /// <para>Queries the regional distribution data of quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the regional distribution data of quality statistics. When you call this operation, the following limits apply:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data within any time range in the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityAreaDistributionStatDataRequest
@@ -9025,8 +11032,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计区域分布统计数据</para>
+        /// <para>Queries the regional distribution data of quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the regional distribution data of quality statistics. When you call this operation, the following limits apply:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data within any time range in the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityAreaDistributionStatDataRequest
@@ -9079,8 +11098,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计区域分布统计数据</para>
+        /// <para>Queries the regional distribution data of quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the regional distribution data of quality statistics. When you call this operation, the following limits apply:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data within any time range in the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityAreaDistributionStatDataRequest
@@ -9097,8 +11128,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计区域分布统计数据</para>
+        /// <para>Queries the regional distribution data of quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the regional distribution data of quality statistics. When you call this operation, the following limits apply:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data within any time range in the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityAreaDistributionStatDataRequest
@@ -9115,8 +11158,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计分布数据</para>
+        /// <para>This API is used to obtain the distribution data of quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the distribution data of quality statistics. The following limits apply when using this API:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any period within the last 365 days (excluding the current day).</description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If you exceed this limit, your API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API reasonably.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityDistributionStatDataRequest
@@ -9169,8 +11224,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计分布数据</para>
+        /// <para>This API is used to obtain the distribution data of quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the distribution data of quality statistics. The following limits apply when using this API:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any period within the last 365 days (excluding the current day).</description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If you exceed this limit, your API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API reasonably.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityDistributionStatDataRequest
@@ -9223,8 +11290,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计分布数据</para>
+        /// <para>This API is used to obtain the distribution data of quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the distribution data of quality statistics. The following limits apply when using this API:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any period within the last 365 days (excluding the current day).</description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If you exceed this limit, your API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API reasonably.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityDistributionStatDataRequest
@@ -9241,8 +11320,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计分布数据</para>
+        /// <para>This API is used to obtain the distribution data of quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the distribution data of quality statistics. The following limits apply when using this API:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any period within the last 365 days (excluding the current day).</description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If you exceed this limit, your API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API reasonably.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityDistributionStatDataRequest
@@ -9259,8 +11350,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计各操作系统下SDK版本分布数据</para>
+        /// <para>Retrieves the distribution data of operating systems and SDK versions in quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the distribution data of operating systems and SDK versions in quality statistics. The following limits apply when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data within the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityOsSdkVersionDistributionStatDataRequest
@@ -9309,8 +11412,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计各操作系统下SDK版本分布数据</para>
+        /// <para>Retrieves the distribution data of operating systems and SDK versions in quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the distribution data of operating systems and SDK versions in quality statistics. The following limits apply when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data within the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityOsSdkVersionDistributionStatDataRequest
@@ -9359,8 +11474,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计各操作系统下SDK版本分布数据</para>
+        /// <para>Retrieves the distribution data of operating systems and SDK versions in quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the distribution data of operating systems and SDK versions in quality statistics. The following limits apply when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data within the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityOsSdkVersionDistributionStatDataRequest
@@ -9377,8 +11504,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计各操作系统下SDK版本分布数据</para>
+        /// <para>Retrieves the distribution data of operating systems and SDK versions in quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the distribution data of operating systems and SDK versions in quality statistics. The following limits apply when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data within the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityOsSdkVersionDistributionStatDataRequest
@@ -9395,8 +11534,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计概览数据</para>
+        /// <para>This API is used to obtain overview data of quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain overview data of quality statistics. The following restrictions apply when using this API:  </para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any time range within the last 365 days (excluding the current day).  </description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If you exceed this limit, your API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityOverallDataRequest
@@ -9449,8 +11600,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计概览数据</para>
+        /// <para>This API is used to obtain overview data of quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain overview data of quality statistics. The following restrictions apply when using this API:  </para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any time range within the last 365 days (excluding the current day).  </description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If you exceed this limit, your API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityOverallDataRequest
@@ -9503,8 +11666,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计概览数据</para>
+        /// <para>This API is used to obtain overview data of quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain overview data of quality statistics. The following restrictions apply when using this API:  </para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any time range within the last 365 days (excluding the current day).  </description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If you exceed this limit, your API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityOverallDataRequest
@@ -9521,8 +11696,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质量统计概览数据</para>
+        /// <para>This API is used to obtain overview data of quality statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain overview data of quality statistics. The following restrictions apply when using this API:  </para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any time range within the last 365 days (excluding the current day).  </description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If you exceed this limit, your API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeQualityOverallDataRequest
@@ -9537,6 +11724,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DescribeQualityOverallDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeRecordFiles to query the list of files generated by recording.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to query the list of files generated by recording. For example, you can query parameters such as the creation time and recording duration of files generated by recording.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this operation reasonably. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecordFilesRequest
         /// </param>
@@ -9602,6 +11802,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRecordFilesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeRecordFiles to query the list of files generated by recording.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to query the list of files generated by recording. For example, you can query parameters such as the creation time and recording duration of files generated by recording.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this operation reasonably. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecordFilesRequest
         /// </param>
@@ -9667,6 +11880,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRecordFilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeRecordFiles to query the list of files generated by recording.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to query the list of files generated by recording. For example, you can query parameters such as the creation time and recording duration of files generated by recording.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this operation reasonably. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecordFilesRequest
         /// </param>
@@ -9680,6 +11906,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DescribeRecordFilesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeRecordFiles to query the list of files generated by recording.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to query the list of files generated by recording. For example, you can query parameters such as the creation time and recording duration of files generated by recording.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this operation reasonably. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecordFilesRequest
         /// </param>
@@ -9693,6 +11932,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DescribeRecordFilesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of recording template configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording template.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecordTemplatesRequest
         /// </param>
@@ -9746,6 +11998,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRecordTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of recording template configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording template.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecordTemplatesRequest
         /// </param>
@@ -9799,6 +12064,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRecordTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of recording template configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording template.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecordTemplatesRequest
         /// </param>
@@ -9812,6 +12090,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DescribeRecordTemplatesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of recording template configurations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording template.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecordTemplatesRequest
         /// </param>
@@ -9825,6 +12116,11 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DescribeRecordTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of channel communication records.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRtcChannelListRequest
         /// </param>
@@ -9894,6 +12190,11 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRtcChannelListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of channel communication records.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRtcChannelListRequest
         /// </param>
@@ -9963,6 +12264,11 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRtcChannelListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of channel communication records.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRtcChannelListRequest
         /// </param>
@@ -9976,6 +12282,11 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DescribeRtcChannelListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of channel communication records.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRtcChannelListRequest
         /// </param>
@@ -9989,6 +12300,11 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DescribeRtcChannelListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of communication records in a channel. You can query data within the last 180 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRtcChannelMetricRequest
         /// </param>
@@ -10038,6 +12354,11 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRtcChannelMetricResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of communication records in a channel. You can query data within the last 180 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRtcChannelMetricRequest
         /// </param>
@@ -10087,6 +12408,11 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRtcChannelMetricResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of communication records in a channel. You can query data within the last 180 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRtcChannelMetricRequest
         /// </param>
@@ -10100,6 +12426,11 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DescribeRtcChannelMetricWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of communication records in a channel. You can query data within the last 180 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRtcChannelMetricRequest
         /// </param>
@@ -10113,6 +12444,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DescribeRtcChannelMetricWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the total communication duration for an application within a specified time range. Data is aggregated by audio and video specifications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The maximum query time range is 30 days.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRtcDurationDataRequest
         /// </param>
@@ -10170,6 +12513,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRtcDurationDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the total communication duration for an application within a specified time range. Data is aggregated by audio and video specifications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The maximum query time range is 30 days.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRtcDurationDataRequest
         /// </param>
@@ -10227,6 +12582,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRtcDurationDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the total communication duration for an application within a specified time range. Data is aggregated by audio and video specifications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The maximum query time range is 30 days.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRtcDurationDataRequest
         /// </param>
@@ -10240,6 +12607,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DescribeRtcDurationDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the total communication duration for an application within a specified time range. Data is aggregated by audio and video specifications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The maximum query time range is 30 days.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRtcDurationDataRequest
         /// </param>
@@ -10253,6 +12632,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DescribeRtcDurationDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak number of concurrent channels of an application in a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The maximum time range that can be queried is 30 days.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRtcPeakChannelCntDataRequest
         /// </param>
@@ -10310,6 +12701,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRtcPeakChannelCntDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak number of concurrent channels of an application in a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The maximum time range that can be queried is 30 days.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRtcPeakChannelCntDataRequest
         /// </param>
@@ -10367,6 +12770,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRtcPeakChannelCntDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak number of concurrent channels of an application in a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The maximum time range that can be queried is 30 days.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRtcPeakChannelCntDataRequest
         /// </param>
@@ -10380,6 +12795,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DescribeRtcPeakChannelCntDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak number of concurrent channels of an application in a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The maximum time range that can be queried is 30 days.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRtcPeakChannelCntDataRequest
         /// </param>
@@ -10393,6 +12820,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DescribeRtcPeakChannelCntDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of active users of an application within a specified time range, that is, the number of user terminals that engaged in communication.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The maximum time span between the start time and the end time of a data query is 30 days.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRtcUserCntDataRequest
         /// </param>
@@ -10450,6 +12889,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRtcUserCntDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of active users of an application within a specified time range, that is, the number of user terminals that engaged in communication.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The maximum time span between the start time and the end time of a data query is 30 days.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRtcUserCntDataRequest
         /// </param>
@@ -10507,6 +12958,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeRtcUserCntDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of active users of an application within a specified time range, that is, the number of user terminals that engaged in communication.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The maximum time span between the start time and the end time of a data query is 30 days.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRtcUserCntDataRequest
         /// </param>
@@ -10520,6 +12983,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DescribeRtcUserCntDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of active users of an application within a specified time range, that is, the number of user terminals that engaged in communication.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>The maximum time span between the start time and the end time of a data query is 30 days.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRtcUserCntDataRequest
         /// </param>
@@ -10535,8 +13010,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询旁路推流状态</para>
+        /// <para>Queries the bypass streaming status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeStreamingOutStatusRequest
@@ -10585,8 +13066,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询旁路推流状态</para>
+        /// <para>Queries the bypass streaming status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeStreamingOutStatusRequest
@@ -10635,8 +13122,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询旁路推流状态</para>
+        /// <para>Queries the bypass streaming status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeStreamingOutStatusRequest
@@ -10653,8 +13146,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询旁路推流状态</para>
+        /// <para>Queries the bypass streaming status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this API operation is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeStreamingOutStatusRequest
@@ -10671,8 +13170,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>系统内置布局</para>
+        /// <para>Built-in system layouts</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. Call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSystemLayoutListRequest
@@ -10721,8 +13226,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>系统内置布局</para>
+        /// <para>Built-in system layouts</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. Call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSystemLayoutListRequest
@@ -10771,8 +13282,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>系统内置布局</para>
+        /// <para>Built-in system layouts</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. Call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSystemLayoutListRequest
@@ -10789,8 +13306,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>系统内置布局</para>
+        /// <para>Built-in system layouts</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 10 calls per second. Exceeding this limit triggers rate limiting, which may affect your business. Call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSystemLayoutListRequest
@@ -10807,8 +13330,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计地域分布数据</para>
+        /// <para>This API is used to retrieve the regional distribution data of usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to retrieve the regional distribution data of usage statistics. The following restrictions apply when using this API:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any period within the last 365 days (excluding the current day).</description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If you exceed this limit, your API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageAreaDistributionStatDataRequest
@@ -10861,8 +13396,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计地域分布数据</para>
+        /// <para>This API is used to retrieve the regional distribution data of usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to retrieve the regional distribution data of usage statistics. The following restrictions apply when using this API:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any period within the last 365 days (excluding the current day).</description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If you exceed this limit, your API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageAreaDistributionStatDataRequest
@@ -10915,8 +13462,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计地域分布数据</para>
+        /// <para>This API is used to retrieve the regional distribution data of usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to retrieve the regional distribution data of usage statistics. The following restrictions apply when using this API:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any period within the last 365 days (excluding the current day).</description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If you exceed this limit, your API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageAreaDistributionStatDataRequest
@@ -10933,8 +13492,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计地域分布数据</para>
+        /// <para>This API is used to retrieve the regional distribution data of usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to retrieve the regional distribution data of usage statistics. The following restrictions apply when using this API:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any period within the last 365 days (excluding the current day).</description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If you exceed this limit, your API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageAreaDistributionStatDataRequest
@@ -10951,8 +13522,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计分布数据</para>
+        /// <para>Queries the distribution data of usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the distribution data of usage statistics. When you call this operation, the following limits apply:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data within any time range in the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageDistributionStatDataRequest
@@ -11005,8 +13588,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计分布数据</para>
+        /// <para>Queries the distribution data of usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the distribution data of usage statistics. When you call this operation, the following limits apply:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data within any time range in the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageDistributionStatDataRequest
@@ -11059,8 +13654,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计分布数据</para>
+        /// <para>Queries the distribution data of usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the distribution data of usage statistics. When you call this operation, the following limits apply:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data within any time range in the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageDistributionStatDataRequest
@@ -11077,8 +13684,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计分布数据</para>
+        /// <para>Queries the distribution data of usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation queries the distribution data of usage statistics. When you call this operation, the following limits apply:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data within any time range in the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageDistributionStatDataRequest
@@ -11095,8 +13714,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计各操作系统下SDK版本分布数据</para>
+        /// <para>This API is used to obtain the distribution data of operating systems and SDK versions in usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the distribution data of operating systems and SDK versions in usage statistics. When using this API, the following restrictions apply:  </para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any period within the last 365 days (excluding the current day).  </description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>Rate Limiting</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If you exceed this limit, your API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageOsSdkVersionDistributionStatDataRequest
@@ -11145,8 +13776,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计各操作系统下SDK版本分布数据</para>
+        /// <para>This API is used to obtain the distribution data of operating systems and SDK versions in usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the distribution data of operating systems and SDK versions in usage statistics. When using this API, the following restrictions apply:  </para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any period within the last 365 days (excluding the current day).  </description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>Rate Limiting</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If you exceed this limit, your API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageOsSdkVersionDistributionStatDataRequest
@@ -11195,8 +13838,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计各操作系统下SDK版本分布数据</para>
+        /// <para>This API is used to obtain the distribution data of operating systems and SDK versions in usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the distribution data of operating systems and SDK versions in usage statistics. When using this API, the following restrictions apply:  </para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any period within the last 365 days (excluding the current day).  </description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>Rate Limiting</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If you exceed this limit, your API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageOsSdkVersionDistributionStatDataRequest
@@ -11213,8 +13868,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计各操作系统下SDK版本分布数据</para>
+        /// <para>This API is used to obtain the distribution data of operating systems and SDK versions in usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to obtain the distribution data of operating systems and SDK versions in usage statistics. When using this API, the following restrictions apply:  </para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any period within the last 365 days (excluding the current day).  </description></item>
+        /// <item><description>If the query range is less than 24 hours, the data is aggregated by hour. If the query range is greater than or equal to 24 hours, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>Rate Limiting</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 requests per second per user. If you exceed this limit, your API calls will be rate-limited, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageOsSdkVersionDistributionStatDataRequest
@@ -11231,8 +13898,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计概览数据</para>
+        /// <para>Queries the overview data of usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the overview data of usage statistics. The following limits apply when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any time range within the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageOverallDataRequest
@@ -11285,8 +13964,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计概览数据</para>
+        /// <para>Queries the overview data of usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the overview data of usage statistics. The following limits apply when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any time range within the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageOverallDataRequest
@@ -11339,8 +14030,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计概览数据</para>
+        /// <para>Queries the overview data of usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the overview data of usage statistics. The following limits apply when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any time range within the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageOverallDataRequest
@@ -11357,8 +14060,20 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用量统计概览数据</para>
+        /// <para>Queries the overview data of usage statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation retrieves the overview data of usage statistics. The following limits apply when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>You can query data for any time range within the last 365 days, excluding the current day.</description></item>
+        /// <item><description>If the query time range is less than 24 hours, the data is aggregated by hour. If the query time range is 24 hours or more, the data is aggregated by day.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUsageOverallDataRequest
@@ -11373,6 +14088,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DescribeUsageOverallDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeUserInfoInChannel to query the real-time information of a user in a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to query the real-time information of a user in a channel. For example, you can query information such as the user role type and the time of joining the meeting.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 100 times per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeUserInfoInChannelRequest
         /// </param>
@@ -11422,6 +14150,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeUserInfoInChannelResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeUserInfoInChannel to query the real-time information of a user in a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to query the real-time information of a user in a channel. For example, you can query information such as the user role type and the time of joining the meeting.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 100 times per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeUserInfoInChannelRequest
         /// </param>
@@ -11471,6 +14212,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DescribeUserInfoInChannelResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeUserInfoInChannel to query the real-time information of a user in a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to query the real-time information of a user in a channel. For example, you can query information such as the user role type and the time of joining the meeting.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 100 times per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeUserInfoInChannelRequest
         /// </param>
@@ -11484,6 +14238,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DescribeUserInfoInChannelWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeUserInfoInChannel to query the real-time information of a user in a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to query the real-time information of a user in a channel. For example, you can query information such as the user role type and the time of joining the meeting.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this operation is 100 times per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Call this operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeUserInfoInChannelRequest
         /// </param>
@@ -11497,6 +14264,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DescribeUserInfoInChannelWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit per user is 1,000 requests per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DisableAutoLiveStreamRuleRequest
         /// </param>
@@ -11542,6 +14322,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DisableAutoLiveStreamRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit per user is 1,000 requests per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DisableAutoLiveStreamRuleRequest
         /// </param>
@@ -11587,6 +14380,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<DisableAutoLiveStreamRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit per user is 1,000 requests per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DisableAutoLiveStreamRuleRequest
         /// </param>
@@ -11600,6 +14406,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return DisableAutoLiveStreamRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit per user is 1,000 requests per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DisableAutoLiveStreamRuleRequest
         /// </param>
@@ -11613,6 +14432,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await DisableAutoLiveStreamRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit per user for this operation is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EnableAutoLiveStreamRuleRequest
         /// </param>
@@ -11658,6 +14490,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<EnableAutoLiveStreamRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit per user for this operation is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EnableAutoLiveStreamRuleRequest
         /// </param>
@@ -11703,6 +14548,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<EnableAutoLiveStreamRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit per user for this operation is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EnableAutoLiveStreamRuleRequest
         /// </param>
@@ -11716,6 +14574,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return EnableAutoLiveStreamRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit per user for this operation is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EnableAutoLiveStreamRuleRequest
         /// </param>
@@ -11731,7 +14602,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAgent。</para>
+        /// <para>GetAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11781,7 +14652,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAgent。</para>
+        /// <para>GetAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11831,7 +14702,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAgent。</para>
+        /// <para>GetAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11849,7 +14720,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetAgent。</para>
+        /// <para>GetAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11865,6 +14736,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await GetAgentWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the status of a bypass transcoding task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a bypass transcoding task.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 4,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMPUTaskStatusRequest
         /// </param>
@@ -11910,6 +14794,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<GetMPUTaskStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the status of a bypass transcoding task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a bypass transcoding task.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 4,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMPUTaskStatusRequest
         /// </param>
@@ -11955,6 +14852,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<GetMPUTaskStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the status of a bypass transcoding task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a bypass transcoding task.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 4,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMPUTaskStatusRequest
         /// </param>
@@ -11968,6 +14878,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return GetMPUTaskStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the status of a bypass transcoding task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a bypass transcoding task.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 4,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMPUTaskStatusRequest
         /// </param>
@@ -11983,8 +14906,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改App信息</para>
+        /// <para>Modifies the name of a specified application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4>Usage notes</h4>
+        /// <para>This operation modifies the name of a specified application.</para>
+        /// <h4>QPS limit</h4>
+        /// <para>The queries per second (QPS) limit per user for this operation is 200 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppRequest
@@ -12033,8 +14964,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改App信息</para>
+        /// <para>Modifies the name of a specified application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4>Usage notes</h4>
+        /// <para>This operation modifies the name of a specified application.</para>
+        /// <h4>QPS limit</h4>
+        /// <para>The queries per second (QPS) limit per user for this operation is 200 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppRequest
@@ -12083,8 +15022,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改App信息</para>
+        /// <para>Modifies the name of a specified application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4>Usage notes</h4>
+        /// <para>This operation modifies the name of a specified application.</para>
+        /// <h4>QPS limit</h4>
+        /// <para>The queries per second (QPS) limit per user for this operation is 200 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppRequest
@@ -12101,8 +15048,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改App信息</para>
+        /// <para>Modifies the name of a specified application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4>Usage notes</h4>
+        /// <para>This operation modifies the name of a specified application.</para>
+        /// <h4>QPS limit</h4>
+        /// <para>The queries per second (QPS) limit per user for this operation is 200 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppRequest
@@ -12119,8 +15074,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用智能体开关</para>
+        /// <para>Modifies the agent feature switch for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppAgentFunctionStatusRequest
@@ -12161,8 +15122,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用智能体开关</para>
+        /// <para>Modifies the agent feature switch for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppAgentFunctionStatusRequest
@@ -12203,8 +15170,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用智能体开关</para>
+        /// <para>Modifies the agent feature switch for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppAgentFunctionStatusRequest
@@ -12221,8 +15194,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用智能体开关</para>
+        /// <para>Modifies the agent feature switch for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppAgentFunctionStatusRequest
@@ -12239,8 +15218,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用智能体模版</para>
+        /// <para>Updates an application agent template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyAppAgentTemplateRequest
@@ -12371,8 +15356,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用智能体模版</para>
+        /// <para>Updates an application agent template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyAppAgentTemplateRequest
@@ -12503,8 +15494,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用智能体模版</para>
+        /// <para>Updates an application agent template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppAgentTemplateRequest
@@ -12521,8 +15518,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用智能体模版</para>
+        /// <para>Updates an application agent template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppAgentTemplateRequest
@@ -12539,8 +15542,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新app回调事件开关</para>
+        /// <para>Updates the callback event switch for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user for this API operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppCallbackStatusRequest
@@ -12581,8 +15590,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新app回调事件开关</para>
+        /// <para>Updates the callback event switch for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user for this API operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppCallbackStatusRequest
@@ -12623,8 +15638,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新app回调事件开关</para>
+        /// <para>Updates the callback event switch for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user for this API operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppCallbackStatusRequest
@@ -12641,8 +15662,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新app回调事件开关</para>
+        /// <para>Updates the callback event switch for an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user for this API operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppCallbackStatusRequest
@@ -12659,8 +15686,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改app自定义布局</para>
+        /// <para>Modify a custom application layout.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>This API supports a maximum of 10 calls per second per user. Exceeding this limit triggers rate limiting, which may impact your business operations. Use the API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyAppLayoutRequest
@@ -12715,8 +15748,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改app自定义布局</para>
+        /// <para>Modify a custom application layout.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>This API supports a maximum of 10 calls per second per user. Exceeding this limit triggers rate limiting, which may impact your business operations. Use the API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyAppLayoutRequest
@@ -12771,8 +15810,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改app自定义布局</para>
+        /// <para>Modify a custom application layout.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>This API supports a maximum of 10 calls per second per user. Exceeding this limit triggers rate limiting, which may impact your business operations. Use the API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppLayoutRequest
@@ -12789,8 +15834,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改app自定义布局</para>
+        /// <para>Modify a custom application layout.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>This API supports a maximum of 10 calls per second per user. Exceeding this limit triggers rate limiting, which may impact your business operations. Use the API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppLayoutRequest
@@ -12807,8 +15858,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用旁路开关</para>
+        /// <para>Modify the bypass toggle of an application</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user per second. If the limit is exceeded, API calls will be subject to Rate Limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppLiveStreamStatusRequest
@@ -12853,8 +15910,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用旁路开关</para>
+        /// <para>Modify the bypass toggle of an application</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user per second. If the limit is exceeded, API calls will be subject to Rate Limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppLiveStreamStatusRequest
@@ -12899,8 +15962,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用旁路开关</para>
+        /// <para>Modify the bypass toggle of an application</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user per second. If the limit is exceeded, API calls will be subject to Rate Limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppLiveStreamStatusRequest
@@ -12917,8 +15986,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用旁路开关</para>
+        /// <para>Modify the bypass toggle of an application</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user per second. If the limit is exceeded, API calls will be subject to Rate Limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppLiveStreamStatusRequest
@@ -12935,8 +16010,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用录制开关</para>
+        /// <para>Modifies the recording switch of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppRecordStatusRequest
@@ -12981,8 +16062,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用录制开关</para>
+        /// <para>Modifies the recording switch of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppRecordStatusRequest
@@ -13027,8 +16114,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用录制开关</para>
+        /// <para>Modifies the recording switch of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppRecordStatusRequest
@@ -13045,8 +16138,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用录制开关</para>
+        /// <para>Modifies the recording switch of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppRecordStatusRequest
@@ -13063,8 +16162,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用录制模版</para>
+        /// <para>Modify an application recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 calls per second per user. If you exceed this limit, rate limiting is triggered, which might affect your service. Call the API at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyAppRecordTemplateRequest
@@ -13119,8 +16224,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用录制模版</para>
+        /// <para>Modify an application recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 calls per second per user. If you exceed this limit, rate limiting is triggered, which might affect your service. Call the API at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyAppRecordTemplateRequest
@@ -13175,8 +16286,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用录制模版</para>
+        /// <para>Modify an application recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 calls per second per user. If you exceed this limit, rate limiting is triggered, which might affect your service. Call the API at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppRecordTemplateRequest
@@ -13193,8 +16310,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用录制模版</para>
+        /// <para>Modify an application recording template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 calls per second per user. If you exceed this limit, rate limiting is triggered, which might affect your service. Call the API at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppRecordTemplateRequest
@@ -13211,8 +16334,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用推流模版</para>
+        /// <para>Modify the stream ingest template for an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API modifies the stream ingest template for an RTC 3.0 application.  </para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, your API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyAppStreamingOutTemplateRequest
@@ -13263,8 +16394,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用推流模版</para>
+        /// <para>Modify the stream ingest template for an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API modifies the stream ingest template for an RTC 3.0 application.  </para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, your API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyAppStreamingOutTemplateRequest
@@ -13315,8 +16454,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用推流模版</para>
+        /// <para>Modify the stream ingest template for an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API modifies the stream ingest template for an RTC 3.0 application.  </para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, your API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppStreamingOutTemplateRequest
@@ -13333,8 +16480,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用推流模版</para>
+        /// <para>Modify the stream ingest template for an RTC 3.0 application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API modifies the stream ingest template for an RTC 3.0 application.  </para>
+        /// <h3>QPS Limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, your API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppStreamingOutTemplateRequest
@@ -13351,8 +16506,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改合流开关</para>
+        /// <para>Modifies the merging switch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppViewStatusRequest
@@ -13393,8 +16554,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改合流开关</para>
+        /// <para>Modifies the merging switch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppViewStatusRequest
@@ -13435,8 +16602,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改合流开关</para>
+        /// <para>Modifies the merging switch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppViewStatusRequest
@@ -13453,8 +16626,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改合流开关</para>
+        /// <para>Modifies the merging switch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppViewStatusRequest
@@ -13471,8 +16650,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用合流模版</para>
+        /// <para>Update an application view template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>This API supports up to 10 calls per second per user. Exceeding this limit triggers rate limiting, which may affect your business. Use this API with caution.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyAppViewTemplateRequest
@@ -13523,8 +16708,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用合流模版</para>
+        /// <para>Update an application view template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>This API supports up to 10 calls per second per user. Exceeding this limit triggers rate limiting, which may affect your business. Use this API with caution.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyAppViewTemplateRequest
@@ -13575,8 +16766,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用合流模版</para>
+        /// <para>Update an application view template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>This API supports up to 10 calls per second per user. Exceeding this limit triggers rate limiting, which may affect your business. Use this API with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppViewTemplateRequest
@@ -13593,8 +16790,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用合流模版</para>
+        /// <para>Update an application view template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>This API supports up to 10 calls per second per user. Exceeding this limit triggers rate limiting, which may affect your business. Use this API with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAppViewTemplateRequest
@@ -13611,8 +16814,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新app回调</para>
+        /// <para>Updates the callback configuration of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyCallbackMetaRequest
@@ -13667,8 +16876,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新app回调</para>
+        /// <para>Updates the callback configuration of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyCallbackMetaRequest
@@ -13723,8 +16938,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新app回调</para>
+        /// <para>Updates the callback configuration of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCallbackMetaRequest
@@ -13741,8 +16962,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新app回调</para>
+        /// <para>Updates the callback configuration of an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCallbackMetaRequest
@@ -13759,7 +16986,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新纪要热词表</para>
+        /// <para>Updates the hotwords table for meeting minutes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13811,7 +17038,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新纪要热词表</para>
+        /// <para>Updates the hotwords table for meeting minutes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13863,7 +17090,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新纪要热词表</para>
+        /// <para>Updates the hotwords table for meeting minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13881,7 +17108,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新纪要热词表</para>
+        /// <para>Updates the hotwords table for meeting minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13897,6 +17124,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await ModifyCloudNotePhrasesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a bypass live streaming layout.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyMPULayoutRequest
         /// </param>
@@ -13954,6 +17194,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<ModifyMPULayoutResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a bypass live streaming layout.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyMPULayoutRequest
         /// </param>
@@ -14011,6 +17264,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<ModifyMPULayoutResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a bypass live streaming layout.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyMPULayoutRequest
         /// </param>
@@ -14024,6 +17290,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return ModifyMPULayoutWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a bypass live streaming layout.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a> to create a bypass live streaming layout.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyMPULayoutRequest
         /// </param>
@@ -14039,8 +17318,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置流属性</para>
+        /// <para>Sets the stream properties.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyStreamingPropertyRequest
@@ -14103,8 +17388,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置流属性</para>
+        /// <para>Sets the stream properties.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyStreamingPropertyRequest
@@ -14167,8 +17458,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置流属性</para>
+        /// <para>Sets the stream properties.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyStreamingPropertyRequest
@@ -14185,8 +17482,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置流属性</para>
+        /// <para>Sets the stream properties.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyStreamingPropertyRequest
@@ -14203,8 +17506,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置合流布局</para>
+        /// <para>Configures the mixed stream layout.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyViewLayoutRequest
@@ -14287,8 +17596,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置合流布局</para>
+        /// <para>Configures the mixed stream layout.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyViewLayoutRequest
@@ -14371,8 +17686,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置合流布局</para>
+        /// <para>Configures the mixed stream layout.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyViewLayoutRequest
@@ -14389,8 +17710,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置合流布局</para>
+        /// <para>Configures the mixed stream layout.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyViewLayoutRequest
@@ -14593,6 +17920,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await NotifyAgentWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the RemoveTerminals operation to remove specified end users from a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This API removes specified end users from a channel.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The queries per second (QPS) limit for this API is 1,000 calls per minute per user. If you exceed the limit, API calls are subject to rate limiting, which may affect your business. Call this API at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveTerminalsRequest
         /// </param>
@@ -14642,6 +17982,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<RemoveTerminalsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the RemoveTerminals operation to remove specified end users from a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This API removes specified end users from a channel.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The queries per second (QPS) limit for this API is 1,000 calls per minute per user. If you exceed the limit, API calls are subject to rate limiting, which may affect your business. Call this API at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveTerminalsRequest
         /// </param>
@@ -14691,6 +18044,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<RemoveTerminalsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the RemoveTerminals operation to remove specified end users from a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This API removes specified end users from a channel.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The queries per second (QPS) limit for this API is 1,000 calls per minute per user. If you exceed the limit, API calls are subject to rate limiting, which may affect your business. Call this API at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveTerminalsRequest
         /// </param>
@@ -14704,6 +18070,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return RemoveTerminalsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the RemoveTerminals operation to remove specified end users from a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This API removes specified end users from a channel.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The queries per second (QPS) limit for this API is 1,000 calls per minute per user. If you exceed the limit, API calls are subject to rate limiting, which may affect your business. Call this API at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveTerminalsRequest
         /// </param>
@@ -14721,6 +18100,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <summary>
         /// <para>RemoveUsers</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to kick users out of an online channel.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveUsersRequest
@@ -14772,6 +18159,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>RemoveUsers</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to kick users out of an online channel.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveUsersRequest
         /// </param>
@@ -14822,6 +18217,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>RemoveUsers</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to kick users out of an online channel.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveUsersRequest
         /// </param>
@@ -14840,6 +18243,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>RemoveUsers</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to kick users out of an online channel.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. If the limit is exceeded, API calls will be subject to Rate Limiting, which may Impact your business. Please invoke the API appropriately.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveUsersRequest
         /// </param>
@@ -14855,8 +18266,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消Sip邀请</para>
+        /// <para>Cancels a SIP invite.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, API calls are subject to rate limiting, which may affect your business. Call this API at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RtcCancelSipInviteRequest
@@ -14909,8 +18326,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消Sip邀请</para>
+        /// <para>Cancels a SIP invite.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, API calls are subject to rate limiting, which may affect your business. Call this API at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RtcCancelSipInviteRequest
@@ -14963,8 +18386,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消Sip邀请</para>
+        /// <para>Cancels a SIP invite.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, API calls are subject to rate limiting, which may affect your business. Call this API at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RtcCancelSipInviteRequest
@@ -14981,8 +18410,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消Sip邀请</para>
+        /// <para>Cancels a SIP invite.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 per user. If you exceed this limit, API calls are subject to rate limiting, which may affect your business. Call this API at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RtcCancelSipInviteRequest
@@ -14999,8 +18434,166 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>邀请SIP加入频道</para>
+        /// <para>Sends DTMF key signals to a target OneRTC SIP call in a specified channel.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// RtcSendSipDtmfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RtcSendSipDtmfResponse
+        /// </returns>
+        public RtcSendSipDtmfResponse RtcSendSipDtmfWithOptions(RtcSendSipDtmfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelUserId))
+            {
+                query["ChannelUserId"] = request.ChannelUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceType))
+            {
+                query["DeviceType"] = request.DeviceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Digits))
+            {
+                query["Digits"] = request.Digits;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RtcSendSipDtmf",
+                Version = "2018-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RtcSendSipDtmfResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends DTMF key signals to a target OneRTC SIP call in a specified channel.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RtcSendSipDtmfRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RtcSendSipDtmfResponse
+        /// </returns>
+        public async Task<RtcSendSipDtmfResponse> RtcSendSipDtmfWithOptionsAsync(RtcSendSipDtmfRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelUserId))
+            {
+                query["ChannelUserId"] = request.ChannelUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceType))
+            {
+                query["DeviceType"] = request.DeviceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Digits))
+            {
+                query["Digits"] = request.Digits;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RtcSendSipDtmf",
+                Version = "2018-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RtcSendSipDtmfResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends DTMF key signals to a target OneRTC SIP call in a specified channel.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RtcSendSipDtmfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RtcSendSipDtmfResponse
+        /// </returns>
+        public RtcSendSipDtmfResponse RtcSendSipDtmf(RtcSendSipDtmfRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RtcSendSipDtmfWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends DTMF key signals to a target OneRTC SIP call in a specified channel.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RtcSendSipDtmfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RtcSendSipDtmfResponse
+        /// </returns>
+        public async Task<RtcSendSipDtmfResponse> RtcSendSipDtmfAsync(RtcSendSipDtmfRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RtcSendSipDtmfWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invites a SIP endpoint to join a channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Rate limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RtcSipInviteMemberRequest
@@ -15097,8 +18690,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>邀请SIP加入频道</para>
+        /// <para>Invites a SIP endpoint to join a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Rate limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RtcSipInviteMemberRequest
@@ -15195,8 +18794,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>邀请SIP加入频道</para>
+        /// <para>Invites a SIP endpoint to join a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Rate limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RtcSipInviteMemberRequest
@@ -15213,8 +18818,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>邀请SIP加入频道</para>
+        /// <para>Invites a SIP endpoint to join a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Rate limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RtcSipInviteMemberRequest
@@ -15231,8 +18842,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mute操作</para>
+        /// <para>Mutes or unmutes the microphone for a SIP endpoint.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RtcSipMuteRequest
@@ -15281,8 +18898,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mute操作</para>
+        /// <para>Mutes or unmutes the microphone for a SIP endpoint.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RtcSipMuteRequest
@@ -15331,8 +18954,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mute操作</para>
+        /// <para>Mutes or unmutes the microphone for a SIP endpoint.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RtcSipMuteRequest
@@ -15349,8 +18978,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mute操作</para>
+        /// <para>Mutes or unmutes the microphone for a SIP endpoint.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RtcSipMuteRequest
@@ -15367,7 +19002,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动AI Agent</para>
+        /// <para>Starts an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15439,7 +19074,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动AI Agent</para>
+        /// <para>Starts an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15511,7 +19146,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动AI Agent</para>
+        /// <para>Starts an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15529,7 +19164,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动AI Agent</para>
+        /// <para>Starts an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15547,8 +19182,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启某个事件回调</para>
+        /// <para>Starts an event callback.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 calls per second per user. If you exceed the limit, API calls are subject to rate limiting, which may affect your business. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartCategoryCallbackRequest
@@ -15599,8 +19240,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启某个事件回调</para>
+        /// <para>Starts an event callback.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 calls per second per user. If you exceed the limit, API calls are subject to rate limiting, which may affect your business. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartCategoryCallbackRequest
@@ -15651,8 +19298,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启某个事件回调</para>
+        /// <para>Starts an event callback.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 calls per second per user. If you exceed the limit, API calls are subject to rate limiting, which may affect your business. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartCategoryCallbackRequest
@@ -15669,8 +19322,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启某个事件回调</para>
+        /// <para>Starts an event callback.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for this API is 10 calls per second per user. If you exceed the limit, API calls are subject to rate limiting, which may affect your business. Call the API at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartCategoryCallbackRequest
@@ -15687,8 +19346,23 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启智能纪要</para>
+        /// <para>Starts an intelligent meeting minutes task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation starts a meeting minutes task for an online channel. If you need meeting minutes and subtitles, enable all features.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</para>
+        /// <remarks>
+        /// <para>Concurrency limits</para>
+        /// <list type="bullet">
+        /// <item><description>Only one meeting minutes task can run in the same channel at a time.</description></item>
+        /// <item><description>You can start and stop meeting minutes tasks multiple times in the same channel, but the TaskId must be different each time.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartCloudNoteRequest
@@ -15815,8 +19489,23 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启智能纪要</para>
+        /// <para>Starts an intelligent meeting minutes task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation starts a meeting minutes task for an online channel. If you need meeting minutes and subtitles, enable all features.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</para>
+        /// <remarks>
+        /// <para>Concurrency limits</para>
+        /// <list type="bullet">
+        /// <item><description>Only one meeting minutes task can run in the same channel at a time.</description></item>
+        /// <item><description>You can start and stop meeting minutes tasks multiple times in the same channel, but the TaskId must be different each time.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartCloudNoteRequest
@@ -15943,8 +19632,23 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启智能纪要</para>
+        /// <para>Starts an intelligent meeting minutes task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation starts a meeting minutes task for an online channel. If you need meeting minutes and subtitles, enable all features.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</para>
+        /// <remarks>
+        /// <para>Concurrency limits</para>
+        /// <list type="bullet">
+        /// <item><description>Only one meeting minutes task can run in the same channel at a time.</description></item>
+        /// <item><description>You can start and stop meeting minutes tasks multiple times in the same channel, but the TaskId must be different each time.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartCloudNoteRequest
@@ -15961,8 +19665,23 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启智能纪要</para>
+        /// <para>Starts an intelligent meeting minutes task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation starts a meeting minutes task for an online channel. If you need meeting minutes and subtitles, enable all features.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit per user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</para>
+        /// <remarks>
+        /// <para>Concurrency limits</para>
+        /// <list type="bullet">
+        /// <item><description>Only one meeting minutes task can run in the same channel at a time.</description></item>
+        /// <item><description>You can start and stop meeting minutes tasks multiple times in the same channel, but the TaskId must be different each time.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartCloudNoteRequest
@@ -15979,8 +19698,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>StartCloudRecord</para>
+        /// <para>Starts a cloud recording task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation starts a cloud recording task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartCloudRecordRequest
@@ -16115,8 +19842,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>StartCloudRecord</para>
+        /// <para>Starts a cloud recording task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation starts a cloud recording task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartCloudRecordRequest
@@ -16251,8 +19986,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>StartCloudRecord</para>
+        /// <para>Starts a cloud recording task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation starts a cloud recording task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartCloudRecordRequest
@@ -16269,8 +20012,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>StartCloudRecord</para>
+        /// <para>Starts a cloud recording task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation starts a cloud recording task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartCloudRecordRequest
@@ -16285,6 +20036,25 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await StartCloudRecordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a bypass relaying task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to start a bypass relaying task. When you use the bypass relaying service, ApsaraVideo Live has the following limits:
+        /// &lt;props=&quot;china&quot;&gt;- For the concurrency limit on tasks, see <a href="https://help.aliyun.com/document_detail/71050.html#section-eaz-anq-a47">Concurrency limits</a>. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a> two weeks in advance.
+        /// &lt;props=&quot;intl&quot;&gt;- For the concurrency limit on tasks, see <a href="https://www.alibabacloud.com/help/rtc-61399/latest/60e652#section-eaz-anq-a47">Concurrency limits</a>. If you have special requirements, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a> two weeks in advance.</para>
+        /// <list type="bullet">
+        /// <item><description>If the transcoding feature is disabled, each account can concurrently push up to 20 original-quality live streams per live streaming accelerated domain name by default. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>If the transcoding feature is enabled, each account can concurrently push up to 10 transcoded live streams per live streaming accelerated domain name by default. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user calling this operation is 500 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartMPUTaskRequest
         /// </param>
@@ -16446,6 +20216,25 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<StartMPUTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a bypass relaying task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to start a bypass relaying task. When you use the bypass relaying service, ApsaraVideo Live has the following limits:
+        /// &lt;props=&quot;china&quot;&gt;- For the concurrency limit on tasks, see <a href="https://help.aliyun.com/document_detail/71050.html#section-eaz-anq-a47">Concurrency limits</a>. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a> two weeks in advance.
+        /// &lt;props=&quot;intl&quot;&gt;- For the concurrency limit on tasks, see <a href="https://www.alibabacloud.com/help/rtc-61399/latest/60e652#section-eaz-anq-a47">Concurrency limits</a>. If you have special requirements, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a> two weeks in advance.</para>
+        /// <list type="bullet">
+        /// <item><description>If the transcoding feature is disabled, each account can concurrently push up to 20 original-quality live streams per live streaming accelerated domain name by default. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>If the transcoding feature is enabled, each account can concurrently push up to 10 transcoded live streams per live streaming accelerated domain name by default. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user calling this operation is 500 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartMPUTaskRequest
         /// </param>
@@ -16607,6 +20396,25 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<StartMPUTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a bypass relaying task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to start a bypass relaying task. When you use the bypass relaying service, ApsaraVideo Live has the following limits:
+        /// &lt;props=&quot;china&quot;&gt;- For the concurrency limit on tasks, see <a href="https://help.aliyun.com/document_detail/71050.html#section-eaz-anq-a47">Concurrency limits</a>. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a> two weeks in advance.
+        /// &lt;props=&quot;intl&quot;&gt;- For the concurrency limit on tasks, see <a href="https://www.alibabacloud.com/help/rtc-61399/latest/60e652#section-eaz-anq-a47">Concurrency limits</a>. If you have special requirements, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a> two weeks in advance.</para>
+        /// <list type="bullet">
+        /// <item><description>If the transcoding feature is disabled, each account can concurrently push up to 20 original-quality live streams per live streaming accelerated domain name by default. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>If the transcoding feature is enabled, each account can concurrently push up to 10 transcoded live streams per live streaming accelerated domain name by default. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user calling this operation is 500 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartMPUTaskRequest
         /// </param>
@@ -16620,6 +20428,25 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return StartMPUTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a bypass relaying task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>This operation is used to start a bypass relaying task. When you use the bypass relaying service, ApsaraVideo Live has the following limits:
+        /// &lt;props=&quot;china&quot;&gt;- For the concurrency limit on tasks, see <a href="https://help.aliyun.com/document_detail/71050.html#section-eaz-anq-a47">Concurrency limits</a>. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a> two weeks in advance.
+        /// &lt;props=&quot;intl&quot;&gt;- For the concurrency limit on tasks, see <a href="https://www.alibabacloud.com/help/rtc-61399/latest/60e652#section-eaz-anq-a47">Concurrency limits</a>. If you have special requirements, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a> two weeks in advance.</para>
+        /// <list type="bullet">
+        /// <item><description>If the transcoding feature is disabled, each account can concurrently push up to 20 original-quality live streams per live streaming accelerated domain name by default. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// <item><description>If the transcoding feature is enabled, each account can concurrently push up to 10 transcoded live streams per live streaming accelerated domain name by default. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user calling this operation is 500 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartMPUTaskRequest
         /// </param>
@@ -16633,6 +20460,23 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await StartMPUTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a video recording task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.
+        /// &lt;props=&quot;china&quot;&gt;- By default, you can start a maximum of 100 recording tasks at the same time. If the limit is exceeded, new recording tasks become unavailable. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
+        /// &lt;props=&quot;intl&quot;&gt;- By default, you can start a maximum of 100 recording tasks at the same time. If the limit is exceeded, new recording tasks become unavailable. If you have special requirements, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 500 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartRecordTaskRequest
         /// </param>
@@ -16746,6 +20590,23 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<StartRecordTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a video recording task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.
+        /// &lt;props=&quot;china&quot;&gt;- By default, you can start a maximum of 100 recording tasks at the same time. If the limit is exceeded, new recording tasks become unavailable. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
+        /// &lt;props=&quot;intl&quot;&gt;- By default, you can start a maximum of 100 recording tasks at the same time. If the limit is exceeded, new recording tasks become unavailable. If you have special requirements, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 500 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartRecordTaskRequest
         /// </param>
@@ -16859,6 +20720,23 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<StartRecordTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a video recording task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.
+        /// &lt;props=&quot;china&quot;&gt;- By default, you can start a maximum of 100 recording tasks at the same time. If the limit is exceeded, new recording tasks become unavailable. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
+        /// &lt;props=&quot;intl&quot;&gt;- By default, you can start a maximum of 100 recording tasks at the same time. If the limit is exceeded, new recording tasks become unavailable. If you have special requirements, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 500 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartRecordTaskRequest
         /// </param>
@@ -16872,6 +20750,23 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return StartRecordTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a video recording task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.
+        /// &lt;props=&quot;china&quot;&gt;- By default, you can start a maximum of 100 recording tasks at the same time. If the limit is exceeded, new recording tasks become unavailable. If you have special requirements, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
+        /// &lt;props=&quot;intl&quot;&gt;- By default, you can start a maximum of 100 recording tasks at the same time. If the limit is exceeded, new recording tasks become unavailable. If you have special requirements, <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a>.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit for a single user is 500 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartRecordTaskRequest
         /// </param>
@@ -16887,8 +20782,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>StartStreamingOut</para>
+        /// <para>Starts a bypass streaming task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation starts a bypass streaming task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartStreamingOutRequest
@@ -17015,8 +20918,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>StartStreamingOut</para>
+        /// <para>Starts a bypass streaming task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation starts a bypass streaming task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartStreamingOutRequest
@@ -17143,8 +21054,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>StartStreamingOut</para>
+        /// <para>Starts a bypass streaming task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation starts a bypass streaming task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartStreamingOutRequest
@@ -17161,8 +21080,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>StartStreamingOut</para>
+        /// <para>Starts a bypass streaming task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation starts a bypass streaming task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartStreamingOutRequest
@@ -17179,8 +21106,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始合流</para>
+        /// <para>Starts stream mixing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartViewRequest
@@ -17267,8 +21200,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始合流</para>
+        /// <para>Starts stream mixing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartViewRequest
@@ -17355,8 +21294,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始合流</para>
+        /// <para>Starts stream mixing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartViewRequest
@@ -17373,8 +21318,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始合流</para>
+        /// <para>Starts stream mixing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API operation at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartViewRequest
@@ -17391,7 +21342,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止AI Agent</para>
+        /// <para>Stops an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17441,7 +21392,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止AI Agent</para>
+        /// <para>Stops an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17491,7 +21442,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止AI Agent</para>
+        /// <para>Stops an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17509,7 +21460,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止AI Agent</para>
+        /// <para>Stops an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17527,8 +21478,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭某个事件回调</para>
+        /// <para>Disables an event callback.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StopCategoryCallbackRequest
@@ -17579,8 +21536,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭某个事件回调</para>
+        /// <para>Disables an event callback.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StopCategoryCallbackRequest
@@ -17631,8 +21594,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭某个事件回调</para>
+        /// <para>Disables an event callback.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopCategoryCallbackRequest
@@ -17649,8 +21618,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭某个事件回调</para>
+        /// <para>Disables an event callback.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopCategoryCallbackRequest
@@ -17667,8 +21642,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除频道</para>
+        /// <para>This API is used by the server to actively shut down a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used by the server to actively shut down an online channel.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your service. Invoke this API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopChannelRequest
@@ -17713,8 +21696,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除频道</para>
+        /// <para>This API is used by the server to actively shut down a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used by the server to actively shut down an online channel.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your service. Invoke this API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopChannelRequest
@@ -17759,8 +21750,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除频道</para>
+        /// <para>This API is used by the server to actively shut down a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used by the server to actively shut down an online channel.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your service. Invoke this API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopChannelRequest
@@ -17777,8 +21776,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除频道</para>
+        /// <para>This API is used by the server to actively shut down a channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used by the server to actively shut down an online channel.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your service. Invoke this API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopChannelRequest
@@ -17795,8 +21802,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止智能纪要</para>
+        /// <para>Stops an intelligent meeting minutes task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation stops a meeting minutes task for an online channel.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopCloudNoteRequest
@@ -17849,8 +21864,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止智能纪要</para>
+        /// <para>Stops an intelligent meeting minutes task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation stops a meeting minutes task for an online channel.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopCloudNoteRequest
@@ -17903,8 +21926,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止智能纪要</para>
+        /// <para>Stops an intelligent meeting minutes task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation stops a meeting minutes task for an online channel.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopCloudNoteRequest
@@ -17921,8 +21952,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止智能纪要</para>
+        /// <para>Stops an intelligent meeting minutes task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation stops a meeting minutes task for an online channel.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable rate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopCloudNoteRequest
@@ -17941,6 +21980,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <summary>
         /// <para>StopCloudRecord</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to stop an online channel cloud recording job.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopCloudRecordRequest
@@ -17992,6 +22039,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>StopCloudRecord</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to stop an online channel cloud recording job.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopCloudRecordRequest
         /// </param>
@@ -18042,6 +22097,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>StopCloudRecord</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to stop an online channel cloud recording job.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopCloudRecordRequest
         /// </param>
@@ -18060,6 +22123,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>StopCloudRecord</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to stop an online channel cloud recording job.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Please invoke the API appropriately.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopCloudRecordRequest
         /// </param>
@@ -18073,6 +22144,22 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await StopCloudRecordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the StopMPUTask operation to stop a stream relay task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a stream relay task.</description></item>
+        /// <item><description>If you need to stop a stream relay task and the stream relay task is abnormal (the StopMPUTask operation is not called to stop the task), the stream relay task is automatically stopped 2 minutes after the last user leaves the channel. After the task is stopped, if you need to resume stream relay, you need to call the <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> operation again.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit per user for this operation is 500 times per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopMPUTaskRequest
         /// </param>
@@ -18118,6 +22205,22 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<StopMPUTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the StopMPUTask operation to stop a stream relay task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a stream relay task.</description></item>
+        /// <item><description>If you need to stop a stream relay task and the stream relay task is abnormal (the StopMPUTask operation is not called to stop the task), the stream relay task is automatically stopped 2 minutes after the last user leaves the channel. After the task is stopped, if you need to resume stream relay, you need to call the <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> operation again.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit per user for this operation is 500 times per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopMPUTaskRequest
         /// </param>
@@ -18163,6 +22266,22 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<StopMPUTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the StopMPUTask operation to stop a stream relay task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a stream relay task.</description></item>
+        /// <item><description>If you need to stop a stream relay task and the stream relay task is abnormal (the StopMPUTask operation is not called to stop the task), the stream relay task is automatically stopped 2 minutes after the last user leaves the channel. After the task is stopped, if you need to resume stream relay, you need to call the <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> operation again.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit per user for this operation is 500 times per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopMPUTaskRequest
         /// </param>
@@ -18176,6 +22295,22 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return StopMPUTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the StopMPUTask operation to stop a stream relay task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a stream relay task.</description></item>
+        /// <item><description>If you need to stop a stream relay task and the stream relay task is abnormal (the StopMPUTask operation is not called to stop the task), the stream relay task is automatically stopped 2 minutes after the last user leaves the channel. After the task is stopped, if you need to resume stream relay, you need to call the <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> operation again.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The QPS limit per user for this operation is 500 times per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation properly. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopMPUTaskRequest
         /// </param>
@@ -18189,6 +22324,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await StopMPUTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the StopRecordTask operation to stop a video recording task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> operation to start a video recording task.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>You can call this operation up to 4,000 times per minute per user. If the number of calls per minute exceeds the limit, throttling is triggered, which may affect your business. Call this operation as required. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopRecordTaskRequest
         /// </param>
@@ -18234,6 +22382,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<StopRecordTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the StopRecordTask operation to stop a video recording task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> operation to start a video recording task.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>You can call this operation up to 4,000 times per minute per user. If the number of calls per minute exceeds the limit, throttling is triggered, which may affect your business. Call this operation as required. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopRecordTaskRequest
         /// </param>
@@ -18279,6 +22440,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<StopRecordTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the StopRecordTask operation to stop a video recording task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> operation to start a video recording task.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>You can call this operation up to 4,000 times per minute per user. If the number of calls per minute exceeds the limit, throttling is triggered, which may affect your business. Call this operation as required. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopRecordTaskRequest
         /// </param>
@@ -18292,6 +22466,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return StopRecordTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the StopRecordTask operation to stop a video recording task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> operation to start a video recording task.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>You can call this operation up to 4,000 times per minute per user. If the number of calls per minute exceeds the limit, throttling is triggered, which may affect your business. Call this operation as required. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limit</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopRecordTaskRequest
         /// </param>
@@ -18309,6 +22496,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <summary>
         /// <para>StopStreamingOut</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to stop a bypass stream ingest job for an online channel.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Invoke this API appropriately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopStreamingOutRequest
@@ -18360,6 +22555,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>StopStreamingOut</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to stop a bypass stream ingest job for an online channel.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Invoke this API appropriately.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopStreamingOutRequest
         /// </param>
@@ -18410,6 +22613,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>StopStreamingOut</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to stop a bypass stream ingest job for an online channel.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Invoke this API appropriately.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopStreamingOutRequest
         /// </param>
@@ -18428,6 +22639,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>StopStreamingOut</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>How-To</h3>
+        /// <para>This API is used to stop a bypass stream ingest job for an online channel.  </para>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <para>The QPS limit for this API is 10 queries per second (QPS) per user. If the limit is exceeded, API calls will be subject to rate limiting, which may impact your business. Invoke this API appropriately.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopStreamingOutRequest
         /// </param>
@@ -18443,8 +22662,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止合流</para>
+        /// <para>Stop stream mixing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which can affect your application. Therefore, call the API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopViewRequest
@@ -18493,8 +22718,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止合流</para>
+        /// <para>Stop stream mixing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which can affect your application. Therefore, call the API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopViewRequest
@@ -18543,8 +22774,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止合流</para>
+        /// <para>Stop stream mixing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which can affect your application. Therefore, call the API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopViewRequest
@@ -18561,8 +22798,14 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止合流</para>
+        /// <para>Stop stream mixing.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which can affect your application. Therefore, call the API judiciously.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopViewRequest
@@ -18579,7 +22822,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI Agent</para>
+        /// <para>Update an AI Agent</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18639,7 +22882,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI Agent</para>
+        /// <para>Update an AI Agent</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18699,7 +22942,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI Agent</para>
+        /// <para>Update an AI Agent</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18717,7 +22960,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI Agent</para>
+        /// <para>Update an AI Agent</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18733,6 +22976,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await UpdateAgentWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAutoLiveStreamRuleRequest
         /// </param>
@@ -18802,6 +23058,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<UpdateAutoLiveStreamRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAutoLiveStreamRuleRequest
         /// </param>
@@ -18871,6 +23140,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<UpdateAutoLiveStreamRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAutoLiveStreamRuleRequest
         /// </param>
@@ -18884,6 +23166,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return UpdateAutoLiveStreamRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an automatic bypass single-stream relay rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/353179.html">CreateAutoLiveStreamRule</a> to create a bypass rule.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 1,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAutoLiveStreamRuleRequest
         /// </param>
@@ -18899,8 +23194,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新云端录制任务</para>
+        /// <para>Updates a cloud recording task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage</h3>
+        /// <para>Updates a cloud recording task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 requests per second per user. Exceeding this limit triggers rate limiting, which may affect your service. Call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateCloudRecordRequest
@@ -18983,8 +23286,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新云端录制任务</para>
+        /// <para>Updates a cloud recording task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage</h3>
+        /// <para>Updates a cloud recording task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 requests per second per user. Exceeding this limit triggers rate limiting, which may affect your service. Call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateCloudRecordRequest
@@ -19067,8 +23378,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新云端录制任务</para>
+        /// <para>Updates a cloud recording task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage</h3>
+        /// <para>Updates a cloud recording task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 requests per second per user. Exceeding this limit triggers rate limiting, which may affect your service. Call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateCloudRecordRequest
@@ -19085,8 +23404,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新云端录制任务</para>
+        /// <para>Updates a cloud recording task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage</h3>
+        /// <para>Updates a cloud recording task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>This API supports up to 10 requests per second per user. Exceeding this limit triggers rate limiting, which may affect your service. Call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateCloudRecordRequest
@@ -19101,6 +23428,22 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await UpdateCloudRecordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateMPUTask to update a bypass relay task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, you must have called <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a bypass relay task.</description></item>
+        /// <item><description>This API must be called while the task is running normally. Calls are invalid when the task has not started, has ended, or is in an abnormal state. You can call <a href="https://help.aliyun.com/document_detail/93181.html">GetMPUTaskStatus</a> to obtain the task running status.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this API is 4,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Please call reasonably. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS Limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateMPUTaskRequest
         /// </param>
@@ -19218,6 +23561,22 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<UpdateMPUTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateMPUTask to update a bypass relay task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, you must have called <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a bypass relay task.</description></item>
+        /// <item><description>This API must be called while the task is running normally. Calls are invalid when the task has not started, has ended, or is in an abnormal state. You can call <a href="https://help.aliyun.com/document_detail/93181.html">GetMPUTaskStatus</a> to obtain the task running status.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this API is 4,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Please call reasonably. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS Limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateMPUTaskRequest
         /// </param>
@@ -19335,6 +23694,22 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<UpdateMPUTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateMPUTask to update a bypass relay task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, you must have called <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a bypass relay task.</description></item>
+        /// <item><description>This API must be called while the task is running normally. Calls are invalid when the task has not started, has ended, or is in an abnormal state. You can call <a href="https://help.aliyun.com/document_detail/93181.html">GetMPUTaskStatus</a> to obtain the task running status.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this API is 4,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Please call reasonably. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS Limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateMPUTaskRequest
         /// </param>
@@ -19348,6 +23723,22 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return UpdateMPUTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call UpdateMPUTask to update a bypass relay task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, you must have called <a href="https://help.aliyun.com/document_detail/93183.html">StartMpuTask</a> to start a bypass relay task.</description></item>
+        /// <item><description>This API must be called while the task is running normally. Calls are invalid when the task has not started, has ended, or is in an abnormal state. You can call <a href="https://help.aliyun.com/document_detail/93181.html">GetMPUTaskStatus</a> to obtain the task running status.</description></item>
+        /// </list>
+        /// <h1>QPS limit</h1>
+        /// <para>The per-user QPS limit of this API is 4,000 calls per minute. If the limit is exceeded, API calls are throttled, which may affect your business. Please call reasonably. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS Limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateMPUTaskRequest
         /// </param>
@@ -19361,6 +23752,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await UpdateMPUTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a video recording task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> to start a video recording task.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateRecordTaskRequest
         /// </param>
@@ -19462,6 +23866,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<UpdateRecordTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a video recording task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> to start a video recording task.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateRecordTaskRequest
         /// </param>
@@ -19563,6 +23980,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<UpdateRecordTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a video recording task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> to start a video recording task.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateRecordTaskRequest
         /// </param>
@@ -19576,6 +24006,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return UpdateRecordTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a video recording task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> to start a video recording task.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable frequency. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateRecordTaskRequest
         /// </param>
@@ -19589,6 +24032,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return await UpdateRecordTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a recording configuration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateRecordTemplateRequest
         /// </param>
@@ -19702,6 +24158,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<UpdateRecordTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a recording configuration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateRecordTemplateRequest
         /// </param>
@@ -19815,6 +24284,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return TeaModel.ToObject<UpdateRecordTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a recording configuration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateRecordTemplateRequest
         /// </param>
@@ -19828,6 +24310,19 @@ namespace AlibabaCloud.SDK.Rtc20180111
             return UpdateRecordTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a recording configuration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/193625.html">AddRecordTemplate</a> to add a recording configuration template.</para>
+        /// <h1>QPS limits</h1>
+        /// <para>The QPS limit for a single user is 100 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/341645.html">QPS limits</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateRecordTemplateRequest
         /// </param>
@@ -19843,8 +24338,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新旁路推流任务</para>
+        /// <para>Updates a bypass live streaming task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation updates a bypass live streaming task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateStreamingOutRequest
@@ -19943,8 +24446,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新旁路推流任务</para>
+        /// <para>Updates a bypass live streaming task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation updates a bypass live streaming task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateStreamingOutRequest
@@ -20043,8 +24554,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新旁路推流任务</para>
+        /// <para>Updates a bypass live streaming task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation updates a bypass live streaming task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateStreamingOutRequest
@@ -20061,8 +24580,16 @@ namespace AlibabaCloud.SDK.Rtc20180111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新旁路推流任务</para>
+        /// <para>Updates a bypass live streaming task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Usage notes</h3>
+        /// <para>This operation updates a bypass live streaming task for an online channel.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateStreamingOutRequest

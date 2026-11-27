@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DeleteEventSubscribeRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query applications in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The subscription ID. For more information, see <a href="https://help.aliyun.com/document_detail/274447.html">CreateEventSubscribe</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

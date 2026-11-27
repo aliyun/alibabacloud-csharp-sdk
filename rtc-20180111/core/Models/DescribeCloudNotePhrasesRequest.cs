@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeCloudNotePhrasesRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query the ID in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>The query conditions.</para>
+        /// </summary>
         [NameInMap("Condition")]
         [Validation(Required=false)]
         public DescribeCloudNotePhrasesRequestCondition Condition { get; set; }
         public class DescribeCloudNotePhrasesRequestCondition : TeaModel {
             /// <summary>
+            /// <para>The hotword list ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ac7N****112121</para>
             /// </summary>
@@ -32,8 +38,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The hotword list name.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

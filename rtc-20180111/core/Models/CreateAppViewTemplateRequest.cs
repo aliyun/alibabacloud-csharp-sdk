@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class CreateAppViewTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query it in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The template.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Template")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public CreateAppViewTemplateRequestTemplate Template { get; set; }
         public class CreateAppViewTemplateRequestTemplate : TeaModel {
             /// <summary>
+            /// <para>The list of layout IDs. A maximum of 16 layout IDs are supported.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("LayoutIds")]
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public List<string> LayoutIds { get; set; }
 
             /// <summary>
+            /// <para>The encoding options.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -44,10 +48,11 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? MediaEncode { get; set; }
 
             /// <summary>
+            /// <para>The template name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>模版</para>
+            /// <para>Template</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

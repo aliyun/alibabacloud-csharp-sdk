@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public DescribeChannelResponseBodyChannel Channel { get; set; }
         public class DescribeChannelResponseBodyChannel : TeaModel {
             /// <summary>
+            /// <para>channel ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testid</para>
             /// </summary>
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string ChannelId { get; set; }
 
             /// <summary>
+            /// <para>The UNIX timestamp (in seconds) indicating when the channel started (UTC).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1557909133</para>
             /// </summary>
@@ -34,11 +38,20 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        /// <summary>
+        /// <para>Indicates whether the channel exists. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The channel exists.  </description></item>
+        /// <item><description><b>false</b>: The channel does not exist.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("ChannelExist")]
         [Validation(Required=false)]
         public bool? ChannelExist { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</para>
         /// </summary>

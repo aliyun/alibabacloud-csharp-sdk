@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class ModifyStreamingPropertyShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query the ID in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The ID of an existing channel. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the stream mixing task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The stream mixing content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>main</para>
         /// </summary>
@@ -48,7 +53,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ViewContent { get; set; }
 
         /// <summary>
-        /// <para>ViewSubscribers。</para>
+        /// <para>The view subscribers.</para>
         /// </summary>
         [NameInMap("ViewSubscribers")]
         [Validation(Required=false)]

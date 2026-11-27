@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class RtcCancelSipInviteResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID. Use this ID to locate logs and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EB3C3C75-74D5-5F01-9F3C-9974261BAED4</para>
         /// </summary>

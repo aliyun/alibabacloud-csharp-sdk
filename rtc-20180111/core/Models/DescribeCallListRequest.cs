@@ -21,6 +21,12 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>Call status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IN</b>: In progress.</description></item>
+        /// <item><description><b>OUT</b>: Ended.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>OUT</para>
         /// </summary>
@@ -29,6 +35,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string CallStatus { get; set; }
 
         /// <summary>
+        /// <para>Channel ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>311</para>
         /// </summary>
@@ -37,6 +45,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The end time of the query, expressed as a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,6 +56,12 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? EndTs { get; set; }
 
         /// <summary>
+        /// <para>Sorting field. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>BAD_EXP_USER_COUNT_DESC</b>: Sort by the number of users with poor experience in descending order.</description></item>
+        /// <item><description><b>BAD_EXP_USER_COUNT_ASC</b>: Sort by the number of users with poor experience in ascending order.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>BAD_EXP_USER_COUNT_DESC</para>
         /// </summary>
@@ -55,6 +70,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string OrderBy { get; set; }
 
         /// <summary>
+        /// <para>Page number. Minimum value: 1. Maximum value: 200.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,6 +81,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>Quantity per page, minimum value is 1, maximum value is 200.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,6 +92,12 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Query mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ALL</b>: All calls.</description></item>
+        /// <item><description><b>FOLLOW</b>: Followed calls.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ALL</para>
         /// </summary>
@@ -83,6 +106,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string QueryMode { get; set; }
 
         /// <summary>
+        /// <para>Start Time of the query, represented as a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,6 +117,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? StartTs { get; set; }
 
         /// <summary>
+        /// <para>User ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c906531af5f9****</para>
         /// </summary>

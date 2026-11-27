@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeChannelTopPubUserListRequest : TeaModel {
         /// <summary>
-        /// <para>APP ID。</para>
+        /// <para>The app ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The channel ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +32,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The timestamp when the channel was created. Data from the last 30 days can be queried. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,6 +43,11 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? CreatedTs { get; set; }
 
         /// <summary>
+        /// <para>The timestamp when the channel was released. The value is a UNIX timestamp in seconds. If this parameter is left empty, the current time is used.</para>
+        /// <remarks>
+        /// <para>If the specified channel release time is later than the actual release time, the data from the creation time to the actual release time is returned.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1615893757</para>
         /// </summary>

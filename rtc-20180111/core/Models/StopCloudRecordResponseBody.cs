@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class StopCloudRecordResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The task ID of this cloud recording job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>

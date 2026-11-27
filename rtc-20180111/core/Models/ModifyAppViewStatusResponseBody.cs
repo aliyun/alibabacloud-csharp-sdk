@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class ModifyAppViewStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>94D9A316-9750-5928-B18C-59DF182F6BF7</para>
         /// </summary>

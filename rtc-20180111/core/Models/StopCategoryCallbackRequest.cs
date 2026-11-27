@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class StopCategoryCallbackRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The callback.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Callback")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public StopCategoryCallbackRequestCallback Callback { get; set; }
         public class StopCategoryCallbackRequestCallback : TeaModel {
             /// <summary>
+            /// <para>The callback code.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

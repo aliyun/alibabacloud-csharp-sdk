@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class ModifyAppViewTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>Application ID. Create and view it in the console. Only one ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The template.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Template")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public ModifyAppViewTemplateRequestTemplate Template { get; set; }
         public class ModifyAppViewTemplateRequestTemplate : TeaModel {
             /// <summary>
+            /// <para>List of layout IDs. Maximum of 16 IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("LayoutIds")]
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public List<string> LayoutIds { get; set; }
 
             /// <summary>
+            /// <para>Encoding option.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -44,16 +48,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? MediaEncode { get; set; }
 
             /// <summary>
+            /// <para>Template name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>模版</para>
+            /// <para>模板</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Template ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

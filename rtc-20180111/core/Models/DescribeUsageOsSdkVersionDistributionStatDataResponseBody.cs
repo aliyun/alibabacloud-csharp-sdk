@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>231470C1-ACFB-4C9F-844F-4CFE1E3804C5</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>List of SDK version data in usage statistics.</para>
+        /// </summary>
         [NameInMap("UsageOsSdkVersionStatList")]
         [Validation(Required=false)]
         public List<DescribeUsageOsSdkVersionDistributionStatDataResponseBodyUsageOsSdkVersionStatList> UsageOsSdkVersionStatList { get; set; }
         public class DescribeUsageOsSdkVersionDistributionStatDataResponseBodyUsageOsSdkVersionStatList : TeaModel {
             /// <summary>
+            /// <para>Audio call duration, in minutes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public long? AudioCallDuration { get; set; }
 
             /// <summary>
+            /// <para>Call duration ratio, represented as a four-decimal number, such as 0.0984.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.0984</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string CallDurationRatio { get; set; }
 
             /// <summary>
+            /// <para>SDK version name, such as 1.0.0 or 1.1.1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Operating system, such as iOS or Android.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>macOS</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Os { get; set; }
 
             /// <summary>
+            /// <para>Total call duration, in minutes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>476</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public long? TotalCallDuration { get; set; }
 
             /// <summary>
+            /// <para>Video call duration, in minutes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>473</para>
             /// </summary>

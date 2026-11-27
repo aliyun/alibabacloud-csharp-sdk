@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class UpdateAgentRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. Specify only one ID. You can create and query applications in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The existing channel ID. Specify only one ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The task ID. Specify only one ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,11 +42,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
+        /// <summary>
+        /// <para>Configuration for AI voice conversation.</para>
+        /// </summary>
         [NameInMap("VoiceChatConfig")]
         [Validation(Required=false)]
         public UpdateAgentRequestVoiceChatConfig VoiceChatConfig { get; set; }
         public class UpdateAgentRequestVoiceChatConfig : TeaModel {
             /// <summary>
+            /// <para>1 – Natural conversation mode. 2 – Walkie-talkie mode.If this field is not included, no update occurs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? ChatMode { get; set; }
 
             /// <summary>
+            /// <para>1 – Enable voice interruption. 2 – Disable voice interruption.If this field is not included, no update occurs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>

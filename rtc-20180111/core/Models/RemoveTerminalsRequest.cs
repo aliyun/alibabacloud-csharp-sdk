@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class RemoveTerminalsRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. Only one ID is supported.</para>
+        /// <para>You can create and query application IDs in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +22,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the channel that the user has joined. Only one ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>A list of user IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

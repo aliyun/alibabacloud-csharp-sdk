@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DeleteMPULayoutRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. Only a single ID is supported. You can create and query application IDs in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The layout ID. Only a single ID is supported. To obtain a layout ID, see <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

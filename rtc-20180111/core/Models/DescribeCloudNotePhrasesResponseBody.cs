@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeCloudNotePhrasesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The hotword lists.</para>
+        /// </summary>
         [NameInMap("Phrases")]
         [Validation(Required=false)]
         public List<DescribeCloudNotePhrasesResponseBodyPhrases> Phrases { get; set; }
         public class DescribeCloudNotePhrasesResponseBodyPhrases : TeaModel {
             /// <summary>
+            /// <para>The creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-03-04T06:22:15Z</para>
             /// </summary>
@@ -22,14 +27,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>水果描述</para>
+            /// <para>Fruit description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The hotword list ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1qweadca332121212</para>
             /// </summary>
@@ -38,14 +47,17 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The hotword list name.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>水果</para>
+            /// <para>Fruit</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The hotword weights.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("WordWeights")]
@@ -53,6 +65,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public List<DescribeCloudNotePhrasesResponseBodyPhrasesWordWeights> WordWeights { get; set; }
             public class DescribeCloudNotePhrasesResponseBodyPhrasesWordWeights : TeaModel {
                 /// <summary>
+                /// <para>The weight value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -61,8 +75,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 public int? Weight { get; set; }
 
                 /// <summary>
+                /// <para>The hotword.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>苹果</para>
+                /// <para>Apple</para>
                 /// </summary>
                 [NameInMap("Word")]
                 [Validation(Required=false)]
@@ -73,7 +89,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         }
 
         /// <summary>
-        /// <para>Id of the request。</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3A26E1E3-3CBB-599E-AD68-CB78F5A42FA1</para>
@@ -83,6 +99,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -91,6 +109,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? TotalNum { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

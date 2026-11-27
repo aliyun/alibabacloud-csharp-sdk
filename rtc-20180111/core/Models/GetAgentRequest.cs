@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class GetAgentRequest : TeaModel {
         /// <summary>
+        /// <para>Application ID. You can create and view this ID in the console. Only one ID is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aec****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>Channel ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>Task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yourTaskId</para>
         /// </summary>

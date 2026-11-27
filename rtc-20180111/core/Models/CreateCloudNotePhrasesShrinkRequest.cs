@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class CreateCloudNotePhrasesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query application IDs in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The hotword parameter.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Phrase")]

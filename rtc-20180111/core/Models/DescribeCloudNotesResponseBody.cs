@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeCloudNotesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of meeting summary results.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeCloudNotesResponseBodyItems> Items { get; set; }
         public class DescribeCloudNotesResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>Path where the chapter overview result file is stored.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cloudNote/ksvxxppi/88_12/autoChapters_1724914365173.json</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string AutoChaptersFilePath { get; set; }
 
             /// <summary>
+            /// <para>The user-defined bucket.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sample-bucket</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Bucket { get; set; }
 
             /// <summary>
+            /// <para>Channel ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testchannelId</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string ChannelId { get; set; }
 
             /// <summary>
+            /// <para>The path where the custom prompt result file is stored.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cloudNote/ksvxxppi/88_12/customPrompt_1724914365173.json</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string CustomPromptFilePath { get; set; }
 
             /// <summary>
+            /// <para>The path where the key points extraction result file is stored.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cloudNote/ksvxxppi/88_12/meetingAssistance_1724914365173.json</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string MeetingAssistanceFilePath { get; set; }
 
             /// <summary>
+            /// <para>Reference job region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? Region { get; set; }
 
             /// <summary>
+            /// <para>The path where the service quality inspection result file is stored.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cloudNote/ksvxxppi/88_12/serviceInspection_1724914365173.json</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string ServiceInspectionFilePath { get; set; }
 
             /// <summary>
+            /// <para>Start Time of the meeting summary job.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1731939816837</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public long? StartTs { get; set; }
 
             /// <summary>
+            /// <para>Path where the summary result file is stored.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cloudNote/ksvxxppi/88_12/summarization_1724914365173.json</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string SummarizationFilePath { get; set; }
 
             /// <summary>
+            /// <para>Job ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test001</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>The path where the spoken-to-written text result file is stored.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cloudNote/ksvxxppi/88_12/textPolish_1724914365173.json</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string TextPolishFilePath { get; set; }
 
             /// <summary>
+            /// <para>Path where the transcription result file is stored.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cloudNote/ksvxxppi/88_12/transcription_1724914365173.json</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string TranscriptionFilePath { get; set; }
 
             /// <summary>
+            /// <para>The vendor referenced when enabling the job.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -120,6 +149,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         }
 
         /// <summary>
+        /// <para>Page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -128,6 +159,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>Quantity per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -146,6 +179,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total quantity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

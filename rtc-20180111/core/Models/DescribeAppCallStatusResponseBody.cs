@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The callback status. Valid values: enable (enabled) and disable (disabled).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>enable</para>
         /// </summary>

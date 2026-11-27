@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class UpdateAgentShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. Specify only one ID. You can create and query applications in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The existing channel ID. Specify only one ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The task ID. Specify only one ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,6 +42,9 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
+        /// <summary>
+        /// <para>Configuration for AI voice conversation.</para>
+        /// </summary>
         [NameInMap("VoiceChatConfig")]
         [Validation(Required=false)]
         public string VoiceChatConfigShrink { get; set; }

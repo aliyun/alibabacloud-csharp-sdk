@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class UpdateCloudRecordResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CF8</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The task ID for this cloud recording.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>

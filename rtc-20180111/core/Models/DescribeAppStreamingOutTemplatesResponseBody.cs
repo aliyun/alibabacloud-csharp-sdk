@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>List of templates.</para>
+        /// </summary>
         [NameInMap("Templates")]
         [Validation(Required=false)]
         public List<DescribeAppStreamingOutTemplatesResponseBodyTemplates> Templates { get; set; }
         public class DescribeAppStreamingOutTemplatesResponseBodyTemplates : TeaModel {
             /// <summary>
+            /// <para>Creation Time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-09-04T06:22:15Z</para>
             /// </summary>
@@ -31,11 +36,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>List of layout IDs.</para>
+            /// </summary>
             [NameInMap("LayoutIds")]
             [Validation(Required=false)]
             public List<string> LayoutIds { get; set; }
 
             /// <summary>
+            /// <para>Encoding options.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -44,14 +54,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? MediaEncode { get; set; }
 
             /// <summary>
+            /// <para>Template Name.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>模版名称</para>
+            /// <para>模板名称</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Template ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Bj6D****</para>
             /// </summary>
@@ -62,6 +76,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         }
 
         /// <summary>
+        /// <para>Number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -70,6 +86,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? TotalNum { get; set; }
 
         /// <summary>
+        /// <para>Number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

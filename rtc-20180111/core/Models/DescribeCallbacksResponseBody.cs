@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeCallbacksResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of subscribed events for the application.</para>
+        /// </summary>
         [NameInMap("Callbacks")]
         [Validation(Required=false)]
         public List<DescribeCallbacksResponseBodyCallbacks> Callbacks { get; set; }
         public class DescribeCallbacksResponseBodyCallbacks : TeaModel {
             /// <summary>
+            /// <para>The callback code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RecordEvent</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Category { get; set; }
 
             /// <summary>
+            /// <para>The callback validation status. 0 indicates validating. 1 indicates validation successful. 2 indicates validation failed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string CheckStatus { get; set; }
 
             /// <summary>
+            /// <para>The callback validation code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RESPONSE_INVALID</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The webhook address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Conf { get; set; }
 
             /// <summary>
+            /// <para>The callback validation message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Success</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Msg { get; set; }
 
             /// <summary>
+            /// <para>The callback status. 0 indicates enabled. 1 indicates disabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -61,6 +76,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public int? Status { get; set; }
 
+            /// <summary>
+            /// <para>The sub-events. For more information, see Callback overview.
+            /// Recording events:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>2010</b>: The service status of the recording changes.</para>
+            /// </description></item>
+            /// <item><description><para><b>2011</b>: The status of the recording audio stream changes.</para>
+            /// </description></item>
+            /// <item><description><para><b>2012</b>: The status of the recording video stream changes.</para>
+            /// </description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("SubEvent")]
             [Validation(Required=false)]
             public List<int?> SubEvent { get; set; }

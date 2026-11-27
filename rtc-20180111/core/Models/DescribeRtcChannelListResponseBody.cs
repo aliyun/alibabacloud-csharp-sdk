@@ -48,6 +48,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -56,6 +58,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -64,6 +68,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</para>
         /// </summary>
@@ -72,6 +78,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>

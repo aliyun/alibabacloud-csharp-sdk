@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeRtcChannelMetricRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query the application ID in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The channel ID. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The time when the record is queried, in UTC. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+        /// <para>The time granularity is day.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

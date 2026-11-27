@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class CreateAppAgentTemplateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1223131213231313213</para>
         /// </summary>

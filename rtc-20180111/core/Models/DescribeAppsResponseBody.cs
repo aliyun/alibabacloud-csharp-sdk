@@ -60,14 +60,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>6159ba01-6687-4fb2-a831-f0cd8d188648</para>
+        /// <para>231470C1-ACFB-4C9F-844F-4CFE1E3804C6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of results returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -76,6 +80,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? TotalNum { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

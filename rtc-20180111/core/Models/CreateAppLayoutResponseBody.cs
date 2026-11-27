@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class CreateAppLayoutResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the layout.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>167466539798442****</para>
         /// </summary>

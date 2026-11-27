@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class ModifyMPULayoutRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the application. Only a single ID is supported. You can create and query application IDs in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of audio mixing tracks. Valid values: <b>0</b> to <b>6</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? AudioMixCount { get; set; }
 
         /// <summary>
+        /// <para>The ID of the layout. For more information about how to obtain the layout ID, see <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? LayoutId { get; set; }
 
         /// <summary>
+        /// <para>The name of the layout.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>LayoutName</para>
         /// </summary>
@@ -49,11 +55,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The list of panes in the layout.</para>
+        /// </summary>
         [NameInMap("Panes")]
         [Validation(Required=false)]
         public List<ModifyMPULayoutRequestPanes> Panes { get; set; }
         public class ModifyMPULayoutRequestPanes : TeaModel {
             /// <summary>
+            /// <para>The height of the pane, represented as a normalized percentage. Valid values: <b>0.0 &lt; Height ≤ 1.0</b>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.2456</para>
             /// </summary>
@@ -62,6 +73,12 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? Height { get; set; }
 
             /// <summary>
+            /// <para>Specifies the major pane. Each layout can have only one major pane. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Secondary pane.</description></item>
+            /// <item><description><b>1</b>: Major pane.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? MajorPane { get; set; }
 
             /// <summary>
+            /// <para>The ID of the pane. Panes are sorted from top left to bottom right, starting from 0.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? PaneId { get; set; }
 
             /// <summary>
+            /// <para>The width of the pane, represented as a normalized percentage. Valid values: <b>0.0 &lt; Width ≤ 1.0</b>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.2456</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? Width { get; set; }
 
             /// <summary>
+            /// <para>The X-coordinate, represented as a normalized percentage. Valid values: <b>0.0 ≤ X ≤ 1.0</b>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.7576</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? X { get; set; }
 
             /// <summary>
+            /// <para>The Y-coordinate, represented as a normalized percentage. Valid values: <b>0.0 ≤ Y ≤ 1.0</b>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.7576</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public float? Y { get; set; }
 
             /// <summary>
+            /// <para>The Z-order. A value of 0 indicates the bottom layer, 1 indicates the layer above 0, and so on.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>

@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The end time of the query, expressed as a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,11 +31,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
+        /// <summary>
+        /// <para>The parent region name. For example, the parent of Hangzhou City is Zhejiang Province, and the parameter should be set to China_Zhejiang Province. An empty parameter indicates statistics at the global scope (country dimension), such as China or the United Kingdom.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>中国_浙江省</para>
+        /// </summary>
         [NameInMap("ParentArea")]
         [Validation(Required=false)]
         public string ParentArea { get; set; }
 
         /// <summary>
+        /// <para>The start time of the query, expressed as a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

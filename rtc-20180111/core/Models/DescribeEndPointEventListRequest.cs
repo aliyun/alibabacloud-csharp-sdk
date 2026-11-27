@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeEndPointEventListRequest : TeaModel {
         /// <summary>
-        /// <para>APP ID。</para>
+        /// <para>The app ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The channel ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +32,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The start time of the event query time range. This time cannot be earlier than the actual creation time of the channel or 30 days ago. The time is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? CreatedTs { get; set; }
 
         /// <summary>
+        /// <para>The end time of the event query time range. This time cannot be later than the release time of the channel. The time is a UNIX timestamp in seconds. If this parameter is left empty, the current time is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1614936817</para>
         /// </summary>
@@ -49,6 +53,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? DestroyedTs { get; set; }
 
         /// <summary>
+        /// <para>The list of user IDs. Separate multiple user IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

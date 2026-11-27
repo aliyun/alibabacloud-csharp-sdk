@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeAppViewStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the application. You can create and find the application ID in the console. Only one ID can be specified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

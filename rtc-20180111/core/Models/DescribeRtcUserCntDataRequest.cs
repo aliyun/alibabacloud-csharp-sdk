@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeRtcUserCntDataRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can specify only one ID.</para>
+        /// <para>By default, all application IDs are queried.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yourAppId</para>
         /// </summary>
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The end time of the queried data. The time is displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The end time must be later than the start time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2018-01-29T01:00:00Z</para>
         /// </summary>
@@ -26,6 +32,9 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The time granularity at which the data is queried. Unit: seconds.</para>
+        /// <para>Valid values: <b>3600</b> (one hour) or <b>86400</b> (one day). Default value: <b>3600</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The service area. CN: China (default value).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CN</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ServiceArea { get; set; }
 
         /// <summary>
+        /// <para>The start time of the queried data. The time is displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2018-01-29T00:00:00Z</para>
         /// </summary>

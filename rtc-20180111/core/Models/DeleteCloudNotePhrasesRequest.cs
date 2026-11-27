@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DeleteCloudNotePhrasesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the application. You can create and query application IDs in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The hot word table parameters.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Phrase")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public DeleteCloudNotePhrasesRequestPhrase Phrase { get; set; }
         public class DeleteCloudNotePhrasesRequestPhrase : TeaModel {
             /// <summary>
+            /// <para>The ID of the hot word table.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

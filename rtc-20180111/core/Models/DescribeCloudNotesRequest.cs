@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>Channel ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>311</para>
         /// </summary>
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>Query range, closed interval of job start time, in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1712376532000</para>
         /// </summary>
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? EndTs { get; set; }
 
         /// <summary>
+        /// <para>Page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -45,6 +51,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -53,6 +61,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Query range, open interval of job start time, in milliseconds. If not specified, defaults to querying recordings from the last 3 days, with a maximum range of one year in the past.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1712376032000</para>
         /// </summary>
@@ -60,6 +70,9 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public long? StartTs { get; set; }
 
+        /// <summary>
+        /// <para>List of job TaskIds.</para>
+        /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]
         public List<string> TaskIds { get; set; }

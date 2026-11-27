@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class CreateCloudNotePhrasesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the hotword table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21088b2617489486958531017d0b19</para>
         /// </summary>

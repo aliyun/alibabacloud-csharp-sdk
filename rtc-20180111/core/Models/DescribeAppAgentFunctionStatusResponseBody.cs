@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Switch status. Valid values: enable (on) and disable (off).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>disable</para>
         /// </summary>

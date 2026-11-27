@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeMPULayoutInfoListRequest : TeaModel {
         /// <summary>
+        /// <para>Application ID. You can specify only one ID. Create or view IDs in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>Layout ID. To get a layout ID, see <a href="https://help.aliyun.com/document_detail/162192.html">CreateMPULayout</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? LayoutId { get; set; }
 
         /// <summary>
+        /// <para>Layout name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>LayoutName</para>
         /// </summary>
@@ -40,6 +45,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Page number. Default value: <b>1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -48,6 +55,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Number of entries per page. Default value: <b>10</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

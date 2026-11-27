@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class RtcSipMuteResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The error tracks.</para>
+        /// </summary>
         [NameInMap("ErrTracks")]
         [Validation(Required=false)]
         public List<RtcSipMuteResponseBodyErrTracks> ErrTracks { get; set; }
         public class RtcSipMuteResponseBodyErrTracks : TeaModel {
             /// <summary>
-            /// <para>ErrMsg。</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>participant does not existed.</para>
@@ -24,6 +27,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string ErrMsg { get; set; }
 
             /// <summary>
+            /// <para>The user ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12</para>
             /// </summary>
@@ -32,7 +37,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>OperationId。</para>
+            /// <para>The operation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12122121</para>
@@ -44,6 +49,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E7997404-5858-5C4D-94E4-33677412ACDC</para>
         /// </summary>

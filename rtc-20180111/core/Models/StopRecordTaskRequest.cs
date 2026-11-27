@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class StopRecordTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. Create and query the ID in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The task ID. Only a single ID is supported. The value must be the same as the TaskId parameter of the <a href="https://help.aliyun.com/document_detail/193528.html">StartRecordTask</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

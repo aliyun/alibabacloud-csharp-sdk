@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DeleteCloudNotePhrasesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the hot word table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21088b2617489486958531017d0b19</para>
         /// </summary>

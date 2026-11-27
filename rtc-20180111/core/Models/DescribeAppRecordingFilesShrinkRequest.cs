@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeAppRecordingFilesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>APP ID。</para>
+        /// <para>App ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>Channel ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>311</para>
         /// </summary>
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The query range specifies the start time of the recording task. It is defined as a closed interval and measured in milliseconds (ms).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1712376532000</para>
         /// </summary>
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? EndTs { get; set; }
 
         /// <summary>
+        /// <para>Page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -45,6 +51,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>Number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -53,6 +61,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Query range start time (open interval) for recording tasks, in milliseconds. If not specified, defaults to the past 3 days. You can query recordings up to one year old.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1712376032000</para>
         /// </summary>
@@ -60,6 +70,9 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public long? StartTs { get; set; }
 
+        /// <summary>
+        /// <para>List of recording task IDs.</para>
+        /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]
         public string TaskIdsShrink { get; set; }

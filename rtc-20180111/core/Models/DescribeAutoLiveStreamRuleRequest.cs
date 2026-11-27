@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeAutoLiveStreamRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query the ID in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

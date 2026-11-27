@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class GetAgentResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6159ba01-6687-4fb2-a831-f0cd8d188648</para>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Start timestamp, in Unix time, measured in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1751513144838</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>Agent status. Valid values: 0 (not started), 1 (starting), 2 (running), 3 (stopping), 4 (stopped), or 5 (failed).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>End timestamp, in Unix time, measured in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1751513144838</para>
         /// </summary>

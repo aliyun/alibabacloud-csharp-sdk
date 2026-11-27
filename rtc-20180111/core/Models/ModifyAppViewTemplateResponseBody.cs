@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class ModifyAppViewTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>30D41049-D02D-1C21-86AE-B3E5FD805C27</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Template ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac7N****</para>
         /// </summary>

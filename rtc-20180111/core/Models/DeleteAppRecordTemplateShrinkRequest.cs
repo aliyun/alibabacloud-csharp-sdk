@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DeleteAppRecordTemplateShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can create and query the ID in the console. Only a single ID is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The idempotency parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>53200b81-b761-4c10-842a-a0726d97xxxx</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The template information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Template")]

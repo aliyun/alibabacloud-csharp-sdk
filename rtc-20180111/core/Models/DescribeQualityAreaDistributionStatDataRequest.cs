@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeQualityAreaDistributionStatDataRequest : TeaModel {
         /// <summary>
-        /// <para>APP ID</para>
+        /// <para>The app ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,14 +32,17 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? EndDate { get; set; }
 
         /// <summary>
+        /// <para>The name of the parent region. For example, the parent region of Hangzhou is Zhejiang Province, and the parameter is set to China_Zhejiang Province. If this parameter is left empty, the statistics are collected at the country level worldwide, such as China and the United Kingdom.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>中国</para>
+        /// <para>China_Zhejiang Province</para>
         /// </summary>
         [NameInMap("ParentArea")]
         [Validation(Required=false)]
         public string ParentArea { get; set; }
 
         /// <summary>
+        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac7N****</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeAppViewTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>B0A2FCBC-43A4-428F-BC1D-3F4F85837F76</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Template list</para>
+        /// </summary>
         [NameInMap("Templates")]
         [Validation(Required=false)]
         public List<DescribeAppViewTemplatesResponseBodyTemplates> Templates { get; set; }
         public class DescribeAppViewTemplatesResponseBodyTemplates : TeaModel {
             /// <summary>
+            /// <para>Creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-09-04T06:22:15Z</para>
             /// </summary>
@@ -31,11 +36,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>List of layout IDs</para>
+            /// </summary>
             [NameInMap("LayoutIds")]
             [Validation(Required=false)]
             public List<string> LayoutIds { get; set; }
 
             /// <summary>
+            /// <para>Encoding option</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -44,14 +54,18 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? MediaEncode { get; set; }
 
             /// <summary>
+            /// <para>Template name</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>模版名称</para>
+            /// <para>模板名称</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Template ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Bj6D****</para>
             /// </summary>
@@ -62,6 +76,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         }
 
         /// <summary>
+        /// <para>Total number of records</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -70,6 +86,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public long? TotalNum { get; set; }
 
         /// <summary>
+        /// <para>Total number of pages</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

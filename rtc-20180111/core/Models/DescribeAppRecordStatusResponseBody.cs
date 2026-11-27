@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
     public class DescribeAppRecordStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Recording status. Valid values: enable or disable.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>disable</para>
         /// </summary>
