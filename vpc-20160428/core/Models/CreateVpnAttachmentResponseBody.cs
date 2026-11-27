@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>Indicates whether the current task is successfully executed.</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The task is successfully executed.</description></item>
+        /// <item><description><b>false</b>: The task fails to be executed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -16640,6 +16640,250 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a rate limiting rule to throttle traffic from specified source CIDR blocks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a rate limiting rule for an enhanced Internet NAT gateway or a VPC NAT gateway. The term NAT gateway in this document refers to both types unless otherwise specified.
+        /// When you call this operation to add a rate limiting rule, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>The CreateNatRateLimitRule operation is asynchronous. The system returns a rate limiting rule ID, but the rule is not immediately added. The addition task is still running in the background.<list type="bullet">
+        /// <item><description>If the rule is in the Creating state, the source IP address rate limiting rule is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>If the rule is in the Available state, the source IP address rate limiting rule is created.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNatRateLimitRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNatRateLimitRuleResponse
+        /// </returns>
+        public CreateNatRateLimitRuleResponse CreateNatRateLimitRuleWithOptions(CreateNatRateLimitRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BandwidthLimit))
+            {
+                query["BandwidthLimit"] = request.BandwidthLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchType))
+            {
+                query["MatchType"] = request.MatchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleDescription))
+            {
+                query["RuleDescription"] = request.RuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCIDRs))
+            {
+                query["SourceCIDRs"] = request.SourceCIDRs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelIndex))
+            {
+                query["TunnelIndex"] = request.TunnelIndex;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNatRateLimitRule",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNatRateLimitRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rate limiting rule to throttle traffic from specified source CIDR blocks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a rate limiting rule for an enhanced Internet NAT gateway or a VPC NAT gateway. The term NAT gateway in this document refers to both types unless otherwise specified.
+        /// When you call this operation to add a rate limiting rule, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>The CreateNatRateLimitRule operation is asynchronous. The system returns a rate limiting rule ID, but the rule is not immediately added. The addition task is still running in the background.<list type="bullet">
+        /// <item><description>If the rule is in the Creating state, the source IP address rate limiting rule is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>If the rule is in the Available state, the source IP address rate limiting rule is created.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNatRateLimitRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNatRateLimitRuleResponse
+        /// </returns>
+        public async Task<CreateNatRateLimitRuleResponse> CreateNatRateLimitRuleWithOptionsAsync(CreateNatRateLimitRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BandwidthLimit))
+            {
+                query["BandwidthLimit"] = request.BandwidthLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchType))
+            {
+                query["MatchType"] = request.MatchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleDescription))
+            {
+                query["RuleDescription"] = request.RuleDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCIDRs))
+            {
+                query["SourceCIDRs"] = request.SourceCIDRs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TunnelIndex))
+            {
+                query["TunnelIndex"] = request.TunnelIndex;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNatRateLimitRule",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNatRateLimitRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rate limiting rule to throttle traffic from specified source CIDR blocks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a rate limiting rule for an enhanced Internet NAT gateway or a VPC NAT gateway. The term NAT gateway in this document refers to both types unless otherwise specified.
+        /// When you call this operation to add a rate limiting rule, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>The CreateNatRateLimitRule operation is asynchronous. The system returns a rate limiting rule ID, but the rule is not immediately added. The addition task is still running in the background.<list type="bullet">
+        /// <item><description>If the rule is in the Creating state, the source IP address rate limiting rule is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>If the rule is in the Available state, the source IP address rate limiting rule is created.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNatRateLimitRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNatRateLimitRuleResponse
+        /// </returns>
+        public CreateNatRateLimitRuleResponse CreateNatRateLimitRule(CreateNatRateLimitRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateNatRateLimitRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rate limiting rule to throttle traffic from specified source CIDR blocks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a rate limiting rule for an enhanced Internet NAT gateway or a VPC NAT gateway. The term NAT gateway in this document refers to both types unless otherwise specified.
+        /// When you call this operation to add a rate limiting rule, take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>The CreateNatRateLimitRule operation is asynchronous. The system returns a rate limiting rule ID, but the rule is not immediately added. The addition task is still running in the background.<list type="bullet">
+        /// <item><description>If the rule is in the Creating state, the source IP address rate limiting rule is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>If the rule is in the Available state, the source IP address rate limiting rule is created.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNatRateLimitRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNatRateLimitRuleResponse
+        /// </returns>
+        public async Task<CreateNatRateLimitRuleResponse> CreateNatRateLimitRuleAsync(CreateNatRateLimitRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateNatRateLimitRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a network ACL.</para>
         /// </summary>
         /// 
@@ -18126,26 +18370,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns an instance ID, but the addition of the route is not immediately completed. A background startup task is still running. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the addition status of the route:<list type="bullet">
-        /// <item><description>When the route is in the <b>Creating</b> state, it indicates that the route is being added.</description></item>
-        /// <item><description>When the route is in the <b>Created</b> state, it indicates that the route addition is complete.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you send the request, the system returns an instance ID, but custom route entry is not immediately created. A background task is still running. You can call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the status of custom route entry:<list type="bullet">
+        /// <item><description>If custom route entry is in the <b>Creating</b> state, custom route entry is being created.</description></item>
+        /// <item><description>If custom route entry is in the <b>Created</b> state, custom route entry is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateRouteEntry</b> operation does not support adding a custom route entry concurrently in the same VPC or on the same VBR.</description></item>
-        /// <item><description>If you invoke the <b>CreateRouteEntry</b> operation concurrently, the system may return the <b>TaskConflict</b> error code. Retry the operation as needed.
-        /// <b>When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
-        /// <para>If the route entry that you want to add is a prefix list route, the system checks whether the sum of the number of existing routes and the maximum number of route entries in the prefix list exceeds the route quota.</para>
+        /// <item><description>You cannot use the <b>CreateRouteEntry</b> operation to concurrently create custom route entries in the same VPC or on the same VBR.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation may return the <b>TaskConflict</b> error code in case of concurrency. Retry the request as needed.
+        /// <b>When you use this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
+        /// <para>When the route to be added is a prefix list route, the route quota is calculated based on whether the sum of the number of existing routes and the maximum number of route entries for the prefix list route exceeds the route quota limit.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>You can add up to 200 custom route entries to a route table.</description></item>
+        /// <item><description>A route table can contain at most 200 custom route entries.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of the vSwitch, but cannot be contained by the CIDR block of the vSwitch.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. An incorrect configuration may cause cloud services to become inaccessible.</notice></description></item>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></description></item>
         /// <item><description>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).</description></item>
         /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.</description></item>
-        /// <item><description>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).</description></item>
+        /// <item><description>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).</description></item>
         /// <item><description>The next hop (<b>NextHopId</b>) of a custom route entry must be in the same VPC as the route table.</description></item>
-        /// <item><description>You can use the <b>NextHopList</b> parameter settings to configure ECMP routing:<list type="bullet">
+        /// <item><description>You can configure equal-cost multi-path (ECMP) routing through the <b>NextHopList</b> parameter settings:<list type="bullet">
         /// <item><description><para>When you add a regular (non-ECMP) custom route, you must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.   </para>
         /// </description></item>
         /// <item><description><para>When you add an ECMP route, you must specify the <b>DestinationCidrBlock</b> and <b>NextHopList</b> parameters, and you cannot specify the <b>NextHopType</b> and <b>NextHopId</b> parameters.</para>
@@ -18153,26 +18397,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para><b>When you call this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
+        /// <para><b>When you use this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>You can add up to 200 custom route entries to a route table.  </para>
+        /// <item><description><para>A route table can contain at most 200 custom route entries.  </para>
         /// </description></item>
         /// <item><description><para>The <b>NextHopList</b> parameter is not supported.   </para>
         /// </description></item>
         /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. A configuration error may cause cloud services to become inaccessible.</notice></para>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></para>
         /// </description></item>
         /// <item><description><para>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).   </para>
         /// </description></item>
         /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.   </para>
         /// </description></item>
-        /// <item><description><para>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).  </para>
+        /// <item><description><para>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).  </para>
         /// </description></item>
         /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be a vRouter interface associated with the VBR.  </para>
         /// </description></item>
-        /// <item><description><para>You can create a route entry on a VBR only when the VBR is in the <b>Active</b> state, the associated Express Connect circuit is in the <b>Enabled</b> state, and the VBR is not locked due to overdue payments.  </para>
+        /// <item><description><para>You can create a route entry on a VBR only when the VBR is in the <b>Active</b> state, the associated Express Connect circuit is in the <b>Enabled</b> state, and the VBR is not locked due to an overdue payment.  </para>
         /// </description></item>
-        /// <item><description><para>Only regular (non-ECMP) routes are supported. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
+        /// <item><description><para>Only regular (non-ECMP) routes can be added. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -18274,26 +18518,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns an instance ID, but the addition of the route is not immediately completed. A background startup task is still running. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the addition status of the route:<list type="bullet">
-        /// <item><description>When the route is in the <b>Creating</b> state, it indicates that the route is being added.</description></item>
-        /// <item><description>When the route is in the <b>Created</b> state, it indicates that the route addition is complete.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you send the request, the system returns an instance ID, but custom route entry is not immediately created. A background task is still running. You can call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the status of custom route entry:<list type="bullet">
+        /// <item><description>If custom route entry is in the <b>Creating</b> state, custom route entry is being created.</description></item>
+        /// <item><description>If custom route entry is in the <b>Created</b> state, custom route entry is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateRouteEntry</b> operation does not support adding a custom route entry concurrently in the same VPC or on the same VBR.</description></item>
-        /// <item><description>If you invoke the <b>CreateRouteEntry</b> operation concurrently, the system may return the <b>TaskConflict</b> error code. Retry the operation as needed.
-        /// <b>When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
-        /// <para>If the route entry that you want to add is a prefix list route, the system checks whether the sum of the number of existing routes and the maximum number of route entries in the prefix list exceeds the route quota.</para>
+        /// <item><description>You cannot use the <b>CreateRouteEntry</b> operation to concurrently create custom route entries in the same VPC or on the same VBR.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation may return the <b>TaskConflict</b> error code in case of concurrency. Retry the request as needed.
+        /// <b>When you use this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
+        /// <para>When the route to be added is a prefix list route, the route quota is calculated based on whether the sum of the number of existing routes and the maximum number of route entries for the prefix list route exceeds the route quota limit.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>You can add up to 200 custom route entries to a route table.</description></item>
+        /// <item><description>A route table can contain at most 200 custom route entries.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of the vSwitch, but cannot be contained by the CIDR block of the vSwitch.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. An incorrect configuration may cause cloud services to become inaccessible.</notice></description></item>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></description></item>
         /// <item><description>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).</description></item>
         /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.</description></item>
-        /// <item><description>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).</description></item>
+        /// <item><description>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).</description></item>
         /// <item><description>The next hop (<b>NextHopId</b>) of a custom route entry must be in the same VPC as the route table.</description></item>
-        /// <item><description>You can use the <b>NextHopList</b> parameter settings to configure ECMP routing:<list type="bullet">
+        /// <item><description>You can configure equal-cost multi-path (ECMP) routing through the <b>NextHopList</b> parameter settings:<list type="bullet">
         /// <item><description><para>When you add a regular (non-ECMP) custom route, you must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.   </para>
         /// </description></item>
         /// <item><description><para>When you add an ECMP route, you must specify the <b>DestinationCidrBlock</b> and <b>NextHopList</b> parameters, and you cannot specify the <b>NextHopType</b> and <b>NextHopId</b> parameters.</para>
@@ -18301,26 +18545,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para><b>When you call this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
+        /// <para><b>When you use this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>You can add up to 200 custom route entries to a route table.  </para>
+        /// <item><description><para>A route table can contain at most 200 custom route entries.  </para>
         /// </description></item>
         /// <item><description><para>The <b>NextHopList</b> parameter is not supported.   </para>
         /// </description></item>
         /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. A configuration error may cause cloud services to become inaccessible.</notice></para>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></para>
         /// </description></item>
         /// <item><description><para>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).   </para>
         /// </description></item>
         /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.   </para>
         /// </description></item>
-        /// <item><description><para>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).  </para>
+        /// <item><description><para>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).  </para>
         /// </description></item>
         /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be a vRouter interface associated with the VBR.  </para>
         /// </description></item>
-        /// <item><description><para>You can create a route entry on a VBR only when the VBR is in the <b>Active</b> state, the associated Express Connect circuit is in the <b>Enabled</b> state, and the VBR is not locked due to overdue payments.  </para>
+        /// <item><description><para>You can create a route entry on a VBR only when the VBR is in the <b>Active</b> state, the associated Express Connect circuit is in the <b>Enabled</b> state, and the VBR is not locked due to an overdue payment.  </para>
         /// </description></item>
-        /// <item><description><para>Only regular (non-ECMP) routes are supported. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
+        /// <item><description><para>Only regular (non-ECMP) routes can be added. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -18422,26 +18666,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns an instance ID, but the addition of the route is not immediately completed. A background startup task is still running. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the addition status of the route:<list type="bullet">
-        /// <item><description>When the route is in the <b>Creating</b> state, it indicates that the route is being added.</description></item>
-        /// <item><description>When the route is in the <b>Created</b> state, it indicates that the route addition is complete.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you send the request, the system returns an instance ID, but custom route entry is not immediately created. A background task is still running. You can call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the status of custom route entry:<list type="bullet">
+        /// <item><description>If custom route entry is in the <b>Creating</b> state, custom route entry is being created.</description></item>
+        /// <item><description>If custom route entry is in the <b>Created</b> state, custom route entry is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateRouteEntry</b> operation does not support adding a custom route entry concurrently in the same VPC or on the same VBR.</description></item>
-        /// <item><description>If you invoke the <b>CreateRouteEntry</b> operation concurrently, the system may return the <b>TaskConflict</b> error code. Retry the operation as needed.
-        /// <b>When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
-        /// <para>If the route entry that you want to add is a prefix list route, the system checks whether the sum of the number of existing routes and the maximum number of route entries in the prefix list exceeds the route quota.</para>
+        /// <item><description>You cannot use the <b>CreateRouteEntry</b> operation to concurrently create custom route entries in the same VPC or on the same VBR.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation may return the <b>TaskConflict</b> error code in case of concurrency. Retry the request as needed.
+        /// <b>When you use this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
+        /// <para>When the route to be added is a prefix list route, the route quota is calculated based on whether the sum of the number of existing routes and the maximum number of route entries for the prefix list route exceeds the route quota limit.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>You can add up to 200 custom route entries to a route table.</description></item>
+        /// <item><description>A route table can contain at most 200 custom route entries.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of the vSwitch, but cannot be contained by the CIDR block of the vSwitch.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. An incorrect configuration may cause cloud services to become inaccessible.</notice></description></item>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></description></item>
         /// <item><description>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).</description></item>
         /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.</description></item>
-        /// <item><description>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).</description></item>
+        /// <item><description>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).</description></item>
         /// <item><description>The next hop (<b>NextHopId</b>) of a custom route entry must be in the same VPC as the route table.</description></item>
-        /// <item><description>You can use the <b>NextHopList</b> parameter settings to configure ECMP routing:<list type="bullet">
+        /// <item><description>You can configure equal-cost multi-path (ECMP) routing through the <b>NextHopList</b> parameter settings:<list type="bullet">
         /// <item><description><para>When you add a regular (non-ECMP) custom route, you must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.   </para>
         /// </description></item>
         /// <item><description><para>When you add an ECMP route, you must specify the <b>DestinationCidrBlock</b> and <b>NextHopList</b> parameters, and you cannot specify the <b>NextHopType</b> and <b>NextHopId</b> parameters.</para>
@@ -18449,26 +18693,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para><b>When you call this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
+        /// <para><b>When you use this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>You can add up to 200 custom route entries to a route table.  </para>
+        /// <item><description><para>A route table can contain at most 200 custom route entries.  </para>
         /// </description></item>
         /// <item><description><para>The <b>NextHopList</b> parameter is not supported.   </para>
         /// </description></item>
         /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. A configuration error may cause cloud services to become inaccessible.</notice></para>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></para>
         /// </description></item>
         /// <item><description><para>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).   </para>
         /// </description></item>
         /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.   </para>
         /// </description></item>
-        /// <item><description><para>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).  </para>
+        /// <item><description><para>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).  </para>
         /// </description></item>
         /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be a vRouter interface associated with the VBR.  </para>
         /// </description></item>
-        /// <item><description><para>You can create a route entry on a VBR only when the VBR is in the <b>Active</b> state, the associated Express Connect circuit is in the <b>Enabled</b> state, and the VBR is not locked due to overdue payments.  </para>
+        /// <item><description><para>You can create a route entry on a VBR only when the VBR is in the <b>Active</b> state, the associated Express Connect circuit is in the <b>Enabled</b> state, and the VBR is not locked due to an overdue payment.  </para>
         /// </description></item>
-        /// <item><description><para>Only regular (non-ECMP) routes are supported. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
+        /// <item><description><para>Only regular (non-ECMP) routes can be added. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -18494,26 +18738,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns an instance ID, but the addition of the route is not immediately completed. A background startup task is still running. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the addition status of the route:<list type="bullet">
-        /// <item><description>When the route is in the <b>Creating</b> state, it indicates that the route is being added.</description></item>
-        /// <item><description>When the route is in the <b>Created</b> state, it indicates that the route addition is complete.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you send the request, the system returns an instance ID, but custom route entry is not immediately created. A background task is still running. You can call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the status of custom route entry:<list type="bullet">
+        /// <item><description>If custom route entry is in the <b>Creating</b> state, custom route entry is being created.</description></item>
+        /// <item><description>If custom route entry is in the <b>Created</b> state, custom route entry is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateRouteEntry</b> operation does not support adding a custom route entry concurrently in the same VPC or on the same VBR.</description></item>
-        /// <item><description>If you invoke the <b>CreateRouteEntry</b> operation concurrently, the system may return the <b>TaskConflict</b> error code. Retry the operation as needed.
-        /// <b>When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
-        /// <para>If the route entry that you want to add is a prefix list route, the system checks whether the sum of the number of existing routes and the maximum number of route entries in the prefix list exceeds the route quota.</para>
+        /// <item><description>You cannot use the <b>CreateRouteEntry</b> operation to concurrently create custom route entries in the same VPC or on the same VBR.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation may return the <b>TaskConflict</b> error code in case of concurrency. Retry the request as needed.
+        /// <b>When you use this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
+        /// <para>When the route to be added is a prefix list route, the route quota is calculated based on whether the sum of the number of existing routes and the maximum number of route entries for the prefix list route exceeds the route quota limit.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>You can add up to 200 custom route entries to a route table.</description></item>
+        /// <item><description>A route table can contain at most 200 custom route entries.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of the vSwitch, but cannot be contained by the CIDR block of the vSwitch.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. An incorrect configuration may cause cloud services to become inaccessible.</notice></description></item>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></description></item>
         /// <item><description>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).</description></item>
         /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.</description></item>
-        /// <item><description>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).</description></item>
+        /// <item><description>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).</description></item>
         /// <item><description>The next hop (<b>NextHopId</b>) of a custom route entry must be in the same VPC as the route table.</description></item>
-        /// <item><description>You can use the <b>NextHopList</b> parameter settings to configure ECMP routing:<list type="bullet">
+        /// <item><description>You can configure equal-cost multi-path (ECMP) routing through the <b>NextHopList</b> parameter settings:<list type="bullet">
         /// <item><description><para>When you add a regular (non-ECMP) custom route, you must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.   </para>
         /// </description></item>
         /// <item><description><para>When you add an ECMP route, you must specify the <b>DestinationCidrBlock</b> and <b>NextHopList</b> parameters, and you cannot specify the <b>NextHopType</b> and <b>NextHopId</b> parameters.</para>
@@ -18521,26 +18765,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para><b>When you call this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
+        /// <para><b>When you use this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>You can add up to 200 custom route entries to a route table.  </para>
+        /// <item><description><para>A route table can contain at most 200 custom route entries.  </para>
         /// </description></item>
         /// <item><description><para>The <b>NextHopList</b> parameter is not supported.   </para>
         /// </description></item>
         /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. A configuration error may cause cloud services to become inaccessible.</notice></para>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></para>
         /// </description></item>
         /// <item><description><para>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).   </para>
         /// </description></item>
         /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.   </para>
         /// </description></item>
-        /// <item><description><para>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).  </para>
+        /// <item><description><para>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).  </para>
         /// </description></item>
         /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be a vRouter interface associated with the VBR.  </para>
         /// </description></item>
-        /// <item><description><para>You can create a route entry on a VBR only when the VBR is in the <b>Active</b> state, the associated Express Connect circuit is in the <b>Enabled</b> state, and the VBR is not locked due to overdue payments.  </para>
+        /// <item><description><para>You can create a route entry on a VBR only when the VBR is in the <b>Active</b> state, the associated Express Connect circuit is in the <b>Enabled</b> state, and the VBR is not locked due to an overdue payment.  </para>
         /// </description></item>
-        /// <item><description><para>Only regular (non-ECMP) routes are supported. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
+        /// <item><description><para>Only regular (non-ECMP) routes can be added. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -18822,14 +19066,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteTargetGroup</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation task continues in the background. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
-        /// <item><description>If the routing target group is in the <b>Pending</b> state, the routing target group is being created.</description></item>
-        /// <item><description>If the routing target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the routing target group is created.</description></item>
+        /// <item><description>The <b>CreateRouteTargetGroup</b> operation is asynchronous. The system returns an instance ID, but the routing target group instance is not yet created and the background creation node is still in progress. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
+        /// <item><description>When the routing target group is in the <b>Pending</b> state, it indicates that the routing target group is being created.</description></item>
+        /// <item><description>When the routing target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, it indicates that the routing target group is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Active/standby mode</b>: When you create a routing target group, configure primary and secondary instances that are in different zones and of the same type.</description></item>
-        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks are successful.</description></item>
-        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</description></item>
+        /// <item><description><b>Active/standby pattern</b>: When you create a routing target group, you must configure primary and secondary instances that are of the same type and located in different zones.</description></item>
+        /// <item><description><b>Primary instance</b>: The weight is 100. It carries all traffic under normal circumstances and takes effect when the health check is normal.</description></item>
+        /// <item><description><b>Secondary instance</b>: The weight is 0. It takes over traffic after the primary instance fails and serves as disaster recovery and backup.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18918,14 +19162,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteTargetGroup</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation task continues in the background. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
-        /// <item><description>If the routing target group is in the <b>Pending</b> state, the routing target group is being created.</description></item>
-        /// <item><description>If the routing target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the routing target group is created.</description></item>
+        /// <item><description>The <b>CreateRouteTargetGroup</b> operation is asynchronous. The system returns an instance ID, but the routing target group instance is not yet created and the background creation node is still in progress. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
+        /// <item><description>When the routing target group is in the <b>Pending</b> state, it indicates that the routing target group is being created.</description></item>
+        /// <item><description>When the routing target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, it indicates that the routing target group is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Active/standby mode</b>: When you create a routing target group, configure primary and secondary instances that are in different zones and of the same type.</description></item>
-        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks are successful.</description></item>
-        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</description></item>
+        /// <item><description><b>Active/standby pattern</b>: When you create a routing target group, you must configure primary and secondary instances that are of the same type and located in different zones.</description></item>
+        /// <item><description><b>Primary instance</b>: The weight is 100. It carries all traffic under normal circumstances and takes effect when the health check is normal.</description></item>
+        /// <item><description><b>Secondary instance</b>: The weight is 0. It takes over traffic after the primary instance fails and serves as disaster recovery and backup.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19014,14 +19258,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteTargetGroup</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation task continues in the background. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
-        /// <item><description>If the routing target group is in the <b>Pending</b> state, the routing target group is being created.</description></item>
-        /// <item><description>If the routing target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the routing target group is created.</description></item>
+        /// <item><description>The <b>CreateRouteTargetGroup</b> operation is asynchronous. The system returns an instance ID, but the routing target group instance is not yet created and the background creation node is still in progress. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
+        /// <item><description>When the routing target group is in the <b>Pending</b> state, it indicates that the routing target group is being created.</description></item>
+        /// <item><description>When the routing target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, it indicates that the routing target group is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Active/standby mode</b>: When you create a routing target group, configure primary and secondary instances that are in different zones and of the same type.</description></item>
-        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks are successful.</description></item>
-        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</description></item>
+        /// <item><description><b>Active/standby pattern</b>: When you create a routing target group, you must configure primary and secondary instances that are of the same type and located in different zones.</description></item>
+        /// <item><description><b>Primary instance</b>: The weight is 100. It carries all traffic under normal circumstances and takes effect when the health check is normal.</description></item>
+        /// <item><description><b>Secondary instance</b>: The weight is 0. It takes over traffic after the primary instance fails and serves as disaster recovery and backup.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19046,14 +19290,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteTargetGroup</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation task continues in the background. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
-        /// <item><description>If the routing target group is in the <b>Pending</b> state, the routing target group is being created.</description></item>
-        /// <item><description>If the routing target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the routing target group is created.</description></item>
+        /// <item><description>The <b>CreateRouteTargetGroup</b> operation is asynchronous. The system returns an instance ID, but the routing target group instance is not yet created and the background creation node is still in progress. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
+        /// <item><description>When the routing target group is in the <b>Pending</b> state, it indicates that the routing target group is being created.</description></item>
+        /// <item><description>When the routing target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, it indicates that the routing target group is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Active/standby mode</b>: When you create a routing target group, configure primary and secondary instances that are in different zones and of the same type.</description></item>
-        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks are successful.</description></item>
-        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</description></item>
+        /// <item><description><b>Active/standby pattern</b>: When you create a routing target group, you must configure primary and secondary instances that are of the same type and located in different zones.</description></item>
+        /// <item><description><b>Primary instance</b>: The weight is 100. It carries all traffic under normal circumstances and takes effect when the health check is normal.</description></item>
+        /// <item><description><b>Secondary instance</b>: The weight is 0. It takes over traffic after the primary instance fails and serves as disaster recovery and backup.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33458,9 +33702,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteRouteTargetGroup</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the route target group is not yet deleted. The deletion task continues to run in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<list type="bullet">
+        /// <item><description>The <b>DeleteRouteTargetGroup</b> operation is asynchronous. After you call this operation, the system returns a request ID, but the route target group is not immediately deleted. The deletion task is still running in the background. You can call the ListRouteTargetGroup operation to query the deletion status of the route target group:<list type="bullet">
         /// <item><description>If the route target group is in the <b>Deleting</b> state, the route target group is being deleted.</description></item>
-        /// <item><description>If the specified route target group cannot be found, the route target group is deleted.</description></item>
+        /// <item><description>If the specified route target group cannot be queried, the route target group is deleted.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -33531,9 +33775,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteRouteTargetGroup</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the route target group is not yet deleted. The deletion task continues to run in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<list type="bullet">
+        /// <item><description>The <b>DeleteRouteTargetGroup</b> operation is asynchronous. After you call this operation, the system returns a request ID, but the route target group is not immediately deleted. The deletion task is still running in the background. You can call the ListRouteTargetGroup operation to query the deletion status of the route target group:<list type="bullet">
         /// <item><description>If the route target group is in the <b>Deleting</b> state, the route target group is being deleted.</description></item>
-        /// <item><description>If the specified route target group cannot be found, the route target group is deleted.</description></item>
+        /// <item><description>If the specified route target group cannot be queried, the route target group is deleted.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -33604,9 +33848,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteRouteTargetGroup</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the route target group is not yet deleted. The deletion task continues to run in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<list type="bullet">
+        /// <item><description>The <b>DeleteRouteTargetGroup</b> operation is asynchronous. After you call this operation, the system returns a request ID, but the route target group is not immediately deleted. The deletion task is still running in the background. You can call the ListRouteTargetGroup operation to query the deletion status of the route target group:<list type="bullet">
         /// <item><description>If the route target group is in the <b>Deleting</b> state, the route target group is being deleted.</description></item>
-        /// <item><description>If the specified route target group cannot be found, the route target group is deleted.</description></item>
+        /// <item><description>If the specified route target group cannot be queried, the route target group is deleted.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -33633,9 +33877,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>DeleteRouteTargetGroup</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the route target group is not yet deleted. The deletion task continues to run in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<list type="bullet">
+        /// <item><description>The <b>DeleteRouteTargetGroup</b> operation is asynchronous. After you call this operation, the system returns a request ID, but the route target group is not immediately deleted. The deletion task is still running in the background. You can call the ListRouteTargetGroup operation to query the deletion status of the route target group:<list type="bullet">
         /// <item><description>If the route target group is in the <b>Deleting</b> state, the route target group is being deleted.</description></item>
-        /// <item><description>If the specified route target group cannot be found, the route target group is deleted.</description></item>
+        /// <item><description>If the specified route target group cannot be queried, the route target group is deleted.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -46656,7 +46900,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available regions.</para>
+        /// <para>Queries available regions by calling the DescribeRegions operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46718,7 +46962,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available regions.</para>
+        /// <para>Queries available regions by calling the DescribeRegions operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46780,7 +47024,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available regions.</para>
+        /// <para>Queries available regions by calling the DescribeRegions operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46798,7 +47042,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available regions.</para>
+        /// <para>Queries available regions by calling the DescribeRegions operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61432,6 +61676,190 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the list of rate limiting rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNatRateLimitRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNatRateLimitRulesResponse
+        /// </returns>
+        public ListNatRateLimitRulesResponse ListNatRateLimitRulesWithOptions(ListNatRateLimitRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleIds))
+            {
+                query["RuleIds"] = request.RuleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCIDR))
+            {
+                query["SourceCIDR"] = request.SourceCIDR;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNatRateLimitRules",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNatRateLimitRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of rate limiting rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNatRateLimitRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNatRateLimitRulesResponse
+        /// </returns>
+        public async Task<ListNatRateLimitRulesResponse> ListNatRateLimitRulesWithOptionsAsync(ListNatRateLimitRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleIds))
+            {
+                query["RuleIds"] = request.RuleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCIDR))
+            {
+                query["SourceCIDR"] = request.SourceCIDR;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNatRateLimitRules",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNatRateLimitRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of rate limiting rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNatRateLimitRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNatRateLimitRulesResponse
+        /// </returns>
+        public ListNatRateLimitRulesResponse ListNatRateLimitRules(ListNatRateLimitRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListNatRateLimitRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of rate limiting rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNatRateLimitRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNatRateLimitRulesResponse
+        /// </returns>
+        public async Task<ListNatRateLimitRulesResponse> ListNatRateLimitRulesAsync(ListNatRateLimitRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListNatRateLimitRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the device-level capabilities supported by an Express Connect circuit.</para>
         /// </summary>
         /// 
@@ -62224,12 +62652,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists route target groups.</para>
+        /// <para>Queries route target groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of route target groups.</para>
+        /// <para>Queries route target groups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -62307,12 +62735,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists route target groups.</para>
+        /// <para>Queries route target groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of route target groups.</para>
+        /// <para>Queries route target groups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -62390,12 +62818,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists route target groups.</para>
+        /// <para>Queries route target groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of route target groups.</para>
+        /// <para>Queries route target groups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -62413,12 +62841,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists route target groups.</para>
+        /// <para>Queries route target groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of route target groups.</para>
+        /// <para>Queries route target groups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -74380,18 +74808,18 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a specified vSwitch.</para>
+        /// <para>Modifies the configurations of a specified vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyVSwitchAttribute</b> is an asynchronous operation. After you call this operation, the system returns a request ID, but the vSwitch configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the modification status of the vSwitch:<list type="bullet">
-        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the configuration is being modified.</description></item>
+        /// <item><description>The <b>ModifyVSwitchAttribute</b> operation is asynchronous. The system returns a request ID, but the configurations of the vSwitch are not immediately modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the modification status of the vSwitch:<list type="bullet">
+        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the configurations of the vSwitch are being modified.</description></item>
         /// <item><description>If the vSwitch is in the <b>Available</b> state, the vSwitch is available.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>ModifyVSwitchAttribute</b> does not support concurrent modifications to the same vSwitch.</description></item>
+        /// <item><description>The <b>ModifyVSwitchAttribute</b> operation does not support concurrent modifications to the configurations of the same vSwitch.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -74482,18 +74910,18 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a specified vSwitch.</para>
+        /// <para>Modifies the configurations of a specified vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyVSwitchAttribute</b> is an asynchronous operation. After you call this operation, the system returns a request ID, but the vSwitch configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the modification status of the vSwitch:<list type="bullet">
-        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the configuration is being modified.</description></item>
+        /// <item><description>The <b>ModifyVSwitchAttribute</b> operation is asynchronous. The system returns a request ID, but the configurations of the vSwitch are not immediately modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the modification status of the vSwitch:<list type="bullet">
+        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the configurations of the vSwitch are being modified.</description></item>
         /// <item><description>If the vSwitch is in the <b>Available</b> state, the vSwitch is available.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>ModifyVSwitchAttribute</b> does not support concurrent modifications to the same vSwitch.</description></item>
+        /// <item><description>The <b>ModifyVSwitchAttribute</b> operation does not support concurrent modifications to the configurations of the same vSwitch.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -74584,18 +75012,18 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a specified vSwitch.</para>
+        /// <para>Modifies the configurations of a specified vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyVSwitchAttribute</b> is an asynchronous operation. After you call this operation, the system returns a request ID, but the vSwitch configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the modification status of the vSwitch:<list type="bullet">
-        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the configuration is being modified.</description></item>
+        /// <item><description>The <b>ModifyVSwitchAttribute</b> operation is asynchronous. The system returns a request ID, but the configurations of the vSwitch are not immediately modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the modification status of the vSwitch:<list type="bullet">
+        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the configurations of the vSwitch are being modified.</description></item>
         /// <item><description>If the vSwitch is in the <b>Available</b> state, the vSwitch is available.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>ModifyVSwitchAttribute</b> does not support concurrent modifications to the same vSwitch.</description></item>
+        /// <item><description>The <b>ModifyVSwitchAttribute</b> operation does not support concurrent modifications to the configurations of the same vSwitch.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -74614,18 +75042,18 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a specified vSwitch.</para>
+        /// <para>Modifies the configurations of a specified vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyVSwitchAttribute</b> is an asynchronous operation. After you call this operation, the system returns a request ID, but the vSwitch configuration has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> to query the modification status of the vSwitch:<list type="bullet">
-        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the configuration is being modified.</description></item>
+        /// <item><description>The <b>ModifyVSwitchAttribute</b> operation is asynchronous. The system returns a request ID, but the configurations of the vSwitch are not immediately modified. The modification task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the modification status of the vSwitch:<list type="bullet">
+        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the configurations of the vSwitch are being modified.</description></item>
         /// <item><description>If the vSwitch is in the <b>Available</b> state, the vSwitch is available.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>ModifyVSwitchAttribute</b> does not support concurrent modifications to the same vSwitch.</description></item>
+        /// <item><description>The <b>ModifyVSwitchAttribute</b> operation does not support concurrent modifications to the configurations of the same vSwitch.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -88500,15 +88928,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a route target group instance, including the name, description, and disabled members.</para>
+        /// <para>Updates the information about a route target group instance, including the name, description, and disabled members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>UpdateRouteTargetGroup</b> operation is asynchronous. The system returns a request ID, but the route target group is not yet updated. The update task is still running in the background. You can call the ListRouteTargetGroup operation to query the update status of the route target group:<list type="bullet">
-        /// <item><description>If the route target group is in the <b>Updating</b> state, the route target group is being updated.</description></item>
-        /// <item><description>If the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the route target group is updated.</description></item>
+        /// <item><description>The <b>UpdateRouteTargetGroup</b> operation is asynchronous. After you call this operation, the system returns a request ID, but the update task is still running in the background. You can call ListRouteTargetGroup to query the update status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Updating</b> state, the route target group is being updated.</description></item>
+        /// <item><description>When the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the update is complete.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -88581,15 +89009,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a route target group instance, including the name, description, and disabled members.</para>
+        /// <para>Updates the information about a route target group instance, including the name, description, and disabled members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>UpdateRouteTargetGroup</b> operation is asynchronous. The system returns a request ID, but the route target group is not yet updated. The update task is still running in the background. You can call the ListRouteTargetGroup operation to query the update status of the route target group:<list type="bullet">
-        /// <item><description>If the route target group is in the <b>Updating</b> state, the route target group is being updated.</description></item>
-        /// <item><description>If the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the route target group is updated.</description></item>
+        /// <item><description>The <b>UpdateRouteTargetGroup</b> operation is asynchronous. After you call this operation, the system returns a request ID, but the update task is still running in the background. You can call ListRouteTargetGroup to query the update status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Updating</b> state, the route target group is being updated.</description></item>
+        /// <item><description>When the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the update is complete.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -88662,15 +89090,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a route target group instance, including the name, description, and disabled members.</para>
+        /// <para>Updates the information about a route target group instance, including the name, description, and disabled members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>UpdateRouteTargetGroup</b> operation is asynchronous. The system returns a request ID, but the route target group is not yet updated. The update task is still running in the background. You can call the ListRouteTargetGroup operation to query the update status of the route target group:<list type="bullet">
-        /// <item><description>If the route target group is in the <b>Updating</b> state, the route target group is being updated.</description></item>
-        /// <item><description>If the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the route target group is updated.</description></item>
+        /// <item><description>The <b>UpdateRouteTargetGroup</b> operation is asynchronous. After you call this operation, the system returns a request ID, but the update task is still running in the background. You can call ListRouteTargetGroup to query the update status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Updating</b> state, the route target group is being updated.</description></item>
+        /// <item><description>When the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the update is complete.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -88691,15 +89119,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a route target group instance, including the name, description, and disabled members.</para>
+        /// <para>Updates the information about a route target group instance, including the name, description, and disabled members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>UpdateRouteTargetGroup</b> operation is asynchronous. The system returns a request ID, but the route target group is not yet updated. The update task is still running in the background. You can call the ListRouteTargetGroup operation to query the update status of the route target group:<list type="bullet">
-        /// <item><description>If the route target group is in the <b>Updating</b> state, the route target group is being updated.</description></item>
-        /// <item><description>If the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the route target group is updated.</description></item>
+        /// <item><description>The <b>UpdateRouteTargetGroup</b> operation is asynchronous. After you call this operation, the system returns a request ID, but the update task is still running in the background. You can call ListRouteTargetGroup to query the update status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Updating</b> state, the route target group is being updated.</description></item>
+        /// <item><description>When the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the update is complete.</description></item>
         /// </list>
         /// </description></item>
         /// </list>

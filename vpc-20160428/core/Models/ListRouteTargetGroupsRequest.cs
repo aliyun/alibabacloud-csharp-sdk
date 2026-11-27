@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListRouteTargetGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request is unique.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The IP version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
         /// </summary>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>50</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -38,7 +40,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member instance in the route target group. This parameter is used to filter route target groups that contain the specified member instance ID.</para>
+        /// <para>The ID of the member instance in the route target group.
+        /// Filters route target groups that contain the specified member instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ep-xxxx</para>
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string MemberId { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. Leave this parameter empty for the first query or when no subsequent query is required. For subsequent queries, set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The token for the next query. If this is the first query or no subsequent query is required, leave this parameter empty. If a subsequent query is required, set this parameter to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
@@ -79,7 +82,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of routing target group instance IDs. You can specify up to 50 instance IDs in a single query.</para>
+        /// <para>The IDs of the route target groups.
+        /// You can specify up to 50 instance IDs in a single query.</para>
         /// </summary>
         [NameInMap("RouteTargetGroupIds")]
         [Validation(Required=false)]
@@ -93,7 +97,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<ListRouteTargetGroupsRequestTag> Tag { get; set; }
         public class ListRouteTargetGroupsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot enter an empty string. A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -103,7 +108,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string. A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</para>
+            /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

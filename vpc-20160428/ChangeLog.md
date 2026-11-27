@@ -1,3 +1,8 @@
+2026-11-27 Version: 7.5.0
+- Support API CreateNatRateLimitRule.
+- Support API ListNatRateLimitRules.
+
+
 2026-11-26 Version: 7.4.1
 - Update API CreateNatGateway: add request parameters Ipv6Config.
 - Update API CreateRouteTargetGroup: add request parameters DryRun.

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ModifyRouteEntryRequest : TeaModel {
         /// <summary>
         /// <para>The description of the route entry.</para>
-        /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 1 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EntryDescription</para>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the route entry. Both IPv4 CIDR blocks and IPv6 CIDR blocks are supported.</para>
+        /// <para>The destination CIDR block of the route. IPv4 CIDR blocks and IPv6 CIDR blocks are supported.</para>
         /// <remarks>
         /// <para>If the <b>RouteEntryId</b> parameter is not specified, the <b>DestinationCidrBlock</b> and <b>RouteTableId</b> parameters are required.
-        /// To change the destination CIDR block of the routing entry to a <b>prefix list</b>, you must specify the <b>RouteEntryId</b> parameter. The <b>DestinationCidrBlock</b> parameter does not support prefix list CIDR blocks or prefix list instance IDs.</para>
+        /// To change the destination CIDR block of the route to a <b>prefix list</b>, you must specify the <b>RouteEntryId</b> parameter. The <b>DestinationCidrBlock</b> parameter does not support prefix list CIDR blocks or prefix list instance IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,16 +35,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
-        /// <para><b>true</b>: performs a dry run and does not modify the routing entry. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// <para><b>false</b> (default): sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the routing entry is modified.</para>
+        /// <para>Specifies whether to perform a dry run for this request. Valid values:</para>
+        /// <para><b>true</b>: The system performs a dry run and does not send the request to modify the route. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user has the required authorization, and whether the required parameters are specified. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <para><b>false</b> (default): The system sends a normal request. If the request passes the check, a 2xx HTTP status code is returned and the route is directly modified.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the next hop for the new routing entry.</para>
+        /// <para>The instance ID of the next hop for the new route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-bp17y37ytsenqyim****</para>
@@ -54,35 +54,35 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NewNextHopId { get; set; }
 
         /// <summary>
-        /// <para>The new next hop type of the routing entry. Valid values:</para>
+        /// <para>The new next hop type of the route. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Instance</b>: an ECS instance.</para>
+        /// <item><description><para><b>Instance</b>: ECS instance.</para>
         /// </description></item>
-        /// <item><description><para><b>HaVip</b>: a high-availability virtual IP address.  </para>
+        /// <item><description><para><b>HaVip</b>: high-availability virtual IP address.  </para>
         /// </description></item>
-        /// <item><description><para><b>RouterInterface</b>: a vRouter interface.</para>
+        /// <item><description><para><b>RouterInterface</b>: vRouter interface.</para>
         /// </description></item>
-        /// <item><description><para><b>NetworkInterface</b>: an elastic network interface controller (NIC).</para>
+        /// <item><description><para><b>NetworkInterface</b>: elastic network interfaces (ENIs) network interface controller (NIC).</para>
         /// </description></item>
-        /// <item><description><para><b>VpnGateway</b>: a VPN gateway.</para>
+        /// <item><description><para><b>VpnGateway</b>: VPN gateway.</para>
         /// </description></item>
-        /// <item><description><para><b>IPv6Gateway</b>: an IPv6 gateway.</para>
+        /// <item><description><para><b>IPv6Gateway</b>: IPv6 gateway.</para>
         /// </description></item>
-        /// <item><description><para><b>NatGateway</b>: a NAT gateway.</para>
+        /// <item><description><para><b>NatGateway</b>: NAT gateway.</para>
         /// </description></item>
-        /// <item><description><para><b>Attachment</b>: a transit router (TR).</para>
+        /// <item><description><para><b>Attachment</b>: forward router.</para>
         /// </description></item>
-        /// <item><description><para><b>VpcPeer</b>: a VPC peering connection.</para>
+        /// <item><description><para><b>VpcPeer</b>: VPC peering connection.</para>
         /// </description></item>
-        /// <item><description><para><b>Ipv4Gateway</b>: an IPv4 gateway.</para>
+        /// <item><description><para><b>Ipv4Gateway</b>: IPv4 gateway.</para>
         /// </description></item>
-        /// <item><description><para><b>GatewayEndpoint</b>: a gateway endpoint.</para>
+        /// <item><description><para><b>GatewayEndpoint</b>: gateway endpoint.</para>
         /// </description></item>
-        /// <item><description><para><b>Ecr</b>: an Express Connect Router (ECR).</para>
+        /// <item><description><para><b>Ecr</b>: Express Connect Router (ECR).</para>
         /// </description></item>
-        /// <item><description><para><b>GatewayLoadBalancerEndpoint</b>: a Gateway Load Balancer endpoint (GWLBe).</para>
+        /// <item><description><para><b>GatewayLoadBalancerEndpoint</b>: Gateway Load Balancer endpoint (GWLBe).</para>
         /// </description></item>
-        /// <item><description><para><b>RouteTargetGroup</b>: a routing target group.</para>
+        /// <item><description><para><b>RouteTargetGroup</b>: routing target group.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the route entry.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the route entry.</para>
-        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EntryName</para>

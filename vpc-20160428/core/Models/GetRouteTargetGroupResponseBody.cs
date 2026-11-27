@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The configuration mode of the route target group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Active-Standby</b>: Active/standby mode.</description></item>
+        /// <item><description><b>Active-Standby</b>: active/standby mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,6 +33,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The IP version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VPC to which the route target group belongs is deployed. You can call the DescribeRegions operation to query the region ID.</para>
+        /// <para>The ID of the region where the VPC to which the route target group belongs is deployed. You can call the DescribeRegions operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-qingdao</para>
@@ -83,7 +84,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteTargetGroupDescription { get; set; }
 
         /// <summary>
-        /// <para>The routing target group instance ID.</para>
+        /// <para>The ID of the route target group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rtg-xxxx</para>
@@ -115,7 +116,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <item><description><b>Enable</b>: Enabled.</description></item>
             /// <item><description><b>Disable</b>: Disabled.</description></item>
             /// </list>
-            /// <para>You can replace only a disabled route target group member with another instance. You cannot modify an enabled route target group member.</para>
+            /// <para>Only disabled route target group members can be replaced with other instances. Enabled route target group members cannot be modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Enable</para>
@@ -139,7 +140,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string HealthCheckStatus { get; set; }
 
             /// <summary>
-            /// <para>The routing target group member instance ID.</para>
+            /// <para>The instance ID of the route target group member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ep-xxxx</para>
@@ -149,9 +150,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string MemberId { get; set; }
 
             /// <summary>
-            /// <para>The type of the route target group member. Valid values:</para>
+            /// <para>The type of the route target group member.</para>
+            /// <para>Currently supported types:</para>
             /// <list type="bullet">
-            /// <item><description><b>GatewayLoadBalancerEndpoint</b>: Gateway load balancer endpoint.</description></item>
+            /// <item><description><b>GatewayLoadBalancerEndpoint</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,16 +181,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The status of the routing target group. Valid values:</para>
+        /// <para>The status of the route target group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Recovering</b>: The system is switching back to the primary instance.</description></item>
-        /// <item><description><b>Switched</b>: The active/standby switchover is completed.</description></item>
-        /// <item><description><b>Available</b>: The routing target group is available.</description></item>
-        /// <item><description><b>Abnormal</b>: Secondary instance failures.</description></item>
-        /// <item><description><b>Pending</b>: The routing target group is being created.</description></item>
-        /// <item><description><b>Switching</b>: An active/standby switchover is in progress.</description></item>
-        /// <item><description><b>Deleting</b>: The routing target group is being deleted.</description></item>
-        /// <item><description><b>Unavailable</b>: Both primary and secondary instances have instance failures.</description></item>
+        /// <item><description><b>Recovering</b>: Switching back to the primary instance.</description></item>
+        /// <item><description><b>Switched</b>: Primary and secondary instances switched.</description></item>
+        /// <item><description><b>Available</b>: Active.</description></item>
+        /// <item><description><b>Abnormal</b>: The secondary instance is abnormal.</description></item>
+        /// <item><description><b>Pending</b>: Creating.</description></item>
+        /// <item><description><b>Switching</b>: Switching between primary and secondary instances.</description></item>
+        /// <item><description><b>Deleting</b>: Delete in progress.</description></item>
+        /// <item><description><b>Unavailable</b>: Both primary and secondary instances are abnormal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

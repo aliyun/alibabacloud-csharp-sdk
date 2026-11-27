@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UpdateRouteTargetGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run without executing the actual operation.</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
+        /// <para>The IP version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
         /// </summary>
@@ -54,7 +59,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteTargetGroupDescription { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the routing target group.</para>
+        /// <para>The routing target group instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +93,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<UpdateRouteTargetGroupRequestRouteTargetMemberList> RouteTargetMemberList { get; set; }
         public class UpdateRouteTargetGroupRequestRouteTargetMemberList : TeaModel {
             /// <summary>
-            /// <para>The instance ID of the member in the routing target group.</para>
+            /// <para>The routing target group member instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ep-xxxx</para>
@@ -98,7 +103,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string MemberId { get; set; }
 
             /// <summary>
-            /// <para>The type of the member in the route target group.</para>
+            /// <para>The type of the route target group member.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>GatewayLoadBalancerEndpoint</b></description></item>
@@ -113,7 +118,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string MemberType { get; set; }
 
             /// <summary>
-            /// <para>The weight of the member in the route target group. Valid values:</para>
+            /// <para>The weight of the route target group member. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>100: The member is the primary instance.</description></item>
             /// <item><description>0: The member is the secondary instance.</description></item>

@@ -50,6 +50,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether DNS64 is enabled for the vSwitch. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: DNS64 is enabled.</description></item>
+        /// <item><description><b>false</b>: DNS64 is disabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -58,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableDns64 { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the IPv6 CIDR block is enabled and configured for the vSwitch. Valid values:</para>
+        /// <para>Specifies whether the IPv6 CIDR block feature is enabled and configured for the vSwitch. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Enabled.</description></item>
         /// <item><description><b>false</b>: Disabled.</description></item>
@@ -82,7 +88,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv6CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the vSwitch is an IPv6 single-stack vSwitch. Valid values:</para>
+        /// <para>Specifies whether the vSwitch is an IPv6 single-stack vSwitch. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The vSwitch is an IPv6 single-stack vSwitch.</description></item>
         /// <item><description>false: The vSwitch is not an IPv6 single-stack vSwitch.</description></item>
@@ -120,9 +126,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NetworkAclId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the resource owner.</para>
+        /// <para>The Alibaba Cloud account ID of the resource ownership.</para>
         /// <remarks>
-        /// <para>Notice: This value is of the Long type and may cause precision loss in some programming languages. Use it with caution.</para>
+        /// <para>Notice: This value is of the Long type. Precision loss may occur in some programming languages. Use it with caution.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -172,9 +178,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The type of the route table. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>System</b>: System route table.</para>
+            /// <item><description><para><b>System</b>: system route table.</para>
             /// </description></item>
-            /// <item><description><para><b>Custom</b>: Custom route table.</para>
+            /// <item><description><para><b>Custom</b>: custom route table.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -188,11 +194,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The share type of the vSwitch.</para>
+        /// <para>The sharing type of the vSwitch.</para>
         /// <list type="bullet">
-        /// <item><description>If the value is empty, the vSwitch is a standard vSwitch.</description></item>
-        /// <item><description>If the value is <b>Shared</b>, the vSwitch is a shared vSwitch.</description></item>
-        /// <item><description>If the value is <b>Sharing</b>, the vSwitch is being shared.</description></item>
+        /// <item><description>If the value is empty, the vSwitch is a regular vSwitch.</description></item>
+        /// <item><description><b>Shared</b>: The vSwitch is a shared vSwitch.</description></item>
+        /// <item><description><b>Sharing</b>: The vSwitch is being shared with other users.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -205,9 +211,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the vSwitch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Pending</b>: Configuring. </para>
+        /// <item><description><para><b>Pending</b>: The vSwitch is being configured. </para>
         /// </description></item>
-        /// <item><description><para><b>Available</b>: Available.</para>
+        /// <item><description><para><b>Available</b>: The vSwitch is available.</para>
         /// </description></item>
         /// </list>
         /// 

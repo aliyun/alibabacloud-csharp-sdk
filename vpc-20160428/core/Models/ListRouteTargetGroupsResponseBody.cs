@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListRouteTargetGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. If NextToken is empty, no subsequent query is required. If NextToken is returned, the value indicates the token for the next query.</para>
+        /// <para>The token for the next query. If the NextToken parameter is empty, no subsequent query is available. If the NextToken parameter is returned, the value indicates the token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ConfigMode { get; set; }
 
             /// <summary>
-            /// <para>The time when the route target group was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the route target group was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-30T06:40:50Z</para>
@@ -70,6 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The IP version of the route target group.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -111,7 +112,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RouteTargetGroupDescription { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the routing target group.</para>
+            /// <para>The instance ID of the route target group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rtg-xxxx</para>
@@ -143,7 +144,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <item><description><b>Enable</b>: Enabled.</description></item>
                 /// <item><description><b>Disable</b>: Disabled.</description></item>
                 /// </list>
-                /// <para>Only members in the Disabled state can be changed to other instances. Members in the Enabled state cannot be modified.</para>
+                /// <para>Only members in the Disabled state can be changed to other instances. Members in the Enabled state cannot be changed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enable</para>
@@ -167,7 +168,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string HealthCheckStatus { get; set; }
 
                 /// <summary>
-                /// <para>The member instance ID of the routing target group.</para>
+                /// <para>The instance ID of the member in the route target group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ep-xxxx</para>
@@ -177,7 +178,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string MemberId { get; set; }
 
                 /// <summary>
-                /// <para>The member type of the route target group.</para>
+                /// <para>The type of the member in the route target group.</para>
                 /// <para>Currently supported types:</para>
                 /// <list type="bullet">
                 /// <item><description><b>GatewayLoadBalancerEndpoint</b></description></item>
@@ -208,16 +209,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The status of the routing target group. Valid values:</para>
+            /// <para>The status of the route target group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Recovering</b>: Switching back to the primary instance.</description></item>
-            /// <item><description><b>Switched</b>: Primary/secondary switchover completed.</description></item>
-            /// <item><description><b>Available</b>: active.</description></item>
-            /// <item><description><b>Abnormal</b>: Secondary instance failures.</description></item>
-            /// <item><description><b>Pending</b>: Creating.</description></item>
-            /// <item><description><b>Switching</b>: Performing primary/secondary switchover.</description></item>
-            /// <item><description><b>Deleting</b>: delete.</description></item>
-            /// <item><description><b>Unavailable</b>: Both primary and secondary instances have instance failures.</description></item>
+            /// <item><description><b>Recovering</b>: The active/standby switchback is in progress.</description></item>
+            /// <item><description><b>Switched</b>: The active/standby switchover is completed.</description></item>
+            /// <item><description><b>Available</b>: The route target group is available.</description></item>
+            /// <item><description><b>Abnormal</b>: The secondary instance is abnormal.</description></item>
+            /// <item><description><b>Pending</b>: The route target group is being created.</description></item>
+            /// <item><description><b>Switching</b>: The active/standby switchover is in progress.</description></item>
+            /// <item><description><b>Deleting</b>: The route target group is being deleted.</description></item>
+            /// <item><description><b>Unavailable</b>: Both the primary and secondary instances are abnormal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -228,7 +229,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string. A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</para>
+            /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -245,7 +247,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string. A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</para>
+                /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the gateway route table.</para>
-        /// <para>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>new</para>
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run and does not modify the gateway route table. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>true</b>: performs only a dry run and does not modify the gateway route table. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</description></item>
         /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the gateway route table is modified.</description></item>
         /// </list>
         /// 
@@ -94,11 +94,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The instance ID of the next hop to be modified.</para>
         /// <list type="bullet">
         /// <item><description>If <b>NextHopType</b> is set to <b>Instance</b>, <b>NextHopId</b> is the ID of the ECS instance.</description></item>
-        /// <item><description>If <b>NextHopType</b> is set to <b>NetworkInterface</b>, <b>NextHopId</b> is the ID of the elastic network interface controller (NIC) instance.</description></item>
+        /// <item><description>If <b>NextHopType</b> is set to <b>NetworkInterface</b>, <b>NextHopId</b> is the ID of the elastic network interface controller (NIC).</description></item>
         /// <item><description>If <b>NextHopType</b> is set to <b>Local</b>, <b>NextHopId</b> is empty, which indicates local.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>To modify the next hop of a route whose next hop type is <b>Instance</b> or <b>NetworkInterface</b>, you must first change <b>NextHopType</b> to <b>Local</b>, and then change <b>NextHopType</b> back to <b>Instance</b> or <b>NetworkInterface</b> and specify a new <b>NextHopId</b>. You cannot directly change the next hop to other elastic network interface controllers (NICs) or ECS instances.</para>
+        /// <para>If the next hop type of the routing entry is <b>Instance</b> or <b>NetworkInterface</b> and you want to modify the next hop, you must first change <b>NextHopType</b> to <b>Local</b>, and then change <b>NextHopType</b> back to <b>Instance</b> or <b>NetworkInterface</b> before modifying the specific <b>NextHopId</b>. You cannot directly change the next hop from an elastic network interface controller (NIC) or an ECS instance to another elastic network interface controller (NIC) or ECS instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -109,11 +109,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHopId { get; set; }
 
         /// <summary>
-        /// <para>The next hop type of the route to be modified. Valid values:</para>
+        /// <para>The next hop type of the routing entry to be modified. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>Instance</b>: an ECS instance.</para>
         /// </description></item>
-        /// <item><description><para><b>NetworkInterface</b>: an elastic network interface controller (NIC) instance.</para>
+        /// <item><description><para><b>NetworkInterface</b>: an elastic network interface controller (NIC).</para>
         /// </description></item>
         /// <item><description><para><b>Local</b>: local.</para>
         /// </description></item>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the gateway route table to be modified.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

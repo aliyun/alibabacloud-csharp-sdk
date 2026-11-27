@@ -70,6 +70,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The customer gateway ID.</para>
+        /// <remarks>
+        /// <para>This parameter must be specified only when you create an IPsec-VPN connection in single-tunnel mode.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cgw-p0w2jemrcj5u61un8****</para>
@@ -80,6 +83,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: sends a check request and does not create the IPsec connection. The system checks whether required parameters are specified, whether the request format is valid, and whether business limits are exceeded. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. After the check succeeds, the system directly creates the IPsec connection.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -90,6 +97,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>Specifies whether the configuration of the IPsec-VPN connection takes effect immediately. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes. After the configuration is complete, the system immediately starts IPsec negotiation.</description></item>
+        /// <item><description><b>false</b> (default): no. The system starts IPsec negotiation only after traffic flows in.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -134,6 +145,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>This parameter is supported when you create a dual-tunnel IPsec-VPN connection.</para>
+        /// <para>Specifies whether to enable BGP for the tunnel. Valid values: <b>true</b> and <b>false</b> (default).</para>
+        /// <remarks>
+        /// <para>Before you add BGP configurations, we recommend that you understand the working mechanism and usage limits of BGP dynamic routing. For more information, see <a href="https://help.aliyun.com/document_detail/445767.html">Configure BGP dynamic routing</a>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -144,6 +159,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>This parameter is supported when you create a single-tunnel IPsec-VPN connection.</para>
+        /// <para>Health check configurations:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>HealthCheckConfig.enable</b>: specifies whether to enable health checks. Valid values: <b>true</b> and <b>false</b> (default).</para>
+        /// </description></item>
+        /// <item><description><para><b>HealthCheckConfig.dip</b>: the destination IP address of health checks. Enter the IP address of the on-premises data center that can be accessed from the VPC side over the IPsec connection.</para>
+        /// </description></item>
+        /// <item><description><para><b>HealthCheckConfig.sip</b>: the source IP address of health checks. Enter the IP address on the VPC side that can be accessed from the on-premises data center over the IPsec connection.</para>
+        /// </description></item>
+        /// <item><description><para><b>HealthCheckConfig.interval</b>: the interval at which health check retries are performed. Unit: seconds. Default value: <b>3</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>HealthCheckConfig.retry</b>: the number of packets that are retransmitted for health checks. Default value: <b>3</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>HealthCheckConfig.Policy</b>: specifies whether to revoke the published routes if a health check fails. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>revoke_route</b> (default): revokes the published routes.</description></item>
+        /// <item><description><b>reserve_route</b>: does not revoke the published routes.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;enable&quot;:&quot;true&quot;,&quot;dip&quot;:&quot;192.168.1.1&quot;,&quot;sip&quot;:&quot;10.1.1.1&quot;,&quot;interval&quot;:&quot;3&quot;,&quot;retry&quot;:&quot;3&quot;,&quot;Policy&quot;: &quot;revoke_route&quot;}</para>
@@ -230,6 +264,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the IPsec-VPN connection.</para>
+        /// <para>The name must be 1 to 100 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -240,6 +275,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The network type of the IPsec-VPN connection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>public</b> (default): public network. The IPsec connection establishes an encrypted communication channel over the public network.</description></item>
+        /// <item><description><b>private</b>: private network. The IPsec connection establishes an encrypted communication channel over a private network.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>public</para>
@@ -315,6 +354,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The list of tags to add to the IPsec-VPN connection.</para>
+        /// <para>You can add up to 20 tags to an IPsec connection at a time.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -347,7 +387,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The bandwidth specification of a single VPN tunnel. Valid values:</para>
+        /// <para>The bandwidth specification of a single VPN tunnel. Valid values:
+        /// Standard (default): Standard type. Default bandwidth: 1 Gbps
+        /// Large: Large type. Default bandwidth: 3 Gbps</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard</para>
@@ -372,6 +414,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class CreateVpnAttachmentRequestTunnelOptionsSpecification : TeaModel {
             /// <summary>
             /// <para>The ID of the customer gateway associated with the tunnel.</para>
+            /// <remarks>
+            /// <para>This parameter is required when you create an IPsec-VPN connection in dual-tunnel mode.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>cgw-p0w2jemrcj5u61un8****</para>
