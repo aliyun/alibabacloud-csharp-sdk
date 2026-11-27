@@ -2513,7 +2513,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves monitoring metrics at a specific point in time or queries metric trends over a period of time. You can filter queries by account, team, template, or sandbox.</para>
+        /// <para>Queries monitoring metrics at a specific point in time or retrieves trends over a period of time. You can query metrics by account, team, template, or sandbox. Each metric returns up to 200 time series, and a single request queries up to 100,000 nominal data points.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2610,7 +2610,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves monitoring metrics at a specific point in time or queries metric trends over a period of time. You can filter queries by account, team, template, or sandbox.</para>
+        /// <para>Queries monitoring metrics at a specific point in time or retrieves trends over a period of time. You can query metrics by account, team, template, or sandbox. Each metric returns up to 200 time series, and a single request queries up to 100,000 nominal data points.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2707,7 +2707,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves monitoring metrics at a specific point in time or queries metric trends over a period of time. You can filter queries by account, team, template, or sandbox.</para>
+        /// <para>Queries monitoring metrics at a specific point in time or retrieves trends over a period of time. You can query metrics by account, team, template, or sandbox. Each metric returns up to 200 time series, and a single request queries up to 100,000 nominal data points.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2731,7 +2731,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves monitoring metrics at a specific point in time or queries metric trends over a period of time. You can filter queries by account, team, template, or sandbox.</para>
+        /// <para>Queries monitoring metrics at a specific point in time or retrieves trends over a period of time. You can query metrics by account, team, template, or sandbox. Each metric returns up to 200 time series, and a single request queries up to 100,000 nominal data points.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2755,7 +2755,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the CPU, memory, and disk usage over a specified period. You can view the cumulative usage and usage trends by account, team, or template.</para>
+        /// <para>Queries the CPU, memory, and disk usage within a specified time range, including the disk usage of template caches and snapshots. You can view the cumulative usage for the interval, hourly usage, or daily usage. You can also group the results by team, template, snapshot, or sandbox plan.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2801,6 +2801,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820
             {
                 query["sandboxPlan"] = request.SandboxPlan;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotID))
+            {
+                query["snapshotID"] = request.SnapshotID;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["startTime"] = request.StartTime;
@@ -2844,7 +2848,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the CPU, memory, and disk usage over a specified period. You can view the cumulative usage and usage trends by account, team, or template.</para>
+        /// <para>Queries the CPU, memory, and disk usage within a specified time range, including the disk usage of template caches and snapshots. You can view the cumulative usage for the interval, hourly usage, or daily usage. You can also group the results by team, template, snapshot, or sandbox plan.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2890,6 +2894,10 @@ namespace AlibabaCloud.SDK.Sandbox20260820
             {
                 query["sandboxPlan"] = request.SandboxPlan;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotID))
+            {
+                query["snapshotID"] = request.SnapshotID;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["startTime"] = request.StartTime;
@@ -2933,7 +2941,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the CPU, memory, and disk usage over a specified period. You can view the cumulative usage and usage trends by account, team, or template.</para>
+        /// <para>Queries the CPU, memory, and disk usage within a specified time range, including the disk usage of template caches and snapshots. You can view the cumulative usage for the interval, hourly usage, or daily usage. You can also group the results by team, template, snapshot, or sandbox plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2957,7 +2965,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the CPU, memory, and disk usage over a specified period. You can view the cumulative usage and usage trends by account, team, or template.</para>
+        /// <para>Queries the CPU, memory, and disk usage within a specified time range, including the disk usage of template caches and snapshots. You can view the cumulative usage for the interval, hourly usage, or daily usage. You can also group the results by team, template, snapshot, or sandbox plan.</para>
         /// </description>
         /// 
         /// <param name="request">

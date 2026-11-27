@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class GetMetricDataShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the time series query. This time is exclusive. Specify a UTC time accurate to seconds. The end time must be later than the start time. You can query metrics for a maximum of 7 days at a time. The time range must include at least one time point aligned with the period, and these time points cannot be later than the current time.</para>
+        /// <para>The end time for a time-series query, exclusive. Specify a UTC time in whole seconds, which must be later than startTime. You can query data for up to 7 days at a time. The time range must include at least one time point aligned with period, and these time points cannot be later than the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-11-05T00:02:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Groups metrics by a specific key. For example, you can group metrics by teamID to view the metrics of each team separately. You can combine up to four different grouping keys. The available keys vary by metric. If you do not specify this parameter, the overall results within the query scope are returned.</para>
+        /// <para>For example, grouping by teamID allows you to view the metrics of each team separately. You can combine up to four different grouping keys. The available keys vary by metric. If not specified, the overall results for the query scope are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;teamID&quot;]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string GroupByShrink { get; set; }
 
         /// <summary>
-        /// <para>The names of the metrics to query. You can query 1 to 16 different metrics at a time. For available metrics and query scopes, refer to the metric catalog.</para>
+        /// <para>Specifies 1 to 16 different metric names in each request. For available metrics and their applicable scopes, see the monitoring metrics folder.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string MetricNamesShrink { get; set; }
 
         /// <summary>
-        /// <para>The time interval for time series queries, in seconds. Valid values: 60, 300, 900, 1800, 3600, and 86400. A value of 60 corresponds to exact minutes, and 86400 corresponds to 00:00:00 UTC every day. The calculation duration of some statistical metrics varies with the interval.</para>
+        /// <para>Required for both single-point and time-series queries. In a time-series query, this parameter specifies the interval between adjacent data points in seconds. Valid values: 60, 300, 900, 1800, 3600, and 86400.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sandbox to query. You must also specify the teamID and templateID to which the sandbox belongs, and select a metric that supports sandbox-level queries.</para>
+        /// <para>The ID of the sandbox to query. You must also specify the teamID and templateID to which the sandbox belongs, and select a metric that supports querying by sandbox.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sbx-62105527-699e-48df-ad3b-7425001ae4f2</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string SandboxID { get; set; }
 
         /// <summary>
-        /// <para>Queries the number of sandboxes by sandbox plan. This parameter applies only to the sandboxCount metric. Valid values: eco, std, pro, and ent.</para>
+        /// <para>Queries the number of sandboxes by sandbox edition. This parameter applies only to sandboxCount. Valid values: eco, std, pro, and ent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pro</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string SandboxPlan { get; set; }
 
         /// <summary>
-        /// <para>The start time of the time series query. This time is inclusive. Specify a UTC time accurate to seconds, and also specify the endTime parameter.</para>
+        /// <para>The start time for a time-series query, inclusive. Specify a UTC time accurate to seconds as shown in the example, and also specify endTime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-11-05T00:00:00Z</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the team to query. If you leave this parameter empty, the metrics of the current account are queried.</para>
+        /// <para>Required when you query by team. If omitted, the metrics of the current account are queried. Account quotas and team quotas must be queried separately.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70d1c834-0333-58d8-97ac-5336eb9179eb</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TemplateID { get; set; }
 
         /// <summary>
-        /// <para>The specific point in time to query. If you query metrics at a specific point in time, specify only this parameter. Specify a current or past UTC time accurate to seconds. If you omit all time parameters, the metrics at the current time are queried.</para>
+        /// <para>The point in time for a single-point query. Specify the current or a past UTC time, accurate to seconds. If time, startTime, and endTime are omitted, the current time is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-11-05T00:01:00Z</para>

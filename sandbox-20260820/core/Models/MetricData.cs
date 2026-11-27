@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The grouping keys used for this query. An empty array is returned if no grouping is applied.</para>
+        /// <para>The group keys used for this query. An empty array is returned if no grouping is applied.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The result for each requested metric.</para>
+        /// <para>The result corresponding to each requested metric.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public List<MetricDataResults> Results { get; set; }
         public class MetricDataResults : TeaModel {
             /// <summary>
-            /// <para>The name of the metric in the request.</para>
+            /// <para>The name of the metric corresponding to the request.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>The time series for the metric. An empty array is returned if no data points exist.</para>
+            /// <para>The time series for the metric. An empty array is returned if there are no data points.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
             public List<MetricDataResultsSeries> Series { get; set; }
             public class MetricDataResultsSeries : TeaModel {
                 /// <summary>
-                /// <para>The team, template, or other grouping values for this series.</para>
+                /// <para>The team, template, or other grouping values corresponding to this series.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
                 public Dictionary<string, string> Dimensions { get; set; }
 
                 /// <summary>
-                /// <para>The data points in chronological order. Only times with metric values are listed.</para>
+                /// <para>The data points arranged in chronological order, listing only the times when metric values are available.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

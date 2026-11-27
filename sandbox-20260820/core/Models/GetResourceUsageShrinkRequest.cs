@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class GetResourceUsageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the query. This time is exclusive. Specify the time on the hour in UTC. The latest allowed time is the start of the current hour. You can query data for a maximum of 7 days at a time. The end time must be later than the start time.</para>
+        /// <para>The end time of the query. This time is exclusive. Specify a full hour in UTC. The latest allowed time is the start of the current hour. You can query a maximum of 7 days at a time. The end time must be later than the start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The granularity at which usage data is aggregated. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>All: Aggregates the cumulative usage over the entire query period.</description></item>
-        /// <item><description>Hour: Aggregates the usage by hour.</description></item>
-        /// <item><description>Day: Aggregates the usage every 24 hours starting from the startTime. The last period may be less than 24 hours.</description></item>
-        /// </list>
+        /// <para>The granularity for aggregating usage. Set to All to view the cumulative usage for the entire query interval. Set to Hour to view hourly usage. Set to Day to aggregate usage every 24 hours from the start time. The last interval can be less than 24 hours.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +32,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Granularity { get; set; }
 
         /// <summary>
-        /// <para>The keys used to group the results. You can specify any combination of teamID, templateID, and sandboxPlan. Each key can be specified only once. If you do not specify this parameter, the results are aggregated over the entire query scope.</para>
+        /// <para>Specifies the keys by which to group the results. You can use any combination of teamID, templateID, snapshotID, and sandboxPlan. Each key can be specified only once. If this parameter is not specified, the results are aggregated for the entire query range. If you group by snapshotID, only the usage associated with snapshots is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;teamID&quot;]</para>
@@ -47,7 +42,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string GroupByShrink { get; set; }
 
         /// <summary>
-        /// <para>The sandbox edition to query. Valid values: eco, std, pro, and ent.</para>
+        /// <para>The sandbox plan to query. Valid values: eco, std, pro, and ent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pro</para>
@@ -57,7 +52,17 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string SandboxPlan { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. This time is inclusive. Specify the time on the hour in UTC, such as 00:00 UTC.</para>
+        /// <para>The ID of the snapshot for which you want to query historical usage.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>550e8400-e29b-41d4-a716-446655440000</para>
+        /// </summary>
+        [NameInMap("snapshotID")]
+        [Validation(Required=false)]
+        public string SnapshotID { get; set; }
+
+        /// <summary>
+        /// <para>The start time of the query. This time is inclusive. Specify a full hour in UTC, such as 00:00 UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +73,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the team to query. If you do not specify this parameter, the usage of the current account is queried.</para>
+        /// <para>Specifies the team ID. Required when querying by team. If this parameter is omitted, the usage of the current account is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70d1c834-0333-58d8-97ac-5336eb9179eb</para>
@@ -88,11 +93,11 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TemplateID { get; set; }
 
         /// <summary>
-        /// <para>The usage items to query. You can specify 1 to 6 different usage items in a single request. CPU usage items include cpuActive and cpuIdle. Memory usage items include memoryActive and memoryIdle. Disk usage items include disk and diskDeepSleep. The disk item includes the usage of deep sleep disks.</para>
+        /// <para>Specifies 1 to 8 different usage item names for each request. For available usage items, refer to the resource usage metrics catalog.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;cpuActive&quot;]</para>
+        /// <para>[&quot;activeVCPU&quot;]</para>
         /// </summary>
         [NameInMap("usageNames")]
         [Validation(Required=false)]

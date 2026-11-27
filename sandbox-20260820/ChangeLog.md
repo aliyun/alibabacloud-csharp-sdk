@@ -1,3 +1,7 @@
+2026-11-27 Version: 1.5.5
+- Update API GetResourceUsage: add request parameters snapshotID.
+
+
 2026-11-25 Version: 1.5.4
 - Generated csharp 2026-08-20 for Sandbox.
 
